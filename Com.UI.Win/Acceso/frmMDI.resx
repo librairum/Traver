@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="radLabelElement3.AccessibleDescription" xml:space="preserve">
+    <value>radLabelElement1</value>
+  </data>
+  <data name="radLabelElement3.AccessibleName" xml:space="preserve">
+    <value>radLabelElement1</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="radLabelElement3.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="radLabelElement3.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radLabelElement3.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="radLabelElement3.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radLabelElement3.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="radLabelElement3.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="radLabelElement3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="radLabelElement3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="radLabelElement3.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radLabelElement3.Text" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="radLabelElement3.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="radLabelElement3.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="lblUsuario.AccessibleDescription" xml:space="preserve">
+    <value>lblUsuario</value>
+  </data>
+  <data name="lblUsuario.AccessibleName" xml:space="preserve">
+    <value>lblUsuario</value>
+  </data>
+  <data name="lblUsuario.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="lblUsuario.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblUsuario.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblUsuario.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblUsuario.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="lblUsuario.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblUsuario.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblUsuario.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblUsuario.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblUsuario.Text" xml:space="preserve">
+    <value>lblUsuario</value>
+  </data>
+  <data name="lblUsuario.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="lblUsuario.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="commandBarSeparator1.AccessibleDescription" xml:space="preserve">
+    <value>commandBarSeparator1</value>
+  </data>
+  <data name="commandBarSeparator1.AccessibleName" xml:space="preserve">
+    <value>commandBarSeparator1</value>
+  </data>
+  <data name="commandBarSeparator1.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="commandBarSeparator1.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="commandBarSeparator1.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="commandBarSeparator1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="commandBarSeparator1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="commandBarSeparator1.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="commandBarSeparator1.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="commandBarSeparator1.TextWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radLabelElement4.AccessibleDescription" xml:space="preserve">
+    <value>radLabelElement4</value>
+  </data>
+  <data name="radLabelElement4.AccessibleName" xml:space="preserve">
+    <value>radLabelElement4</value>
+  </data>
+  <data name="radLabelElement4.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="radLabelElement4.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radLabelElement4.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radLabelElement4.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radLabelElement4.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="radLabelElement4.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="radLabelElement4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="radLabelElement4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="radLabelElement4.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radLabelElement4.Text" xml:space="preserve">
+    <value>Perfil</value>
+  </data>
+  <data name="radLabelElement4.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="radLabelElement4.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="lblPerfil.AccessibleDescription" xml:space="preserve">
+    <value>lblPerfil</value>
+  </data>
+  <data name="lblPerfil.AccessibleName" xml:space="preserve">
+    <value>lblPerfil</value>
+  </data>
+  <data name="lblPerfil.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="lblPerfil.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblPerfil.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblPerfil.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblPerfil.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="lblPerfil.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPerfil.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblPerfil.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblPerfil.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblPerfil.Text" xml:space="preserve">
+    <value>lblPerfil</value>
+  </data>
+  <data name="lblPerfil.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="lblPerfil.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="radLabelElement5.AccessibleDescription" xml:space="preserve">
+    <value>radLabelElement5</value>
+  </data>
+  <data name="radLabelElement5.AccessibleName" xml:space="preserve">
+    <value>radLabelElement5</value>
+  </data>
+  <data name="radLabelElement5.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="radLabelElement5.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radLabelElement5.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radLabelElement5.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radLabelElement5.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="radLabelElement5.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="radLabelElement5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="radLabelElement5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="radLabelElement5.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radLabelElement5.Text" xml:space="preserve">
+    <value>Empresa</value>
+  </data>
+  <data name="radLabelElement5.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="radLabelElement5.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="lblNomEmpresa.AccessibleDescription" xml:space="preserve">
+    <value>lblEmpresa</value>
+  </data>
+  <data name="lblNomEmpresa.AccessibleName" xml:space="preserve">
+    <value>lblEmpresa</value>
+  </data>
+  <data name="lblNomEmpresa.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="lblNomEmpresa.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblNomEmpresa.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblNomEmpresa.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblNomEmpresa.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="lblNomEmpresa.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNomEmpresa.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblNomEmpresa.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblNomEmpresa.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblNomEmpresa.Text" xml:space="preserve">
+    <value>lblEmpresa</value>
+  </data>
+  <data name="lblNomEmpresa.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="lblNomEmpresa.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="radStatusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 416</value>
+  </data>
+  <data name="radStatusStrip1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radStatusStrip1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radStatusStrip1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="radStatusStrip1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radStatusStrip1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radStatusStrip1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="radStatusStrip1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radStatusStrip1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="radStatusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 27</value>
+  </data>
+  <data name="radStatusStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radStatusStrip1.Text" xml:space="preserve">
+    <value>radStatusStrip1</value>
+  </data>
+  <data name="&gt;&gt;radStatusStrip1.Name" xml:space="preserve">
+    <value>radStatusStrip1</value>
+  </data>
+  <data name="&gt;&gt;radStatusStrip1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadStatusStrip, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radStatusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radStatusStrip1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;radDock1.Name" xml:space="preserve">
+    <value>radDock1</value>
+  </data>
+  <data name="&gt;&gt;radDock1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.Docking.RadDock, Telerik.WinControls.RadDock, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radDock1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;radDock1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="resource.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 130</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 286</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="documentContainer1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="documentContainer1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="documentContainer1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="documentContainer1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="documentContainer1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="documentContainer1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="documentContainer1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="documentContainer1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;documentContainer1.Name" xml:space="preserve">
+    <value>documentContainer1</value>
+  </data>
+  <data name="&gt;&gt;documentContainer1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.Docking.DocumentContainer, Telerik.WinControls.RadDock, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;documentContainer1.Parent" xml:space="preserve">
+    <value>radDock1</value>
+  </data>
+  <data name="&gt;&gt;documentContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radDock1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="radDock1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="radDock1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="radDock1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radDock1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radDock1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="radDock1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radDock1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radDock1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="radDock1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radDock1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="radDock1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 286</value>
+  </data>
+  <data name="radDock1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radDock1.Text" xml:space="preserve">
+    <value>radDock1</value>
+  </data>
+  <data name="&gt;&gt;radDock1.Name" xml:space="preserve">
+    <value>radDock1</value>
+  </data>
+  <data name="&gt;&gt;radDock1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.Docking.RadDock, Telerik.WinControls.RadDock, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radDock1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;radDock1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="resource.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="radLabelElement1.AccessibleDescription" xml:space="preserve">
+    <value>Usuario:</value>
+  </data>
+  <data name="radLabelElement1.AccessibleName" xml:space="preserve">
+    <value>Usuario:</value>
+  </data>
+  <data name="radLabelElement1.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="radLabelElement1.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radLabelElement1.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radLabelElement1.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radLabelElement1.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="radLabelElement1.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="radLabelElement1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="radLabelElement1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="radLabelElement1.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radLabelElement1.Text" xml:space="preserve">
+    <value>Usuario:</value>
+  </data>
+  <data name="radLabelElement1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="radLabelElement1.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="radLabelElement2.AccessibleDescription" xml:space="preserve">
+    <value>Usuario:</value>
+  </data>
+  <data name="radLabelElement2.AccessibleName" xml:space="preserve">
+    <value>Usuario:</value>
+  </data>
+  <data name="radLabelElement2.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="radLabelElement2.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radLabelElement2.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radLabelElement2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radLabelElement2.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="radLabelElement2.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="radLabelElement2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="radLabelElement2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="radLabelElement2.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radLabelElement2.Text" xml:space="preserve">
+    <value>Usuario:</value>
+  </data>
+  <data name="radLabelElement2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="radLabelElement2.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <metadata name="windows8Theme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="telerikMetroTouchTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="radThemeManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>212, 56</value>
+  </metadata>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>374, 56</value>
+  </metadata>
+  <metadata name="office2013LightTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>538, 56</value>
+  </metadata>
+  <data name="cboperiodos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1110, 64</value>
+  </data>
+  <data name="cboperiodos.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="cboperiodos.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="cboperiodos.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="cboperiodos.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cboperiodos.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cboperiodos.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="cboperiodos.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="cboperiodos.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="cboperiodos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 20</value>
+  </data>
+  <data name="cboperiodos.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cboperiodos.Name" xml:space="preserve">
+    <value>cboperiodos</value>
+  </data>
+  <data name="&gt;&gt;cboperiodos.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;cboperiodos.Parent" xml:space="preserve">
+    <value>radRibbonBar1</value>
+  </data>
+  <data name="&gt;&gt;cboperiodos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radRibbonBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="radRibbonBar1.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 130</value>
+  </data>
+  <data name="radRibbonBar1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 130</value>
+  </data>
+  <data name="radRibbonBar1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radRibbonBar1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radRibbonBar1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="radRibbonBar1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radRibbonBar1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radRibbonBar1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="radRibbonBar1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radRibbonBar1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="radRibbonBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 130</value>
+  </data>
+  <data name="radRibbonBar1.StartButtonImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAANCAYAAAB2HjRBAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAALNJREFUOE+NkeENQiEMhBnBERzBkRzFTRzBERjBERzBn/wAgnd97Ut9lsglBCj3
+        HSUkaoxx6r3n1tqTaykGgudeSnnDc5ECFmdCfkQBBmJ+7AG11hcPaCAUBRxvxHzFGHKzOJxotgC33lpV
+        Rdwuu232jKloJkTYt/tXBvq2lwKOoJZ/vygSTJlDt19iXQPi9zNZDTctibCXr+GspVgwSABb1f0aaILR
+        AvLGLYImAPaECZjSB56hKtx0sdEUAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="radRibbonBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radRibbonBar1.Text" xml:space="preserve">
+    <value>frmMDI</value>
+  </data>
+  <data name="&gt;&gt;radRibbonBar1.Name" xml:space="preserve">
+    <value>radRibbonBar1</value>
+  </data>
+  <data name="&gt;&gt;radRibbonBar1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadRibbonBar, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radRibbonBar1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radRibbonBar1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>113</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 443</value>
+  </data>
+  <data name="frmMDI.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="frmMDI.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="frmMDI.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="frmMDI.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="frmMDI.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="frmMDI.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="frmMDI.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="frmMDI.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>frmMDI</value>
+  </data>
+  <data name="&gt;&gt;radLabelElement3.Name" xml:space="preserve">
+    <value>radLabelElement3</value>
+  </data>
+  <data name="&gt;&gt;radLabelElement3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabelElement, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;lblUsuario.Name" xml:space="preserve">
+    <value>lblUsuario</value>
+  </data>
+  <data name="&gt;&gt;lblUsuario.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabelElement, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;commandBarSeparator1.Name" xml:space="preserve">
+    <value>commandBarSeparator1</value>
+  </data>
+  <data name="&gt;&gt;commandBarSeparator1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.CommandBarSeparator, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabelElement4.Name" xml:space="preserve">
+    <value>radLabelElement4</value>
+  </data>
+  <data name="&gt;&gt;radLabelElement4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabelElement, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;lblPerfil.Name" xml:space="preserve">
+    <value>lblPerfil</value>
+  </data>
+  <data name="&gt;&gt;lblPerfil.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabelElement, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabelElement5.Name" xml:space="preserve">
+    <value>radLabelElement5</value>
+  </data>
+  <data name="&gt;&gt;radLabelElement5.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabelElement, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;lblNomEmpresa.Name" xml:space="preserve">
+    <value>lblNomEmpresa</value>
+  </data>
+  <data name="&gt;&gt;lblNomEmpresa.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabelElement, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabelElement1.Name" xml:space="preserve">
+    <value>radLabelElement1</value>
+  </data>
+  <data name="&gt;&gt;radLabelElement1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabelElement, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabelElement2.Name" xml:space="preserve">
+    <value>radLabelElement2</value>
+  </data>
+  <data name="&gt;&gt;radLabelElement2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabelElement, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;windows8Theme1.Name" xml:space="preserve">
+    <value>windows8Theme1</value>
+  </data>
+  <data name="&gt;&gt;windows8Theme1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.Themes.Windows8Theme, Telerik.WinControls.Themes.Windows8, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;telerikMetroTouchTheme1.Name" xml:space="preserve">
+    <value>telerikMetroTouchTheme1</value>
+  </data>
+  <data name="&gt;&gt;telerikMetroTouchTheme1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.Themes.TelerikMetroTouchTheme, Telerik.WinControls.Themes.TelerikMetroTouch, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radThemeManager1.Name" xml:space="preserve">
+    <value>radThemeManager1</value>
+  </data>
+  <data name="&gt;&gt;radThemeManager1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.RadThemeManager, Telerik.WinControls, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorker1.Name" xml:space="preserve">
+    <value>backgroundWorker1</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorker1.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;office2013LightTheme1.Name" xml:space="preserve">
+    <value>office2013LightTheme1</value>
+  </data>
+  <data name="&gt;&gt;office2013LightTheme1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.Themes.Office2013LightTheme, Telerik.WinControls.Themes.Office2013Light, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmMDI</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadRibbonForm, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+</root>

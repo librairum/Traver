@@ -1,0 +1,78 @@
+-- Eliminar mov suministros en bloque
+Alter PROCEDURE Spu_Inv_Del_MovimientoSuministroBloque
+                          
+@IN06CODEMP  char(2),
+@IN06AA  char(4),
+@IN06MM  char(2),
+@XMLrango xml,
+@flag int output,
+@mensaje varchar(100) output
+AS                          
+Begin transaction      
+         
+DECLARE @tmp_rango TABLE  (campo1 varCHAR(2), campo2 varchar(30))            
+          
+If @XMLrango.exist('//tbl')=1 -- Verificar que el XML tenga data                              
+ Begin                              
+ DECLARE @HANDLE INT    
+                                   
+ EXEC SP_XML_PREPAREDOCUMENT  @HANDLE OUTPUT,@XMLrango          
+          
+ INSERT INTO @tmp_rango (campo1, campo2)                            
+ SELECT campo1, campo2 FROM OPENXML(@HANDLE, '/DataSet/tbl', 2)           
+                        
+ WITH (campo1  varchar(2), campo2 varchar(30)  )              
+ End        
+
+--Eliminar los registro seleccionado por el usuario  
+--Actualizar el almacen con los valores de los detalles a eliminar del movimiento
+
+        
+--Eliminacion de cabecera del documento de movimiento
+Delete   doc            
+	from in06docu doc
+    Inner Join @tmp_rango tmp
+    On doc.IN06TIPDOC = tmp.campo1
+    and doc.IN06CODDOC =tmp.campo2
+    where doc.IN06CODEMP = @IN06CODEMP
+    and doc.IN06AA = @IN06AA
+    and doc.IN06MM = @IN06MM 
+
+ if @@Error <> 0    
+ Begin    
+ set @mensaje = 'Error al eliminar cabecera de movimiento'
+ set @flag = -1    
+ goto ManejaError     
+ End    
+ 
+
+--Eliminacion de detalle del documento de movimiento 
+    Delete mov
+    from in07movi mov
+    Inner Join @tmp_rango tmp
+    On mov.IN07TIPDOC = tmp.campo1
+    and mov.IN07CODDOC =tmp.campo2
+    where mov.IN07CODEMP = @IN06CODEMP
+    and mov.IN07AA = @IN06AA
+    and mov.IN07MM = @IN06MM    
+
+
+
+ if @@Error <> 0    
+ Begin    
+ set @mensaje = 'Error al eliminar detalle de  movimiento'    
+ set @flag = -1    
+ goto ManejaError     
+ End    
+ 
+ set @mensaje = 'Eliminacion exitosa'    
+ set @flag = 1    
+ Commit Transaction    
+ return 1    
+     
+ ManejaError:    
+ set @flag = -1  
+  
+ Rollback transaction    
+ return -1
+

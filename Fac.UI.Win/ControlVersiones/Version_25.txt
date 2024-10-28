@@ -1,0 +1,1366 @@
+﻿-- ===02/08/2022 Cambiar Calculo de Precio Unitario con Impuesto (Solo SQL, no hubo cambio en BIN)
+
+Alter Procedure Spu_Fac_Ins_DocumentosElectronicos                        
+@FAC04CODEMP char(2),                                  
+@FAC01COD  char(2),                                  
+@FAC04NUMDOC varchar(20),                                  
+@flag   int output,                                  
+@msgretorno  Varchar(100) output                                  
+AS                                                                                      
+Begin Transaction                                                                                      
+-- Validar que el documento no tenga factura electronica                                                                                      
+If(                                                                                                
+Select Count(*) from [BIZLINKS_PROD21].dbo.VW_SPE_EINVOICE_RESPONSE vfb Where                                                                                      
+ vfb.tipoDocumento = @FAC01COD                                                                                                                  
+ And vfb.serieNumero =@FAC04NUMDOC)>0                                                                                                                  
+ Begin                                                                                                                  
+   Set @msgretorno='VALIDAR :: Documento Electronico ya esta Generado'                                                                                                                            
+   GOTO Manejaerror                                                                                                                            
+ End                                                                                                                     
+                                                                                                                 
+ -- Eliminar en caso ya tenga                                                                                                                 
+                                                                                                                
+Delete from [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER where                                                                                                                
+ serieNumero = @FAC04NUMDOC                                                                                                                
+ And tipoDocumento = @FAC01COD                                                                                                                
+ IF @@ERROR <>0                                                                                                                  
+  Begin                                                                                                                  
+    Set @msgretorno='ERROR :: No se Pudo Eliminar Cabecera Doc Electronico'                                                                                                                            
+    GOTO Manejaerror                                                                                                                            
+  End                                                                                                                    
+ -- ==                                                                                                                
+ Delete from [BIZLINKS_PROD21].dbo.SPE_EINVOICEDETAIL where                                                                                                                
+ serieNumero = @FAC04NUMDOC                                      
+ And tipoDocumento = @FAC01COD                        
+ IF @@ERROR <>0                                                                              
+ Begin                                                   
+  Set @msgretorno='ERROR :: No se Pudo Eliminar Detalle Doc Electronico'                                                                     
+  GOTO Manejaerror                              
+ End                                                                  
+ -- ==                                                                                     
+ Delete from [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER_ADD where                                               
+ serieNumero = @FAC04NUMDOC                                                                                                                
+ And tipoDocumento = @FAC01COD                                                                                                                
+ IF @@ERROR <>0                                                                                                                  
+  Begin                                                                                                        
+  Set @msgretorno='ERROR :: No se Pudo Eliminar Cabecera Adicional Doc Electronico'                                                                    
+  GOTO Manejaerror                                                                                    
+ End                                                                                                                    
+-- Elimnar tabla de error local                                                                  
+Delete from [BIZLINKS_PROD21].dbo.SPE_ERROR_LOG where                                                                  
+TIPODOCUMENTO=@FAC01COD                                                                  
+And SERIENUMERO=@FAC04NUMDOC                                                                  
+                                                                  
+                                                                  
+                                                                                              
+-- Validar que el documento tenga Item                                                                                       
+If (Select CounT(*) from  FAC05_DETFACTURA fd                                                                                                 
+Inner Join FAC04_CABFACTURA fc On                                                                                     
+ fc.FAC04CODEMP = fd.FAC05CODEMP                                                                         
+ And fc.FAC01COD = fd.FAC01COD                                                                                                                                                
+ And fc.FAC04NUMDOC = fd.FAC04NUMDOC                                                                                                                                      
+    -- Amarre a la plantilla                                                                                                            
+    Inner Join FAC03_SUBPLANTILLA Subplantilla On                                                                                                                              
+     fc.FAC04CODEMP = Subplantilla.FAC03CODEMP                                                                                                                                                
+    And fc.FAC01COD = Subplantilla.FAC01COD                                                                                                                                                
+    And fc.FAC03COD = Subplantilla.FAC03COD                                                                                                                                     
+Inner Join FAC01_TIPDOC td On                         
+   fd.FAC05CODEMP = td.FAC01CODEMP                                                                  
+And fd.FAC01COD = td.FAC01COD                                                                
+Inner Join empresa  e On                                                      
+fd.FAC05CODEMP = Codigo                                                        
+And Sistema ='VENTAS'                                                                                                 
+Where                                          
+ fd.FAC05CODEMP=@FAC04CODEMP                                                                                                                                     
+ And fd.FAC01COD=@FAC01COD                                         
+ And fd.FAC04NUMDOC=@FAC04NUMDOC )<=0                                 
+ Begin                                                            
+   SET @msgretorno = 'VALIDAR :: DOCUMENTO ELECTRONICO DEBE CONTENR AL MENOS UN ITEM'                                                                                           
+   GOTO Manejaerror                                   
+ End                          
+                           
+ -- ======== Validar que si la factura es a credito tenga Cuotas                          
+ -- ========                           
+Declare @FormaPagoSunat varchar(2)                          
+Set @FormaPagoSunat=''                          
+                          
+Select @FormaPagoSunat = Isnull(FAC04FORMAPAGOSUNAT,'') from FAC04_CABFACTURA fc Where                           
+ fc.FAC04CODEMP=@FAC04CODEMP                                                                                                                                                
+ And fc.FAC01COD=@FAC01COD                                                                                                                             
+ And fc.FAC04NUMDOC=@FAC04NUMDOC                          
+                           
+ If @FormaPagoSunat='02' -- Credito                          
+ Begin                          
+  If (SELECT COUNT(*) FROM FAC12_FACTURACUOTAS  where                            
+  FAC12CODEMP=@FAC04CODEMP and  FAC12COD=@FAC01COD and  FAC12NUMDOC=@FAC04NUMDOC)<=0                           
+   Begin                          
+     SET @msgretorno = 'VALIDAR :: DOCUMENTO A CREDITO, DEBE TENER CUOTAS'                                                                                           
+     GOTO Manejaerror                                                   
+   End                          
+ End                          
+                                                                                                                    
+                                                                              
+--                                                                                                                          
+Declare @tipoDocumentoEmisor char(1)                                                                                                         
+Declare @numeroDocumentoEmisor varchar(20)                                                                             
+Declare @tipoDocumento   char(2)                                                                                                                                 
+Declare @serieNumero   varchar(13)                                                                                                                                                
+Declare @ubigeoAdquiriente  varchar(6)                                                                                                                             
+Declare @direccionAdquiriente  varchar(200)                                                                                  
+Declare @departamentoAdquiriente varchar(30)                                                                                                           
+Declare @provinciaAdquiriente  varchar(30)                                                
+Declare @distritoAdquiriente  varchar(30)                                          
+Declare @paisAdquiriente   varchar(30)                                                                      
+Declare @urbanizacionAdquiriente varchar(25)                                                                                                                  
+Declare @TipoVentaNacoExp char(2)                                         
+Declare @CorreoCliente varchar(100)                         
+Declare @FormaPagoNegociable char(1)                          
+Declare @montoNetoPendiente  float                          
+Declare @ordenCompra varchar(20)              
+Declare @FormaPagoDetraccion varchar(3)                        
+  -- == Capturar Variables                                                                                      
+   Select                                                                
+   @tipoDocumentoEmisor='6',                                                              
+   @numeroDocumentoEmisor=e.Ruc,                                                                                                               
+   @tipoDocumento=td.FAC01FETIPDOC,                                                                                                             
+   @serieNumero=fc.FAC04NUMDOC,                                                                                                            
+   @ubigeoAdquiriente =ltrim(rtrim((Isnull(Cliente.ccm02FEDepartamentoCod,'') + Isnull(Cliente.ccm02FEProvinciaCod,'') + Isnull(Cliente.ccm02FEDistritoCod,'')))),                                                                                
+   @direccionAdquiriente = REPLACE(REPLACE(left((Case When Isnull(Cliente.ccm02dir,'')='' then '-' else Cliente.ccm02dir end),100),CHAR(10),''),CHAR(13),''),                                                                            
+   --left((Case When Isnull(Cliente.ccm02dir,'')='' then '-' else Cliente.ccm02dir end),100),                                                                                    
+   @departamentoAdquiriente=(Case When Isnull(DepartamentoAdqui.Descripcion,'')='' then '-' else DepartamentoAdqui.Descripcion end),                                                                                                                
+   @provinciaAdquiriente=(Case When Isnull(ProvinciaAdqui.Descripcion,'')='' then '-' else ProvinciaAdqui.Descripcion end),                                                                                                                  
+   @distritoAdquiriente=(Case When Isnull(DistritoAdqui.Descripcion,'')='' then '-' else DistritoAdqui.Descripcion end),                                                                                                                  
+   @paisAdquiriente=(Case When isnull(ccm02FEPaisCod,'')='' then '-' else isnull(ccm02FEPaisCod,'') end), --PENDIENTE, se esta poniend PE hasta que los usuarios llenen la data de su PAIS                                                                    
+  
+    
+      
+        
+          
+            
+              
+   @urbanizacionAdquiriente = (Case When Isnull(ccm02FEUrbanizacion,'')='' then '-' else ccm02FEUrbanizacion end),                                                                                                                    
+   @TipoVentaNacoExp = Isnull(FAC03TIPOVENTA,''),                                                                                  
+   @CorreoCliente = Isnull(Cliente.ccm02CorreoFacturaElectronica,''),                              
+   @FormaPagoNegociable =   (Case When Isnull(fc.FAC04FORMAPAGOSUNAT,'')='02' then '1' else '0' end), -- si es nulo o vacio por defecto es contado                                                                                                            
+   @montoNetoPendiente = Convert(varchar(15),Convert(DECIMAL(12,2),                                                                      
+      (Isnull(FAC04FETOTALGRAVADA,0)  + Isnull(FAC04FETOTALNOGRAVADA,0) +                                                                   
+      Isnull(FAC04FETOTALEXONERADA,0) + Isnull(FAC04FETOTALGRATUITA,0) +  Isnull(FAC04FETOTALEXPORTACION,0)  + Isnull(FAC04IMPIGV,0)     
+      - ISNULL(FAC04FETOTALDETRACCION,0)                                                                 
+      ))),                          
+ @ordenCompra = left(ltrim(Isnull(FAC04ORDENCOMPRA,'')),20), -- Solo 20 caracteres                        
+  @FormaPagoDetraccion = (Case when Isnull(FAC04FECODBIENOSERVDETRACCION,'')='' then '' else '001' end) -- 001 es deposito en cuenta segun catalogo 59               
+              
+  From FAC04_CABFACTURA fc                             Inner Join empresa  e On                                                                          
+    Codigo = FAC04CODEMP                                                                              
+    And Sistema ='VENTAS'                                                                                         
+    -- Amarre a la plantilla                                                                                                                     
+    Inner Join FAC03_SUBPLANTILLA Subplantilla On                                                                                                                          
+     fc.FAC04CODEMP = Subplantilla.FAC03CODEMP                                                                                                        
+    And fc.FAC01COD = Subplantilla.FAC01COD                                                                                                                     
+   And fc.FAC03COD = Subplantilla.FAC03COD                                                                                                                                                
+  -- == Amarrar con Tipo Documento                                                                                                    
+    Inner Join  FAC01_TIPDOC td On                                                                                                         
+    fc.FAC04CODEMP = td.FAC01CODEMP                                                       
+  And fc.FAC01COD = td.FAC01COD                                                                                                                                                
+    Inner join ccm02cta cliente On                            
+    fc.FAC04CODEMP = cliente.ccm02emp                                                                                                                                                
+    And fc.FAC04TIPANA = cliente.ccm02tipana                                                                                           
+    And fc.FAC04CODCLI = cliente.ccm02cod                                                                                                                       
+    -- Amarre Departamento Adquiriente                                                                                                                                                
+    Left Join departamento DepartamentoAdqui On                                                                                                                                                 
+    cliente.ccm02FEDepartamentoCod = DepartamentoAdqui.CodigoDepartamento                                                                                                                                                
+    -- Amarre Provincia Adquiriente                                                                        
+    Left Join Provincia ProvinciaAdqui On                                                                                                                                         
+    cliente.ccm02FEDepartamentoCod  = ProvinciaAdqui.CodigoDepartamento                                                                                                                                                
+    And cliente.ccm02FEProvinciaCod = ProvinciaAdqui.CodigoProvincia                                                                                    
+    -- Amaree Distrito Adquiriente                                                                                                                                    
+Left Join Distrito DistritoAdqui On                                                                                                       
+     cliente.ccm02FEDepartamentoCod  = DistritoAdqui.CodigoDepartamento                                                                                  
+    And cliente.ccm02FEProvinciaCod = DistritoAdqui.CodigoProvincia                                                                    
+    And cliente.ccm02FEDistritoCod = DistritoAdqui.CodigoDistrito                                                                                      
+    -- Amarre pais Adquiriente                                                                                    
+    Left Join Glo04catalogoFE PaisAdqui On                                                                  
+    Cliente.ccm02FEPaisCod = PaisAdqui.glo04Codigo                                                                                                                                                
+    And PaisAdqui.glo04CodigoTabla='04' -- Paises                                  
+    Where                                                                                                                                                
+    fc.FAC04CODEMP=@FAC04CODEMP                            
+    And fc.FAC01COD= @FAC01COD                                                                                                                                      
+    And fc.FAC04NUMDOC=@FAC04NUMDOC                                                                                                       
+                                                                         
+    -- Capturar Partida Aranceari                                                                                                
+                            
+Declare @PartidaArancelaria varchar(50)                         
+Set @PartidaArancelaria='-'                                                                                                
+                                                                                                
+sELECT @PartidaArancelaria = max(Isnull(FAC05PARTARAN,'-')) FROM FAC05_DETFACTURA  fd Where                                                                                      
+    fd.FAC05CODEMP=@FAC04CODEMP                                                                                       
+    And fd.FAC01COD= @FAC01COD                                                                                                               
+    And fd.FAC04NUMDOC=@FAC04NUMDOC                                                                                                       
+                                                                                                
+                                                                                                
+                                                                                                                    
+-- ====== Validar                                                                                                                    
+                                                                                                       
+If  @TipoVentaNacoExp='01'   -- Nacional                                                                                                
+ Begin                                                                                                                     
+  If @FAC01COD in ('01','07','08')                                                                                                                    
+    Begin                                                           
+   -- Validar correo electronico                                                    
+     If isnull(@CorreoCliente,'') =''                                                                                                                     
+Begin                                                                                                   
+        Set @msgretorno='Validar :: Cliente No tiene correo electronico'                                                                          
+       GOTO Manejaerror                                                                                                           
+      End                                                      
+  -- Valido Ubigeo y pais                                                                                                                    
+     If isnull(@ubigeoAdquiriente,'') =''                                                                                            
+      Begin                                                                                                                    
+        Set @msgretorno='Validar :: Ubigeo No Valido'                                                                         
+       GOTO Manejaerror                                                                      
+      End                                                                           
+     -- Pais No Valido                                                                                                                    
+     If isnull(@paisAdquiriente,'') =''                                                                                                                     
+      Begin                                                                                     
+        Set @msgretorno='Validar :: Pais No Valido'                                                                                                          
+       GOTO Manejaerror                                             
+      End                                                                                                                    
+                                                                                                                          
+      End                                                                                               
+ End                                                                 
+Else if @TipoVentaNacoExp='02' -- Exportacion                                                                                                                    
+ Begin                                                                
+  If @FAC01COD in ('01','07','08')                                                 
+   Begin                                                                                                                 
+      -- Validar correo electronico                                                                                                                
+   If isnull(@CorreoCliente,'') =''                                               
+      Begin                                                            
+        Set @msgretorno='Validar :: Cliente No tiene correo electronico'                                                                                                                
+       GOTO Manejaerror                                                                                                              
+      End                                                                                          
+                                                                                                                          
+     If isnull(@paisAdquiriente,'') ='' --Valido Pais                                                                                                                    
+      Begin                                                                                                                    
+        Set @msgretorno='Validar :: Pais No valido Cliente Exportacion'                                                                                                                    
+       GOTO Manejaerror                            End                                                                                                                    
+    End                                                                                                                    
+ End                   
+                                                                                                   
+                                                                                                                                  
+Insert INTO [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER(                                                                        
+-- Campos Base                                                                        
+tipoDocumentoEmisor,                                                                                       
+numeroDocumentoEmisor,                                                                                                                         
+tipoDocumento,                                                                  
+serieNumero,                                                                                                                                      
+correoEmisor,                                                                                                                                      
+correoAdquiriente,                                                                                  
+razonSocialEmisor,                                                                                                                       
+nombreComercialEmisor,                                                        
+fechaEmision,                                                                                                 
+ubigeoEmisor,                                                                                                                                      
+direccionEmisor,                                                                                                                                      
+urbanizacion,                                                                               
+provinciaEmisor,                                              
+departamentoEmisor,                                                                                                           
+distritoEmisor,                                                                                                                                      
+paisEmisor,                      
+tipoDocumentoAdquiriente,                                                                                                                                      
+numeroDocumentoAdquiriente,                                                                                                                                      
+razonSocialAdquiriente,                                                               
+tipoMoneda,                                                                           
+-- Nuevoa Campos Mandatorios                        
+totalValorVenta,                        
+totalPrecioVenta,                        
+                                                                         
+-- ==== Campos Condicionales                                                                                                           
+totalValorVentaNetoOpGravadas,                                    
+totalValorVentaNetoOpNoGravada,                                                                                                           
+totalValorVentaNetoOpExonerada,                                                                                                                                      
+totalValorVentaNetoOpGratuitas,                                             
+totalValorVentaNetoOpExporta,                                                                                                                    
+descuentosGlobales,                                                                                    
+--                                                                        
+totalIgv,                                                                        
+totalImpuestos,                                                                        
+totalVenta,                                      
+tipoOperacion,                                                        
+horaEmision,                                                                        
+codigoLocalAnexoEmisor,                                                                        
+--                                                                        
+codigoLeyenda_1,                                                                                                                                      
+textoLeyenda_1,                                                                                                                                      
+codigoLeyenda_2,                         
+textoLeyenda_2,                                                                                                                                      
+                                                                                                                                      
+codigoDetraccion,                        
+totalDetraccion,                        
+porcentajeDetraccion,                        
+numeroCtaBancoNacion,               
+                                                                    
+                                                                                                                
+lugardestino,                                                                                    
+                                                                      
+codigoSerieNumeroAfectado,                                                                                 
+motivoDocumento,                                                                                                                        
+tipoDocumentoReferenciaPrincip,                                                                                                                                      
+numeroDocumentoReferenciaPrinc,                                                                   
+codigoAuxiliar100_4,                                                                                           
+textoAuxiliar100_4,                                     
+--                                                                                                                              
+codigoAuxiliar100_1,                                                                    
+textoAuxiliar100_1,                                                                             
+codigoAuxiliar100_2,                                                                                                                      
+textoAuxiliar100_2,                                                                                                  
+codigoAuxiliar100_3,                                                                                                                                 
+textoAuxiliar100_3,                                                                                                                                
+codigoAuxiliar100_5,                                                                                                                
+textoAuxiliar100_5,                                              
+codigoAuxiliar100_6,                                                                                                                              
+textoAuxiliar100_6,                                 
+codigoAuxiliar100_7,                                                                                                               
+textoAuxiliar100_7,                                
+codigoAuxiliar100_8,                                                                          
+textoAuxiliar100_8,                                                                                                                                
+codigoAuxiliar100_9,                                                            
+textoAuxiliar100_9,                                 
+codigoAuxiliar100_10,                                                               
+textoAuxiliar100_10,                                                                                                                                
+codigoAuxiliar40_1,                                                                                    
+textoAuxiliar40_1,                                                               
+codigoAuxiliar40_2,                                                                                                                                      
+textoAuxiliar40_2,                                                                                                                             
+codigoAuxiliar40_3,                                                                     
+textoAuxiliar40_3,                                                                                                                                
+codigoAuxiliar40_4,                                                                                  
+textoAuxiliar40_4,                                                  
+codigoAuxiliar40_5,                      
+textoAuxiliar40_5,                                                                                                                                
+codigoAuxiliar40_6,                                                                             
+textoAuxiliar40_6,                                                                                                                                
+codigoAuxiliar40_7,                                                                                               
+textoAuxiliar40_7,                                                                                                                              
+codigoAuxiliar40_8,                                      
+textoAuxiliar40_8,                                                                                                                            
+codigoAuxiliar40_9,                                                                                                                                      
+textoAuxiliar40_9,                                                                        
+codigoAuxiliar40_11,                                                      
+textoAuxiliar40_11,                                                                                                 
+codigoAuxiliar40_12,                                                 
+textoAuxiliar40_12,                                                                                   
+codigoAuxiliar250_1,                                                                                                                                      
+textoAuxiliar250_1,                                                                                                            
+codigoAuxiliar250_2,                                                  
+textoAuxiliar250_2                                     
+,tipoReferenciaAdicional_1                                                  
+,numeroDocumentoRefeAdicional_1                                                  
+)                                                                                               
+                                                                                            
+Select                                   
+                      
+'6'   as 'tipoDocumentoEmisor',-- Siempre es 6, RUC                                                                                                                                                
+                                                           
+e.Ruc  as 'numeroDocumentoEmisor',                                                                                                                                                
+                                                                                                  
+td.FAC01FETIPDOC  as 'tipoDocumento',                             
+                                                                       
+fc.FAC04NUMDOC     as 'serieNumero',                                
+                                             
+Isnull(e.CorreoFacturaElectonica,'-') as 'correoEmisor',                                                                                                                                                
+                                  
+(Case when Isnull(Cliente.ccm02CorreoFacturaElectronica,'')='' then '-' else Cliente.ccm02CorreoFacturaElectronica end) as 'correoAdquiriente',                                                                                                         
+                                                                                                          
+Isnull(e.Nombre,'') as 'razonSocialEmisor',                                                                                                                      
+                                                                                                                                      
+'-' as 'nombreComercialEmisor',                                                                                                                                                
+                       
+dbo.FECHAFORMATEADAANIOMESDIATEXTO(fc.FAC04FECHA) as 'fechaEmision',                                                                                                                                             
+                                                                                                                                      
+-- ===                                          
+(Isnull(e.DepartamentoCod,'') + Isnull(e.ProvinciaCod,'') + Isnull(e.DistritoCod,'')) as 'ubigeoEmisor',                                                                                             
+Isnull(e.Direccion,'') as 'direccionEmisor',                                                                                           
+isnull(e.urbanizacion,'') as 'urbanizacion',                                                                                                                                                
+Isnull(ProvinciaEmi.Descripcion,'') as 'provinciaEmisor',                                                                                                                                                
+Isnull(DepartamentoEmi.Descripcion,'') as  'departamentoEmisor',                                                                                                                         
+Isnull(DistritoEmi.Descripcion,'') as 'distritoEmisor',                                                                                                      
+'PE' as 'paisEmisor', --valor indicado PDF [[BIZLINKS_PROD21]-PROD]                                                                                                                                                
+-- ===                                                                            
+Isnull(Cliente.ccm02tipdocidentidad,'') as 'tipoDocumentoAdquiriente',                                                                                                                                                
+Isnull(fc.FAC04CLIRUC,'') as 'numeroDocumentoAdquiriente',                                            
+Isnull(fc.FAC04CLINOMBRE,'') as 'razonSocialAdquiriente',                                                                                                                                                
+ -- ====                                                                                               
+Isnull(moneda.FAC54FEMONEDACOD,'')  as 'tipoMoneda',                                                                                                                  
+                                    
+-- ==== Insertra Campos Mandatorios                        
+Convert(varchar(15),Convert(DECIMAL(12,2),                                                                      
+(Isnull(FAC04FETOTALGRAVADA,0)  + Isnull(FAC04FETOTALNOGRAVADA,0) +                                                                       
+Isnull(FAC04FETOTALEXONERADA,0) + Isnull(FAC04FETOTALGRATUITA,0) +  Isnull(FAC04FETOTALEXPORTACION,0)                          
+- Isnull(FAC04DESCUENTOGLOBAL,0) --+ Isnull(FAC05FEIMPORTECARGO,0) Ojo deisi no maneja cargos                        
+))) as 'totalValorVenta',                      
+                        
+Convert(varchar(15),Convert(DECIMAL(12,2),                                                                      
+(Isnull(FAC04FETOTALGRAVADA,0)  + Isnull(FAC04FETOTALNOGRAVADA,0) +                                                                       
+Isnull(FAC04FETOTALEXONERADA,0) + Isnull(FAC04FETOTALGRATUITA,0) +  Isnull(FAC04FETOTALEXPORTACION,0)                          
+- Isnull(FAC04DESCUENTOGLOBAL,0) --+ Isnull(FAC05FEIMPORTECARGO,0)                        
++ Isnull(FAC04FETOTALIMPUESTOS,0)                          
+))) as 'totalPrecioVenta',                                                                                                        
+                                 
+                                                                    
+-- ==== Campos Condicionales                                                                        
+(Case when dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE ,'SPE_EINVOICEHEADER','totalValorVentaNetoOpGravadas') is Null then Null                                         
+Else    Convert(varchar(15),Convert(DECIMAL(12,2),Isnull(FAC04FETOTALGRAVADA,0))) end) as 'totalValorVentaNetoOpGravadas',                                                                        
+                                                                        
+(Case when dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE ,'SPE_EINVOICEHEADER','totalValorVentaNetoOpNoGravada') is Null then Null                                                                         
+Else    Convert(varchar(15),Convert(DECIMAL(12,2),Isnull(FAC04FETOTALNOGRAVADA,0))) end) as 'totalValorVentaNetoOpNoGravada',                                             
+                                                                        
+(Case when dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE ,'SPE_EINVOICEHEADER','totalValorVentaNetoOpExoneradas') is Null then Null                                                                         
+Else    Convert(varchar(15),Convert(DECIMAL(12,2),Isnull(FAC04FETOTALEXONERADA,0))) end) as 'totalValorVentaNetoOpExoneradas',                                                                        
+                                                                        
+(Case when dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE ,'SPE_EINVOICEHEADER','totalValorVentaNetoOpGratuitas') is Null then Null                                                                         
+Else    Convert(varchar(18),Convert(DECIMAL(15,2),Isnull(FAC04FETOTALGRATUITA,0))) end) as 'totalValorVentaNetoOpGratuitas',                             
+                                                                        
+(Case when dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE ,'SPE_EINVOICEHEADER','totalValorVentaNetoOpExporta') is Null then Null                                                                         
+Else    Convert(varchar(15),Convert(DECIMAL(12,2),Isnull(FAC04FETOTALEXPORTACION,0))) end) as 'totalValorVentaNetoOpExporta',                                  
+                                                                        
+(Case when dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE ,'SPE_EINVOICEHEADER','descuentosGlobales') is Null then Null                        
+Else    Convert(varchar(15),Convert(DECIMAL(12,2),Isnull(FAC04DESCUENTOGLOBAL,0))) end) as 'descuentosGlobales',                                                                        
+                                                                        
+Convert(varchar(15),Convert(DECIMAL(12,2),Isnull(FAC04IMPIGV,0)))  as 'totalIgv', -- Campo Base                                                           
+Convert(varchar(15),Convert(DECIMAL(12,2),Isnull(FAC04FETOTALIMPUESTOS,0)))  as 'totalImpuestos', -- Campo Base                                                              
+                                                                        
+Convert(varchar(15),Convert(DECIMAL(12,2),                                                                      
+(Isnull(FAC04FETOTALGRAVADA,0)  + Isnull(FAC04FETOTALNOGRAVADA,0) +                                                         
+Isnull(FAC04FETOTALEXONERADA,0) + Isnull(FAC04FETOTALGRATUITA,0) +  Isnull(FAC04FETOTALEXPORTACION,0)  + Isnull(FAC04IMPIGV,0)                                                                      
+))) as 'totalVenta',                                
+            
+(Case When @FormaPagoDetraccion<>'' then '1001' else FAC04FETIPODEOPERACION end) as 'tipoOperacion', -- Cambiar tipo de operacion cuando este afectoa detraccion            
+--FAC04FETIPODEOPERACION as 'tipoOperacion',            
+                   
+convert(char(8), getdate(), 108)as 'horaEmision',  -- Se captura la fecha  que se envia la factura                                                                      
+FAC04FECODIGOANEXOEMISOR as 'codigoLocalAnexoEmisor',                                                                        
+                                                                        
+--                                                                                                      
+'1000' as 'codigoLeyenda_1', --Segun catalogo 15, el codigo monto en letras es 1000                                                                               
+Isnull(FAC04IMPORTELETRAS,'') as 'textoLeyenda_1',                                                                                 
+            
+-- codigoLeyenda_2                                                                                                                                                
+(Case when @FormaPagoDetraccion <>'' then '2006' else            
+  (Case when dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE ,'SPE_EINVOICEHEADER','codigoLeyenda_2') Is Not Null then                                                                                                             
+ dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE ,'SPE_EINVOICEHEADER','codigoLeyenda_2') Else  Null end)             
+  End)            
+ as 'codigoLeyenda_2',                                                               
+--textoLeyenda_2            
+(Case when @FormaPagoDetraccion <>'' then 'Operación sujeta a detracción' else                                                                                  
+(Case when dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE ,'SPE_EINVOICEHEADER','textoLeyenda_2') Is not  Null then                                                   
+ dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE ,'SPE_EINVOICEHEADER','textoLeyenda_2') else  Null end)            
+ end)  as 'textoLeyenda_2',    
+--codigoDetraccion                        
+--Select top 2 * from FAC04_CABFACTURA                        
+(Case when Isnull(FAC04FECODBIENOSERVDETRACCION,'')='' then Null else '0' + ltrim(rtrim(FAC04FECODBIENOSERVDETRACCION)) end) as 'codigoDetraccion',                        
+--totalDetraccion                                                                                                                                      
+(Case when Isnull(FAC04FECODBIENOSERVDETRACCION,'')='' then Null else  Round(Isnull(FAC04FETOTALDETRACCION,0),2) end) as 'totalDetraccion',                        
+--porcentajeDetraccion                        
+(Case when Isnull(FAC04FECODBIENOSERVDETRACCION,'')='' then Null else  Isnull(FAC04FEPORCEDETRACCION,0) end) as 'porcentajeDetraccion',                        
+--numeroCtaBancoNacion                                                                                                                  
+(Case when Isnull(FAC04FECODBIENOSERVDETRACCION,'')='' then Null else  Isnull(e.CtaDetraccionBN,'') end) as 'numeroCtaBancoNacion',                        
+                                                                      
+-- Lugar Destino                                                                 
+                              
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','lugardestino') Is not Null then                                                                                                                                 
+  
+    
+      
+        
+          
+        
+              
+               
+  FAC04FELUGARDESTINO else  Null end) as 'lugardestino',                                                                                                                 
+                                                                                                                                   
+                                                                                                                               
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoSerieNumeroAfectado') Is not  Null then                                                                                                   
+            
+              
+                
+                 
+                    
+                      
+                        
+                        
+                        
+                         
+ Isnull(FAC04FETIPONOTA,'01') else  Null end) as 'codigoSerieNumeroAfectado',                                                                                                                               
+                                                                                                                                  
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','motivoDocumento') Is Not Null then                                                                          
+  Isnull(REPLACE(REPLACE(FAC04TIPMOTEMIDES,CHAR(10),''),CHAR(13),''),'') else  Null end) as 'motivoDocumento',                                                                          
+                                                                              
+                                                          
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','tipoDocumentoReferenciaPrincipal') Is Not Null then                                                                                                              
+ 
+ Isnull(FAC04DOCMODTIPDOC,'') else  Null end) as 'tipoDocumentoReferenciaPrincipal',                                                      
+                                                                                                                                   
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','numeroDocumentoReferenciaPrincipal') is Not Null then                                                                                            
+    
+      
+       
+           
+            
+              
+                
+                  
+ Isnull(FAC04DOCMODNRO,'') else  Null end) as 'numeroDocumentoReferenciaPrincipal',                                                                        
+                                                                                                                   
+-- Campos para Nota Debito          
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_4') is not Null then                                                                                                                          
+  
+   
+                    
+                      
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_4') else  Null end) as 'codigoAuxiliar100_4',                                                                                       
+                          
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar100_4') Is Not Null then                                                                                     
+                     
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar100_4') else Null end) as 'textoAuxiliar100_4',                                                                                                              
+  
+    
+      
+        
+          
+            
+              
+               
+                  
+         
+                                                                      
+-- Campos Adicionales factura exportacion                                             
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_1') is not Null then                                                                                
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_1') else  Null end) as 'codigoAuxiliar100_1',                                                                                                           
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                   
+            
+                        
+                        
+                        
+                         
+                            
+                              
+                                
+                                  
+                                                                                                                                      
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar100_1') Is Not Null then                                                     
+  @PartidaArancelaria else  Null end) as 'textoAuxiliar100_1',                                                                                                                         
+                                           
+                                                                       
+-- Orden Compra                                                                                                                                
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_2') is not Null then                                                                                                
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_2') else  Null end) as 'codigoAuxiliar100_2',                                       
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar100_2') Is Not Null then             
+   (Case When isnull(FAC04ORDENCOMPRA,'')='' then '-' else FAC04ORDENCOMPRA end) else  Null end) as 'textoAuxiliar100_2' ,                                        
+                                                                            
+--Conociemiento de embarque                                                                                                                              
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_3') is not Null then                                                 
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_3') else  Null end) as 'codigoAuxiliar100_3',                                                                                                          
+  
+     
+      
+        
+          
+            
+             
+                 
+                  
+                    
+                      
+                       
+                         
+                        
+                         
+                             
+                              
+                                
+                                 
+                                                                                   
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar100_3') Is Not Null then                                                                                                            
+   (Case When isnull(FAC04EXPCONOEMBARQUE,'')='' then '-' else  FAC04EXPCONOEMBARQUE end) else  Null end) as 'textoAuxiliar100_3',                                                       
+                                                                                                    
+-- Container                            
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_5') is not Null then                                  
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_5') else  Null end) as 'codigoAuxiliar100_5',                                                                                                           
+  
+    
+      
+        
+          
+            
+              
+                
+                 
+                     
+                      
+                        
+                        
+                        
+                          
+                            
+                                 
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar100_5') Is Not Null then                                                                                        
+   --isnull((Select isnull(FAC51DESCRIPCION,'')  From FAC51_PAISES  Where FAC51CODPAIS = fc.FAC04EXPCODPAISORIGEN)   ,'-')                                                                                                                             
+   (Case When isnull(FAC04EXPNROCONTAINER,'')='' then '-' else FAC04EXPNROCONTAINER end)                             
+   else  Null end) as 'textoAuxiliar100_5',                                                                                                  
+                                                                                                                               
+-- Precinto                                                                              
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_6') is not Null then                                                                                                   
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_6') else  Null end) as 'codigoAuxiliar100_6',                                                                                                   
+                                                                                               
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar100_6') Is Not Null then                                                                                       
+   --isnull((Select Isnull(FAC51DESCRIPCION,'')  From FAC51_PAISES  Where FAC51CODPAIS = fc.FAC04EXPCODPAISDESTINO),'-')                                           
+ (Case When isnull(FAC04EXPNROPRECINTO,'')='' then '-' else FAC04EXPNROPRECINTO end )                            
+   else  Null end) as 'textoAuxiliar100_6',                                                                                          
+                                                     
+-- Condicion de pago                                                                                                                       
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_7') is not Null then                                                                                                                           
+ 
+    
+dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_7') else  Null end) as 'codigoAuxiliar100_7',                                                                             
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar100_7') Is Not Null then                                                                                                                            
+  
+   
+       
+        
+          
+            
+              
+                
+                  
+                   
+                      
+   isnull((Select ISnull(FAC53DESCEEUU,'')  From FAC53_FORMAPAGO Where  FAC53COD = fc.FAC04EXPCODCONDPAGO),'-')                                                
+   else  Null end) as 'textoAuxiliar100_7',                                                                                                                              
+                                                                                                      
+-- Condiciones de despacho                                                                                                                                
+  (Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_8') is not Null then                                                                                                                  
+dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_8') else  Null end) as 'codigoAuxiliar100_8',                                                                                                             
+  
+    
+      
+        
+          
+                            
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar100_8') Is Not Null then                                                                              
+ isnull((Select Isnull(glo01descripcion,'-')  From GLO01TABLAS   Where  glo01codigotabla ='23' and glo01codigo=fc.FAC04EXPCODCONDDESPACHO),'-')                                                                                                                
+  
+    
+      
+        
+          
+            
+             
+   else  Null end) as 'textoAuxiliar100_8',                                                                                                                              
+                                                                                             -- Puerto de embarque                     
+   (Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_9') is not Null then                                                                           
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_9') else  Null end) as 'codigoAuxiliar100_9',                                   
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar100_9') Is Not Null then                                          
+ Isnull((Select Isnull(FAC52DESCRIPCION,'-')  From FAC52_PUERTOS Where  FAC52CODPUERTO = fc.FAC04EXPCODPUERTO),'-')                                                                                                                   
+   else  Null end) as 'textoAuxiliar100_9',                                                                                                              
+                                                                                    
+-- Fecha Orden Compra                                                                                                                       
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_10') is not Null then                                                                                                                          
+  
+    
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar100_10') else  Null end) as 'codigoAuxiliar100_10',                               
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar100_10') Is Not Null then                                                                                                                           
+  
+    
+      
+        
+         
+             
+             
+                
+                   
+                   
+                      
+                        
+                        
+                         
+   (Case When isdate(fc.FAC04FECORDCOMPRA)=1 then dbo.ForFechaaTexto(Convert(datetime,fc.FAC04FECORDCOMPRA,103)) else '-' end)                                                                                                                            
+   else  Null end) as 'textoAuxiliar100_10',                      
+                                                                                                                            
+--Tasa IGV                                                                      
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_1') is not Null then                                                                                                                            
+  
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_1') else  Null end) as 'codigoAuxiliar40_1',                                                                                                             
+  
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar40_1') Is Not Null then                                                             
+(Case When isnull(FAC04IGV,'')='' then '-' else Convert(varchar(15),Isnull(FAC04IGV,0)) End)  else  Null end) as 'textoAuxiliar40_1',                                                                   
+                                                                      
+  --Convert(varchar(15),Convert(DECIMAL(12,2),Isnull(FAC04FETOTALEXPORTACION,0)))                                                                    
+                                                                      
+-- Doc Credito Nro                                      
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_2') is not Null then                                                                                                                            
+  
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_2') else  Null end) as 'codigoAuxiliar40_2',                                             
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar40_2') Is Not Null then                                                                                                                            
+   
+    
+      
+       
+          
+             
+              
+               
+                  
+   (Case When isnull(FAC04EXPCDDOCCRED,'')='' then '-' else FAC04EXPCDDOCCRED End)  else  Null end) as 'textoAuxiliar40_2',                            
+                                                                      
+--  Lc emitida / issued                                                                                
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_3') is not Null then                                                                                                                            
+  
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_3') else  Null end) as 'codigoAuxiliar40_3',                                                                                                             
+  
+    
+      
+        
+          
+            
+              
+                
+                 
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar40_3') Is Not Null then                                                                                                        
+   (Case When isnull(FAC04EXPLCEMITIDA,'')='' then '-' else FAC04EXPLCEMITIDA end) else  Null end) as 'textoAuxiliar40_3',                                                                                                                     
+-- Bank code                                                                                       
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_4') is not Null then                                                         
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_4') else  Null end) as 'codigoAuxiliar40_4',                                                                                                             
+  
+    
+      
+        
+          
+            
+              
+                
+                 
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar40_4') Is Not Null then                  
+   (Case When isnull(FAC04EXPBANKCODE,'')='' then '-' else FAC04EXPBANKCODE end) else  Null end) as 'textoAuxiliar40_4',                                                            
+                                                               
+-- Account Number                                                                                                       
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_5') is not Null then                                                                                                                            
+  
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_5') else  Null end) as 'codigoAuxiliar40_5',                                                                                                             
+  
+    
+     
+         
+          
+            
+              
+               
+          (Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar40_5') Is Not Null then                                                                                                                   
+  
+    
+      
+        
+         
+   (Case When isnull(FAC04EXPNUMCUENTA,'')='' then '-' else FAC04EXPNUMCUENTA end) else  Null end) as 'textoAuxiliar40_5',                                            
+                                                                                                                    
+-- Pais Origen                                   
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_6') is not Null then                                                   
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_6') else  Null end) as 'codigoAuxiliar40_6',                                                                                                            
+   
+    
+      
+        
+         
+             
+              
+                
+                 
+                              
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar40_6') Is Not Null then                                                   
+   isnull((Select isnull(FAC51DESCRIPCION,'')  From FAC51_PAISES  Where FAC51CODPAIS = fc.FAC04EXPCODPAISORIGEN)   ,'-')                                    
+   else  Null end) as 'textoAuxiliar40_6',                                                                                
+                            
+-- Pais Destino                                                                                                                              
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_7') is not Null then                                                                                                       
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_7') else  Null end) as 'codigoAuxiliar40_7',                                                                           
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar40_7') Is Not Null then                                                                                                                             
+ 
+   isnull((Select Isnull(FAC51DESCRIPCION,'')  From FAC51_PAISES  Where FAC51CODPAIS = fc.FAC04EXPCODPAISDESTINO),'-')                                                                                                                             
+   else  Null end) as 'textoAuxiliar40_7',                                                                                                                              
+                                                             
+-- Peso Aduana                                                                                                                                 
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_8') is not Null then                                                                                         
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_8') else  Null end) as 'codigoAuxiliar40_8',                                                                                            
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar40_8') Is Not Null then                                                                                                                           
+   isnull(FAC04TOTALPESOADUANA,'-') else  Null end) as 'textoAuxiliar40_8',                                                                                                                            
+                                                                                                                 
+-- Nro Cajas                                                           
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_9') is not Null then                                                                     
+   
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_9') else  Null end) as 'codigoAuxiliar40_9',                                                                                                            
+  
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar40_9') Is Not Null then                                                  
+   isnull(FAC04TOTALCAJAS,'-') else  Null end) as 'textoAuxiliar40_9',                                                                                      
+                                                                      
+-- Libre , la guia se pado al 250_2                                                      
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_11') is not Null then                                                                               
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_11') else  Null end) as 'codigoAuxiliar40_11',                                                                                                           
+ 
+     
+      
+       
+          
+            
+              
+                                                                            
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar40_11') Is Not Null then                                             
+(Case When isnull(FAC04GUIAS,'')='' then '-' else Isnull(REPLACE(REPLACE(FAC04GUIAS,CHAR(10),''),CHAR(13),''),'') end) else  Null end) as 'textoAuxiliar40_11',                                                                                                
+            
+                                                     
+-- Nro Liquidaacio             
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_12') is not Null then                                                                                                                        
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar40_12') else  Null end) as 'codigoAuxiliar40_12',                                                                                               
+                       
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar40_12') Is Not Null then                                                                                                                        
+   (Case When isnull(FAC04LIQUIDACIONNRO,'')='' then '-' else FAC04LIQUIDACIONNRO end) else  Null end) as 'textoAuxiliar40_12',                       
+                                                                                                       
+                                                                   
+                                                                                                             
+-- Observaciones                                                           
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar250_1') is not Null then                                                                                                                        
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar250_1') else  Null end) as 'codigoAuxiliar250_1',                                                                                                           
+  
+   
+      
+         
+          
+            
+              
+               
+                   
+                   
+                       
+                       
+                        
+                        
+                          
+                            
+                                                                              
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar250_1') Is Not Null then                                       
+   (Case When REPLACE(REPLACE(isnull(FAC04GLOSA,''),CHAR(10),''),CHAR(13),'')='' then '-' else FAC04GLOSA end) else  Null end) as 'textoAuxiliar250_1',                                                      
+                                        
+-- GUIA                                                    
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar250_2') is not Null then                                                      
+  dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','codigoAuxiliar250_2') else  Null end) as 'codigoAuxiliar250_2',               
+                                                                                  
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEHEADER','textoAuxiliar250_2') Is Not Null then                                                      
+   (Case When REPLACE(REPLACE(isnull(FAC04GUIAS,''),CHAR(10),''),CHAR(13),'')='' then '-' else REPLACE(REPLACE(isnull(FAC04GUIAS,''),CHAR(10),''),CHAR(13),'') end) else  Null end) as 'textoAuxiliar250_2'                            
+                                                 
+-- Por indicaciones de Bizlinks, si Motivo NC = 10, especificar 99                                                   
+,(Case when Isnull(FAC04FETIPONOTA,'') = '10'  then '99' else  Null end) as 'tipoReferenciaAdicional_1'                                                  
+,(Case when Isnull(FAC04FETIPONOTA,'') = '10'  then '99' else  Null end) as 'numeroDocumentoRefeAdicional_1'                                                  
+                                                    
+                                                      
+From FAC04_CABFACTURA fc                                                                                                                                                 
+                            
+-- == Amarra con empresa                                                                                                                                        
+                                                                                                                                      
+Inner Join empresa  e On                                                                                                                                                 
+                                                                                                                            
+Codigo = FAC04CODEMP                                                                                                                              
+                                                                                           
+And Sistema ='VENTAS'                                                                 
+                                                             
+-- Amarre a la plantilla                                                                                                                                                
+                                                                                                         
+Inner Join FAC03_SUBPLANTILLA Subplantilla On                                                                                                                            
+                                                                    
+fc.FAC04CODEMP = Subplantilla.FAC03CODEMP                                                                                                                                 
+                                                                                                                        
+And fc.FAC01COD = Subplantilla.FAC01COD                                                                        
+                                                                                                                                      
+And fc.FAC03COD = Subplantilla.FAC03COD                                                                                                                             
+                                                                                                               
+-- == Amarrar con Tipo Documento                                                                                                                                                
+                                                           
+Inner Join  FAC01_TIPDOC td On                                                                  
+                                                                                                             
+fc.FAC04CODEMP = td.FAC01CODEMP                                                                                        
+                                                                                                                       
+And fc.FAC01COD = td.FAC01COD                             
+                                                                                                                                      
+-- == Amarrar con cliente                                                                                                     
+                                                                                
+Inner join ccm02cta cliente On                                                                          
+                                                                              
+fc.FAC04CODEMP = cliente.ccm02emp                                                                          
+                                                                                                                                      
+And fc.FAC04TIPANA = cliente.ccm02tipana                                                                                              
+                                                                                                                                      
+And fc.FAC04CODCLI = cliente.ccm02cod                                                                                                                                                
+                                                                                                                            
+-- Amarre Departamento Emisor                                                                                                                        
+Left Join departamento DepartamentoEmi On                                                                    
+e.DepartamentoCod = DepartamentoEmi.CodigoDepartamento                                                                                                   
+-- Amarre Provincia Emisor                                                                                                                                   
+Left Join Provincia ProvinciaEmi On                                       
+e.DepartamentoCod  = ProvinciaEmi.CodigoDepartamento                                                                                                             
+And e.ProvinciaCod = ProvinciaEmi.CodigoProvincia                                                                                                              
+-- Amaree Distrito Emisor                                                                                                                                
+Left Join Distrito DistritoEmi On                                                                                                                         
+e.DepartamentoCod  = DistritoEmi.CodigoDepartamento                                                                                           
+And e.ProvinciaCod = DistritoEmi.CodigoProvincia                             
+And e.DistritoCod  = DistritoEmi.CodigoDistrito                                                                    
+-- Amarre Moneda                                                                                                                              
+                                         
+Inner Join FAC54_MONEDA Moneda On                                                                                                                                                
+                                                                                                                                      
+fc.FAC04MONEDA = Moneda.FAC54CODIGO                                                                                                                                                
+-- Amarre Puerto Embarque                                                                                                                   
+                                                 
+Where                                                                                        
+                                                                                                                                      
+fc.FAC04CODEMP=@FAC04CODEMP                                         
+                                                                                                              
+And fc.FAC01COD=@FAC01COD                                                                                                                                           
+                                                                                                        
+And fc.FAC04NUMDOC=@FAC04NUMDOC                                                                           
+                                                                                                                                      
+                                                                   
+                                                                                                  
+IF @@ERROR <>0                                                                                                                                                                                                                         
+   BEGIN                                                                                                    
+                                                                                                                                      
+ Set @msgretorno='ERROR :: INESPERADO AL INSERTAR CABECERA'                                                                                                                                      
+                                                                                                                                      
+ GOTO Manejaerror                                                                           
+                                                                                       
+   END                                                                                                                 
+-- ======== Insertar Adicionles de cabecera ===============================                                                                                                                 
+                                                               
+-- ========================================================================                                                                                                                                 
+                                                                                              
+                                                                               
+                                                                                
+                                                
+                                                                                                                                      
+-- === Traer los campos Adicionales                                                                          
+If @FAC01COD in ('01','07','08') --Si es factura NC o ND                         
+                                                                                                           
+ begin                                                                                            
+                                                                                                                   
+  Set @ubigeoAdquiriente = (Case When @ubigeoAdquiriente='' then '-' else @ubigeoAdquiriente end)                                                                                             
+  Insert Into [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER_ADD(tipoDocumentoEmisor,numeroDocumentoEmisor,tipoDocumento,serieNumero,clave,Valor)                                                                                                                   
+  
+    
+      
+        
+          
+            
+              
+                
+                 
+  Values (@tipoDocumentoEmisor,@numeroDocumentoEmisor,@tipoDocumento,@serieNumero,'ubigeoAdquiriente',@ubigeoAdquiriente)                              
+                                                          
+  IF @@ERROR <>0  BEGIN  Set @msgretorno='ERROR :: INESPERADO CABECERA ADD'  GOTO Manejaerror  END                                                                        
+                                                                                                 
+                                                                                                                                              
+                                                                                                                                 
+  Insert Into [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER_ADD(tipoDocumentoEmisor,numeroDocumentoEmisor,tipoDocumento,serieNumero,clave,Valor)                                                                                                                    
+  
+                        
+                         
+                        
+                         
+                             
+                                                                                                                             
+  Values (@tipoDocumentoEmisor,@numeroDocumentoEmisor,@tipoDocumento,@serieNumero,'direccionAdquiriente',@direccionAdquiriente)                                
+                                                        
+                                                                                              
+   IF @@ERROR <>0  BEGIN  Set @msgretorno='ERROR :: INESPERADO CABECERA ADD'  GOTO Manejaerror  END                                                                                                               
+                                                                                                         
+ Insert Into [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER_ADD(tipoDocumentoEmisor,numeroDocumentoEmisor,tipoDocumento,serieNumero,clave,Valor)                                                                                                                     
+  
+    
+      
+        
+          
+           
+               
+                
+                 
+                    
+                       
+                        
+                         
+                        
+                         
+                        
+                                                                                                                                      
+  Values (@tipoDocumentoEmisor,@numeroDocumentoEmisor,@tipoDocumento,@serieNumero,'departamentoAdquiriente',@departamentoAdquiriente)                                                           
+                                            
+                                                                                                                                      
+   IF @@ERROR <>0  BEGIN  Set @msgretorno='ERROR :: INESPERADO CABECERA ADD'  GOTO Manejaerror  END                                                                                                      
+                                                                                                                                      
+  Insert Into [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER_ADD(tipoDocumentoEmisor,numeroDocumentoEmisor,tipoDocumento,serieNumero,clave,Valor)                                                                                            
+                                Values (@tipoDocumentoEmisor,@numeroDocumentoEmisor,@tipoDocumento,@serieNumero,'provinciaAdquiriente',@provinciaAdquiriente)                                                                                                  
+  
+    
+      
+        
+          
+            
+             
+                 
+                  
+                    
+                      
+                        
+                         
+                         
+                          
+                            
+                                                                               
+   IF @@ERROR <>0  BEGIN  Set @msgretorno='ERROR :: INESPERADO CABECERA ADD'  GOTO Manejaerror  END                                                                                                                                                      
+      
+                                                                                                                                      
+  Insert Into [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER_ADD(tipoDocumentoEmisor,numeroDocumentoEmisor,tipoDocumento,serieNumero,clave,Valor)                                                                                                                    
+                                                               
+  Values (@tipoDocumentoEmisor,@numeroDocumentoEmisor,@tipoDocumento,@serieNumero,'distritoAdquiriente',@distritoAdquiriente)                                                                                                      
+                                                                                                                              
+   IF @@ERROR <>0  BEGIN  Set @msgretorno='ERROR :: INESPERADO CABECERA ADD'  GOTO Manejaerror  END                                                                                                                                                            
+ 
+     
+      
+                                                                                   
+                                                                                                         
+                                                                                                                                      
+  Insert Into [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER_ADD(tipoDocumentoEmisor,numeroDocumentoEmisor,tipoDocumento,                               
+  serieNumero,clave,Valor)                                                             
+  Values (@tipoDocumentoEmisor,@numeroDocumentoEmisor,@tipoDocumento,@serieNumero,'paisAdquiriente',@paisAdquiriente)                                                                                                                        
+                                                                                                                                 
+   IF @@ERROR <>0  BEGIN  Set @msgretorno='ERROR :: INESPERADO CABECERA ADD'  GOTO Manejaerror  END                                                                          
+                                                                                                                                      
+  Insert Into [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER_ADD(tipoDocumentoEmisor,numeroDocumentoEmisor,tipoDocumento,serieNumero,clave,Valor)                                                                                                           
+  Values (@tipoDocumentoEmisor,@numeroDocumentoEmisor,@tipoDocumento,@serieNumero,'urbanizacionAdquiriente',@urbanizacionAdquiriente)                                                                                                                          
+  
+    
+     
+         
+          
+           
+   IF @@ERROR <>0  BEGIN  Set @msgretorno='ERROR :: INESPERADO CABECERA ADD'  GOTO Manejaerror  END                                                                                                                    
+              
+ -- Inserta Forma pago detraccion , si existe              
+ If @FormaPagoDetraccion<>'' --Insertar forma de pago solo si existe                        
+ Begin                        
+  Insert Into [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER_ADD(tipoDocumentoEmisor,numeroDocumentoEmisor,tipoDocumento,serieNumero,clave,Valor)                                                                                                           
+  Values (@tipoDocumentoEmisor,@numeroDocumentoEmisor,@tipoDocumento,@serieNumero,'formaPago',@FormaPagoDetraccion)                                                                                                                                     
+  IF @@ERROR <>0  BEGIN  Set @msgretorno='ERROR :: AL INSERTAR FORMAPAGO DETRACCION EN CABECERA ADD '  GOTO Manejaerror  END                                                            
+ End              
+                          
+ -- Inserta Orden de Compra                        
+ If @ordenCompra<>'' --Insertar Orden de compra solo si existe                        
+ Begin                        
+  Insert Into [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER_ADD(tipoDocumentoEmisor,numeroDocumentoEmisor,tipoDocumento,serieNumero,clave,Valor)                                                                                                           
+  Values (@tipoDocumentoEmisor,@numeroDocumentoEmisor,@tipoDocumento,@serieNumero,'ordenCompra',@ordenCompra)                                                                                                                                     
+  IF @@ERROR <>0  BEGIN  Set @msgretorno='ERROR :: AL INSERTAR ORDEN DE COMPRA EN CABECERA ADD '  GOTO Manejaerror  END                                                                                                    
+ End                                                                                                                         
+                         
+                         
+ -- Insertra Forma de pago negocociable                          
+  Insert Into [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER_ADD(tipoDocumentoEmisor,numeroDocumentoEmisor,tipoDocumento,serieNumero,clave,Valor)                                                                                                           
+  Values (@tipoDocumentoEmisor,@numeroDocumentoEmisor,@tipoDocumento,@serieNumero,'formaPagoNegociable',@FormaPagoNegociable)                                                                                                                                  
+ 
+    
+   IF @@ERROR <>0  BEGIN  Set @msgretorno='ERROR :: INESPERADO CABECERA ADD FORMA PAGO NEGOCIABLE'  GOTO Manejaerror  END                                                                                  
+                         
+-- Insertar Coutas si es a credito                           
+ If @FormaPagoNegociable='1'                          
+ Begin                          
+                           
+    -- ==== Insertar Monto Pago Pendiente                          
+    Insert Into [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER_ADD(tipoDocumentoEmisor,numeroDocumentoEmisor,tipoDocumento,serieNumero,clave,Valor)                          
+    Values (@tipoDocumentoEmisor,@numeroDocumentoEmisor,@tipoDocumento,@serieNumero,'montoNetoPendiente',Convert(varchar(15),Convert(DECIMAL(12,2),@montoNetoPendiente)))                   
+                        
+    -- ====Insertar Cuotas  ====                          
+    -- =========================                          
+    Declare @FAC12CUOTANRO int                          
+    Declare @FAC12FECHA varchar(10)                          
+    Declare @FAC12IMPORTECUOTANETO float                        
+                        
+    Declare @montoPagoCuota_clave varchar(30)                          
+    Declare @fechaPagoCuota_clave varchar(30)                          
+                          
+                              
+                          
+    DECLARE vendor_cursor CURSOR FOR                             
+    SELECT FAC12CUOTANRO, dbo.FECHAFORMATEADAANIOMESDIATEXTO(FAC12FECHA),      
+    (isnull(FAC12IMPORTEBASE,0)+isnull(FAC12IMPORTEIGV,0) -isnull(FAC12IMPORTEDETRACCION,0)-      
+ isnull(FAC12IMPORTERETENCION,0)-isnull(FAC12IMPORTEOTROSDCTOS,0)) as FAC12IMPORTECUOTANETO      
+    FROM FAC12_FACTURACUOTAS  where                            
+    FAC12CODEMP=@FAC04CODEMP and  FAC12COD=@FAC01COD and  FAC12NUMDOC=@FAC04NUMDOC order by FAC12CUOTANRO                          
+                               
+    OPEN vendor_cursor                            
+    FETCH NEXT FROM vendor_cursor                             
+    INTO @FAC12CUOTANRO, @FAC12FECHA,@FAC12IMPORTECUOTANETO      
+                                
+    WHILE @@FETCH_STATUS = 0                            
+    BEGIN                            
+      Set @montoPagoCuota_clave = 'montoPagoCuota' + Convert(varchar(5),@FAC12CUOTANRO)                          
+      Set @fechaPagoCuota_clave = 'fechaPagoCuota' + Convert(varchar(5),@FAC12CUOTANRO)                          
+      --Select '@FAC12CUOTANRO', @FAC12CUOTANRO                          
+                                    
+      Insert Into [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER_ADD(tipoDocumentoEmisor,numeroDocumentoEmisor,tipoDocumento,serieNumero,clave,Valor)                          
+      Values (@tipoDocumentoEmisor,@numeroDocumentoEmisor,@tipoDocumento,@serieNumero,@montoPagoCuota_clave,Convert(varchar(15),Convert(DECIMAL(12,2),@FAC12IMPORTECUOTANETO)))                  
+                        
+      --Select  @montoPagoCuota_clave,@FAC12IMPORTEBASE                          
+      Insert Into [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER_ADD(tipoDocumentoEmisor,numeroDocumentoEmisor,tipoDocumento,serieNumero,clave,Valor)                          
+      Values (@tipoDocumentoEmisor,@numeroDocumentoEmisor,@tipoDocumento,@serieNumero,@fechaPagoCuota_clave,@FAC12FECHA)                          
+      --Select @fechaPagoCuota_clave,@FAC12FECHA                          
+                                  
+     -- Get the next vendor.                            
+   FETCH NEXT FROM vendor_cursor                             
+     INTO @FAC12CUOTANRO, @FAC12FECHA,@FAC12IMPORTECUOTANETO      
+    END                             
+    CLOSE vendor_cursor;                            
+    DEALLOCATE vendor_cursor;                          
+  End                                 
+ End                                     
+                                                                      
+                                                                                                     
+-- ================ Insertar Detalle de Factura ========================                                                              
+Insert into [BIZLINKS_PROD21].dbo.SPE_EINVOICEDETAIL(                                                                
+tipoDocumentoEmisor,                                                                        
+numeroDocumentoEmisor,                                                                        
+tipoDocumento,                                                                        
+serieNumero,                                                                        
+numeroOrdenItem,                                                                        
+codigoProducto,                                     
+codigoProductoSUNAT,                                                                        
+descripcion,                                                                        
+cantidad,                             
+unidadMedida,                                                                        
+-- ===                                                                        
+importeTotalSinImpuesto,        importeUnitarioSinImpuesto,                                                                        
+importeUnitarioConImpuesto,                          
+codigoImporteUnitarioConImpues,                                                                        
+montoBaseIgv,                                                                        
+tasaIGV,                                                              
+importeIgv,                                                                        
+importeTotalImpuestos,                                                                        
+ --===                                                                     
+ImporteBaseDescuento,                                                          
+factorDescuento,                                                          
+importeDescuento,                                                          
+                                                          
+importeCargo,                                                                        
+codigoRazonExoneracion,                                                                        
+codigoImporteReferencial,         
+importeReferencial,                                                                        
+-- ==                                   
+codigoAuxiliar100_5,                             
+textoAuxiliar100_5,                                                                        
+codigoAuxiliar100_6,                                                                        
+textoAuxiliar100_6,                                                         
+codigoAuxiliar100_1,                                                                        
+textoAuxiliar100_1                                                                        
+)                                                                
+-- ===                                                                                                                                               
+Select                                                                                        
+'6'  as 'tipoDocumentoEmisor',                                                                                                                                                
+e.Ruc as 'numeroDocumentoEmisor',                                                                                       
+td.FAC01FETIPDOC as 'tipoDocumento',                                                                                                                                                
+fd.FAC04NUMDOC  as 'serieNumero',                                                                                    
+fd.FAC05CODFACDET as 'numeroOrdenItem',                   
+(Case when Isnull(fd.FAC05CODPROD,'-')='.' then '-' else  fd.FAC05CODPROD end) as 'codigoProducto',                                                                        
+Isnull(FAC05FECODPRODSUNAT,'') + '00' as 'codigoProductoSUNAT',  -- Como se esta mandando a nivel de clase (6 digitos) , se completa con 00 para que quede nivel de prodycto (8 digitos)                                                                
+                                                                
+REPLACE(REPLACE(fd.FAC05DESCPROD,CHAR(10),''),CHAR(13),'') as 'descripcion',                         
+Convert(varchar(25),Convert(DECIMAL(12,2),Isnull(fd.FAC05CANTIDAD,0))) as 'cantidad',                                                                        
+(Case When Isnull(FAC05FEPRODUCTOTIPO,'P') ='P' then 'NIU' else 'ZZ' end) as 'unidadMedida',                                                                        
+-- ==== Montos Base ===                                                                        
+Convert(varchar(15),Convert(DECIMAL(12,2),Isnull(FAC05SUBTOTAL,0))) as 'importeTotalSinImpuesto',                              
+Convert(varchar(23),Convert(DECIMAL(12,6),Isnull(FAC05PRECIO,0))) as 'importeUnitarioSinImpuesto',                    
+--Convert(varchar(23),Convert(DECIMAL(12,6),(Isnull(FAC05SUBTOTAL,0)+Isnull(FAC05IGV,0))/Isnull(fd.FAC05CANTIDAD,0))) as 'importeUnitarioConImpuesto',                    
+Convert(varchar(23),Convert(DECIMAL(12,6),(Isnull(FAC05PRECIO,0) + (Isnull(FAC05PRECIO,0)* (FAC05FEIGVTASA/100))))) as 'importeUnitarioConImpuesto',                    
+                    
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE ,'SPE_EINVOICEDETAIL','codigoImporteUnitarioConImpuesto') is not Null then                                                                        
+dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEDETAIL','codigoImporteUnitarioConImpuesto') else  Null end) as 'codigoImporteUnitarioConImpuesto',                                                                        
+--Convert(varchar(15),Convert(DECIMAL(12,2),(Case When Isnull(FAC05IGV,0)<>0 then Isnull(FAC05SUBTOTAL,0) else 0 end))) as 'montoBaseIgv',                                                                        
+-- Segun ultimo cambio indicado por cooreo 01/07/2022                                            
+Convert(varchar(15),Convert(DECIMAL(12,2),(Isnull(FAC05SUBTOTAL,0) - Isnull(FAC05FEIMPORTECARGO,0)))) as 'montoBaseIgv',                                             
+                                            
+Convert(varchar(9),Convert(DECIMAL(9,5),Isnull(FAC05FEIGVTASA,0))) as 'tasaIGV',                                                                        
+Convert(varchar(15),Convert(DECIMAL(12,2),Isnull(FAC05IGV,0))) as 'importeIgv',                                         
+Convert(varchar(15),Convert(DECIMAL(12,2),Isnull(FAC05IGV,0))) as 'importeTotalImpuestos',  -- Como solo tenemos IGV el importe total impuestos = Suma IGV                                                                        
+Convert(varchar(15),Convert(DECIMAL(12,2),(Case when Isnull(FAC05FEIMPDSCTO,0)>0 then (Isnull(FAC05SUBTOTAL,0) + Isnull(FAC05FEIMPDSCTO,0)) else Null end))) as 'ImporteBaseDescuento',                                                           
+Convert(varchar(15),Convert(DECIMAL(8,5),(Case when Isnull(FAC05FEIMPDSCTO,0)>0 then round((Isnull(FAC05FEIMPDSCTO,0)/(Isnull(FAC05SUBTOTAL,0) + Isnull(FAC05FEIMPDSCTO,0))),5) else Null end))) as 'factorDescuento',                                        
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+Convert(varchar(15),Convert(DECIMAL(12,2),Isnull(FAC05FEIMPDSCTO,0))) as 'importeDescuento', -- Colocar 0, de no existir                                                         
+Isnull(FAC05FEIMPORTECARGO,0) as 'importeCargo', -- Colocar 0, de no existir                                                                        
+-- ==== Montos Opcionales ===                               
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE ,'SPE_EINVOICEDETAIL','codigoRazonExoneracion') is not Null then                                                                                                         
+ dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEDETAIL','codigoRazonExoneracion') else  '' end) as 'codigoRazonExoneracion',                                                                 
+ (Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEDETAIL','codigoImporteReferencial') is not Null then                                                           
+ dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEDETAIL','codigoImporteReferencial') else  Null end) as 'codigoImporteReferencial',         
+(Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEDETAIL','importeReferencial') is not Null then                                                                        
+fd.FAC05FEIMPORTEREFERENCIAL else  Null end) as 'importeReferencial',                              
+                                                                                    
+-- Unidad Medida                                                                                                                                 
+   (Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEDETAIL','codigoAuxiliar100_5') is not Null then                                                                                         
+   dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEDETAIL','codigoAuxiliar100_5') else  Null end)                                                                                   
+   as 'codigoAuxiliar100_5',                                                                                                                              
+                                                                                                                          
+   (Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEDETAIL','textoAuxiliar100_5') Is Not Null then                                                                                                      
+   (Case When Isnull(FAC05UNIMED,'')='' then '-' else FAC05UNIMED end)                                                                                                          
+   else  Null end) as 'textoAuxiliar100_5',                                                                
+                                                                                               
+-- Cantidad Cajas                                                                        
+   (Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEDETAIL','codigoAuxiliar100_6') is not Null then                                                                 
+   dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEDETAIL','codigoAuxiliar100_6') else  Null end)                                                                                   
+   as 'codigoAuxiliar100_6',                                                                         
+                                                                                                                          
+   (Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEDETAIL','textoAuxiliar100_6') Is Not Null then                                                                                                                        
+  
+     
+      
+        
+          
+            
+             
+                 
+                 
+                    
+                       
+                       
+                        
+                         
+   (Case When Isnull(FAC05NROCAJA,0)=0 then 0 else FAC05NROCAJA end)                                                                                                                          
+ else  Null end) as 'textoAuxiliar100_6',                                                  
+                                                                                   
+  -- Codigo Producto Sunat                                                                                                
+   (Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEDETAIL','codigoAuxiliar100_1') is not Null then                                                                                                              
+   dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEDETAIL','codigoAuxiliar100_1') else  Null end)                                                       
+   as 'codigoAuxiliar100_1',                                                        
+   -- Nota : se esta poniendo en duro codigo de producto y servicio                                                                                  
+   (Case When dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEDETAIL','textoAuxiliar100_1') Is Not Null then                                               
+   (Case When Isnull(FAC05FEPRODUCTOTIPO,'P') ='P' then dbo.PlantillaFEValorPorDefecto(Subplantilla.FAC03PLANTILLAFE,'SPE_EINVOICEDETAIL','textoAuxiliar100_1')  else '71101710' end)                                                   
+ else  Null end)            
+    as 'textoAuxiliar100_1'                                                    
+                                   
+From FAC05_DETFACTURA fd                                                                                                                                                 
+                                     
+Inner Join FAC04_CABFACTURA fc On                                                                                                                 
+                                                   
+ fc.FAC04CODEMP = fd.FAC05CODEMP                                                                     
+                                                                                                                                      
+ And fc.FAC01COD = fd.FAC01COD                                                                                                                                               
+                                                                                                                                      
+ And fc.FAC04NUMDOC = fd.FAC04NUMDOC                                                                                           
+    -- Amarre a la plantilla                                                                                                                             
+                                            
+    Inner Join FAC03_SUBPLANTILLA Subplantilla On                                                                                                                                                 
+                                                                                                                                      
+     fc.FAC04CODEMP = Subplantilla.FAC03CODEMP                                                                                          
+    And fc.FAC01COD = Subplantilla.FAC01COD                                                                                                    
+                                                                                                                                  
+    And fc.FAC03COD = Subplantilla.FAC03COD                           
+                                                                                                                                                 
+                                                                                                     
+Inner Join FAC01_TIPDOC td On                                                                                                              
+                                                                                                                             
+    fd.FAC05CODEMP = td.FAC01CODEMP                                                                                                                   
+                                                                                                                                      
+ And fd.FAC01COD = td.FAC01COD                                                                                                              
+                                                                                 
+Inner Join empresa  e On               
+                                                                          
+ fd.FAC05CODEMP = Codigo                                                                                                                                                
+                                                                                                                                      
+ And Sistema ='VENTAS'                                                                                                                      
+                                                                   
+Where                                                                                                           
+fd.FAC05CODEMP=@FAC04CODEMP                                                               
+And fd.FAC01COD=@FAC01COD                                                                                                                                                
+                                                                        
+And fd.FAC04NUMDOC=@FAC04NUMDOC                                            
+                                                                                                 
+                                                                                                       
+IF @@ERROR <>0                                                     
+                                                                                                                           
+   BEGIN                                                                                                              
+                                               
+   Set @msgretorno='ERROR :: INESPERADO AL INSERTAR DETALLE'                                               
+                                                                                                    
+  GOTO Manejaerror                                                                  
+                                                                                                                                      
+   END                                                                                  
+                                                          
+-- Actualiar Estado                                                                                                                                          
+Update [BIZLINKS_PROD21].dbo.SPE_EINVOICEHEADER                                                                                           
+Set bl_estadoregistro='A'                                                                                                                               
+From FAC04_CABFACTURA fc ,FAC01_TIPDOC td ,empresa  e                                                                                                                                          
+Where                                                                                                                                   
+-- Amarre con tipo Documento                                                     
+    fc.FAC04CODEMP = td.FAC01CODEMP                                                                                                                                                
+ And fc.FAC01COD = td.FAC01COD                                                                                        
+                                                                 
+-- amarre con empresa     And fc.FAC04CODEMP = Codigo                                                                                                                             
+ And Sistema ='VENTAS'                                                                                                                                                
+                                                                                                                     
+-- Amarre con documento Electronico                                                                                              
+And tipoDocumentoEmisor='6'                                                                       
+And numeroDocumentoEmisor = e.Ruc                                                                                                                                          
+And tipoDocumento = td.FAC01FETIPDOC                                                                                               
+And serieNumero   = fc.FAC04NUMDOC                                                                                                                                          
+                                                                                    
+-- Amarre con ell                                                                    
+And fc.FAC04CODEMP=@FAC04CODEMP                                                                                                                   
+And fc.FAC01COD=@FAC01COD                                                                                                                    
+And fc.FAC04NUMDOC=@FAC04NUMDOC                                                                                 
+                                                                                     
+                                                                                                     
+                                                           
+IF @@ERROR <>0                                         
+   BEGIN                                                                                                                            
+  Set @msgretorno='ERROR :: INESPERADO AL ACTUALIZAR ESTADO'                                                                                 
+  GOTO Manejaerror                                                                                                                                                
+   END                                                                    
+                                                                  
+                                                                      
+ -- Actualizar flag de Sunat de cabecera de documento                                                                                                                                      
+    UPDATE FAC04_cabFACTURA                                                         
+    SET Fac04EstadoSunat = '01'                                                                                                                                      
+    WHERE [FAC04CODEMP] = @FAC04CODEMP                                                                                          
+    AND [FAC01COD] = @FAC01COD                                                                                                          
+    AND [FAC04NUMDOC] = @FAC04NUMDOC                                                                                                               
+    IF @@ERROR <> 0                                                                
+    BEGIN                                                                                                                                      
+        SET @msgretorno = 'ERROR :: INESPERADO AL ACTUALIZAR ESTADO SUNAT'                                                                                                                                      
+        GOTO Manejaerror         
+    End                                                                                                                                      
+                                                        
+                                                                                             
+Set @msgretorno='OK :: SE GENERO DOCUMENTO ELECTRONICO CON EXITO'                                                                                                                                                
+set @flag    = 1                                                                            
+                                                                                                                                      
+Commit Transaction                                                                                    
+return 1                                                               
+Manejaerror:                                                                                                                                                
+set @flag = -1                                                                            
+Rollback Transaction                                                                                                      
+return -1 

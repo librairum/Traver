@@ -1,0 +1,331 @@
+﻿--Cambios Version 21 Almacenes 
+
+-- Crear trae responsable
+Create PROCEDURE Spu_Inv_Trae_Responsables
+@in23codemp CHAR(02)  
+AS  
+SELECT * FROM IN23RESPONSABLE  
+Where in23codemp= @in23codemp
+ORDER BY IN23CODIGO  
+
+Go
+-- Crear sp trae nuevo codigo responsable
+Create PROC Spu_Inv_Trae_ResponsablesCodigo
+@in23codemp CHAR(2)  ,    
+@Codigo char(3) output    
+AS      
+BEGIN      
+DECLARE @CANTIDAD  AS INT = (SELECT COUNT(*) FROM IN23RESPONSABLE WHERE in23codemp = @in23codemp)      
+ IF (@cantidad) = 0       
+ BEGIN      
+  SELECT @Codigo = '001'      
+ END       
+ ELSE       
+ BEGIN      
+  
+Declare @ultimoCodigo char(3)   
+Select @ultimoCodigo = Max(in23Codigo) from IN23RESPONSABLE where in23codemp =@in23codemp
+  
+Declare @longitud as int  
+Select @longitud = Len(cast(@ultimoCodigo as Integer)  + 1)  
+--Select @Codigo  = @longitud  
+SELECT @Codigo = REPLICATE('0', 3- @longitud) +   LTRIM(  Str(Cast(@ultimoCodigo as Integer) + 1)  )        
+   
+ END      
+END  
+
+-- Agregar Menu 
+
+
+-- Agregar Formularios
+--Select * from segformulario where codmodulo='01' order by codigo desc
+Insert Into segformulario(codigo,nombre,descripcion,codmodulo)
+Values('0090','FrmResponsables','FrmResponsables','01')
+
+-- Agregar Menu
+--Select * from segmenu where codmodulo='01' order by codigo desc
+--Select * from segmenu where codmodulo='01' order by nivel1,nivel2,codigo
+Insert Into segmenu(codigo,etiqueta,nivel1,nivel2,nivel3,comando,codigoFormulario,nombreIcono,codmodulo)
+Values('0126','Responsables','01','20','00','OPENFORM','0090','cuenta_corriente.png','01')
+
+
+-- Agregar Menu x perfil
+Insert into segmenuxperfil(codigoPerfil,codigoMenu,opcxmenu,codmodulo)
+Values('01','0126','11111111111111111111','01')
+Insert into segmenuxperfil(codigoPerfil,codigoMenu,opcxmenu,codmodulo)
+Values('09','0126','11111111111111111111','01')
+
+Go
+-- Actualizar los ayudas a pedir a 17 digitos 
+Update in12tido Set in12WorStr = in12WorStr + REPLICATE('0',17-len(in12WorStr))
+
+Go
+-- Agregar al opcion @cFlag = 'CTACTE'                    
+      
+Alter PROCEDURE sp_Inv_Dame_Descripcion                            
+/*--------------------------------------------------------------------------*/                                                    
+/* Objetivo   : Obtiene la Descripcion de una Tabla           */                                                    
+/* Actualiza  :            */                                                    
+/* Creado Por : Jose Carlos Vasquez Laines                                  */                                                    
+/* Fecha      : 23/07/1999                                                  */                                                    
+/*--------------------------------------------------------------------------*/                                                    
+                                                    
+@cCodigo varchar(50),                                                    
+@cFlag varchar(15),                                                    
+@cDescripcion varchar(80) OUTPUT                                                    
+                                                    
+AS                                                    
+                                                    
+/* Si el Valor de Busqueda es Vacio devuelvo lo mismo */                                                    
+IF @cCodigo = '' OR @cCodigo = ','                                                    
+    BEGIN                                                    
+ SELECT @cDescripcion = ''                                                    
+ RETURN                                                    
+    END                                                    
+                                                    
+/* Obtengo la Descripcion segun el Flag */                                                    
+IF @cFlag = 'LINEA'                                                    
+    BEGIN                                                    
+ SELECT @cDescripcion = In31descri FROM In31cda1  WHERE In31codemp + In31key1 = @cCodigo                                                    
+    END                                                    
+ELSE IF @cFlag = 'GRUPO'                                                    
+    BEGIN                                                    
+ SELECT @cDescripcion = In32descri FROM In32cda2  WHERE In32codemp + In32key1 + In32key2 = @cCodigo                                                    
+    END                                                    
+ELSE IF @cFlag = 'ACENTRO'                                                    
+    BEGIN                                                    
+ SELECT @cDescripcion = In20CcDefa FROM In20Areas  WHERE In20Codemp + In20CodArea  = @cCodigo                                                    
+    END                                                    
+ELSE IF @cFlag = 'ARESPONSABLE'                                                    
+    BEGIN                                                    
+ SELECT @cDescripcion = In20Responsable FROM In20Areas  WHERE In20Codemp + In20CodArea  = @cCodigo                                                    
+    END                                                    
+ELSE IF @cFlag = 'AREAS'                                                    
+    BEGIN                                                    
+ SELECT @cDescripcion = In20Descripcion FROM IN20AREAS WHERE In20Codemp + In20CodArea = @cCodigo                                                    
+    END                                                    
+ELSE IF @cFlag = 'TIPO'                                                    
+    BEGIN                                                    
+ SELECT @cDescripcion = In33descri FROM In33cda3  WHERE In33codemp + In33key1 + In33key2 + In33key3 = @cCodigo                                                    
+    END                                                    
+ELSE IF @cFlag = 'UNIDAD'                                                    
+    BEGIN                                        
+ SELECT @cDescripcion = In21descri FROM In21unidad  WHERE In21codemp + In21Codigo = @cCodigo                                                    
+    END                                                   
+ELSE IF @cFlag = 'TRANSAC'                       
+    BEGIN                                                    
+ SELECT @cDescripcion = In15Descripcion FROM In15Tran WHERE In15CodEmp + In15Codigo = @cCodigo                                                    
+    END                                                    
+ELSE IF @cFlag = 'PROVEEDOR'                
+    BEGIN                                                    
+ SELECT @cDescripcion = ccm02nom FROM ccm02cta WHERE ccm02emp + ccm02tipana + ccm02cod = @cCodigo                                                    
+    END                                    ELSE IF @cFlag = 'CLIENTE'                                                    
+    BEGIN                                                    
+ SELECT @cDescripcion = ccm02nom FROM ccm02cta WHERE ccm02emp + ccm02tipana + ccm02cod = @cCodigo                                                    
+ END                                                    
+ELSE IF @cFlag = 'CLIENTEP'                                                    
+    BEGIN                               
+ SELECT @cDescripcion = In31Nombre FROM  In31Cliente  WHERE In31CodEmp + In31CodCli = @cCodigo                           
+    END                                     
+ELSE IF @cFlag = 'TIPDOC'                                                    
+    BEGIN                                                    
+    --Se agrego Tipo de naturaleza y tipoMovimiento para el filtro                                   
+    SELECT @cDescripcion = In12deslar FROM In12tido WHERE In12CodEmp + In12TipDoc + in12naturaleza + in12TipMov  = @cCodigo                                   
+                                
+    END                                                    
+ELSE IF @cFlag = 'TIPDOCSN'                                                    
+    BEGIN                                                    
+    --Se agrego Tipo de naturaleza y tipoMovimiento para el filtro                                   
+    SELECT @cDescripcion = In12deslar FROM In12tido WHERE In12CodEmp + In12TipDoc = @cCodigo                                   
+    END                                                    
+    
+ELSE IF @cFlag = 'TIPDOCMOV'                                                    
+   BEGIN                                                    
+ SELECT @cDescripcion = in12TipMov FROM In12tido WHERE In12CodEmp + In12TipDoc = @cCodigo                                                    
+    END                                           
+ELSE IF @cFlag = 'TIPDOCTODO'                          
+    BEGIN                          
+    SELECT @cDescripcion =  In12deslar from In12tido WHERE In12CodEmp + In12TipDoc + in12TipMov = @cCodigo                          
+    END                                   
+ELSE IF @cFlag = 'CENCOSTO'                                                    
+    BEGIN                                                    
+ SELECT @cDescripcion = ccb02des FROM ccb02cc WHERE ccb02emp + ccb02cod = @cCodigo                                                    
+    END                                        
+ELSE IF @cFlag = 'RESPONSABLE'                                                    
+    BEGIN                                                    
+ SELECT @cDescripcion = In23descri FROM In23Responsable WHERE In23CodEmp + In23codigo = @cCodigo                                                    
+    END                                                    
+ELSE IF @cFlag = 'TIPORESPONSABLE'                                                    
+    BEGIN                                                    
+                                                    
+ SELECT @cDescripcion = in23tipo FROM In23Responsable WHERE In23CodEmp + In23codigo = @cCodigo            
+    END                                                    
+ELSE IF @cFlag = 'OBRA'                                                    
+    BEGIN         
+ SELECT @cDescripcion = In22descripcion FROM In22Obra WHERE In22CodEmp + In22codigo = @cCodigo                                                    
+    END                                                    
+ELSE IF @cFlag = 'MAQUINA'                                                    
+    BEGIN                                                    
+ SELECT @cDescripcion = In20descripcion FROM In20Maquina WHERE In20CodEmp + In20codigo = @cCodigo                                                    
+    END                                                    
+ELSE IF @cFlag = 'ARTICULO'            
+    BEGIN                                                    
+ SELECT @cDescripcion = In01Deslar FROM In01Arti WHERE In01CodEmp + In01AA + In01key = @cCodigo                                   
+    END                                                    
+ELSE IF @cFlag = 'UNIDADARTICULO'                                                    
+    BEGIN                                             SELECT @cDescripcion = In01Unimed  FROM In01Arti WHERE In01codemp + In01Aa+In01KEy = @cCodigo                                                    
+    END                                                    
+                     
+ELSE IF @cFlag = 'TRANLIQUI'                                                    
+   BEGIN                                                    
+     SELECT @cDescripcion = In15Liquidacion FROM In15Tran WHERE In15CodEmp + In15Codigo = @cCodigo                                                    
+   END                                                    
+ELSE IF @cFlag = 'TRANMOVI'                                                    
+   BEGIN                          
+     SELECT @cDescripcion = In15TipoMovimiento FROM In15Tran WHERE In15CodEmp + In15Codigo = @cCodigo                                                    
+   END                                                    
+                                                    
+ELSE IF @cFlag = 'TRANMOVI'                                                    
+   BEGIN                                                    
+     SELECT @cDescripcion = In15TipoMovimiento FROM In15Tran WHERE In15CodEmp + In15Codigo = @cCodigo                                                    
+   END                                                    
+                                                    
+ELSE IF @cFlag = 'CTAALM'                                                    
+   BEGIN                                                    
+     SELECT @cDescripcion = In09Cuenta FROM In09Alma WHERE In09CodEmp + In09Codigo = @cCodigo                                                    
+END                                                    
+                                                    
+ELSE IF @cFlag = 'ALMACEN'                                                    
+                                                    
+    BEGIN                                                    
+ SELECT @cDescripcion = In09descripcion FROM In09alma WHERE In09CodEmp + In09codigo = @cCodigo                                                    
+    END                                                    
+                                                    
+ELSE IF @cFlag = 'FC'                                                    
+                                     
+    BEGIN                                                    
+ SELECT @cDescripcion = ccm01defcc FROM ccm01cta WHERE ccm01emp + ccm01Cta = @cFlag                                        
+    END                                                    
+                                                
+ELSE IF @cFlag = 'PROTER'                                                    
+    BEGIN                                                    
+   SELECT @cDescripcion = iSNULL(glo01descripcion,'') FROM Glo01ProdTermCarac WHERE glo01codigotabla<>'--' And (glo01codigotabla + glo01codigo)=@cCodigo                                                  
+    END                                                    
+                                                
+ELSE IF @cFlag = 'GLOTA'                                                    
+BEGIN                                                    
+   SELECT @cDescripcion = iSNULL(glo01descripcion,'') FROM glo01tablas WHERE glo01codigotabla<>'00' And (glo01codigotabla + glo01codigo)=@cCodigo                                                  
+    END                                                    
+                                                         
+ELSE IF @cFlag = 'NOTASALIDA'                                                    
+    BEGIN                                                    
+       SELECT @cDescripcion = iSNULL(IN06AA + IN06MM + IN06TIPDOC  + IN06CODDOC,'') FROM in06docu                                          
+  WHERE        
+  (IN06CODEMP + IN06AA + IN06MM + IN06TIPDOC  + IN06CODDOC) =@cCodigo                                                  
+    END                                                    
+                                            
+  ELSE IF @cFlag  = 'CANTERA'               
+  BEGIN                                        
+   SELECT  @cDescripcion = ISNULL(IN20DESC, '') FROM  IN20CANTERA                                        
+  WHERE                                         
+   (IN20CODEMP +  IN20CODIGO)  = @cCodigo                                           
+  END                                        
+  ELSE IF @cFlag = 'TIPOANALISIS'                                      
+ BEGIN                                      
+  SELECT @cDescripcion = ISNULL(ccb17desc , '') FROM ccb17ana                                        
+  WHERE  (ccb17emp + ccb17cdgo) = @cCodigo                                      
+ END                                      
+ELSE IF @cFlag = 'ALMACENXNAT'                                                                        
+    BEGIN                                                    
+ SELECT @cDescripcion = In09descripcion FROM In09alma WHERE In09CodEmp + In09codigo + in09PRODNATURALEZA = @cCodigo                                     
+    END                                                    
+                               
+     ELSE IF  @cFlag = 'TURNO'                                
+    BEGIN                                
+     SELECT @cDescripcion = ISNULL( (PRO12DESC + ' de ' +                   
+        Convert(char(5), PRO12HORAINICIO, 108) + ' a '+                 
+  Convert(char(5), PRO12HORAFIN, 108) )                 
+      ,'') FROM PRO12TURNOS  WHERE (PRO12CODEMP + PRO12COD ) = @cCodigo                                
+    END                                
+     ELSE IF @cFlag = 'LINEAPROD'                                
+    BEGIN                                
+  SELECT @cDescripcion = ISNULL(PRO08DESC, '') From PRO08LINEA                                
+  WHERE  (PRO08CODEMP + PRO08COD ) = @cCodigo                                  
+    END                                 
+    ELSE IF  @cFlag = 'ACTIVIDADNIVEL1'                                
+    BEGIN                                
+  SELECT @cDescripcion = ISNULL(PRO09DESC, '') from PRO09ACTIVIDADNIVEL1                                  
+     WHERE (PRO09CODEMP +  PRO09LINEACOD + PRO09COD) = @cCodigo                                
+    END                                
+    ELSE IF @cFlag = 'NATURALEZA'                              
+    BEGIN                              
+  SELECT @cDescripcion = ISNULL(IN20DESCRIPCION, '') from IN20PRODUCTONATURALEZA                              
+  where IN20COD = @cCodigo                              
+    END                              
+  ELSE IF @cFlag = 'MAQUINAPROD'                            
+  BEGIN                            
+ SELECT @cDescripcion = ISNULL( PRO11DESC, '') FROM PRO11MAQUINA                             
+ WHERE (PRO11CODEMP +   PRO11ACTIVIDADREL + PRO11COD) = @cCodigo                     
+  END                            
+ELSE IF @cFlag = 'OPERARIO'                                                    
+    BEGIN                                                    
+ SELECT @cDescripcion = ISNULL(ccm02nom, '') FROM ccm02cta WHERE ccm02emp + ccm02tipana + ccm02cod = @cCodigo                                                    
+    END                                                  
+        ELSE IF  @cFlag = 'PROVMATERIA'                      
+       BEGIN                      
+   SELECT @cDescripcion = Isnull(ccm02nom, '') from ccm02cta where ccm02emp + ccm02tipana + ccm02cod = @cCodigo                      
+       END                       
+        ELSE IF @cFlag = 'ACTCONTABLETIPO'                      
+      BEGIN                      
+     SELECT @cDescripcion = Isnull(COS02DESCRIPCION, '') FROM COS02ACTIVIDADCONTABLETIPO WHERE COS02CODIGO = @cCodigo                        
+      END                      
+         ELSE IF @cFlag = 'ACTCONTABLE'                    
+    BEGIN                    
+      SELECT @cDescripcion = Isnull(COS01DESCRIPCION, '') FROM COS01ACTIVIDADCONTABLE                      
+      WHERE COS01CODEMP +  COS01CODIGO = @cCodigo                        
+    END        
+   ELSE IF @cFlag = 'HORAMUERTA'              
+   BEGIN              
+  SELECT  @cDescripcion = Isnull(PRO01DESCRIPCION, '') FROM PRO01MOTIVOHORAMUERTA               
+ WHERE PRO01CODEMP + PRO01CODIGO= @cCodigo                
+   END              
+   ELSE IF @cFlag = 'MOTIVO'          
+   BEGIN          
+   Select @cDescripcion =  isnull(PRO15DESCRIPCION, '')  from  PRO15MOTIVOS             
+   Where PRO15CODEMP + PRO15CODIGO = @cCodigo          
+   END          
+ELSE IF @cFlag = 'FLAGTIPCALAREA'              
+   BEGIN              
+  Select @cDescripcion = isnull(IN01FLAGTIPCALAREA,'F') from in01arti           
+  where IN01CODEMP + IN01AA + IN01KEY = @cCodigo          
+   END              
+ELSE IF @cFlag = 'CLIENTEFLAGDESC'        
+    BEGIN                                                    
+  SELECT @cDescripcion = Isnull(ccm02FlagDescripcionCliente,'0') FROM ccm02cta         
+  WHERE ccm02emp + ccm02tipana + ccm02cod = @cCodigo                                                    
+    END                                                  
+ELSE IF @cFlag = 'EQUIALMGUIA'        
+    BEGIN             
+    --Select * from FAC66_MOTIVODETRASLADO    
+   SELECT @cDescripcion = Isnull(FAC66DESMOTIVO,'') FROM FAC66_MOTIVODETRASLADO    
+  WHERE FAC66CODMOTIVO = @cCodigo                                                    
+    END                                                  
+ELSE IF @cFlag = 'CTACTE'                    
+    BEGIN                                                        
+  SELECT @cDescripcion = ccm02nom FROM ccm02cta WHERE ccm02emp + ccm02tipana + ccm02cod = @cCodigo                                                        
+    END                                        
+           
+             
+             
+          
+/* Devuelvo la Descripcion */                                                    
+IF @@ROWCOUNT = 0                                                    
+    BEGIN                                                    
+ SELECT @cDescripcion = '???'                                                    
+    END                                                    
+ELSE                                                    
+    BEGIN                                                    
+ SELECT @cDescripcion = RTRIM(@cDescripcion)                                                    
+    END 
+
+

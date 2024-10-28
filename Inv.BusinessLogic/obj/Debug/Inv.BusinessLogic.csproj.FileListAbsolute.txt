@@ -1,0 +1,200 @@
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver29102020\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver29102020\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver29102020\Traver\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver29102020\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver29102020\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver29102020\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver29102020\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver29102020\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver29102020\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver29102020\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub\Traver\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\traver_v1\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\traver_v1\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\traver_v1\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\traver_v1\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\traver_v1\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\traver_v1\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\traver_v1\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\traver_v1\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\traver_v1\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\traver_v1\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+D:\proyectos\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+D:\proyectos\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+D:\proyectos\Traver_v2\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+D:\proyectos\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+D:\proyectos\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+D:\proyectos\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+D:\proyectos\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+D:\proyectos\Traver_v2\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\proyectos\Traver_v2\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+D:\proyectos\Traver_v2\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+D:\proyectos\Traver\Fuente\Traver_v2\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\proyectos\Traver\Fuente\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+D:\proyectos\Traver\Fuente\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+D:\proyectos\Traver\Fuente\Traver_v2\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+D:\proyectos\Traver\Fuente\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+D:\proyectos\Traver\Fuente\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+D:\proyectos\Traver\Fuente\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+D:\proyectos\Traver\Fuente\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+D:\proyectos\Traver\Fuente\Traver_v2\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+D:\proyectos\Traver\Fuente\Traver_v2\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Documents\FuenteAl11042023\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Documents\FuenteAl11042023\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Documents\FuenteAl11042023\Traver_v2\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+C:\Users\sistemas\Documents\FuenteAl11042023\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+C:\Users\sistemas\Documents\FuenteAl11042023\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+C:\Users\sistemas\Documents\FuenteAl11042023\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+C:\Users\sistemas\Documents\FuenteAl11042023\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+C:\Users\sistemas\Documents\FuenteAl11042023\Traver_v2\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Documents\FuenteAl11042023\Traver_v2\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Documents\FuenteAl11042023\Traver_v2\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Documents\William_Fuente_280423\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Documents\William_Fuente_280423\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Documents\William_Fuente_280423\Traver_v2\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+C:\Users\sistemas\Documents\William_Fuente_280423\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+C:\Users\sistemas\Documents\William_Fuente_280423\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+C:\Users\sistemas\Documents\William_Fuente_280423\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+C:\Users\sistemas\Documents\William_Fuente_280423\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+C:\Users\sistemas\Documents\William_Fuente_280423\Traver_v2\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Documents\William_Fuente_280423\Traver_v2\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Documents\William_Fuente_280423\Traver_v2\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\Traver_v2\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\Traver_v2\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\Traver_v2\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\Traver_v2\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\TraverGitHub_v1\Traver_v2\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE\traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE\traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE\traver\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE\traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE\traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE\traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE\traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE\traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE\traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE\traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE - copia\traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE - copia\traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE - copia\traver\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE - copia\traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE - copia\traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE - copia\traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE - copia\traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE - copia\traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE - copia\traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\GITHUB_TRAVER_CLONE - copia\traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+C:\Users\usuario\Downloads\traver\traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+C:\Users\usuario\Downloads\traver\traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+C:\Users\usuario\Downloads\traver\traver\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+C:\Users\usuario\Downloads\traver\traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+C:\Users\usuario\Downloads\traver\traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+C:\Users\usuario\Downloads\traver\traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+C:\Users\usuario\Downloads\traver\traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+C:\Users\usuario\Downloads\traver\traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Downloads\traver\traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+C:\Users\usuario\Downloads\traver\traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\traver\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\MineraDeisi\PROTER\Integracion\01022018\traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\Traver_William2807\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\Traver_William2807\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\Traver_William2807\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+C:\Users\sistemas\Desktop\Traver_William2807\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+C:\Users\sistemas\Desktop\Traver_William2807\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+C:\Users\sistemas\Desktop\Traver_William2807\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+C:\Users\sistemas\Desktop\Traver_William2807\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+C:\Users\sistemas\Desktop\Traver_William2807\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Desktop\Traver_William2807\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\Traver_William2807\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\William\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\William\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\William\Traver\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+C:\Users\sistemas\Desktop\William\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+C:\Users\sistemas\Desktop\William\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+C:\Users\sistemas\Desktop\William\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+C:\Users\sistemas\Desktop\William\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+C:\Users\sistemas\Desktop\William\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Desktop\William\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\William\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Integracion\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Integracion\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Integracion\Traver\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+D:\MineraDeisi\PROTER\Integracion\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+D:\MineraDeisi\PROTER\Integracion\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+D:\MineraDeisi\PROTER\Integracion\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+D:\MineraDeisi\PROTER\Integracion\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+D:\MineraDeisi\PROTER\Integracion\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\MineraDeisi\PROTER\Integracion\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Integracion\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb

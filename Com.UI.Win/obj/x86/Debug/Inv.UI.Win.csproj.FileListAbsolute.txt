@@ -1,0 +1,818 @@
+C:\Proyectos\Minera Deisi\Logistica.solution\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+C:\Proyectos\Minera Deisi\Logistica.solution\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+C:\Proyectos\Minera Deisi\Logistica.solution\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+C:\Proyectos\Minera Deisi\Logistica.solution\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+C:\Proyectos\Minera Deisi\Logistica.solution\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+C:\Proyectos\Minera Deisi\Logistica.solution\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe.config
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\bin\Debug\BLToolkit.4.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\bin\Debug\Inv.DataAccess.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\bin\Debug\Inv.DataAccess.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csprojResolveAssemblyReference.cache
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBusqueda.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FormViewCristal.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloCaracLista.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloDet.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloLista.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseHelp.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDetalleMovi.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMovi.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDocu.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBase.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReg.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMDI.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\bin\Debug\C1.Win.C1List.2.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\bin\Debug\C1.Win.C1List.2.xml
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv1\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe.licenses
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csprojResolveAssemblyReference.cache
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBusqueda.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FormViewCristal.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseMante.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmAlmacen.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloCaracLista.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloDet.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloLista.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmCuentaCorriente.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTipoDocumento.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTransaccion.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReporte.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseHelp.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDetalleMovi.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMovi.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDocu.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBase.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReg.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMDI.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepMovimientos.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardexRes.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmStockRep.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe.config
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\bin\Debug\BLToolkit.4.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\bin\Debug\Inv.DataAccess.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\bin\Debug\Inv.DataAccess.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProdFabricante.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProvMateriaPrima.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardex.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmUbicacionFisica.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmInvFisico.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmPeriodos.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmUniMed.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csprojResolveAssemblyReference.cache
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBusqueda.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FormViewCristal.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseMante.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmUniMed.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmAlmacen.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloCaracLista.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloDet.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloLista.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmCuentaCorriente.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTipoDocumento.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTransaccion.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmInvFisico.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmUbicacionFisica.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReporte.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseHelp.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDetalleMovi.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMovi.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDocu.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBase.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReg.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMDI.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardex.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProvMateriaPrima.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProdFabricante.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepMovimientos.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardexRes.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmStockRep.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmPeriodos.resources
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe.config
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\bin\Debug\BLToolkit.4.dll
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\bin\Debug\Inv.DataAccess.dll
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\bin\Debug\Inv.DataAccess.pdb
+C:\ProyectoTraver\24082015\Construccionv2\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe.licenses
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe.config
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\BLToolkit.4.dll
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Inv.DataAccess.dll
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Inv.DataAccess.pdb
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csprojResolveAssemblyReference.cache
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBusqueda.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FormViewCristal.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseMante.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmUniMed.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmAlmacen.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloCaracLista.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloDet.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloLista.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmCuentaCorriente.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTipoDocumento.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTransaccion.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmInvFisico.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmUbicacionFisica.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReporte.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseHelp.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDetalleMovi.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMovi.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDocu.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBase.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReg.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMDI.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardex.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProvMateriaPrima.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProdFabricante.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepMovimientos.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardexRes.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmStockRep.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmPeriodos.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe.licenses
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmLogin.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuPrueba.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuConPermisos.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Seg.UI.Win.exe
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Seg.BusinessLogic.dll
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Seg.BusinessEntities.dll
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Seg.DataAccess.dll
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Seg.UI.Win.pdb
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Seg.BusinessLogic.pdb
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Seg.BusinessEntities.pdb
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\bin\Debug\Seg.DataAccess.pdb
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmCambiarClave.resources
+C:\ProyectoTraver\Modulo Seguridad\Seguridad\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepControlDevoluciones.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe.config
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\BLToolkit.4.dll
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.dll
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\Seg.BusinessEntities.dll
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\Seg.BusinessLogic.dll
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\Seg.DataAccess.dll
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\Seg.UI.Win.pdb
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.pdb
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\Seg.BusinessEntities.pdb
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\Seg.BusinessLogic.pdb
+C:\ProyectoTraver\Logistica\Inv.UI.Win\bin\Debug\Seg.DataAccess.pdb
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csprojResolveAssemblyReference.cache
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmCambiarClave.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmLogin.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBusqueda.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FormViewCristal.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuConPermisos.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuPrueba.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepControlDevoluciones.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseMante.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmUniMed.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmAlmacen.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloCaracLista.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloDet.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloLista.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmCuentaCorriente.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTipoDocumento.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTransaccion.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmInvFisico.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmUbicacionFisica.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReporte.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseHelp.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDetalleMovi.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMovi.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDocu.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBase.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReg.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMDI.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardex.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProvMateriaPrima.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProdFabricante.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepMovimientos.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardexRes.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmStockRep.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmPeriodos.resources
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe.licenses
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe.config
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\BLToolkit.4.dll
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.dll
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\Seg.BusinessEntities.dll
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\Seg.BusinessLogic.dll
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\Seg.DataAccess.dll
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\Seg.UI.Win.pdb
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.pdb
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\Seg.BusinessEntities.pdb
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\Seg.BusinessLogic.pdb
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\bin\Debug\Seg.DataAccess.pdb
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csprojResolveAssemblyReference.cache
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmCambiarClave.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmLogin.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBusqueda.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FormViewCristal.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuConPermisos.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuPrueba.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepControlDevoluciones.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseMante.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmUniMed.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmAlmacen.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloCaracLista.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloDet.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloLista.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmCuentaCorriente.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTipoDocumento.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTransaccion.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmInvFisico.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmUbicacionFisica.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReporte.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseHelp.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDetalleMovi.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMovi.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDocu.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBase.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReg.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMDI.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardex.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProvMateriaPrima.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProdFabricante.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepMovimientos.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardexRes.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmStockRep.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmPeriodos.resources
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+C:\Users\Jose Crisostomo\Desktop\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe.licenses
+C:\ProyectoTraver\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepTransacciones.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe.config
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\bin\Debug\BLToolkit.4.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csprojResolveAssemblyReference.cache
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmCambiarClave.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmLogin.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBusqueda.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FormViewCristal.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuConPermisos.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuPrueba.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Procesos.frmEntradaSalida.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepTransacciones.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepControlDevoluciones.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseMante.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmUniMed.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmAlmacen.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloCaracLista.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloDet.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloLista.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmCuentaCorriente.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTipoDocumento.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTransaccion.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmInvFisico.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmUbicacionFisica.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReporte.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseHelp.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDetalleMovi.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMovi.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDocu.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBase.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReg.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMDI.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardex.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProvMateriaPrima.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProdFabricante.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepMovimientos.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardexRes.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmStockRep.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmPeriodos.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe.licenses
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe.config
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\bin\Debug\BLToolkit.4.dll
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.dll
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.pdb
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csprojResolveAssemblyReference.cache
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmCambiarClave.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmLogin.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBusqueda.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FormViewCristal.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuConPermisos.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuPrueba.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Procesos.frmEntradaSalida.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepTransacciones.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepControlDevoluciones.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseMante.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmUniMed.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmAlmacen.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloCaracLista.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloDet.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloLista.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmCuentaCorriente.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTipoDocumento.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTransaccion.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmInvFisico.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmUbicacionFisica.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReporte.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseHelp.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDetalleMovi.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMovi.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDocu.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBase.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReg.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMDI.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardex.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProvMateriaPrima.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProdFabricante.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepMovimientos.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardexRes.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmStockRep.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmPeriodos.resources
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+C:\ProyectoTraver\Especificaciones\EntrgarIvan21102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe.licenses
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe.config
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\bin\Debug\BLToolkit.4.dll
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.dll
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.pdb
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csprojResolveAssemblyReference.cache
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmCambiarClave.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmLogin.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBusqueda.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FormViewCristal.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuConPermisos.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuPrueba.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Procesos.frmEntradaSalida.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepTransacciones.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepControlDevoluciones.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseMante.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmUniMed.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmAlmacen.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloCaracLista.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloDet.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloLista.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmCuentaCorriente.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTipoDocumento.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTransaccion.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmInvFisico.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmUbicacionFisica.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReporte.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseHelp.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDetalleMovi.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMovi.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDocu.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBase.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReg.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMDI.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardex.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProvMateriaPrima.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProdFabricante.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepMovimientos.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardexRes.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmStockRep.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmPeriodos.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe.licenses
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\Especificaciones\EntregarIvan26102015\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe.config
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csprojResolveAssemblyReference.cache
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmCambiarClave.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmLogin.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBusqueda.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FormViewCristal.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuConPermisos.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuPrueba.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Procesos.frmEntradaSalida.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepTransacciones.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepControlDevoluciones.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseMante.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmUniMed.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmAlmacen.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloCaracLista.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloDet.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloLista.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmCuentaCorriente.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTipoDocumento.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTransaccion.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmInvFisico.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmUbicacionFisica.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReporte.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseHelp.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDetalleMovi.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMovi.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDocu.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBase.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReg.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMDI.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardex.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProvMateriaPrima.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProdFabricante.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepMovimientos.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardexRes.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmStockRep.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmPeriodos.resources
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe.licenses
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\bin\Debug\BLToolkit.4.dll
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.dll
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+C:\ProyectoTraver\Fuentes\Logistica_30102015\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.pdb
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe.config
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\BLToolkit.4.dll
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.dll
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.pdb
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csprojResolveAssemblyReference.cache
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmCambiarClave.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmLogin.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBusqueda.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FormViewCristal.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuConPermisos.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuPrueba.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Procesos.frmEntradaSalida.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepTransacciones.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepControlDevoluciones.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseMante.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmUniMed.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmAlmacen.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloCaracLista.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloDet.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloLista.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmCuentaCorriente.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTipoDocumento.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTransaccion.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmInvFisico.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmUbicacionFisica.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReporte.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseHelp.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDetalleMovi.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMovi.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDocu.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBase.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReg.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMDI.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardex.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProvMateriaPrima.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProdFabricante.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepMovimientos.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardexRes.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmStockRep.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmPeriodos.resources
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+I:\MineraDeisi\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe.licenses
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe.config
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\BLToolkit.4.dll
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.dll
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.pdb
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csprojResolveAssemblyReference.cache
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmCambiarClave.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmLogin.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBusqueda.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FormViewCristal.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuConPermisos.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuPrueba.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Procesos.frmEntradaSalida.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepTransacciones.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepControlDevoluciones.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseMante.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmUniMed.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmAlmacen.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloCaracLista.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloDet.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloLista.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmCuentaCorriente.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTipoDocumento.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTransaccion.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmInvFisico.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmUbicacionFisica.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReporte.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseHelp.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDetalleMovi.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMovi.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDocu.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBase.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReg.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMDI.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardex.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProvMateriaPrima.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProdFabricante.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepMovimientos.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardexRes.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmStockRep.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmPeriodos.resources
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+D:\MineraDeisi\PROTER\Integracion\04112015\EntregadoPorIvan02112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe.licenses
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe.config
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\bin\Debug\BLToolkit.4.dll
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.dll
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.pdb
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csprojResolveAssemblyReference.cache
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmCambiarClave.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmLogin.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBusqueda.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FormViewCristal.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuConPermisos.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuPrueba.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Procesos.frmEntradaSalida.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepTransacciones.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepControlDevoluciones.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseMante.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmUniMed.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmAlmacen.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloCaracLista.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloDet.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloLista.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmCuentaCorriente.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTipoDocumento.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTransaccion.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmInvFisico.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmUbicacionFisica.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReporte.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseHelp.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDetalleMovi.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMovi.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDocu.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBase.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReg.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMDI.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardex.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProvMateriaPrima.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProdFabricante.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepMovimientos.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardexRes.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmStockRep.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmPeriodos.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe.licenses
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\Especificaciones\EntregarIvan30112015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe.config
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Telerik.WinControls.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Telerik.WinControls.GridView.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Telerik.WinControls.PivotGrid.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Telerik.WinControls.RadDock.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Telerik.WinControls.Themes.Desert.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Telerik.WinControls.Themes.Office2013Light.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Telerik.WinControls.Themes.TelerikMetroBlue.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Telerik.WinControls.Themes.TelerikMetroTouch.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Telerik.WinControls.Themes.Windows8.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Telerik.WinControls.UI.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\TelerikCommon.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\TelerikData.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\BLToolkit.4.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csprojResolveAssemblyReference.cache
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmCambiarClave.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmLogin.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBusqueda.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FormViewCristal.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuConPermisos.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuPrueba.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Procesos.frmEntradaSalida.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepTransacciones.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepControlDevoluciones.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseMante.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmUniMed.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmAlmacen.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloCaracLista.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloDet.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloLista.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmCuentaCorriente.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTipoDocumento.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTransaccion.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmInvFisico.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmUbicacionFisica.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReporte.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseHelp.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDetalleMovi.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMovi.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDocu.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBase.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReg.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMDI.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardex.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProvMateriaPrima.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProdFabricante.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepMovimientos.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardexRes.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmStockRep.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmPeriodos.resources
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe.licenses
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Telerik.WinControls.UI.Design.dll
+D:\MineraDeisi\PROTER\Desarrollo\Modulo Almacen\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmValidaciones.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe.config
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\bin\Debug\BLToolkit.4.dll
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.dll
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.pdb
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csprojResolveAssemblyReference.cache
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmCambiarClave.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Acceso.frmLogin.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBusqueda.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FormViewCristal.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuConPermisos.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMenuPrueba.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmValidaciones.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Procesos.frmEntradaSalida.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepTransacciones.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmRepControlDevoluciones.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseMante.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmUniMed.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmAlmacen.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloCaracLista.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloDet.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmArticuloLista.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmCuentaCorriente.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTipoDocumento.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmTransaccion.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmInvFisico.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmUbicacionFisica.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReporte.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseHelp.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDetalleMovi.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMovi.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmDocu.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBase.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmBaseReg.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.frmMDI.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardex.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProvMateriaPrima.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepProdFabricante.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepMovimientos.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmRepKardexRes.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmStockRep.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.FrmPeriodos.resources
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+C:\ProyectoTraver\Especificaciones\EntregarIvan14122015\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe.licenses
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe.config
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\bin\Debug\BLToolkit.4.dll
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.dll
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\bin\Debug\Inv.DataAccess.pdb
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csprojResolveAssemblyReference.cache
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.Properties.Resources.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.csproj.GenerateResource.Cache
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe.licenses
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.exe
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Inv.UI.Win.pdb
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.Acceso.frmCambiarClave.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.Acceso.frmLogin.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.frmBusqueda.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FormViewCristal.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.RadForm1.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmValidaciones.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.Procesos.frmEntradaSalida.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.frmRepTransacciones.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.frmRepControlDevoluciones.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.frmBaseMante.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmUniMed.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmAlmacen.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmArticuloCaracLista.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmArticuloDet.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmArticuloLista.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmCuentaCorriente.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmTipoDocumento.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmTransaccion.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmInvFisico.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.frmUbicacionFisica.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.frmBaseReporte.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.frmBaseHelp.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.frmDetalleMovi.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.frmMovi.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.frmDocu.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.frmBase.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.frmBaseReg.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.frmMDI.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmRepKardex.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmRepProvMateriaPrima.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmRepProdFabricante.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmRepMovimientos.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmRepKardexRes.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmStockRep.resources
+C:\ProyectoTraver\Fuentes\Logistica\Inv.UI.Win\obj\x86\Debug\Fac.UI.Win.FrmPeriodos.resources

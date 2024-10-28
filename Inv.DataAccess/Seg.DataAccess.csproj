@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B9B152C-0249-45D1-A2AA-642625BB28BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inv.DataAccess</RootNamespace>
+    <AssemblyName>Inv.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BLToolkit.4">
+      <HintPath>..\Inv.UI.Win\Librerias\BLToolkit.4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessorBase.cs" />
+    <Compile Include="AlmacenAccesor.cs" />
+    <Compile Include="ArticuloAccesor.cs" />
+    <Compile Include="ArticuloCaracteristicasAccesor.cs" />
+    <Compile Include="ArticuloClienteAccesor.cs" />
+    <Compile Include="ArticuloPorAlmacenAccesor.cs" />
+    <Compile Include="CentroCostoAccesor.cs" />
+    <Compile Include="ClienteAccesor.cs" />
+    <Compile Include="InventarioFisicoAccesor.cs" />
+    <Compile Include="CuentaCorrienteAccesor.cs" />
+    <Compile Include="PedidoVentaAccesor.cs" />
+    <Compile Include="PeriodoAccesor.cs" />
+    <Compile Include="DocumentoAccesor.cs" />
+    <Compile Include="GlobalAccesor.cs" />
+    <Compile Include="MonedaAccesor.cs" />
+    <Compile Include="ObraAccesor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProveedorAccesor.cs" />
+    <Compile Include="ResponsableAccesor.cs" />
+    <Compile Include="SedeAccesor.cs" />
+    <Compile Include="SeguridadAccesor.cs" />
+    <Compile Include="TipoDocumentoAccesor.cs" />
+    <Compile Include="TipoDocumentoClienteAccesor.cs" />
+    <Compile Include="TipoTransaccionAccesor.cs" />
+    <Compile Include="TipoVentaAccesor.cs" />
+    <Compile Include="TransaccionAccesor.cs" />
+    <Compile Include="UnidaddeMedidaAccesor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inv.BusinessEntities\Inv.BusinessEntities.csproj">
+      <Project>{FC35BF50-F5C9-490B-974A-1BB73C3C108A}</Project>
+      <Name>Seg.BusinessEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

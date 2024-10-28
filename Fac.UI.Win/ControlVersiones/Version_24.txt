@@ -1,0 +1,292 @@
+﻿-- ===Crear Tabla
+CREATE TABLE [dbo].[TiCambioOtrasMonedas](
+	[Fecha] [datetime] NOT NULL,
+	[MonedaOrigenCod] [varchar](2) NOT NULL,
+	[MonedaDestinoCod] [varchar](2) NOT NULL,
+	[TipoCambio] [decimal](9, 6) NULL,
+ CONSTRAINT [PK_TiCambioOtrasMonedas] PRIMARY KEY NONCLUSTERED 
+(
+	[Fecha] ASC,
+	[MonedaOrigenCod] ASC,
+	[MonedaDestinoCod] ASC
+)
+)
+
+-- ===Insertar Valor
+Insert TiCambioOtrasMonedas(Fecha,MonedaOrigenCod,MonedaDestinoCod,TipoCambio)
+Values(Convert(datetime,'05/05/2022',103),'D','E',1.057000)
+
+-- Crear Funcion
+Create function Fn_TipCamOtrasMonedas(@fecha datetime , @MonedaOrigen Varchar(2), @MonedaDestino Varchar(2))  
+returns  float  
+as  
+Begin  
+ declare @TicamOtrasMonedas as float  
+ Set @TicamOtrasMonedas=1
+ 
+ Select @TicamOtrasMonedas = Isnull(TipoCambio,1) from TiCambioOtrasMonedas where 
+ Fecha = CONVERT(datetime,@fecha,103)
+ And MonedaOrigenCod =@MonedaOrigen	And MonedaDestinoCod=@MonedaDestino
+  
+ return @TicamOtrasMonedas
+End  
+
+Sp_helptext       Spu_Fac_Trae_RepVentasAdministracion
+
+-- Modificar Sp 
+        
+--exec Spu_Fac_Trae_RepVentasAdministracion '01', '2019', '09', '01', '02'                    
+Alter Procedure Spu_Fac_Trae_RepVentasAdministracion                        
+@FAC04CODEMP      char(2),                        
+@FAC04AA char(4),                        
+@FAC04MM char(2),                        
+@TipDoc     char(2),                        
+@PlantillaDoc     char(2)                        
+As                        
+                
+-- == Genero Temporal de facturas sin tipo de cambio                
+Select * into #TiCambio from premium.dbo.ticambio                 
+where Fecha in (Select Distinct FAC04FECHA from FAC04_CABFACTURA where  FAC04TIPCAMBIO<=1)                
+ -- Actualizo factura sin tipo de cambio o tipo cambio=1                
+ Update FAC04_CABFACTURA                
+ Set FAC04TIPCAMBIO =VenBan                
+ From #TiCambio                
+ where                  
+ FAC04TIPCAMBIO<=0                
+ And FAC04FECHA = Fecha                      
+                        
+Select                        
+                        
+c.FAC04CODEMP as 'CodigoEmpresa',                        
+                        
+c.FAC01COD as 'TipoDocumento',                        
+                        
+c.FAC04NUMDOC as 'NumeroDocumento',                        
+                        
+-- Datos de cabecera Factura                        
+                        
+c.FAC04FECHA  as 'Fecha',                        
+                        
+c.FAC04CODCLI as 'ClienteCod',                        
+                        
+FAC04CLINOMBRE as 'ClienteNombre',                        
+                        
+--(Case when c.FAC04MONEDA='D' then FAC04IMPSUBTOTAL else (FAC04IMPSUBTOTAL/FAC04TIPCAMBIO) end) as 'ValorVentaDol',                        
+--(Case when c.FAC04MONEDA='S' then FAC04IMPSUBTOTAL else (FAC04IMPSUBTOTAL*FAC04TIPCAMBIO) end) as 'ValorVentaSol',                        
+-- ====  Moneda Dolares  
+(Case when c.FAC04MONEDA='D' then FAC04IMPSUBTOTAL else   
+ (Case when c.FAC04MONEDA ='S' then (FAC04IMPSUBTOTAL/FAC04TIPCAMBIO)   
+     Else (FAC04IMPSUBTOTAL*dbo.Fn_TipCamOtrasMonedas(c.FAC04FECHA,'D',c.FAC04MONEDA))  
+ End)  
+ end) as 'ValorVentaDol',       
+-- ===  
+FAC04TIPCAMBIO as 'TipCambio',                        
+   
+-- ==== Moneda Soles                    
+(Case when c.FAC04MONEDA='S' then FAC04IMPSUBTOTAL else   
+(Case when c.FAC04MONEDA='D' then  
+(FAC04IMPSUBTOTAL*FAC04TIPCAMBIO)   
+Else  
+-- Primero lo estandarizo a dolares y despues   
+(FAC04IMPSUBTOTAL*dbo.Fn_TipCamOtrasMonedas(c.FAC04FECHA,'D',c.FAC04MONEDA))*FAC04TIPCAMBIO  
+End)  
+end) as 'ValorVentaSol',                        
+-- ===  
+  
+                        
+Isnull(pais.FAC51DESCRIPCION,'') as 'PAIS_DESTINO',                        
+                        
+c.FAC04ORDENCOMPRA AS 'NRO_ORDENCOMPRA',                        
+                        
+Isnull(cp.FAC53DESC,'') AS 'CONDICION_PAGO',                        
+                        
+Isnull(FAC04GUIAS,'') as 'GuiaNroCabecera',                        
+Isnull(c.FAC04LIQUIDACIONNRO, '') as 'FAC04LIQUIDACIONNRO',                  
+                        
+Isnull(FAC04GLOSA,'') as 'Observacion',    
+Isnull(FAC04VENDEDORCOD,'') as 'VendedorCod',    
+Isnull(FAC04VENDEDORNOMBRE,'') as 'VendedorDesc'    
+                        
+--Drop Table #Facturas                        
+                        
+Into #Facturas                        
+                        
+From FAC04_CABFACTURA c                        
+                       
+-- Amarre con pais                        
+                        
+Left Join FAC51_PAISES pais On                        
+                        
+      c.FAC04EXPCODPAISDESTINO = pais.FAC51CODPAIS                          
+                        
+-- Amarre con Condicion pago                        
+                        
+Left Join   FAC53_FORMAPAGO cp on                        
+                        
+FAC04EXPCODCONDPAGO = cp.FAC53COD                
+-- Solo facturas aceptadas      
+Inner Join V_EstadoFacturas festado On                 
+      c.FAC04CODEMP = festado.FAC04CODEMP                 
+  And c.FAC01COD = festado.FAC01COD                 
+  And c.FAC04NUMDOC = festado.FAC04NUMDOC                
+              
+                        
+Where                        
+                        
+      c.FAC04CODEMP = @FAC04CODEMP                        
+                        
+and c.FAC04AA = @FAC04AA                        
+                        
+and c.FAC04MM = @FAC04MM                        
+                        
+and c.FAC01COD = @TipDoc                        
+                        
+and c.FAC03COD = @PlantillaDoc                        
+                        
+And ISnull(DocumentoElectronicoEstadoUsuario,'')  in ('ACEPTADO','ENVIADO BOLETAS')                
+                         
+                        
+-- Correcion para el error en caso tenga la coma al final                        
+                        
+Update #Facturas Set GuiaNroCabecera =Replace(GuiaNroCabecera,',','')                        
+                        
+                         
+                        
+-- Traer Detalle de Facturas                        
+       
+Select                        
+                        
+d.FAC05CODEMP,                        
+                        
+d.FAC01COD,                        
+                        
+d.FAC04NUMDOC,                        
+                        
+-- Uni Med Venta                        
+                        
+--d.FAC05UNIMED,                        
+Sum(d.FAC05CANTIDAD) as 'Cantidad',                        
+---- MT2                        
+Sum((Case When d.FAC05UNIMED in ('MT2','TM')  then d.FAC05CANTIDAD else 0 end)) as 'CantidadMT2oTM',                        
+-- Otras Uni MED                        
+Sum((Case When d.FAC05UNIMED Not in ('MT2','TM') then d.FAC05CANTIDAD else 0 end)) as 'CantidadOtrasUniMed',                        
+--                   
+Sum(d.FAC05NROCAJA) as 'NROCAJAS',        
+Sum(CEILING(d.FAC05NROCAJA)) as 'NROETIQUETAS',        
+Sum((Case when dbo.Fn_ClasificarProdTipo(FAC05DESCPROD) = 'Baldosa' then (Case when d.FAC05UNIMED in ('MT2') then FAC05CANTIDAD else 0 end) else 0 end)) as 'CantidadBaldosasMT2',                        
+Sum((Case when dbo.Fn_ClasificarProdTipo(FAC05DESCPROD) = 'Mosaico' then (Case when d.FAC05UNIMED in ('MT2') then FAC05CANTIDAD else 0 end) else 0 end)) as 'CantidadMosaicosMT2',                        
+Sum((Case when dbo.Fn_ClasificarProdTipo(FAC05DESCPROD) = 'Plancha' then (Case when d.FAC05UNIMED in ('MT2') then FAC05CANTIDAD else 0 end) else 0 end)) as 'CantidadPlanchasMT2',                        
+Sum((Case when dbo.Fn_ClasificarProdTipo(FAC05DESCPROD) = 'Baldosa' then (Case when d.FAC05UNIMED not in ('MT2') then FAC05CANTIDAD else 0 end) else 0 end)) as 'CantidadBaldosasOtrasUniMed',                        
+Sum((Case when dbo.Fn_ClasificarProdTipo(FAC05DESCPROD) = 'Mosaico' then (Case when d.FAC05UNIMED not in ('MT2') then FAC05CANTIDAD else 0 end) else 0 end)) as 'CantidadMosaicosOtrasUniMed',                        
+Sum((Case when dbo.Fn_ClasificarProdTipo(FAC05DESCPROD) = 'Plancha' then (Case when d.FAC05UNIMED not in ('MT2') then FAC05CANTIDAD else 0 end) else 0 end)) as 'CantidadPlanchasOtrasUniMed',                        
+Sum((Case when dbo.ProTerTipo(d.FAC05CODPROD) = 'ET' then (Case when d.FAC05UNIMED in ('TM') then FAC05CANTIDAD else 0 end) else 0 end)) as 'CantidadEscallaPlantaTM',                              
+Sum((Case when dbo.ProTerTipo(d.FAC05CODPROD) = 'EC' then (Case when d.FAC05UNIMED in ('TM') then FAC05CANTIDAD else 0 end) else 0 end)) as 'CantidadEscallaCanteraTM',                        
+Sum((Case when dbo.ProTerTipo(d.FAC05CODPROD) = 'PT' then (Case when d.FAC05UNIMED in ('TM') then FAC05CANTIDAD else 0 end) else 0 end)) as 'CantidadPolvoTM',                        
+Sum((Case when dbo.ProTerTipo(d.FAC05CODPROD) = 'ET' then (Case when d.FAC05UNIMED Not in ('TM') then FAC05CANTIDAD else 0 end) else 0 end)) as 'CantidadEscallaPlantaOtrasUniMed',                        
+Sum((Case when dbo.ProTerTipo(d.FAC05CODPROD) = 'EC' then (Case when d.FAC05UNIMED Not in ('TM') then FAC05CANTIDAD else 0 end) else 0 end)) as 'CantidadEscallaCanteraOtrasUniMed',                        
+Sum((Case when dbo.ProTerTipo(d.FAC05CODPROD) = 'PT' then (Case when d.FAC05UNIMED Not in ('TM') then FAC05CANTIDAD else 0 end) else 0 end)) as 'CantidadPolvoOtrasUniMed'                        
+Into #FacturaDetalle                        
+                        
+--Drop Table #FacturaDetalle                        
+                        
+From FAC05_DETFACTURA d Inner Join #Facturas c On                                    
+                        
+      d.FAC05CODEMP = c.CodigoEmpresa                        
+                        
+And d.FAC01COD = c.TipoDocumento                        
+                        
+And d.FAC04NUMDOC = c.NumeroDocumento                        
+                        
+Group by d.FAC05CODEMP,d.FAC01COD,d.FAC04NUMDOC                   
+                        
+                         
+                        
+-- Cosulta para excelexportacion                        
+                        
+Select                        
+                        
+dbo.FECHAFORMATEADATEXTO(c.Fecha) as Fecha,              
+                        
+c.NumeroDocumento,                             
+                        
+c.ClienteNombre,                     
+                        
+d.CantidadMT2oTM,                        
+                        
+c.ValorVentaDol,                        
+                        
+c.TipCambio,                        
+                        
+c.ValorVentaSol,                        
+                        
+d.NROCAJAS,                          
+                        
+d.CantidadOtrasUniMed,                        
+                        
+isnull(d.NROETIQUETAS,0) as 'NROETIQUETAS',                        
+                        
+--                        
+                        
+c.PAIS_DESTINO,                        
+                        
+c.NRO_ORDENCOMPRA,                        
+                        
+c.CONDICION_PAGO,           
+                        
+c.GuiaNroCabecera,                    
+                        
+-- Detalle Guia                        
+              
+--Convert(varchar, Isnull(g.FAC34FECHA,''), 103) as 'GuiaFecha',                        
+dbo.FECHAFORMATEADATEXTO(Isnull(g.FAC34FECHA,'')) as 'GuiaFecha',              
+                        
+Isnull(g.FAC34NROGUIA,'') as 'GuiaNro',                        
+                        
+Isnull(g.CantidadMT2,0) as 'GuiaCantidad',                        
+                        
+-- Datos Planta                        
+                        
+0 as 'PlantaMT2',                        
+                        
+0 as 'Diferencia',                        
+                        
+--                        
+                        
+d.CantidadBaldosasMT2,                        
+                        
+d.CantidadMosaicosMT2,                        
+                        
+d.CantidadPlanchasMT2,                        
+                        
+--                        
+                  
+d.CantidadEscallaPlantaTM,                        
+                        
+d.CantidadEscallaCanteraTM,                        
+                        
+d.CantidadPolvoTM,                        
+                        
+--                        
+                        
+c.observacion,                    
+c.FAC04LIQUIDACIONNRO as NroLiquidacion,                    
+    '' as 'otros',    
+c.VendedorCod,    
+c.VendedorDesc                        
+From #Facturas c                        
+                        
+Inner Join #FacturaDetalle d On                        
+                        
+      d.FAC05CODEMP = c.CodigoEmpresa                        
+                        
+      And d.FAC01COD = c.TipoDocumento                        
+                        
+      And d.FAC04NUMDOC = c.NumeroDocumento                        
+                        
+Left Join V_GuiasAgrupadas g On                        
+                        
+      c.CodigoEmpresa = g.FAC34CODEMP                        
+                        
+      And c.GuiaNroCabecera = g.FAC34NROGUIA                        
+                        
+Order by c.Fecha,c.NumeroDocumento

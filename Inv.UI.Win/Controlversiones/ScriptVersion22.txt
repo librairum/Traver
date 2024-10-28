@@ -1,0 +1,742 @@
+--Importacion de movimientos, personalizacion Proalvi
+-- Cambios inventario
+CREATE TABLE [dbo].[MovimientoAlmacenImportar](
+	[Empresa] [char](2) NULL,
+	[Anio] [char](4) NULL,
+	[Mes] [char](2) NULL,
+	[Contador] [int] NULL,
+	[DOCUMENTO_FECHA] [datetime] NULL,
+	[DOCUMENTO_TIPO] [char](1) NULL,
+	[DOCUMENTO_NUMERO] [varchar](20) NULL,
+	[DOCUMENTO_TIPOOPERACION] [varchar](100) NULL,
+	[ENTRADA_CANTIDAD] [float] NULL,
+	[ENTRADA_COSTOUNITARIO] [float] NULL,
+	[ENTRADA_COSTOTOTAL] [float] NULL,
+	[SALIDA_CANTIDAD] [float] NULL,
+	[SALIDA_COSTOUNITARIO] [float] NULL,
+	[SALIDA_COSTOTOTAL] [float] NULL,
+	[SALDOFINAL_CANTIDAD] [float] NULL,
+	[SALDOFINAL_COSTOUNITARIO] [float] NULL,
+	[SALDOFINAL_COSTOTOTAL] [float] NULL,
+	[ALMACEN] [varchar](50) NULL,
+	[PRODUCTO_CODIGOCONTASIS] [varchar](50) NULL,
+	[PRODUCTO_DESCRIPCIONCONTASIS] [varchar](250) NULL,
+	[PRODUCTO_UNIMED] [varchar](50) NULL,
+	[PRODUCTO_CODIGOTRAVER] [varchar](50) NULL,
+	[PRODUCTO_CODIGOSAP] [varchar](50) NULL,
+	[RUC] [varchar](11) NULL,
+	[RAZONSOCIAL] [varchar](250) NULL,
+	[ORDENDECOMPRA] [varchar](50) NULL,
+	[COMENTARIOS] [varchar](max) NULL,
+	[CAMPOADICIONAL1] [varchar](100) NULL,
+	[CAMPOADICIONAL2] [varchar](100) NULL,
+	[USUARIO] [varchar](50) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+Go
+Create procedure Spu_Inv_Del_MovimientoAlmacenImportado  
+@Empresa char(2),  
+@USUARIO VARCHAR(50)  
+as  
+Begin  
+  
+delete from MovimientoAlmacenImportar     
+ where   
+ Empresa = @Empresa  
+ and USUARIO = @USUARIO           
+        
+ end  
+Go
+
+---PROCEDIMIENTOS
+Create procedure Spu_Inv_Trae_MovimientoAlmacenImportado    
+@Empresa char(2) , -- se asigna de los valores globales del sistema      
+@USUARIO varchar(50)  
+as      
+begin      
+--la tabla debe listar todo los datos que contiene, los datos de esta tabla tambien sera retirado cuando se procese de temporal a la tabla final d    
+ Select * from MovimientoAlmacenImportar   
+ where Empresa = @Empresa
+ and USUARIO = @USUARIO  
+end
+Go
+CREATE procedure Spu_Inv_Ins_MovimientoAlmacenImportado          
+@Empresa char(2),          
+@Anio char(4),          
+@Mes char(2),          
+@contador int,          
+@DOCUMENTO_FECHA DATETIME,          
+@DOCUMENTO_TIPO CHAR(1),          
+@DOCUMENTO_NUMERO varchar(20),          
+@DOCUMENTO_TIPOOPERACION varchar(100),          
+          
+@ENTRADA_CANTIDAD float ,           
+@ENTRADA_COSTOUNITARIO float ,          
+@ENTRADA_COSTOTOTAL float,          
+          
+          
+@SALIDA_CANTIDAD float,          
+@SALIDA_COSTOUNITARIO float,          
+@SALIDA_COSTOTOTAL float,          
+          
+          
+@SALDOFINAL_CANTIDAD float,          
+@SALDOFINAL_COSTOUNITARIO float,          
+@SALDOFINAL_COSTOTOTAL float,          
+@ALMACEN varchar(50),        
+@PRODUCTO_CODIGOCONTASIS varchar(50),          
+@PRODUCTO_DESCRIPCIONCONTASIS varchar(250),          
+@PRODUCTO_UNIMED  varchar(50),          
+@PRODUCTO_CODIGOTRAVER varchar(50),          
+@PRODUCTO_CODIGOSAP varchar(50),          
+          
+--CUENTACORRIENTE          
+@RUC  varchar(11),          
+@RAZONSOCIAL varchar(250),          
+          
+--ORDEN COMPRA          
+@ORDENDECOMPRA varchar(50),          
+          
+          
+--CAMPOS ADICIONALES            
+@COMENTARIOS varchar(max),          
+@CAMPOADICIONAL1 varchar(100),          
+@CAMPOADICIONAL2 varchar(100),          
+@USUARIO VARCHAR(50),          
+@flag int output,                
+@mensaje varchar(20) output             
+as          
+          
+Begin                
+Begin transaction             
+ declare @fechaformateada datetime          
+ set @fechaformateada = convert(datetime,@DOCUMENTO_FECHA, 121)          
+      
+ insert into MovimientoAlmacenImportar values(@Empresa,@Anio,@Mes,@contador, @fechaformateada,@DOCUMENTO_TIPO,@DOCUMENTO_NUMERO,          
+ --@DOCUMENTO_TIPOOPERACION,  
+ replace( replace ( replace  (replace( replace  (@DOCUMENTO_TIPOOPERACION, 'á', 'a' ), 'é', 'e' ), 'í', 'i' ), 'ó', 'o' ), 'ú', 'u' ),  
+ @ENTRADA_CANTIDAD, @ENTRADA_COSTOUNITARIO,@ENTRADA_COSTOTOTAL,@SALIDA_CANTIDAD,          
+ @SALIDA_COSTOUNITARIO,@SALIDA_COSTOTOTAL, @SALDOFINAL_CANTIDAD,@SALDOFINAL_COSTOUNITARIO, @SALDOFINAL_COSTOTOTAL, @ALMACEN,        
+ @PRODUCTO_CODIGOCONTASIS,@PRODUCTO_DESCRIPCIONCONTASIS,@PRODUCTO_UNIMED, @PRODUCTO_CODIGOTRAVER, @PRODUCTO_CODIGOSAP,          
+ @RUC,@RAZONSOCIAL,@ORDENDECOMPRA,@COMENTARIOS,@CAMPOADICIONAL1,@CAMPOADICIONAL2, @USUARIO)          
+           
+ if @@Error <> 0              
+ Begin              
+ set @mensaje = 'Error al insertar guia de importacion'               
+ goto ManejaError               
+ End              
+               
+ set @mensaje = 'Insercion exitosa'              
+ set @flag = 1              
+ Commit Transaction              
+ return 1              
+               
+ ManejaError:              
+ set @flag = -1              
+ Rollback transaction              
+ return -1              
+               
+End 
+
+Go
+
+--Exec  Spu_Inv_Ins_ImpMovAlmacen '03','2022','05','yadira',0,''
+Alter Procedure Spu_Inv_Ins_ImpMovAlmacen  
+@Empresa VarChar(2),    
+@Anio  VarChar(4),    
+@Mes  VarChar(2),    
+@Usuario VarChar(20),    
+@flag int output,  
+@Msgretorno VarChar(100)  Output              
+    
+As    
+    
+BEGIN TRANSACTION       
+    
+-- ===== Crear temporal de lo importado y validado  
+Select   
+Empresa  as 'EmpresaCod',Anio,Mes,  
+DOCUMENTO_TIPOOPERACION,  
+Isnull(tido.in12TipDoc,'01') as 'TipDoc',  
+ '00000' as 'IN06CODDOC',  
+    Convert(datetime,DOCUMENTO_FECHA,103) as 'Fecha',  
+ right('0' + DOCUMENTO_TIPO,2) as 'DocRefTipo',  
+ Convert(varchar(20),cast(cast(ruc as bigint) as varchar(100))) as 'RUC',  
+ --NUMERO as 'DocRefNum',  
+ dbo.ExtraeSerieyNumero(DOCUMENTO_NUMERO,'S') + '-'+ dbo.ExtraeSerieyNumero(DOCUMENTO_NUMERO,'N') as 'DocRefNum',  
+ --  (Case ltrim(rtrim(DOCUMENTO_TIPOOPERACION))   
+ --When '02 - COMPRA NACIONAL'  then 'E'  
+ --When '01 - VENTA NACIONAL' then 'S'  
+ --When '06 - DEVOLUCIÓN ENTREGADA' then 'S'  
+ --When '05 - DEVOLUCIÓN RECIBIDA' then 'E'  
+ --Else '' End ) as 'TransaCod',  
+  isnull(tido.in12TipMov,'E') as 'TransaCod',  
+ 'S' as 'Moneda', -- Moneda x defecto  
+ 1.0000 as 'TipCam',  
+ '04' as 'NaturalezaCod',  
+ 'M' as OrigenTipo,  
+--  
+iSNULL(ALMACEN,'01') as 'Almacen', -- Almacen por defecto  
+  
+PRODUCTO_CODIGOCONTASIS,PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,  
+right('0' + PRODUCTO_CODIGOTRAVER,9) as 'PRODUCTO_CODIGOTRAVER', -- Se completa con un cero hasta 9 digitos  
+PRODUCTO_CODIGOSAP,  
+--  
+ENTRADA_CANTIDAD,ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,  
+SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO,SALIDA_COSTOTOTAL,  
+--  
+ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2  
+--Drop table #ImportarMov   
+Into #ImportarMov  
+From MovimientoAlmacenImportar  Left Join in12tido tido On 
+Empresa = tido.in12codemp
+And  rtrim(ltrim(DOCUMENTO_TIPOOPERACION)) = rtrim(ltrim(tido.in12DesLar))
+where   
+Empresa = @Empresa And usuario = @Usuario And isnull(DOCUMENTO_TIPOOPERACION,'')<>''  
+Order by DOCUMENTO_FECHA asc   
+  
+-- ===== Insertar Cabecera  
+-- Obtener el ultimo numero de mov voucher  
+ Select IN06CODEMP,IN06AA,IN06MM,IN06TIPDOC,MAX(IN06CODDOC) as UltimoNumero   
+ Into #UltimaNumeroDocMovAlm  
+ --Drop Table #UltimaNumeroDocMovAlm  
+ From in06docu Where  
+ IN06CODEMP=@Empresa
+ And IN06AA=@Anio
+ -- No tomo el mes, por que hago inner la hora de crear el numerico  
+ Group by IN06CODEMP,IN06AA,IN06MM,IN06TIPDOC  
+  
+  
+   
+Insert into in06docu  
+(IN06CODEMP,IN06AA,IN06MM,IN06TIPDOC,IN06CODDOC,IN06FECDOC,IN06CODTRA,IN06REFDOC,  
+IN06TRANSA,IN06MONEDA,IN06CAMBIO,IN06PRODNATURALEZA,IN06ORIGENTIPO,  
+IN06CODPRO,IN06CODCLI,IN06DOCRESCTACTETIPANA,IN06DOCRESCTACTENUMERO)  
+  
+Select im.EmpresaCod,im.Anio,im.mes,im.TipDoc,  
+--right(isnull(UltimoNumero,0) + Convert(varchar(5),ROW_NUMBER() OVER(Partition by im.Anio,im.mes,im.TransaCod,im.TipDoc ORDER BY im.Anio,im.mes,im.TransaCod,im.TipDoc)),5) as NumDoc,  
+dbo.PadR((isnull(UltimoNumero,0) + ROW_NUMBER() OVER(Partition by im.Anio,im.mes,im.TransaCod,im.TipDoc ORDER BY im.Anio,im.mes,im.TransaCod,im.TipDoc)),5,'0') as NumDoc,  
+im.Fecha,im.DocRefTipo,im.DocRefNum,im.TransaCod,im.Moneda,im.TipCam,im.NaturalezaCod,im.OrigenTipo,  
+(Case When im.TransaCod='E' then im.ruc else '' end) as IN06CODPRO, -- Provisional , el de prodelca  
+(Case When im.TransaCod='S' then im.ruc else '' end) as IN06CODCLI,  
+(Case When im.TransaCod='E' then '02' else '01' end) as IN06DOCRESCTACTETIPANA,  
+ im.ruc as IN06DOCRESCTACTENUMERO  
+From #ImportarMov im left Join #UltimaNumeroDocMovAlm umma on   
+im.EmpresaCod = umma.IN06CODEMP  
+And im.Anio = umma.IN06AA  
+And im.mes = umma.IN06MM  
+And im.TipDoc = umma.IN06TIPDOC  
+  
+If @@ERROR<>0                
+ Begin                
+  SELECT @MsgRetorno = 'Error al insertar Cabecera'                  
+  Goto MANEJAERROR                  
+ End     
+    
+  
+-- ==== Insertar Detalle  
+Insert Into in07movi(IN07CODEMP,IN07AA,IN07MM,IN07TIPDOC,IN07CODDOC,  
+IN07KEY,IN07ORDEN,IN07UNIMED,IN07FECDOC,IN07CODALM,IN07CODTRA,IN07TRANSA,  
+IN07CANART,IN07COSUNI,IN07COUNSO,IN07COUNDO,IN07IMPORT,IN07IMPSOL,IN07IMPDOL,  
+in07observacion,IN07SECUENCIA)  
+
+
+Select imd.EmpresaCod,imd.Anio,imd.mes,imd.TipDoc,  
+--right(IN06CODDOC + Convert(varchar(5),ROW_NUMBER() OVER(Partition by Anio,mes,TipDoc ORDER BY Anio,mes,TipDoc)),5) as NumDoc,  
+--dbo.PadR((isnull(UltimoNumero,0) + Convert(varchar(5),ROW_NUMBER() OVER(Partition by imd.Anio,imd.mes,imd.TransaCod,imd.TipDoc ORDER BY imd.Anio,imd.mes,imd.TransaCod,imd.TipDoc)),5,'0') as 'NumDoc',  
+dbo.PadR((isnull(UltimoNumero,0) + ROW_NUMBER() OVER(Partition by imd.Anio,imd.mes,imd.TransaCod,imd.TipDoc ORDER BY imd.Anio,imd.mes,imd.TransaCod,imd.TipDoc)),5,'0') as NumDoc,  
+imd.PRODUCTO_CODIGOTRAVER,1 as 'orden',  
+Isnull(unimed.In21Codigo,'UNI') as 'Unimedmed',  
+Convert(datetime,imd.Fecha,103) as 'Fecha',  
+Isnull(alma.in09codigo,'01') as 'Almacen',DocRefTipo,TransaCod,  
+(Case When TransaCod='E' then ENTRADA_CANTIDAD else SALIDA_CANTIDAD end) as 'Cantidad',  
+(Case When TransaCod='E' then ENTRADA_COSTOUNITARIO else SALIDA_COSTOUNITARIO end) as 'CostoUni',  
+(Case When TransaCod='E' then ENTRADA_COSTOUNITARIO else SALIDA_COSTOUNITARIO end) as 'CostoUniSol',  
+0 as 'CostoUniDol',  
+(Case When TransaCod='E' then ENTRADA_COSTOTOTAL else SALIDA_COSTOTOTAL end) as 'Importe',  
+(Case When TransaCod='E' then ENTRADA_COSTOTOTAL else SALIDA_COSTOTOTAL end) as 'ImporteSol',  
+0   as 'ImporteDol',  
+Left(rtrim(ltrim(imd.COMENTARIOS)),100),1  
+From #ImportarMov imd left Join #UltimaNumeroDocMovAlm umma on   
+imd.EmpresaCod = umma.IN06CODEMP  
+And imd.Anio = umma.IN06AA  
+And imd.mes = umma.IN06MM  
+And imd.TipDoc = umma.IN06TIPDOC  
+-- Amarre con almacen  
+Left Join in09alma alma on   
+imd.EmpresaCod = alma.in09codemp  
+And ltrim(rtrim(imd.almacen)) = ltrim(rtrim(alma.in09descripcion))  
+-- Amarre uni med  
+Left Join in21unidad unimed on   
+imd.EmpresaCod = in21codemp  
+And ltrim(rtrim(imd.PRODUCTO_UNIMED)) = ltrim(rtrim(in21Descri))  
+    
+If @@ERROR<>0                
+ Begin                
+  SELECT @MsgRetorno = 'Error al insertar Detalle'  
+  Goto MANEJAERROR                  
+ End     
+     
+Set @MsgRetorno='OK:: La a importacion se realizo con exito'              
+set @flag = 1         
+COMMIT TRANSACTION                  
+RETURN 1              
+                  
+MANEJAERROR:  
+set @flag = -1           
+ROLLBACK TRANSACTION                  
+RETURN -1 
+
+Go
+
+  
+--Exec Spu_Inv_Trae_ValImpMovAlmacen '01','2022','05','yadira'  
+Alter Procedure Spu_Inv_Trae_ValImpMovAlmacen  
+@Empresa VarChar(2),     
+@Anio  VarChar(4),     
+@Mes  VarChar(2),     
+@Usuario VarChar(20)     
+as     
+-- Creo una temporal para los errores     
+CREATE TABLE #MovAlm_importarError(  
+ [Empresa] [char](2) NULL,  
+ [Anio][char](4) NULL,  
+ [Mes] [char](2) NULL,  
+ [Contador] [int] Not NULL,  
+ [DOCUMENTO_FECHA] [datetime] NULL,  
+ [DOCUMENTO_TIPO] [char](1) NULL,  
+ [DOCUMENTO_NUMERO] [varchar](20) NULL,  
+ [DOCUMENTO_TIPOOPERACION] [varchar](100) NULL,  
+ [ENTRADA_CANTIDAD] [float] NULL,  
+ [ENTRADA_COSTOUNITARIO] [float] NULL,  
+ [ENTRADA_COSTOTOTAL] [float] NULL,  
+ [SALIDA_CANTIDAD] [float] NULL,  
+ [SALIDA_COSTOUNITARIO] [float] NULL,  
+ [SALIDA_COSTOTOTAL] [float] NULL,  
+ [SALDOFINAL_CANTIDAD] [float] NULL,  
+ [SALDOFINAL_COSTOUNITARIO] [float] NULL,  
+ [SALDOFINAL_COSTOTOTAL] [float] NULL,  
+ Almacen varchar(50),  
+ [PRODUCTO_CODIGOCONTASIS] [varchar](50) NULL,  
+ [PRODUCTO_DESCRIPCIONCONTASIS] [varchar](100) NULL,  
+ [PRODUCTO_UNIMED] [varchar](50) NULL,  
+ [PRODUCTO_CODIGOTRAVER] [varchar](50) NULL,  
+ [PRODUCTO_CODIGOSAP] [varchar](50) NULL,  
+ [RUC] [varchar](11) NULL,  
+ [RAZONSOCIAL] [varchar](250) NULL,  
+ [ORDENDECOMPRA] [varchar](50) NULL,  
+ [COMENTARIOS] [varchar](max) NULL,  
+ [CAMPOADICIONAL1] [varchar](100) NULL,  
+ [CAMPOADICIONAL2] [varchar](100) NULL,  
+ [USUARIO] [varchar](50) NULL,  
+ [Errorcod] [varchar](5) NULL,     
+ [Errordes] [varchar](250) NULL  
+) ON [PRIMARY]  
+                            
+    
+CREATE TABLE #MovAlm_importarOri(     
+ [Empresa] [char](2) NULL,  
+ [Anio] [char](4) NULL,  
+ [Mes] [char](2) NULL,  
+ [Contador] [int] Not NULL,  
+ [DOCUMENTO_FECHA] [datetime] NULL,  
+ [DOCUMENTO_TIPO] [char](1) NULL,  
+ [DOCUMENTO_NUMERO] [varchar](20) NULL,  
+ [DOCUMENTO_TIPOOPERACION] [varchar](100) NULL,  
+ [ENTRADA_CANTIDAD] [float] NULL,  
+ [ENTRADA_COSTOUNITARIO] [float] NULL  
+,  
+ [ENTRADA_COSTOTOTAL] [float] NULL,  
+ [SALIDA_CANTIDAD] [float] NULL,  
+ [SALIDA_COSTOUNITARIO] [float] NULL,  
+ [SALIDA_COSTOTOTAL] [float] NULL,  
+ [SALDOFINAL_CANTIDAD] [float] NULL,  
+ [SALDOFINAL_COSTOUNITARIO] [float] NULL,  
+ [SALDOFINAL_COSTOTOTAL] [float]NULL,  
+ [Almacen] varchar(50),  
+ [PRODUCTO_CODIGOCONTASIS] [varchar](50) NULL,  
+ [PRODUCTO_DESCRIPCIONCONTASIS] [varchar](250) NULL,  
+ [PRODUCTO_UNIMED] [varchar](50) NULL,  
+ [PRODUCTO_CODIGOTRAVER] [varchar](50) NULL,  
+ [PRODUCTO_CODIGOSAP] [varchar](50) NULL,  
+   
+ [RUC] [varchar](11) NULL,  
+ [RAZONSOCIAL] [varchar](250) NULL,  
+ [ORDENDECOMPRA] [varchar](50) NULL,  
+ [COMENTARIOS] [varchar](max) NULL,  
+ [CAMPOADICIONAL1] [varchar](100) NULL,  
+ [CAMPOADICIONAL2] [varchar](100) NULL,  
+ [USUARIO] [varchar](50) NULL  
+  )     
+  
+-- === Inserto Data Original   
+  
+Insert into  #MovAlm_importarOri(Empresa,Anio,Mes,Contador,  
+DOCUMENTO_FECHA,DOCUMENTO_TIPO,DOCUMENTO_NUMERO,DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,  
+ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO  
+,SALIDA_COSTOTOTAL,  
+SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,SALDOFINAL_COSTOTOTAL,Almacen,PRODUCTO_CODIGOCONTASIS,  
+PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,USUARIO)     
+      Select  Empresa,Anio,Mes,Contador,  
+         DOCUMENTO_FECHA,DOCUMENTO_TIPO,
+         DOCUMENTO_NUMERO,DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,  
+ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO  
+,SALIDA_COSTOTOTAL,  
+SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,SALDOFINAL_COSTOTOTAL,Almacen, PRODUCTO_CODIGOCONTASIS,  
+PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,USUARIO  
+
+      from    
+         MovimientoAlmacenImportar  
+      Where    
+         Empresa = @Empresa     
+         And usuario = @Usuario     
+         And Isnull(DOCUMENTO_NUMERO, '') <> ''     
+  
+  -- ========== Validar Inconsistencias del mismo registro                               
+      
+      -- Validar Fechas vs Periodo     
+      --print 'validar fecha vs periodo'  
+Insert Into #MovAlm_importarError (Empresa,Anio,Mes,Contador,DOCUMENTO_FECHA,DOCUMENTO_TIPO,DOCUMENTO_NUMERO,  
+DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,  
+ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO,SALIDA_COSTOTOTAL,  
+SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,SALDOFINAL_COSTOTOTAL,Almacen,PRODUCTO_CODIGOCONTASIS,  
+PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,USUARIO, Errorcod, Errordes)     
+  
+Select    
+Empresa,Anio,Mes,Contador,DOCUMENTO_FECHA,DOCUMENTO_TIPO,DOCUMENTO_NUMERO,DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,  
+ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO,SALIDA_COSTOTOTAL,  
+SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,SALDOFINAL_COSTOTOTAL,Almacen,PRODUCTO_CODIGOCONTASIS,  
+PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,USUARIO,    
+'1.1',  'Fecha No Pertenece al Periodo: La Fecha debe estar dentro del periodo'     
+         From    #MovAlm_importarOri     
+         Where    
+            Empresa = @Empresa     
+            And usuario = @Usuario     
+            And     
+            (    
+               Month(Isnull (DOCUMENTO_FECHA, '')) <> Mes     
+               Or YEAR(Isnull(DOCUMENTO_FECHA, '')) <> Anio    
+            )    
+      
+  
+ ---validacion de tipo de documento  
+ --print 'validacion tipo de documento'  
+   
+ Insert Into  #MovAlm_importarError (  Empresa,Anio,Mes,Contador,DOCUMENTO_FECHA,DOCUMENTO_TIPO,DOCUMENTO_NUMERO,DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,  
+ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO,SALIDA_COSTOTOTAL,  
+SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,SALDOFINAL_COSTOTOTAL,Almacen, PRODUCTO_CODIGOCONTASIS,  
+PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,USUARIO, Errorcod, Errordes)     
+  
+ Select    
+ Empresa,Anio,Mes,Contador,DOCUMENTO_FECHA,DOCUMENTO_TIPO,DOCUMENTO_NUMERO,DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,  
+ ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO,SALIDA_COSTOTOTAL,  
+ SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,SALDOFINAL_COSTOTOTAL,Almacen, PRODUCTO_CODIGOCONTASIS,  
+ PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+ RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,USUARIO,    
+ '1.2',    
+ 'Transaccion no validao' 
+ from   #MovAlm_importarOri origen   
+  Left Join in12tido tipodocumento  
+  on  origen.Empresa=tipodocumento.in12codemp  
+	  and upper(ltrim(rtrim(origen.DOCUMENTO_TIPOOPERACION))) = upper(ltrim(rtrim(tipodocumento.in12DesLar)))
+  where   
+  origen.Empresa= @Empresa
+  And usuario = @Usuario
+  and isnull(tipodocumento.in12TipDoc,'') = ''   -- Solo saque los doc nulos
+  
+-- Validar Almacen
+Insert Into  #MovAlm_importarError (  Empresa,Anio,Mes,Contador,DOCUMENTO_FECHA,DOCUMENTO_TIPO,DOCUMENTO_NUMERO,DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,  
+ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO,SALIDA_COSTOTOTAL,  
+SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,SALDOFINAL_COSTOTOTAL,Almacen, PRODUCTO_CODIGOCONTASIS,  
+PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,USUARIO, Errorcod, Errordes)     
+  
+ Select    
+ Empresa,Anio,Mes,Contador,DOCUMENTO_FECHA,DOCUMENTO_TIPO,DOCUMENTO_NUMERO,DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,  
+ ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO,SALIDA_COSTOTOTAL,  
+ SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,SALDOFINAL_COSTOTOTAL,Almacen, PRODUCTO_CODIGOCONTASIS,  
+ PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+ RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,USUARIO,    
+ '1.2',    
+ 'Almacen no validao' 
+ from   #MovAlm_importarOri origen   
+  Left Join in09alma almacen  
+  on  origen.Empresa=almacen.in09codemp  
+	  and upper(ltrim(rtrim(origen.Almacen))) = upper(ltrim(rtrim(almacen.in09descripcion)))
+  where   
+  origen.Empresa= @Empresa
+  And origen.usuario = @Usuario
+  and isnull(Almacen.in09codigo,'') = ''   -- Solo saque los doc nulos
+        
+  
+ --DOCUMENTO_TIPOOPERACION  
+ Insert Into    
+ #MovAlm_importarError (  Empresa,Anio,Mes,Contador,DOCUMENTO_FECHA,DOCUMENTO_TIPO,DOCUMENTO_NUMERO,DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,  
+ ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO,SALIDA_COSTOTOTAL,  
+ SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,SALDOFINAL_COSTOTOTAL,Almacen, PRODUCTO_CODIGOCONTASIS,  
+ PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+ RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,USUARIO, Errorcod, Errordes)     
+ select   
+ Empresa,Anio,Mes,Contador,DOCUMENTO_FECHA,DOCUMENTO_TIPO,DOCUMENTO_NUMERO,DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,  
+ ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO,SALIDA_COSTOTOTAL,  
+ SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,SALDOFINAL_COSTOTOTAL,Almacen, PRODUCTO_CODIGOCONTASIS,  
+ PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+ RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,USUARIO,    
+ '1.3',    
+ 'Tipo de documento respaldo no valido'   
+  from #MovAlm_importarOri origen   
+  Left Join in15tran docrespaldo   
+  on origen.empresa = docrespaldo.in15codemp  
+  and right('0' + origen.DOCUMENTO_TIPO,2) = docrespaldo.in15Codigo  
+  where origen.empresa = @Empresa  
+  And origen.usuario = @Usuario
+  and isnull(docrespaldo.in15Descripcion,'') = ''  
+   
+  --right('0' + DOCUMENTO_TIPO,2) as 'DocRefTipo',
+    
+----validar codigo de producto in01arti  
+Insert into #MovAlm_importarError (  Empresa,Anio,Mes,Contador,DOCUMENTO_FECHA,DOCUMENTO_TIPO,DOCUMENTO_NUMERO,DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,  
+ ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO,SALIDA_COSTOTOTAL,  
+ SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,SALDOFINAL_COSTOTOTAL,Almacen, PRODUCTO_CODIGOCONTASIS,  
+ PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+ RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,USUARIO, Errorcod, Errordes)    
+select   
+ Empresa,Anio,Mes,Contador,DOCUMENTO_FECHA,DOCUMENTO_TIPO,DOCUMENTO_NUMERO,DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,  
+ ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO,SALIDA_COSTOTOTAL,  
+ SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,SALDOFINAL_COSTOTOTAL,Almacen, PRODUCTO_CODIGOCONTASIS,  
+ PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+ RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,USUARIO,    
+ '1.4',    
+   
+'codigo de articulo no valido'   
+ from #MovAlm_importarOri origen   
+ Left Join  in01arti arti  
+ on origen.Empresa=  arti.IN01CODEMP   
+ and origen.Anio = arti.IN01AA  
+ and origen.PRODUCTO_CODIGOTRAVER = arti.IN01KEY  
+ where  arti.IN01CODEMP = @Empresa  
+ and arti.IN01AA = @Anio  
+ and isnull(arti.IN01KEY,'') = ''  
+ --definir la naturaleza del producto  
+   
+---validar codigo de cuenta corriente cliente    
+ insert into #MovAlm_importarError(Empresa,Anio,Mes,Contador,DOCUMENTO_FECHA,DOCUMENTO_TIPO,DOCUMENTO_NUMERO,DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,  
+ ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO,SALIDA_COSTOTOTAL,  
+ SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,SALDOFINAL_COSTOTOTAL,Almacen, PRODUCTO_CODIGOCONTASIS,  
+ PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+ RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,USUARIO, Errorcod, Errordes)  
+   
+ select   
+ Empresa,Anio,Mes,Contador,DOCUMENTO_FECHA,DOCUMENTO_TIPO,DOCUMENTO_NUMERO,DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,  
+ ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO,SALIDA_COSTOTOTAL,  
+ SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,SALDOFINAL_COSTOTOTAL,Almacen, PRODUCTO_CODIGOCONTASIS,  
+ PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+ RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,USUARIO,    
+ '1.5',   
+   
+ 'Cuenta corriente  No valido'   
+ from #MovAlm_importarOri origen  Left join ccm02cta cliente  
+ on cliente.ccm02tipana = '01' -- tipo de analisis cliente  
+ and cliente.ccm02emp =  origen.Empresa  
+ and cliente.ccm02cod = origen.RUC  
+ where isnull(cliente.ccm02cod,'') = ''  
+   
+ --Tabla de analisis  
+ --ccb17ana analisis  
+ --Revisa   
+   
+ --validaciones que cantiades sean mayor a cero  
+ insert into #MovAlm_importarError(Empresa,Anio,Mes,Contador,DOCUMENTO_FECHA,DOCUMENTO_TIPO,DOCUMENTO_NUMERO,DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,  
+ ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO,SALIDA_COSTOTOTAL,  
+ SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,SALDOFINAL_COSTOTOTAL,Almacen, PRODUCTO_CODIGOCONTASIS,  
+ PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+ RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,USUARIO, Errorcod, Errordes)  
+   
+ select   
+ Empresa,Anio,Mes,Contador,DOCUMENTO_FECHA,DOCUMENTO_TIPO,DOCUMENTO_NUMERO,DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,  
+ ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,SALIDA_COSTOUNITARIO,SALIDA_COSTOTOTAL,  
+ SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,SALDOFINAL_COSTOTOTAL,Almacen, PRODUCTO_CODIGOCONTASIS,  
+  
+ PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+ RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,USUARIO,    
+ '1.6',    
+ 'La cantidad debe ser un valor positivo'   
+ from #MovAlm_importarOri origen    
+ where isnull(ENTRADA_CANTIDAD,0) + isnull(SALIDA_CANTIDAD,0) = 0  
+   
+   
+
+   -- Retornar valores                            
+Select Errorcod, Errordes,Contador,Empresa,Anio,Mes,Contador,DOCUMENTO_FECHA,DOCUMENTO_TIPO,DOCUMENTO_NUMERO,  
+DOCUMENTO_TIPOOPERACION,ENTRADA_CANTIDAD,ENTRADA_COSTOUNITARIO,ENTRADA_COSTOTOTAL,SALIDA_CANTIDAD,  
+SALIDA_COSTOUNITARIO,SALIDA_COSTOTOTAL,SALDOFINAL_CANTIDAD,SALDOFINAL_COSTOUNITARIO,  
+SALDOFINAL_COSTOTOTAL,Almacen,PRODUCTO_CODIGOCONTASIS,  
+PRODUCTO_DESCRIPCIONCONTASIS,PRODUCTO_UNIMED,PRODUCTO_CODIGOTRAVER,PRODUCTO_CODIGOSAP,  
+RUC,RAZONSOCIAL,ORDENDECOMPRA,COMENTARIOS,CAMPOADICIONAL1,CAMPOADICIONAL2,  
+USUARIO     
+   From    
+      #MovAlm_importarError     
+      Where    
+         Empresa = @Empresa     
+         And usuario = @Usuario     
+         Order by    
+            Errorcod              
+
+
+Go
+--
+Alter PROCEDURE [dbo].[sp_Inv_Genera_Periodo_Cierre]      
+/*--------------------------------------------------------------------------*/      
+/* Objetivo   : Genera un Nuevo Periodo de los Articulos        */            
+/* Actualiza  : In01Arti,In04Axal           */            
+/* Creado Por : Ricardo Huachos H.                                          */            
+/* Fecha      : 20/07/2000                                                  */            
+/*--------------------------------------------------------------------------*/            
+@cCodEmp      varchar(2),            
+@cAnnoOrigen  varchar(4),            
+@cAnnoDestino varchar(4),            
+@nRetornar    float OUTPUT            
+AS            
+
+ if (Select COUNT(*) from ccb03per where ccb03emp=@cCodEmp And left(ccb03cod,4)=@cAnnoDestino)=0
+	begin 
+		-- Crear Copia del perido Anterior    
+		Select * into #ccb03per from ccb03per where ccb03emp=@cCodEmp And left(ccb03cod,4)=@cAnnoOrigen  
+		    
+		Update #ccb03per  
+		Set ccb03cod = Replace(ccb03cod,@cAnnoOrigen,@cAnnoDestino),  ccb03des = Replace(ccb03des,@cAnnoOrigen,@cAnnoDestino),  
+			ccb03proc='0' -- Periodo Abierto  
+		-- ===   
+		Insert Into ccb03per  
+		Select * from #ccb03per  
+	 End 
+--  
+            
+/* Verifico que el periodo a generar no Exista */            
+IF (SELECT COUNT(*) From In01Arti          
+                    Where In01CodEmp = @cCodEmp            
+                    And In01aa = @cAnnoDestino) = 0            
+            
+    BEGIN            
+            
+ /* Genero el Nuevo periodo de los Articulos */            
+ --Creo Temporal       
+ Select  * Into #In01ArtiCopia from In01Arti WHERE In01aa   = @cAnnoOrigen            
+ AND In01CodEmp = @cCodEmp            
+       
+ -- Actualizar Año      
+ Update #In01ArtiCopia Set In01aa = @cAnnoDestino      
+       
+ -- Insertar Nuevo Año      
+ INSERT INTO In01Arti                              
+ SELECT * from #In01ArtiCopia      
+             
+ /* Genero el Nuevo periodo de los Articulos por Almacen */            
+ INSERT INTO In04Axal(In04codemp,In04aa,In04mm,In04key,In04codalm,In04ubicac,In04stomin,            
+                      In04stoseg,In04stomax,In04storep,In04fecini)            
+ SELECT In04codemp,@cAnnoDestino,In04mm,In04key,In04codalm,In04ubicac,In04stomin,            
+               In04stoseg,In04stomax,In04storep,In04fecini            
+ FROM In04Axal           
+ WHERE In04aa   = @cAnnoOrigen            
+ AND In04CodEmp = @cCodEmp            
+ /*            
+ Insert Into in04acum(IN04CODEMP,IN04AA,IN04MM,IN04KEY,IN04CODALM,IN04CANTINGRE,            
+ IN04CANTSALID,IN04IMPINGSOL,IN04IMPSALSOL,IN04IMPINGDOL,IN04IMPSALDOL)            
+ Select in04codemp,@cAnnoDestino,in04mm,in04key,in04codalm,0,            
+ 0,0,0,0,0            
+ From In04Axal (Index = in04axal_key1)            
+ Where In04aa   = @cAnnoOrigen            
+ AND In04CodEmp = @cCodEmp            
+ */            
+        /* Retorno el 0 si Genero Correctamente el Periodo */                   
+        SELECT @nRetornar = 0            
+    END            
+ELSE            
+    BEGIN            
+        /* Retorno el 1 si el periodo ya ha sido generado  */            
+        SELECT @nRetornar = 1            
+            
+    END            
+/* Ejecuto la sentencia */ 
+
+Go
+
+Create PROCEDURE Spu_Inv_Del_MovimientoSuministroBloque
+                          
+@IN06CODEMP  char(2),
+@IN06AA  char(4),
+@IN06MM  char(2),
+@XMLrango xml,
+@flag int output,
+@mensaje varchar(100) output
+AS                          
+Begin transaction               
+DECLARE @tmp_rango TABLE  (campo1 varCHAR(2), campo2 varchar(30))            
+          
+If @XMLrango.exist('//tbl')=1 -- Verificar que el XML tenga data                              
+ Begin                              
+ DECLARE @HANDLE INT                                       
+ EXEC SP_XML_PREPAREDOCUMENT  @HANDLE OUTPUT,@XMLrango          
+          
+ INSERT INTO @tmp_rango (campo1, campo2)                            
+ SELECT campo1, campo2 FROM OPENXML(@HANDLE, '/DataSet/tbl', 2)                                   
+ WITH (campo1  varchar(2), campo2 varchar(30)  )              
+ End        
+
+--Eliminar los registro seleccionado por el usuario  
+--Actualizar el almacen con los valores de los detalles a eliminar del movimiento
+
+        
+--Eliminacion de cabecera del documento de movimiento
+Delete   doc            
+	from in06docu doc
+    Inner Join @tmp_rango tmp
+    On doc.IN06TIPDOC = tmp.campo1
+    and doc.IN06CODDOC =tmp.campo2
+    where doc.IN06CODEMP = @IN06CODEMP
+    and doc.IN06AA = @IN06AA
+    and doc.IN06MM = @IN06MM 
+
+ if @@Error <> 0    
+ Begin    
+ set @mensaje = 'Error al eliminar cabecera de movimiento'
+ set @flag = -1    
+ goto ManejaError     
+ End    
+ 
+
+--Eliminacion de detalle del documento de movimiento 
+    Delete mov
+    from in07movi mov
+    Inner Join @tmp_rango tmp
+    On mov.IN07TIPDOC = tmp.campo1
+    and mov.IN07CODDOC =tmp.campo2
+    where mov.IN07CODEMP = @IN06CODEMP
+    and mov.IN07AA = @IN06AA
+    and mov.IN07MM = @IN06MM    
+
+
+
+ if @@Error <> 0    
+ Begin    
+ set @mensaje = 'Error al eliminar detalle de  movimiento'    
+ set @flag = -1    
+ goto ManejaError     
+ End    
+ 
+ set @mensaje = 'Eliminacion exitosa'    
+ set @flag = 1    
+ Commit Transaction    
+ return 1    
+     
+ ManejaError:    
+ set @flag = -1    
+ Rollback transaction    
+ return -1

@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B9B152C-0249-45D1-A2AA-642625BB28BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inv.DataAccess</RootNamespace>
+    <AssemblyName>Inv.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BLToolkit.4">
+      <HintPath>Librerias\BLToolkit.4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessorBase.cs" />
+    <Compile Include="ActividadContableTipoAccesor.cs" />
+    <Compile Include="ActividadesContableAccesor.cs" />
+    <Compile Include="ActividadNivel2Accesor.cs" />
+    <Compile Include="ActividadNivel1Accesor.cs" />
+    <Compile Include="AlmacenAccesor.cs" />
+    <Compile Include="ArticuloAccesor.cs" />
+    <Compile Include="ArticuloCaracteristicasAccesor.cs" />
+    <Compile Include="ArticuloClienteAccesor.cs" />
+    <Compile Include="ArticuloPorAlmacenAccesor.cs" />
+    <Compile Include="AsientoTipoAccesor.cs" />
+    <Compile Include="BancoAccesor.cs" />
+    <Compile Include="CanterasAccesor.cs" />
+    <Compile Include="CentroCostoAccesor.cs" />
+    <Compile Include="ClienteAccesor.cs" />
+    <Compile Include="CompraDocumentoAccesor.cs" />
+    <Compile Include="CompraArticulosAccesor.cs" />
+    <Compile Include="ComprasCuentaCorrienteAccesor.cs" />
+    <Compile Include="ReportesAccesor.cs" />
+    <Compile Include="Compras_TraerTipoCambioAccesor.cs" />
+    <Compile Include="ConciProdVsCtbleAccesor.cs" />
+    <Compile Include="ConfigVoucherAccesor.cs" />
+    <Compile Include="ContabilidadGastosAccesor.cs" />
+    <Compile Include="DetraccionAccesor.cs" />
+    <Compile Include="Efact_GuiasAccesor.cs" />
+    <Compile Include="RetencionAccesor.cs" />
+    <Compile Include="EquiAlmacenGuiaAccesor.cs" />
+    <Compile Include="EquivProdSunatAccesor.cs" />
+    <Compile Include="EstablecimientoAccesor.cs" />
+    <Compile Include="Compras\LineaArticulosAccesor.cs" />
+    <Compile Include="Compras\GuiaComprasAccesor.cs" />
+    <Compile Include="InventarioOrdenCompraAccesor.cs" />
+    <Compile Include="PackingListAccesor.cs" />
+    <Compile Include="ProductosVariosAccesor.cs" />
+    <Compile Include="Compras\ProvisionamientoAccesor.cs" />
+    <Compile Include="ProvisionFacturaAccesor.cs" />
+    <Compile Include="ServicioDetraccionAccesor.cs" />
+    <Compile Include="ServiciosAccesor.cs" />
+    <Compile Include="ServiciosCompraAccesor.cs" />
+    <Compile Include="usuariologisticaAccesor.cs" />
+    <Compile Include="VentaDocumentoAccesor.cs" />
+    <Compile Include="FormaPagoAccesor.cs" />
+    <Compile Include="OptimizacionBloqueAccesor.cs" />
+    <Compile Include="EstadoCostoAccesor.cs" />
+    <Compile Include="CostosProduccionAccessor.cs" />
+    <Compile Include="DetalleGuiaTransporteAccesor.cs" />
+    <Compile Include="DomicilioDestinoAccesor.cs" />
+    <Compile Include="ErroresComunesAccesor.cs" />
+    <Compile Include="FuncionesAccessor.cs" />
+    <Compile Include="GuiaTransporteAccesor.cs" />
+    <Compile Include="HoraMuertaDetalleAccesor.cs" />
+    <Compile Include="InventarioFisicoAccesor.cs" />
+    <Compile Include="CuentaCorrienteAccesor.cs" />
+    <Compile Include="LineaAccesor.cs" />
+    <Compile Include="LoteCostoAccesor.cs" />
+    <Compile Include="MaquinaAccesor.cs" />
+    <Compile Include="MotivoAccesor.cs" />
+    <Compile Include="MotivoHoraMuertaAccesor.cs" />
+    <Compile Include="NaturalezaAccesor.cs" />
+    <Compile Include="OrdenTrabajoAccesor.cs" />
+    <Compile Include="PaisesAccesor.cs" />
+    <Compile Include="PedidoVentaAccesor.cs" />
+    <Compile Include="PeriodoAccesor.cs" />
+    <Compile Include="DocumentoAccesor.cs" />
+    <Compile Include="GlobalAccesor.cs" />
+    <Compile Include="MonedaAccesor.cs" />
+    <Compile Include="ObraAccesor.cs" />
+    <Compile Include="PlantillaAccesor.cs" />
+    <Compile Include="ProduccionSaldoAccesor.cs" />
+    <Compile Include="ProductoCaracteristicasAccesor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProveedorAccesor.cs" />
+    <Compile Include="PuertoAccesor.cs" />
+    <Compile Include="PuntoVentaAccesor.cs" />
+    <Compile Include="ResponsableAccesor.cs" />
+    <Compile Include="ResumenBoletaAccessor.cs" />
+    <Compile Include="SedeAccesor.cs" />
+    <Compile Include="SegMenuPorPerfilAccesor.cs" />
+    <Compile Include="SegUsuarioAccesor.cs" />
+    <Compile Include="SeriesAccesor.cs" />
+    <Compile Include="SubPlantillaAccesor.cs" />
+    <Compile Include="TasasDistribucionAccesor.cs" />
+    <Compile Include="TipoAnalisisAccesor.cs" />
+    <Compile Include="TipoDocumentoAccesor.cs" />
+    <Compile Include="TipoDocumentoClienteAccesor.cs" />
+    <Compile Include="TipoDocumentoVentasAccesor.cs" />
+    <Compile Include="TipoTransaccionAccesor.cs" />
+    <Compile Include="TipoVentaAccesor.cs" />
+    <Compile Include="TransaccionAccesor.cs" />
+    <Compile Include="TurnosAccesor.cs" />
+    <Compile Include="UnidaddeMedidaAccesor.cs" />
+    <Compile Include="VehiculoAccesor.cs" />
+    <Compile Include="VoucherAccesor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inv.BusinessEntities\Inv.BusinessEntities.csproj">
+      <Project>{FC35BF50-F5C9-490B-974A-1BB73C3C108A}</Project>
+      <Name>Inv.BusinessEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

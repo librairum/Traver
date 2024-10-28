@@ -1,0 +1,4 @@
+﻿Fecha   : 13/09/2022
+Cambios EXE : 
+	Problema reportado: Adaptacion de IGV a 18% y 10%
+	Cambios SQL : Ninguno 

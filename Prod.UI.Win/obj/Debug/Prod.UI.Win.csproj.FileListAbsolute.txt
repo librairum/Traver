@@ -1,0 +1,476 @@
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\bin\Debug\Prod.UI.Win.exe.config
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\bin\Debug\Prod.UI.Win.exe
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\bin\Debug\Prod.UI.Win.pdb
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\bin\Debug\BLToolkit.4.dll
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\bin\Debug\Inv.DataAccess.dll
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\bin\Debug\Inv.DataAccess.pdb
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.Acceso.frmCambiarClave.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.Acceso.frmLogin.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.Comunes.frmBusqueda.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FormViewCristal.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FormViewReport.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmValoresxDefecto.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmErroresComunes.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmHoraMuerta.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmMDI.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepTransaccionesPPVal.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepKardexPPVal.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmPPStockVal.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepControlProduccion.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.Procesos.frmDetalleProduccion.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepErroresComunes.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepHorasMuertas.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepMerma.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepMotivos.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmOrdenTrabajoTipo.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepBloquesvsCortes.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmMotivos.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBase.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseHelp.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseMante.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseReg.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseReporte.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmActividadNivel1.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmActividadNivel2.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmLineas.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmMaquinas.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmTurnos.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.Procesos.frmProduccion.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.Properties.Resources.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmPPStock.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepConxActMP.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmRepKardexPP.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.Frmproduccionxoperario.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmProduccionxDia.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepRendimiento.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepTransaccionesPP.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmSeguirCanastilla.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmValidacionPP.resources
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.csproj.GenerateResource.Cache
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.exe.licenses
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.exe
+C:\Users\sistemas\Desktop\Traver_William2807\Prod.UI.Win\obj\Debug\Prod.UI.Win.pdb
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\bin\Debug\Prod.UI.Win.exe.config
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\bin\Debug\Prod.UI.Win.exe
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\bin\Debug\Prod.UI.Win.pdb
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\bin\Debug\BLToolkit.4.dll
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\bin\Debug\Inv.DataAccess.dll
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\bin\Debug\Inv.DataAccess.pdb
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.Acceso.frmCambiarClave.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.Acceso.frmLogin.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.Comunes.frmBusqueda.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FormViewCristal.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FormViewReport.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmValoresxDefecto.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmErroresComunes.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmHoraMuerta.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmMDI.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepTransaccionesPPVal.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepKardexPPVal.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmPPStockVal.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepControlProduccion.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.Procesos.frmDetalleProduccion.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepErroresComunes.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepHorasMuertas.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepMerma.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepMotivos.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmOrdenTrabajoTipo.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepBloquesvsCortes.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmMotivos.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBase.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseHelp.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseMante.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseReg.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseReporte.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmActividadNivel1.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmActividadNivel2.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmLineas.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmMaquinas.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmTurnos.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.Procesos.frmProduccion.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.Properties.Resources.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmPPStock.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepConxActMP.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmRepKardexPP.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.Frmproduccionxoperario.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmProduccionxDia.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepRendimiento.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepTransaccionesPP.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmSeguirCanastilla.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmValidacionPP.resources
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.csproj.GenerateResource.Cache
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.exe.licenses
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.exe
+C:\Users\sistemas\Desktop\Traver_William2807 - copia\Prod.UI.Win\obj\Debug\Prod.UI.Win.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.exe.config
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.exe
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\bin\Debug\BLToolkit.4.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\bin\Debug\Inv.DataAccess.dll
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\bin\Debug\Inv.DataAccess.pdb
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.csprojResolveAssemblyReference.cache
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Acceso.frmCambiarClave.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Acceso.frmLogin.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Comunes.frmBusqueda.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FormViewCristal.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FormViewReport.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmValoresxDefecto.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmErroresComunes.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmHoraMuerta.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmMDI.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepTransaccionesPPVal.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepKardexPPVal.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmPPStockVal.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepControlProduccion.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Procesos.frmDetalleProduccion.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepErroresComunes.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepHorasMuertas.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepMerma.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepMotivos.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmOrdenTrabajoTipo.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepBloquesvsCortes.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmMotivos.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBase.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseHelp.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseMante.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseReg.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseReporte.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmActividadNivel1.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmActividadNivel2.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmLineas.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmMaquinas.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmTurnos.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Procesos.frmProduccion.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Properties.Resources.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmPPStock.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepConxActMP.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmRepKardexPP.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Frmproduccionxoperario.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmProduccionxDia.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepRendimiento.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepTransaccionesPP.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmSeguirCanastilla.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmValidacionPP.resources
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.csproj.GenerateResource.Cache
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.exe.licenses
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.exe
+D:\MineraDeisi\PROTER\Integracion\01022018\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.pdb
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.exe.config
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.exe
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.pdb
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\bin\Debug\BLToolkit.4.dll
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\bin\Debug\Inv.DataAccess.dll
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\bin\Debug\Inv.DataAccess.pdb
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Acceso.frmCambiarClave.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Acceso.frmLogin.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Comunes.frmBusqueda.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FormViewCristal.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FormViewReport.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmValoresxDefecto.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmErroresComunes.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmHoraMuerta.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmMDI.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepTransaccionesPPVal.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepKardexPPVal.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmPPStockVal.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepControlProduccion.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Procesos.frmDetalleProduccion.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepErroresComunes.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepHorasMuertas.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepMerma.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepMotivos.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmOrdenTrabajoTipo.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepBloquesvsCortes.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmMotivos.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBase.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseHelp.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseMante.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseReg.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseReporte.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmActividadNivel1.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmActividadNivel2.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmLineas.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmMaquinas.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmTurnos.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Procesos.frmProduccion.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Properties.Resources.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmPPStock.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepConxActMP.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmRepKardexPP.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Frmproduccionxoperario.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmProduccionxDia.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepRendimiento.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepTransaccionesPP.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmSeguirCanastilla.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmValidacionPP.resources
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.csproj.GenerateResource.Cache
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.exe.licenses
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.exe
+C:\Users\sistemas\Desktop\William\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.pdb
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.exe.config
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.exe
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.pdb
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\bin\Debug\BLToolkit.4.dll
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.DataAccess.dll
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.DataAccess.pdb
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Acceso.frmCambiarClave.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Acceso.frmLogin.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Comunes.frmBusqueda.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FormViewCristal.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FormViewReport.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmValoresxDefecto.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmErroresComunes.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmHoraMuerta.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmMDI.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepTransaccionesPPVal.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepKardexPPVal.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmPPStockVal.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepControlProduccion.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Procesos.frmDetalleProduccion.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepErroresComunes.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepHorasMuertas.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepMerma.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepMotivos.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmOrdenTrabajoTipo.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepBloquesvsCortes.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmMotivos.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBase.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseHelp.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseMante.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseReg.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseReporte.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmActividadNivel1.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmActividadNivel2.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmLineas.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmMaquinas.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmTurnos.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Procesos.frmProduccion.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Properties.Resources.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmPPStock.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepConxActMP.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmRepKardexPP.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Frmproduccionxoperario.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmProduccionxDia.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepRendimiento.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepTransaccionesPP.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmSeguirCanastilla.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmValidacionPP.resources
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.csproj.GenerateResource.Cache
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.exe.licenses
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.exe
+C:\Users\sistemas\Desktop\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.pdb
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.exe.config
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.exe
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.pdb
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\BLToolkit.4.dll
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.DataAccess.dll
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.DataAccess.pdb
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.csprojResolveAssemblyReference.cache
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Acceso.frmCambiarClave.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Acceso.frmLogin.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Comunes.frmBusqueda.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FormViewCristal.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FormViewReport.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmValoresxDefecto.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmErroresComunes.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmHoraMuerta.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmMDI.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepTransaccionesPPVal.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepKardexPPVal.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmPPStockVal.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepControlProduccion.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Procesos.frmDetalleProduccion.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepErroresComunes.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepHorasMuertas.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepMerma.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepMotivos.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmOrdenTrabajoTipo.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepBloquesvsCortes.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmMotivos.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBase.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseHelp.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseMante.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseReg.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseReporte.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmActividadNivel1.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmActividadNivel2.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmLineas.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmMaquinas.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmTurnos.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Procesos.frmProduccion.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Properties.Resources.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmPPStock.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepConxActMP.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmRepKardexPP.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Frmproduccionxoperario.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmProduccionxDia.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepRendimiento.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepTransaccionesPP.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmSeguirCanastilla.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmValidacionPP.resources
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.csproj.GenerateResource.Cache
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.exe.licenses
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.exe
+C:\Users\sistemas\Desktop\PROYECTOS\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.pdb
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.exe.config
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.exe
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.pdb
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\BLToolkit.4.dll
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.DataAccess.dll
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\bin\Debug\Inv.DataAccess.pdb
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.csprojResolveAssemblyReference.cache
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Acceso.frmCambiarClave.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Acceso.frmLogin.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Comunes.frmBusqueda.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FormViewCristal.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FormViewReport.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmValoresxDefecto.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmErroresComunes.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmHoraMuerta.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmMDI.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepTransaccionesPPVal.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepKardexPPVal.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmPPStockVal.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepControlProduccion.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Procesos.frmDetalleProduccion.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepErroresComunes.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepHorasMuertas.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepMerma.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepMotivos.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmOrdenTrabajoTipo.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepBloquesvsCortes.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmMotivos.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBase.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseHelp.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseMante.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseReg.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseReporte.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmActividadNivel1.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmActividadNivel2.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmLineas.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmMaquinas.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmTurnos.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Procesos.frmProduccion.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Properties.Resources.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmPPStock.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepConxActMP.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmRepKardexPP.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Frmproduccionxoperario.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmProduccionxDia.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepRendimiento.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepTransaccionesPP.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmSeguirCanastilla.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmValidacionPP.resources
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.csproj.GenerateResource.Cache
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.exe.licenses
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.exe
+D:\PROYECTOS_2024\TRAVER\traver_20112023\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.pdb
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.exe.config
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.exe
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\bin\Debug\Prod.UI.Win.pdb
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessEntities.dll
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessLogic.dll
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\bin\Debug\BLToolkit.4.dll
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\bin\Debug\Inv.DataAccess.dll
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessEntities.pdb
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\bin\Debug\Inv.BusinessLogic.pdb
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\bin\Debug\Inv.DataAccess.pdb
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.csprojResolveAssemblyReference.cache
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Acceso.frmCambiarClave.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Acceso.frmLogin.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Comunes.frmBusqueda.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FormViewCristal.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FormViewReport.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmValoresxDefecto.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmErroresComunes.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmHoraMuerta.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmMDI.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepTransaccionesPPVal.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepKardexPPVal.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmPPStockVal.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepControlProduccion.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Procesos.frmDetalleProduccion.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepErroresComunes.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepHorasMuertas.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepMerma.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepMotivos.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmOrdenTrabajoTipo.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepBloquesvsCortes.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmMotivos.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBase.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseHelp.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseMante.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseReg.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmBaseReporte.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmActividadNivel1.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmActividadNivel2.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmLineas.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Maestros.frmMaquinas.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmTurnos.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Procesos.frmProduccion.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Properties.Resources.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmPPStock.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepConxActMP.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.frmRepKardexPP.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.Frmproduccionxoperario.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmProduccionxDia.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepRendimiento.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmRepTransaccionesPP.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmSeguirCanastilla.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.FrmValidacionPP.resources
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.csproj.GenerateResource.Cache
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.exe.licenses
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.exe
+D:\PROYECTOS_29082024\LOGISTICA\Traver\Prod.UI.Win\obj\Debug\Prod.UI.Win.pdb

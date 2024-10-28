@@ -1,0 +1,8 @@
+﻿Fecha   : 12/07/2022
+Author  : William R
+
+Cambios EXE : 
+	Problema reportado: La suma del SubTotal + IGV no cuadraba por los decimales
+	Medida a Tomar :  Se modifico metodo frmfacturacab.calculartotales() para que redondee a 2 digitos 
+					
+Cambios SQL : Ninguno 
