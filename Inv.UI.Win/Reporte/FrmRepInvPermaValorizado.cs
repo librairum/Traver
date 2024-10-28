@@ -347,8 +347,13 @@ namespace Inv.UI.Win
             //armar xml de almacenes seleccionados
 
             //Reporte reporte = new Reporte("RptInvRegisValorizado.rpt");
-            Reporte reporte = new Reporte("RptKardexElectronico.rpt");
+            Reporte reporte = new Reporte("RptKardexElectronico_reducido.rpt");
             reporte.Ruta = Logueo.GetRutaReporte();
+            reporte.FormulasFields.Add(new Formula("NombreEmpresa", Logueo.NombreEmpresa));
+            //reporte.FormulasFields.Add(new Formula("Anio", Logueo.Anio));
+            reporte.FormulasFields.Add(new Formula("TituloReporte", "Reporte Inventario permanente Valorizado"));
+            reporte.FormulasFields.Add(new Formula("RUC","20420310383"));
+            reporte.FormulasFields.Add(new Formula("Ano", cboperiodos.Text ));
             string CodAlmacen = Util.GetCurrentCellText(gridControl,"in09codigo");
             string xml = TraerXmlAlmcenes();
             //DataTable dt = PeriodoLogic.Instance.Traer_Rep_Kardex_Electronico(Logueo.CodigoEmpresa, Logueo.Anio, cboperiodos.SelectedValue.ToString(), CodAlmacen,"","","P","S");
@@ -358,7 +363,8 @@ namespace Inv.UI.Win
             reporte.DataSource = dt;
 
             ReporteControladora controles = new ReporteControladora(reporte);
-            reporte.FormulasFields.Add(new Formula("Ano", Logueo.Anio + cboperiodos.SelectedValue.ToString()));
+            
+            //reporte.FormulasFields.Add(new Formula("Ano", Logueo.Anio + cboperiodos.SelectedValue.ToString()));
             controles.VistaPrevia(enmWindowState.Normal);
             Cursor.Current = Cursors.Default;
         }
