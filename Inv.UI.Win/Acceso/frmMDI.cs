@@ -624,6 +624,11 @@ namespace Inv.UI.Win
                 isLoaded = true;
                 // Establecer añio y mes
                 capturarAniomes();
+
+                //primer registro de empresa seleccionada Inventario (Almacen)
+                Empresa modulo=   GlobalLogic.Instance.TraerEmpresas("ALMACEN", "")[0];
+                Logueo.RucEmpresa = modulo.Ruc;
+
                 lblPerfil.Text = Logueo.nomPerfil;
                 lblUsuario.Text = Logueo.UserName;
                 lblNomEmpresa.Text = Logueo.NombreEmpresa;

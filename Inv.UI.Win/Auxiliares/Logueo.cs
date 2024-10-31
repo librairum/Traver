@@ -10,6 +10,7 @@ namespace Inv.UI.Win
     {
         public static string CodigoEmpresa = "01";
         public static string NombreEmpresa = "XXXXXX";
+        public static string RucEmpresa = "";
         public static string TipoAnalisisCliente = "01";
         public static string TipoAnalisisProveedor = "02";
         public static string TipoAnalisisMateriaPrima = "10";

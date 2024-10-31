@@ -198,3 +198,13 @@ D:\PROYECTOS_29082024\LOGISTICA\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAcces
 D:\PROYECTOS_29082024\LOGISTICA\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
 D:\PROYECTOS_29082024\LOGISTICA\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
 D:\PROYECTOS_29082024\LOGISTICA\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb

@@ -352,9 +352,10 @@ namespace Inv.UI.Win
             reporte.FormulasFields.Add(new Formula("NombreEmpresa", Logueo.NombreEmpresa));
             //reporte.FormulasFields.Add(new Formula("Anio", Logueo.Anio));
             reporte.FormulasFields.Add(new Formula("TituloReporte", "Reporte Inventario permanente Valorizado"));
-            reporte.FormulasFields.Add(new Formula("RUC","20420310383"));
+            reporte.FormulasFields.Add(new Formula("RUC",Logueo.RucEmpresa));
             reporte.FormulasFields.Add(new Formula("Ano", cboperiodos.Text ));
             string CodAlmacen = Util.GetCurrentCellText(gridControl,"in09codigo");
+           
             string xml = TraerXmlAlmcenes();
             //DataTable dt = PeriodoLogic.Instance.Traer_Rep_Kardex_Electronico(Logueo.CodigoEmpresa, Logueo.Anio, cboperiodos.SelectedValue.ToString(), CodAlmacen,"","","P","S");
             DataTable dt =  PeriodoLogic.Instance.Traer_Rep_Kardex_Electronico(Logueo.CodigoEmpresa,
@@ -530,7 +531,7 @@ namespace Inv.UI.Win
 
                     //Nombredelibro = 
                     string prefijo = "LE";
-                    string rucempresa = "20420310383";
+                    string rucempresa = Logueo.RucEmpresa;
                     string anio = Logueo.Anio;
                     string mes = cboperiodos.SelectedValue.ToString();
                     string dias = "00";
@@ -538,7 +539,18 @@ namespace Inv.UI.Win
                     string codigoOportunidadEEFF = "00";
                     string indicadorOperacion = "1"; // empresa privada
                     string indicadorContenido = "1"; //Indicador del contenido del libro o registro = 1->Si tiene registro , 0-> no tiene registros
+                    indicadorContenido = dtRow.Rows.Count > 0 ? "1" : "0";
+                    
                     string indicadorMoneda = "1"; //indica el tipo de moneda utilizada 1-> soles , 2 -> doalres
+                    if (Logueo.MonedaxDefecto == "S")
+                    {
+                        indicadorMoneda = "1";
+                    }
+                    else if (Logueo.MonedaxDefecto == "D")
+                    {
+                        indicadorMoneda = "2";
+                    }
+
                     string indicadorPLE = "1";
                                                                                 //LERRRRRRRRRRRAAAAMM0013010000O1M1.TXT
                     string nombreArchivo = prefijo + rucempresa + anio + mes + dias + identificadorLibro + 
