@@ -45,7 +45,7 @@ namespace Inv.UI.Win
             //OnBuscarDet();
             //CargarStockDetallado();
             //this.gestionarBotones(ElementVisibility.Visible, ElementVisibility.Visible, ElementVisibility.Visible);
-            HabilitarBotones(true, true, true, false);
+            HabilitarBotones(true, true, true, false,true);
 
             this.rpvGeneral.SelectedPage = this.rpvStockResumido;
 
@@ -55,7 +55,19 @@ namespace Inv.UI.Win
             isLoaded = true;
         }
 
-        
+         protected override void OnSeleccionarTodo()
+         {
+             try
+             {
+                 gridControl.SelectAll();
+             }
+             catch (Exception ex)
+             {
+                 Util.ShowError("ERROR");
+             }
+
+         }
+       
 
          
 

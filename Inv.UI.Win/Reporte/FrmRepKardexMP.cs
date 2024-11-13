@@ -243,7 +243,7 @@ namespace Inv.UI.Win
             Crearcolumnas();
             isLoaded = true;
             OnBuscar();
-            HabilitarBotones(true, true, true, false);
+            HabilitarBotones(true, true, true, false,true);
 
             //gestionarBotones(ElementVisibility.Visible, ElementVisibility.Visible, ElementVisibility.Visible);
         }

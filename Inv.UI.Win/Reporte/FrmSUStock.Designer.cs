@@ -123,7 +123,7 @@
             // 
             // 
             this.radLabel1.RootElement.Margin = new System.Windows.Forms.Padding(0);
-            this.radLabel1.Size = new System.Drawing.Size(111, 18);
+            this.radLabel1.Size = new System.Drawing.Size(1235, 18);
             this.radLabel1.TabIndex = 4;
             this.radLabel1.Text = "Stock Por Almacenes";
             // 
@@ -138,7 +138,7 @@
             this.radPanel1.Controls.Add(this.radLabel3);
             this.radPanel1.Controls.Add(this.cboalmacenes);
             this.radPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radPanel1.Location = new System.Drawing.Point(0, 21);
+            this.radPanel1.Location = new System.Drawing.Point(0, 33);
             this.radPanel1.Name = "radPanel1";
             this.radPanel1.Size = new System.Drawing.Size(1256, 38);
             this.radPanel1.TabIndex = 7;
@@ -188,7 +188,7 @@
             this.radPanel2.Controls.Add(this.gridControlDet);
             this.radPanel2.Controls.Add(this.radLabel1);
             this.radPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.radPanel2.Location = new System.Drawing.Point(0, 325);
+            this.radPanel2.Location = new System.Drawing.Point(0, 313);
             this.radPanel2.Name = "radPanel2";
             this.radPanel2.Size = new System.Drawing.Size(1235, 134);
             this.radPanel2.TabIndex = 8;
@@ -211,10 +211,10 @@
             // 
             this.rpvGeneral.Controls.Add(this.rpvStockResumido);
             this.rpvGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rpvGeneral.Location = new System.Drawing.Point(0, 59);
+            this.rpvGeneral.Location = new System.Drawing.Point(0, 71);
             this.rpvGeneral.Name = "rpvGeneral";
             this.rpvGeneral.SelectedPage = this.rpvStockResumido;
-            this.rpvGeneral.Size = new System.Drawing.Size(1256, 507);
+            this.rpvGeneral.Size = new System.Drawing.Size(1256, 495);
             this.rpvGeneral.TabIndex = 1;
             this.rpvGeneral.Text = "radPageView1";
             // 
@@ -225,7 +225,7 @@
             this.rpvStockResumido.ItemSize = new System.Drawing.SizeF(78F, 28F);
             this.rpvStockResumido.Location = new System.Drawing.Point(10, 37);
             this.rpvStockResumido.Name = "rpvStockResumido";
-            this.rpvStockResumido.Size = new System.Drawing.Size(1235, 459);
+            this.rpvStockResumido.Size = new System.Drawing.Size(1235, 447);
             this.rpvStockResumido.Text = "Stock Actual";
             // 
             // FrmSUStock

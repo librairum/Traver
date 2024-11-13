@@ -626,7 +626,7 @@ namespace Inv.UI.Win
         public static bool ShowError(string mensaje)
         {
             bool processOK = false;
-            RadMessageBox.Show(mensaje, "Sistema", MessageBoxButtons.OK, RadMessageIcon.Exclamation);
+            RadMessageBox.Show(mensaje, "Sistema", MessageBoxButtons.OK, RadMessageIcon.Error);
             return processOK;
         }
         public static bool ShowQuestion(string mensaje)

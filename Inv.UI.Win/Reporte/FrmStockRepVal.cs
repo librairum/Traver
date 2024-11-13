@@ -59,11 +59,24 @@ namespace Inv.UI.Win
             FrmParent = padre;
             CargarAlmacenes(this.cboalmacenes);
             OnBuscar();
-            HabilitarBotones(true, true, true, false);
+            HabilitarBotones(true, true, true, false,true);
 
             this.gridControl.CustomFiltering += new GridViewCustomFilteringEventHandler(abrirFiltro);
             isLoaded = true;
         }
+        protected override void OnSeleccionarTodo()
+        {
+            try
+            {
+                gridControl.SelectAll();
+            }
+            catch (Exception ex)
+            {
+                Util.ShowError("ERROR");
+            }
+
+        }
+       
         void abrirFiltro(object sender, GridViewCustomFilteringEventArgs e) {
              MessageBox.Show("Filtro de grilla");
          }

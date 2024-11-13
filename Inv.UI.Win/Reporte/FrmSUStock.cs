@@ -43,7 +43,7 @@ namespace Inv.UI.Win
             //OnBuscarDet();
             
             //this.gestionarBotones(ElementVisibility.Visible, ElementVisibility.Visible, ElementVisibility.Visible);
-            HabilitarBotones(true, true, true, false);
+            HabilitarBotones(true, true, true, false,true);
 
             
             this.gridControl.CustomFiltering += new GridViewCustomFilteringEventHandler(abrirFiltro);

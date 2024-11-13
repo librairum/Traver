@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInvFisico));
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.gridControl = new Telerik.WinControls.UI.RadGridView();
             this.gridControlDet = new Telerik.WinControls.UI.RadGridView();
             this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
@@ -39,6 +42,8 @@
             this.dtpFecha = new Telerik.WinControls.UI.RadDateTimePicker();
             this.gbnuevo = new Telerik.WinControls.UI.RadGroupBox();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
+            this.lblmensaje = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.radCommandBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDet)).BeginInit();
@@ -56,132 +61,40 @@
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
-            // cbbImprimir
+            // barraComando
             // 
-            //this.cbbImprimir.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
-            //this.cbbImprimir.BackColor = System.Drawing.Color.White;
-            //this.cbbImprimir.BorderColor = System.Drawing.Color.White;
-            //this.cbbImprimir.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid;
-            //this.cbbImprimir.Bounds = new System.Drawing.Rectangle(0, 0, 18, 28);
-            //this.cbbImprimir.DrawBorder = true;
-            //this.cbbImprimir.DrawFill = true;
-            //this.cbbImprimir.DrawText = false;
-            //this.cbbImprimir.Font = new System.Drawing.Font("Segoe UI", 9F);
-            //this.cbbImprimir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            //this.cbbImprimir.GradientStyle = Telerik.WinControls.GradientStyles.Solid;
-            //this.cbbImprimir.StretchHorizontally = false;
+            this.barraComando.BackColor = System.Drawing.Color.White;
+            this.barraComando.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
+            this.barraComando.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.barraComando.BorderColor3 = System.Drawing.Color.White;
+            this.barraComando.BorderColor4 = System.Drawing.Color.White;
+            this.barraComando.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid;
+            this.barraComando.Bounds = new System.Drawing.Rectangle(0, 0, 227, 30);
+            this.barraComando.DesiredLocation = ((System.Drawing.PointF)(resources.GetObject("barraComando.DesiredLocation")));
+            this.barraComando.DisplayName = "barraComando";
+            this.barraComando.DrawBorder = true;
+            this.barraComando.DrawFill = true;
+            this.barraComando.DrawText = false;
+            this.barraComando.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.barraComando.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.barraComando.GradientStyle = Telerik.WinControls.GradientStyles.Solid;
             // 
-            // cbbNuevo
             // 
-            //this.cbbNuevo.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
-            //this.cbbNuevo.BackColor = System.Drawing.Color.White;
-            //this.cbbNuevo.BorderColor = System.Drawing.Color.White;
-            //this.cbbNuevo.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            //this.cbbNuevo.BorderColor3 = System.Drawing.Color.White;
-            //this.cbbNuevo.BorderColor4 = System.Drawing.Color.White;
-            //this.cbbNuevo.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid;
-            //this.cbbNuevo.Bounds = new System.Drawing.Rectangle(0, 0, 18, 30);
-            //this.cbbNuevo.DrawBorder = true;
-            //this.cbbNuevo.DrawFill = true;
-            //this.cbbNuevo.DrawText = false;
-            //this.cbbNuevo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            //this.cbbNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            //this.cbbNuevo.GradientStyle = Telerik.WinControls.GradientStyles.Solid;
-            //this.cbbNuevo.StretchHorizontally = false;
             // 
-            // cbbEditar
+            this.barraComando.OverflowButton.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            ((Telerik.WinControls.UI.RadCommandBarOverflowButton)(this.barraComando.GetChildAt(2))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             // 
-            //this.cbbEditar.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
-            //this.cbbEditar.BackColor = System.Drawing.Color.White;
-            //this.cbbEditar.BorderColor = System.Drawing.Color.White;
-            //this.cbbEditar.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            //this.cbbEditar.BorderColor3 = System.Drawing.Color.White;
-            //this.cbbEditar.BorderColor4 = System.Drawing.Color.White;
-            //this.cbbEditar.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid;
-            //this.cbbEditar.Bounds = new System.Drawing.Rectangle(0, 0, 18, 30);
-            //this.cbbEditar.DrawBorder = true;
-            //this.cbbEditar.DrawFill = true;
-            //this.cbbEditar.DrawText = false;
-            //this.cbbEditar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            //this.cbbEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            //this.cbbEditar.GradientStyle = Telerik.WinControls.GradientStyles.Solid;
-            //this.cbbEditar.StretchHorizontally = false;
+            // radCommandBar1
             // 
-            // cbbEliminar
-            // 
-            //this.cbbEliminar.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
-            //this.cbbEliminar.BackColor = System.Drawing.Color.White;
-            //this.cbbEliminar.BorderColor = System.Drawing.Color.White;
-            //this.cbbEliminar.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            //this.cbbEliminar.BorderColor3 = System.Drawing.Color.White;
-            //this.cbbEliminar.BorderColor4 = System.Drawing.Color.White;
-            //this.cbbEliminar.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid;
-            //this.cbbEliminar.Bounds = new System.Drawing.Rectangle(0, 0, 18, 30);
-            //this.cbbEliminar.DrawBorder = true;
-            //this.cbbEliminar.DrawFill = true;
-            //this.cbbEliminar.DrawText = false;
-            //this.cbbEliminar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            //this.cbbEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            //this.cbbEliminar.GradientStyle = Telerik.WinControls.GradientStyles.Solid;
-            //this.cbbEliminar.StretchHorizontally = false;
-            // 
-            // cbbGuardar
-            // 
-            //this.cbbGuardar.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
-            //this.cbbGuardar.BackColor = System.Drawing.Color.White;
-            //this.cbbGuardar.BorderColor = System.Drawing.Color.White;
-            //this.cbbGuardar.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            //this.cbbGuardar.BorderColor3 = System.Drawing.Color.White;
-            //this.cbbGuardar.BorderColor4 = System.Drawing.Color.White;
-            //this.cbbGuardar.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid;
-            //this.cbbGuardar.Bounds = new System.Drawing.Rectangle(0, 0, 18, 30);
-            //this.cbbGuardar.DrawBorder = true;
-            //this.cbbGuardar.DrawFill = true;
-            //this.cbbGuardar.DrawText = false;
-            //this.cbbGuardar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            //this.cbbGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            //this.cbbGuardar.GradientStyle = Telerik.WinControls.GradientStyles.Solid;
-            //this.cbbGuardar.StretchHorizontally = false;
-            // 
-            // cbbCancelar
-            // 
-            //this.cbbCancelar.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
-            //this.cbbCancelar.BackColor = System.Drawing.Color.White;
-            //this.cbbCancelar.BorderColor = System.Drawing.Color.White;
-            //this.cbbCancelar.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            //this.cbbCancelar.BorderColor3 = System.Drawing.Color.White;
-            //this.cbbCancelar.BorderColor4 = System.Drawing.Color.White;
-            //this.cbbCancelar.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid;
-            //this.cbbCancelar.Bounds = new System.Drawing.Rectangle(0, 0, 18, 30);
-            //this.cbbCancelar.DrawBorder = true;
-            //this.cbbCancelar.DrawFill = true;
-            //this.cbbCancelar.DrawText = false;
-            //this.cbbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            //this.cbbCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            //this.cbbCancelar.GradientStyle = Telerik.WinControls.GradientStyles.Solid;
-            //this.cbbCancelar.StretchHorizontally = false;
-            // 
-            // cbbVistaPrevia
-            // 
-            //this.cbbVistaPrevia.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
-            //this.cbbVistaPrevia.BackColor = System.Drawing.Color.White;
-            //this.cbbVistaPrevia.BorderColor = System.Drawing.Color.White;
-            //this.cbbVistaPrevia.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            //this.cbbVistaPrevia.BorderColor3 = System.Drawing.Color.White;
-            //this.cbbVistaPrevia.BorderColor4 = System.Drawing.Color.White;
-            //this.cbbVistaPrevia.BorderGradientStyle = Telerik.WinControls.GradientStyles.Solid;
-            //this.cbbVistaPrevia.Bounds = new System.Drawing.Rectangle(0, 0, 18, 30);
-            //this.cbbVistaPrevia.DrawBorder = true;
-            //this.cbbVistaPrevia.DrawFill = true;
-            //this.cbbVistaPrevia.DrawText = false;
-            //this.cbbVistaPrevia.Font = new System.Drawing.Font("Segoe UI", 9F);
-            //this.cbbVistaPrevia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            //this.cbbVistaPrevia.GradientStyle = Telerik.WinControls.GradientStyles.Solid;
-            //this.cbbVistaPrevia.StretchHorizontally = false;
+            this.radCommandBar1.Size = new System.Drawing.Size(1168, 33);
             // 
             // gridControl
             // 
             this.gridControl.Location = new System.Drawing.Point(3, 35);
+            // 
+            // 
+            // 
+            this.gridControl.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.gridControl.Name = "gridControl";
             this.gridControl.Size = new System.Drawing.Size(241, 253);
             this.gridControl.TabIndex = 0;
@@ -192,10 +105,16 @@
             // gridControlDet
             // 
             this.gridControlDet.Location = new System.Drawing.Point(250, 35);
+            // 
+            // 
+            // 
+            this.gridControlDet.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.gridControlDet.Name = "gridControlDet";
             this.gridControlDet.Size = new System.Drawing.Size(911, 253);
             this.gridControlDet.TabIndex = 1;
+            this.gridControlDet.CellBeginEdit += new Telerik.WinControls.UI.GridViewCellCancelEventHandler(this.gridControlDet_CellBeginEdit);
             this.gridControlDet.CellEndEdit += new Telerik.WinControls.UI.GridViewCellEventHandler(this.gridControlDet_CellEndEdit);
+            this.gridControlDet.CellValidating += new Telerik.WinControls.UI.CellValidatingEventHandler(this.gridControlDet_CellValidating);
             // 
             // commandBarRowElement1
             // 
@@ -272,21 +191,33 @@
             // 
             // radPanel1
             // 
+            this.radPanel1.Controls.Add(this.lblmensaje);
             this.radPanel1.Controls.Add(this.gbnuevo);
             this.radPanel1.Controls.Add(this.gridControlDet);
             this.radPanel1.Controls.Add(this.gridControl);
             this.radPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radPanel1.Location = new System.Drawing.Point(0, 59);
+            this.radPanel1.Location = new System.Drawing.Point(0, 33);
             this.radPanel1.Name = "radPanel1";
-            this.radPanel1.Size = new System.Drawing.Size(1168, 282);
+            this.radPanel1.Size = new System.Drawing.Size(1168, 319);
             this.radPanel1.TabIndex = 5;
+            // 
+            // lblmensaje
+            // 
+            this.lblmensaje.AutoSize = true;
+            this.lblmensaje.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmensaje.Location = new System.Drawing.Point(247, 297);
+            this.lblmensaje.Name = "lblmensaje";
+            this.lblmensaje.Size = new System.Drawing.Size(522, 13);
+            this.lblmensaje.TabIndex = 5;
+            this.lblmensaje.Text = "Modo edicion : Al terminar de editar a la celda cantidad, se guardara automatica " +
+                "el valor ingresado.\r\n";
             // 
             // FrmInvFisico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1168, 341);
+            this.ClientSize = new System.Drawing.Size(1168, 352);
             this.Controls.Add(this.radPanel1);
             this.Name = "FrmInvFisico";
             // 
@@ -296,7 +227,9 @@
             this.Text = "Inventario Fisico";
             this.ThemeName = "ControlDefault";
             this.Load += new System.EventHandler(this.FrmInvFisico_Load);
+            this.Controls.SetChildIndex(this.radCommandBar1, 0);
             this.Controls.SetChildIndex(this.radPanel1, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.radCommandBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDet.MasterTemplate)).EndInit();
@@ -312,6 +245,7 @@
             this.gbnuevo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
             this.radPanel1.ResumeLayout(false);
+            this.radPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -331,5 +265,6 @@
         private Telerik.WinControls.UI.RadRadioButton rbtinvfisicodiferencias;
         private Telerik.WinControls.UI.RadGroupBox gbnuevo;
         private Telerik.WinControls.UI.RadPanel radPanel1;
+        private System.Windows.Forms.Label lblmensaje;
     }
 }

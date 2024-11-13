@@ -250,10 +250,7 @@ namespace Inv.UI.Win
             frmMoviSuministro.Instance(this).Show();
             this.Cursor = Cursors.Default;
         }
-
-        protected override void OnVista()
-        {
-
+        private void VistaReporteSuministroAnterior() {
             string mensajeOut = string.Empty;
             string CodigoTipDoc = Util.GetCurrentCellText(gridControl.CurrentRow, "TipoDoc");
             string NroDocumento = Util.GetCurrentCellText(gridControl.CurrentRow, "CodigoDoc");
@@ -292,12 +289,12 @@ namespace Inv.UI.Win
             ////xmlDetalle
             //var datos = DocumentoLogic.Instance.TraeReportesMovimientosSuministro(Logueo.CodigoEmpresa,
             //Logueo.Anio, Logueo.Mes, Util.ConvertiraXMLdinamico(registros));
-            
+
             //Reporte reporte = new Reporte("Documento");
             //reporte.Ruta = Logueo.GetRutaReporte();
             //reporte.Nombre = "RptMovimientoSuministro.rpt";
             //reporte.DataSource = datos;
-            
+
             //reporte.FormulasFields.Add(new Formula("Ano", Logueo.Anio));
             //reporte.FormulasFields.Add(new Formula("Mes", Logueo.Mes));
             //reporte.FormulasFields.Add(new Formula("NombreEmpresa", Logueo.NombreEmpresa));
@@ -306,6 +303,50 @@ namespace Inv.UI.Win
             ////control.Imprimir();
             //control.VistaPrevia(enmWindowState.Normal);
             //Cursor.Current = Cursors.WaitCursor;
+
+        }
+        protected override void OnVista()
+        {
+
+            string mensajeOut = string.Empty;
+            string CodigoTipDoc = Util.GetCurrentCellText(gridControl.CurrentRow, "TipoDoc");
+            string NroDocumento = Util.GetCurrentCellText(gridControl.CurrentRow, "CodigoDoc");
+
+            //GlobalLogic.Instance.InsertarRangoImpresion(Logueo.CodigoEmpresa, "Admin", CodigoTipDoc, NroDocumento, out mensajeOut);
+            //var datos = DocumentoLogic.Instance.ReporteDocumento(Logueo.CodigoEmpresa, Logueo.Anio, Logueo.Mes);
+
+
+
+
+            Cursor.Current = Cursors.WaitCursor;
+            string[] registros = new string[this.gridControl.SelectedRows.Count];
+            int x = 0;
+            foreach (GridViewRowInfo fila in gridControl.SelectedRows)
+            {
+
+                registros[x] = Util.GetCurrentCellText(fila, "TipoDoc") + "|" +
+                               Util.GetCurrentCellText(fila, "CodigoDoc");
+
+                x++;
+            }
+
+            //xmlDetalle
+            var datos = DocumentoLogic.Instance.TraeReportesMovimientosSuministro(Logueo.CodigoEmpresa,
+            Logueo.Anio, Logueo.Mes, Util.ConvertiraXMLdinamico(registros));
+
+            Reporte reporte = new Reporte("Documento");
+            reporte.Ruta = Logueo.GetRutaReporte();
+            reporte.Nombre = "RptMovimientoSuministro.rpt";
+            reporte.DataSource = datos;
+
+            reporte.FormulasFields.Add(new Formula("Ano", Logueo.Anio));
+            reporte.FormulasFields.Add(new Formula("Mes", Logueo.Mes));
+            reporte.FormulasFields.Add(new Formula("NombreEmpresa", Logueo.NombreEmpresa));
+
+            ReporteControladora control = new ReporteControladora(reporte);
+            //control.Imprimir();
+            control.VistaPrevia(enmWindowState.Normal);
+            Cursor.Current = Cursors.WaitCursor;
 
         }
         protected override void OnVer()

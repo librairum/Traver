@@ -189,11 +189,13 @@ namespace Inv.UI.Win
             string respuesta = "";
             if (optactivo.Checked == true)
             {
-                respuesta = "A";
+                //respuesta = "A";
+                respuesta = "1";
             }
             else if (optinactivo.Checked == true)
             {
-                respuesta = "B";
+                //respuesta = "B";
+                respuesta = "0";
             }
             return respuesta;
         }
@@ -547,7 +549,7 @@ namespace Inv.UI.Win
             entidad.movimiento = valormovimiento;
             entidad.unidadEquivalencia = txtUniEquiv.Text.Trim();
             entidad.tipo = TraeTipo();
-            entidad.estado = TraeEstado();
+            entidad.estado = TraeEstado(); // 1: activo , 0: inactivo tipo de dato cadena
             entidad.montoEquivalencia = string.IsNullOrEmpty(txtMontoEquivalente.Text.Trim()) ? 0.0 :Convert.ToDouble(txtMontoEquivalente.Text.Trim());
             entidad.unidadMayor = TraeEquivalente();
             
@@ -1016,7 +1018,7 @@ namespace Inv.UI.Win
 
             string tipo = Util.GetCurrentCellText(row, "In01tipo");
             string estado = Util.GetCurrentCellText(row, "In01estado");
-            if (estado == "A")
+            if (estado == "1") // *
             {
                 optactivo.Checked = true;
             }

@@ -24,7 +24,7 @@ namespace Inv.UI.Win
             CrearColumnasDet();
             CargarAlmacenes(cboalmacenes);
             this.dtpFecha.Value = DateTime.Now;
-            gbnuevo.Visible=false;
+            //gbnuevo.Visible=false;
         }
         private frmMDI FrmParent { get; set; }
 
@@ -44,7 +44,45 @@ namespace Inv.UI.Win
             CrearColumnasDet();
             CargarAlmacenes(cboalmacenes);
             this.dtpFecha.Value = DateTime.Now;
-            gbnuevo.Visible = false;
+            //gbnuevo.Visible = false;
+        }
+
+        private void HabilitarcontrolesxEstado(FormEstate  estadoFormulario) {
+      
+
+            switch (estadoFormulario)
+            {
+                case FormEstate.List:
+                    dtpFecha.Enabled = false;
+                    cboalmacenes.Enabled = false;
+                    rbtinvfisicodiferencias.Enabled = true;
+                    rbtinvfisicotoma.Enabled = true;
+                    lblmensaje.Visible = false;
+                    break;
+                case FormEstate.New:
+                    rbtinvfisicodiferencias.Enabled = false;
+                    rbtinvfisicotoma.Enabled = false;
+                    dtpFecha.Enabled = true;
+                    cboalmacenes.Enabled = true;
+                    lblmensaje.Visible = false;
+                    break;
+                case FormEstate.Edit:
+                    dtpFecha.Enabled = false;
+                    cboalmacenes.Enabled = false;
+                    rbtinvfisicotoma.Enabled = false;
+                    rbtinvfisicodiferencias.Enabled = false;
+                    lblmensaje.Visible = true;
+                    break;
+                case FormEstate.View:
+                       dtpFecha.Enabled = false;
+                    cboalmacenes.Enabled = false;
+                    rbtinvfisicodiferencias.Enabled = true;
+                    rbtinvfisicotoma.Enabled = true;
+                    lblmensaje.Visible = false;
+                    break;
+                default:
+                    break;
+            }
         }
         protected override void OnBuscar()
         {
@@ -126,15 +164,23 @@ namespace Inv.UI.Win
         protected override void OnNuevo()
         {
             this.Estado = FormEstate.New;
-            gbnuevo.Visible=true;
-            HabilitarBotones(false, false, false, true, true, false);
-            //habilitarBotones(false, true);
+            //gbnuevo.Visible=true;
+
+            OcultarBotones();
+            HabilitaBotonPorNombre(BaseRegBotones.cbbGuardar);
+            HabilitaBotonPorNombre(BaseRegBotones.cbbCancelar);
+            
+            HabilitarcontrolesxEstado(this.Estado);
+            
         }
         protected override void OnEditar()
         {
             this.Estado = FormEstate.Edit;
-            HabilitarBotones(false, false, false, true, true, false);
-            //habilitarBotones(false, true);
+            //HabilitarBotones(false, false, false, false, true, false);
+            OcultarBotones();
+            HabilitaBotonPorNombre(BaseRegBotones.cbbCancelar);
+            HabilitarcontrolesxEstado(this.Estado);
+            
         }
         protected override void OnEliminar()
         {
@@ -188,13 +234,14 @@ namespace Inv.UI.Win
         {
             OnBuscar();            
                             //
-            HabilitarBotones(true, true, true, false, false, true);
-            //habilitarBotones(true, false);
-            radLabel1.Visible = false;
-            cboalmacenes.Visible = false;
-            radLabel2.Visible = false;
-            dtpFecha.Visible = false;
-            gbnuevo.Visible = false;
+            //HabilitarBotones(true, true, true, false, false, true);
+            Estado = FormEstate.List;
+            OcultarBotones();
+            HabilitaBotonPorNombre(BaseRegBotones.cbbNuevo);
+            HabilitaBotonPorNombre(BaseRegBotones.cbbEditar);
+            HabilitaBotonPorNombre(BaseRegBotones.cbbEliminar);
+            HabilitaBotonPorNombre(BaseRegBotones.cbbVistaPreliminar);
+            HabilitarcontrolesxEstado(Estado);
         }
         protected override void OnGuardar()
         {
@@ -219,10 +266,11 @@ namespace Inv.UI.Win
                     string fecha = inventariofisico.IN04FECINV.ToString();
                     RadMessageBox.Show(mensajeRetorno, "Aviso", MessageBoxButtons.OK, RadMessageIcon.Info);
                     // Ocultar group box
-                    gbnuevo.Visible = false;
+                    //gbnuevo.Visible = false;
                     // refrescar grilla
                     OnBuscar();
                     OnBuscarDet();
+                    HabilitarcontrolesxEstado(FormEstate.List);
 
                     Cursor.Current = Cursors.Default;
                 }
@@ -236,27 +284,18 @@ namespace Inv.UI.Win
             {
                   RadMessageBox.Show("Ha ocurrido error inesperado al registrar ", "Aviso", MessageBoxButtons.OK, RadMessageIcon.Error);
             }
-            HabilitarBotones(true, true, true, false, false, true);
+            //HabilitarBotones(true, true, true, false, false, true);
+            OcultarBotones();
+            HabilitaBotonPorNombre(BaseRegBotones.cbbNuevo);
+            HabilitaBotonPorNombre(BaseRegBotones.cbbEliminar);
+            HabilitaBotonPorNombre(BaseRegBotones.cbbEditar);
+            HabilitaBotonPorNombre(BaseRegBotones.cbbVistaPreliminar);
             
         }
         #region metodosdemantenimineto
         private void Crearcolumnas()
         {
-            //this.gridControl.Columns.Clear();
-            //this.gridControl.AllowAddNewRow = false;
-            //this.gridControl.ShowGroupPanel = false;
-            //this.gridControl.ShowFilteringRow = true;
-            //this.gridControl.AllowColumnReorder = true;
-
-            //this.gridControl.AutoGenerateColumns = false;
-            ////this.gridControl.MasterTemplate.AutoSizeColumnsMode = GridViewAutoSizeColumnsMode.Fill;
-
-            ////this.gridControl.AllowSearchRow = true;
-            ////this.gridControl.SearchRowPosition = SystemRowPosition.Top;
-
-            //this.gridControl.EnableHotTracking = true;
-            //this.gridControl.ShowFilteringRow = true;
-            //this.gridControl.EnableFiltering = true;
+          
             grilla = this.CreateGridVista(this.gridControl);            
             this.CreateGridColumn(grilla, "Almacen", "IN04CODALM", 0, "", 90, true, false, true);
             this.CreateGridColumn(grilla, "Fecha", "IN04FECINV", 0, "{0:dd/MM/yyyy}", 100, true, false, true);
@@ -309,11 +348,14 @@ namespace Inv.UI.Win
             //Capturo el primer registro valido 
             OnBuscarDet();
             isLoaded = true;
-            HabilitarBotones(true, true, true, false, false, true);
-
-            //this.habilitarBotones(true, false);
-            //gestionarBotones(true, true, true, true,
-              //  true, true);
+            //HabilitarBotones(true, true, true, false, false, true);
+            OcultarBotones();
+            HabilitaBotonPorNombre(BaseRegBotones.cbbNuevo);
+            HabilitaBotonPorNombre(BaseRegBotones.cbbEditar);
+            HabilitaBotonPorNombre(BaseRegBotones.cbbEliminar);
+            HabilitaBotonPorNombre(BaseRegBotones.cbbVistaPreliminar);
+            Estado = FormEstate.List;
+            HabilitarcontrolesxEstado(Estado);
         }
         private void CargarAlmacenes(RadDropDownList cbo)
         {
@@ -348,7 +390,21 @@ namespace Inv.UI.Win
 
                 if (e.Column.Name.CompareTo("IN04CANTFISICA") == 0)
                 {
-                    this.GuardarDetalle(this.gridControlDet.CurrentRow);
+                    if (e.Value != null) {
+                        bool esNumero = Util.IsNumerico(e.Value.ToString());
+                        if (esNumero)
+                        {
+                            this.GuardarDetalle(this.gridControlDet.CurrentRow);
+                        }
+                        else
+                        {
+                            Util.ShowError("Ingresar un valor numerico entero");
+                        }
+                        
+                        
+                    }
+                    
+                    
                 }
 
             }
@@ -389,6 +445,50 @@ namespace Inv.UI.Win
 
                 throw;
             }
+        }
+
+        private void gridControlDet_CellBeginEdit(object sender, GridViewCellCancelEventArgs e)
+        {
+
+            try
+            {
+                if (e.Column.Name == "IN04CANTFISICA")
+                {
+                    if (Estado == FormEstate.Edit)
+                    {
+                        e.Cancel = false;
+
+                    }
+                    else if (Estado == FormEstate.New || Estado == FormEstate.List || Estado == FormEstate.View)
+                    {
+                        e.Cancel = true;
+                    }
+                }
+            }
+            catch (Exception ex) {
+                Util.ShowError("Error al iniciar edicion:" + ex.Message);
+            }
+            
+            
+        }
+
+        private void gridControlDet_CellValidating(object sender, CellValidatingEventArgs e)
+        {
+            try
+            {
+                if (e.Column.Name == "IN04CANTFISICA")
+                {
+                    int numero;
+                    if (int.TryParse(e.Value.ToString(), out  numero) == false)
+                    {
+                        e.Cancel = true;
+                    }
+                }
+            }
+            catch (Exception ex) {
+                Util.ShowError("Error al validar valor ingresado a celda: " + ex.Message);
+            }
+            
         }
    }
 }

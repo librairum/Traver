@@ -34,7 +34,7 @@ namespace Inv.UI.Win.Procesos
         {
             InitializeComponent();
             FrmParent = padre;
-            HabilitarBotones(true, true, true, false);
+            HabilitarBotones(true, true, true, false,true);
 
             crearColumnas();
            

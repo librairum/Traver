@@ -22,7 +22,7 @@ namespace Inv.UI.Win
             Crearcolumnas();
             isLoaded = true;
             OnBuscar();
-            HabilitarBotones(true, true, true, false);
+            HabilitarBotones(true, true, true, false,true);
 
             //gestionarBotones(ElementVisibility.Visible, ElementVisibility.Visible, ElementVisibility.Visible);
         }
@@ -35,7 +35,19 @@ namespace Inv.UI.Win
             _aForm = new FrmRepKardexVal(mdiPrincipal);
             return _aForm;
         }
+        protected override void OnSeleccionarTodo()
+        {
+            try
+            {
+                gridControl.SelectAll();
+            }
+            catch (Exception ex)
+            {
+                Util.ShowError("ERROR");
+            }
 
+        }
+       
         public FrmRepKardexVal(frmMDI padre)
         {
             InitializeComponent();
@@ -276,10 +288,10 @@ namespace Inv.UI.Win
         {
             OnBuscar();
         }
-        protected override void OnSeleccionarTodo()
-        {
-            gridControl.SelectAll();
-        }
+        //protected override void OnSeleccionarTodo()
+        //{
+        //    gridControl.SelectAll();
+        //}
        
     }
 

@@ -41,7 +41,7 @@ namespace Inv.UI.Win
             rbtMensual.CheckState = CheckState.Checked;
             this.dtpFechaini.Value = DateTime.Now;
             this.dtpFechafin.Value = DateTime.Now;
-            HabilitarBotones(true, true, true, false);
+            HabilitarBotones(true, true, true, false,true);
 
         }
         public FrmRepMovimientos()

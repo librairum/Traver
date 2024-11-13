@@ -57,6 +57,7 @@
             this.gridControl.Size = new System.Drawing.Size(801, 372);
             this.gridControl.TabIndex = 226;
             this.gridControl.Text = "radGridView1";
+            this.gridControl.DoubleClick += new System.EventHandler(this.gridControl_DoubleClick);
             // 
             // frmArticuloSuministro
             // 

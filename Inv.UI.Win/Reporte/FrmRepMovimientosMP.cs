@@ -30,9 +30,22 @@ namespace Inv.UI.Win
             
             Crearcolumnas();
             OnBuscar();
-            HabilitarBotones(true, true, true, false);
+            HabilitarBotones(true, true, true, false,true);
 
         }
+        protected override void OnSeleccionarTodo()
+        {
+            try
+            {
+                gridControl.SelectAll();
+            }
+            catch (Exception ex)
+            {
+                Util.ShowError("ERROR");
+            }
+
+        }
+       
         public static FrmRepMovimientosMP Instance(frmMDI mdiPrincipal) 
         {
             if (_aForm != null) return new FrmRepMovimientosMP(mdiPrincipal);
@@ -221,10 +234,10 @@ namespace Inv.UI.Win
             OnBuscar();
             this.Cursor = Cursors.Default;
         }
-        protected override void OnSeleccionarTodo()
-        {
-            gridControl.SelectAll();
-        }
+        //protected override void OnSeleccionarTodo()
+        //{
+        //    gridControl.SelectAll();
+        //}
        
     }
 }

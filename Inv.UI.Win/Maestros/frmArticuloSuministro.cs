@@ -133,6 +133,12 @@ namespace Inv.UI.Win
             Estado = FormEstate.Edit;
             AbrirFormulario();
         }
+        protected override void OnVista()
+        {
+            SeleccionarDatos();
+            Estado = FormEstate.View;
+            AbrirFormulario();
+        }
         protected override void OnEliminar()
         {
             try
@@ -181,6 +187,13 @@ namespace Inv.UI.Win
             this.tipo = Util.GetCurrentCellText(this.gridControl.CurrentRow, "In01tipo");
             this.estado = Util.GetCurrentCellText(this.gridControl.CurrentRow, "In01estado");
 
+        }
+
+        private void gridControl_DoubleClick(object sender, EventArgs e)
+        {
+            SeleccionarDatos();
+            Estado = FormEstate.View;
+            AbrirFormulario();
         }
     }
 }

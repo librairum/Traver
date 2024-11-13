@@ -57,7 +57,8 @@ namespace Inv.UI.Win
 
                 // Verficar si ha descargado el archivo en ruta de actualzacion Local
                 if (!File.Exists(RutaMasArchivoLocal))
-                    throw new FileNotFoundException("No existe la ruta de Actualizacion local", LocalUpdateFile);
+                    Util.ShowError("NO existe la ruta de actualizacion local:" + LocalUpdateFile);
+                    //throw new FileNotFoundException("No existe la ruta de Actualizacion local", LocalUpdateFile);
 
 
                 string versionOnline = configuracion.ObtenerVersionWeb(rutaActualizacionLocal, NombreArchivoActualizacion);
@@ -70,15 +71,18 @@ namespace Inv.UI.Win
             }
             catch (WebException exWebException)
             {
-                MessageBox.Show("Error al iniciar sesion en el servidor o descargar archivo de actualizacion:" + exWebException.Message);
+                Util.ShowError("Error al iniciar sesion en el servidor o descargar archivo de actualizacion:" + exWebException.Message);
+                //MessageBox.Show("Error al iniciar sesion en el servidor o descargar archivo de actualizacion:" + exWebException.Message);
             }
             catch (IOException exInputOutpu)
             {
-                MessageBox.Show("Error al gestionar archivo: " + exInputOutpu.Message);
+                Util.ShowError("Error al gestionar archivo: " + exInputOutpu.Message);
+                //MessageBox.Show("Error al gestionar archivo: " + exInputOutpu.Message);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error  en [buscar actualizaciones] : " + ex.Message);
+                //MessageBox.Show("Error  en [buscar actualizaciones] : " + ex.Message);
+                Util.ShowError("Error  en [buscar actualizaciones] : " + ex.Message);
                 encontro = false;
             }
 
@@ -105,11 +109,13 @@ namespace Inv.UI.Win
             }
             catch (System.Data.SqlClient.SqlException exSql)
             {
-                MessageBox.Show("Error conexion al servidor :" + exSql.Message);
+                //MessageBox.Show("Error conexion al servidor :" + exSql.Message);
+                Util.ShowError("Error conexion al servidor :" + exSql.Message);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar formulario: " + ex.Message);
+                //MessageBox.Show("Error al cargar formulario: " + ex.Message);
+                Util.ShowError("Error al cargar formulario: " + ex.Message);
             }
         }
         private void IniciarVentanaLogin()
@@ -186,7 +192,8 @@ namespace Inv.UI.Win
             catch (Exception ex)
             {
                 // Util.ShowError("Error al iniciarActualizar :" & ex.Message)
-                MessageBox.Show("Error al iniciarActualizar :" + ex.Message);
+                //MessageBox.Show("Error al iniciarActualizar :" + ex.Message);
+                Util.ShowError("Error al iniciarActualizar :" + ex.Message);
             }
 
             Cursor.Current = Cursors.Default;
@@ -203,8 +210,9 @@ namespace Inv.UI.Win
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al limpiar archivos descargos : " + ex.Message);
-                Application.Exit();
+                //MessageBox.Show("Error al limpiar archivos descargos : " + ex.Message);
+                Util.ShowError("Error al limpiar archivos descargos : " + ex.Message);
+                //Application.Exit();
             }
 
             Cursor.Current = Cursors.Default;
@@ -238,7 +246,8 @@ namespace Inv.UI.Win
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al descargar archivos de actualizacion , detalle : " + ex.Message);
+                //MessageBox.Show("Error al descargar archivos de actualizacion , detalle : " + ex.Message);
+                Util.ShowError("Error al descargar archivos de actualizacion , detalle : " + ex.Message);
             }
 
             return operacionExitoso;
@@ -254,7 +263,9 @@ namespace Inv.UI.Win
                     //Obtener version del archivo actualiza.config, descargado en %appdata%
                     versionOnline = configuracion.ObtenerVersionWeb(rutaActualizacionLocal, NombreArchivoActualizacion);
 
-                    if (MessageBox.Show(string.Format("Version {0} disponible," + Environment.NewLine + "Actualizar?", versionOnline), "Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show(string.Format("Version {0} disponible," + Environment.NewLine + "Actualizar?", 
+                        versionOnline), "Sistema", 
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         if (DescargarArchivosActualizacion() == true)
                             IniciarActualizador();
@@ -267,9 +278,9 @@ namespace Inv.UI.Win
             }
             catch (Exception ex)
             {
-                // Util.ShowError("Error [RunWorkCompleted]: " & ex.Message)
-                MessageBox.Show("Error [RunWorkCompleted]: " + ex.Message);
-                Application.Exit();
+                Util.ShowError("Error al verificar detectar actualizacion : " + ex.Message);
+                //MessageBox.Show("Error al verificar detectar actualizacion : " + ex.Message);
+                //Application.Exit();
             }
         }
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -282,11 +293,13 @@ namespace Inv.UI.Win
             }
             catch (System.Data.SqlClient.SqlException exSql)
             {
-                MessageBox.Show("Error en conexion a base de datos, revisar detalle:" + exSql.Message);
+                //MessageBox.Show("Error en conexion a base de datos, revisar detalle:" + exSql.Message);
+                Util.ShowError("Error en conexion a base de datos, revisar detalle:" + exSql.Message);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error en proceso de actualizacion revisar detalle :" + ex.Message);
+                //MessageBox.Show("Error en proceso de actualizacion revisar detalle :" + ex.Message);
+                Util.ShowError("Error en proceso de actualizacion revisar detalle :" + ex.Message);
             }
 
             Cursor.Current = Cursors.Default;
@@ -332,14 +345,18 @@ namespace Inv.UI.Win
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                string mensaje = "Instale o Actualice como administrador: " + Environment.NewLine + "Clic derecho sobre icono del programa -> Ejecutar como administrador";
-                MessageBox.Show(mensaje + " detalle: " + ex.Message, "Sistema");
-                Application.Exit();
+                //MessageBox.Show(ex.Message);
+                //string mensaje = "Instale o Actualice como administrador: " + Environment.NewLine + "Clic derecho sobre icono del programa -> Ejecutar como administrador";
+                //MessageBox.Show(mensaje + " detalle: " + ex.Message, "Sistema");
+                Util.ShowError("Error al descargar archivo de actualizacion:" + ex.Message);
+                //MessageBox.Show("Error al descargar archivo de actualizacion:" + ex.Message, "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Application.Exit();
+
             }
 
             Cursor.Current = Cursors.Default;
         }
+        
 
     }
 }

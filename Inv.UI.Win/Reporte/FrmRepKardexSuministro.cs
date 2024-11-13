@@ -230,7 +230,7 @@ namespace Inv.UI.Win
                 Crearcolumnas();
                 isLoaded = true;
                 OnBuscar();
-                HabilitarBotones(true, true, false, false);
+                HabilitarBotones(true, true, false, false,true);
 
             }
             catch (Exception ex)
@@ -239,6 +239,7 @@ namespace Inv.UI.Win
             }
             
         }
+       
         protected override void OnSeleccionarTodo()
         {
             gridControl.SelectAll();

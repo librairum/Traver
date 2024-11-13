@@ -23,7 +23,7 @@ namespace Inv.UI.Win
             //(radPageView.ViewElement as RadPageViewStripElement).StripButtons = StripViewButtons.Scroll;
             commandBarStripElement1.OverflowButton.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             commandBarStripElement1.BorderWidth = 0;
-            HabilitarBotones(true, true, false, false);
+            HabilitarBotones(true, true, false, false,true);
            
         }
 
@@ -177,7 +177,7 @@ namespace Inv.UI.Win
                 e.CellElement.Font = nuevaFuente;
             }
         }
-        public void HabilitarBotones(bool bVista, bool bImprimir, bool bRefrescar, bool bExportar, bool bSeleccionarTodo = false) {
+        public void HabilitarBotones(bool bVista, bool bImprimir, bool bRefrescar, bool bExportar, bool bSeleccionarTodo) {
             cbbVista.Visibility = bVista ? ElementVisibility.Visible : ElementVisibility.Collapsed;
             cbbImprimir.Visibility = bImprimir ? ElementVisibility.Visible : ElementVisibility.Collapsed;
             cbbRefrescar.Visibility = bRefrescar ? ElementVisibility.Visible : ElementVisibility.Collapsed;
