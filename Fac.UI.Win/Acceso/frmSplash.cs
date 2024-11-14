@@ -210,7 +210,7 @@ namespace Fac.UI.Win
             catch (Exception ex)
             {
                 MessageBox.Show("Error al limpiar archivos descargos : " + ex.Message);
-                Application.Exit();
+                //Application.Exit();
             }
 
             Cursor.Current = Cursors.Default;
@@ -274,7 +274,7 @@ namespace Fac.UI.Win
             {
                 // Util.ShowError("Error [RunWorkCompleted]: " & ex.Message)
                 MessageBox.Show("Error [RunWorkCompleted]: " + ex.Message);
-                Application.Exit();
+                //Application.Exit();
             }
 
 
@@ -379,7 +379,7 @@ namespace Fac.UI.Win
                 MessageBox.Show(ex.Message);
                 string mensaje = "Instale o Actualice como administrador: " + Environment.NewLine + "Clic derecho sobre icono del programa -> Ejecutar como administrador";
                 MessageBox.Show(mensaje + " detalle: " + ex.Message, "Sistema");
-                Application.Exit();
+                //Application.Exit();
             }
 
             Cursor.Current = Cursors.Default;
