@@ -518,6 +518,8 @@ namespace Inv.UI.Win
 
 
         
+
+        
         public enum alinear
         {
             izquierda = 0,

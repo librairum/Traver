@@ -189,13 +189,13 @@ namespace Inv.UI.Win
             string respuesta = "";
             if (optactivo.Checked == true)
             {
-                //respuesta = "A";
-                respuesta = "1";
+                respuesta = "A";
+                //respuesta = "1";
             }
             else if (optinactivo.Checked == true)
             {
-                //respuesta = "B";
-                respuesta = "0";
+                respuesta = "B";
+                //respuesta = "0";
             }
             return respuesta;
         }

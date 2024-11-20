@@ -9,6 +9,7 @@ using Telerik.WinControls;
 using Inv.BusinessLogic;
 using Inv.BusinessEntities;
 using Telerik.WinControls.UI;
+using System.IO;
 
 namespace Inv.UI.Win
 {
@@ -109,6 +110,10 @@ namespace Inv.UI.Win
             var lista = InventarioFisicoLogic.Instance.InventarioFisicoTraer(Logueo.CodigoEmpresa, Logueo.Anio,invfisalmacen,invfisfecha);
             this.gridControlDet.DataSource = lista;
 
+            if (Estado == FormEstate.Edit) { 
+                //resaltar la columna de estado por ser una columan tipo ayuda
+                Util.ResaltarAyudaColumna(gridControlDet, "estadoinventariodesc");
+            }
             Cursor.Current = Cursors.Default;
         }   
         protected override void OnVista()
@@ -180,7 +185,10 @@ namespace Inv.UI.Win
             OcultarBotones();
             HabilitaBotonPorNombre(BaseRegBotones.cbbCancelar);
             HabilitarcontrolesxEstado(this.Estado);
-            
+            //Util.ResaltarAyuda(gridControlDet.CurrentRow.Cells["in04estado"]);
+            Util.ResaltarAyudaColumna(gridControlDet, "estadoinventariodesc");
+            //ver boton de importar inventario
+            btnImportarInventarioMasivo.Visible = true;
         }
         protected override void OnEliminar()
         {
@@ -230,9 +238,12 @@ namespace Inv.UI.Win
 
 
         }
+        int ultimoRegistroSeleccionado = -1;
         protected override void OnCancelar()
         {
-            OnBuscar();            
+            ultimoRegistroSeleccionado = gridControl.CurrentRow.Index;
+            OnBuscar();
+            gridControl.CurrentRow = gridControl.Rows[ultimoRegistroSeleccionado];
                             //
             //HabilitarBotones(true, true, true, false, false, true);
             Estado = FormEstate.List;
@@ -242,6 +253,10 @@ namespace Inv.UI.Win
             HabilitaBotonPorNombre(BaseRegBotones.cbbEliminar);
             HabilitaBotonPorNombre(BaseRegBotones.cbbVistaPreliminar);
             HabilitarcontrolesxEstado(Estado);
+            OnBuscarDet();
+            //enfocar ultimo registro selecionado de la grilla de inventario generado
+            btnImportarInventarioMasivo.Visible = false;
+
         }
         protected override void OnGuardar()
         {
@@ -293,29 +308,42 @@ namespace Inv.UI.Win
             
         }
         #region metodosdemantenimineto
+        
         private void Crearcolumnas()
         {
-          
+            
             grilla = this.CreateGridVista(this.gridControl);            
             this.CreateGridColumn(grilla, "Almacen", "IN04CODALM", 0, "", 90, true, false, true);
-            this.CreateGridColumn(grilla, "Fecha", "IN04FECINV", 0, "{0:dd/MM/yyyy}", 100, true, false, true);
+            this.CreateGridColumn(grilla, "Fecha", "IN04FECINV", 0, "{0:dd/MM/yyyy}", 75, true, false, true);
+
             
         }
+    
+
         private void CrearColumnasDet()
         {
-            RadGridView grilladet = this.CreateGridVista(this.gridControlDet);
             
+            RadGridView grilladet = this.CreateGridVista(this.gridControlDet);
+            this.CreateGridColumn(grilladet, "Item", "IN04ITEM", 0, "", 50, true, false, true);
+
             this.CreateGridColumn(grilladet, "Columna", "AlmacenColumna", 0, "", 50, true, false, true);
-            this.CreateGridColumn(grilladet, "Caja", "In04caja", 0, "", 100, true, false, true);
+            this.CreateGridColumn(grilladet, "Caja", "In04caja", 0, "", 70, true, false, true);
             this.CreateGridColumn(grilladet, "Ubicacion", "In07ubicacion", 0, "", 90, true, false, true);
-            this.CreateGridColumn(grilladet, "Codigo", "in04key", 0, "", 200, true, false, true);
-            this.CreateGridColumn(grilladet, "Descripcion", "in01deslar", 0, "", 345, true, false, true);
-            this.CreateGridColumn(grilladet, "Uni Med", "in01unimed", 0, "", 80, true, false, true);
+            this.CreateGridColumn(grilladet, "Codigo", "in04key", 0, "", 100, true, false, true);
+            this.CreateGridColumn(grilladet, "Descripcion", "in01deslar", 0, "", 200, true, false, true);
+            this.CreateGridColumn(grilladet, "Uni Med", "in01unimed", 0, "", 50, true, false, true);
             this.CreateGridColumn(grilladet, "Cant. Fisica", "IN04CANTFISICA", 0, "", 80, false, true, true);
 
             this.CreateGridColumn(grilladet, "Fecha Inv", "IN04FECINV", 0, "", 50, true, false, false);
             this.CreateGridColumn(grilladet, "Almacen", "IN04CODALM", 0, "", 50, true, false, false);
-            this.CreateGridColumn(grilladet, "Item", "IN04ITEM", 0, "", 50, true, false, false);
+
+            this.CreateGridColumn(grilladet, "Estado", "in04estado", 0, "", 50, true, false, false);
+            this.CreateGridColumn(grilladet, "DescEstado", "estadoinventariodesc", 0, "", 100, true, false, true);
+
+            this.CreateGridColumn(grilladet, "Obs", "in04observacion", 0, "", 200, false, true, true);
+
+            
+            //--AgregarColumnaCombo();
 
 
         } 
@@ -339,7 +367,7 @@ namespace Inv.UI.Win
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Util.ShowError(ex.Message);
             }
         }
         private void FrmInvFisico_Load(object sender, EventArgs e)
@@ -356,6 +384,7 @@ namespace Inv.UI.Win
             HabilitaBotonPorNombre(BaseRegBotones.cbbVistaPreliminar);
             Estado = FormEstate.List;
             HabilitarcontrolesxEstado(Estado);
+            btnImportarInventarioMasivo.Visible = false;
         }
         private void CargarAlmacenes(RadDropDownList cbo)
         {
@@ -388,7 +417,7 @@ namespace Inv.UI.Win
             try
             {
 
-                if (e.Column.Name.CompareTo("IN04CANTFISICA") == 0)
+                if (e.Column.Name.CompareTo("IN04CANTFISICA") == 0 )
                 {
                     if (e.Value != null) {
                         bool esNumero = Util.IsNumerico(e.Value.ToString());
@@ -403,14 +432,22 @@ namespace Inv.UI.Win
                         
                         
                     }
+
+
+                }
+                else if (e.Column.Name.CompareTo("in04observacion") == 0) 
+                {
+                    if (e.Value != null) {
+                        this.GuardarDetalle(this.gridControlDet.CurrentRow);
+                    }
                     
-                    
+                
                 }
 
             }
             catch (Exception ex)
             {
-                RadMessageBox.Show(ex.Message);
+                Util.ShowError(ex.Message);
             }
 
         }
@@ -428,6 +465,15 @@ namespace Inv.UI.Win
                 invfis.IN04ITEM = int.Parse(info.Cells["IN04ITEM"].Value.ToString());
                 invfis.IN04CANTFISICA =double.Parse(info.Cells["IN04CANTFISICA"].Value.ToString());
 
+                if (info.Cells["in04observacion"].Value != null) {
+                    invfis.in04observacion = info.Cells["in04observacion"].Value.ToString();
+                }
+
+                if(info.Cells["in04estado"].Value != null){
+                    invfis.in04estado = info.Cells["in04estado"].Value.ToString();
+                }
+
+
                 string mensajeRetorno = string.Empty;
                 int flagok = 0;
 
@@ -440,10 +486,10 @@ namespace Inv.UI.Win
 
             }
             //RadMessageBox.Show("Grabar Nuevo Registro", "Aviso", MessageBoxButtons.OK, RadMessageIcon.Info);
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                Util.ShowError("Error al guardar detalle:" + ex.Message);
             }
         }
 
@@ -452,7 +498,7 @@ namespace Inv.UI.Win
 
             try
             {
-                if (e.Column.Name == "IN04CANTFISICA")
+                if (e.Column.Name == "IN04CANTFISICA" || e.Column.Name == "in04observacion")
                 {
                     if (Estado == FormEstate.Edit)
                     {
@@ -489,6 +535,217 @@ namespace Inv.UI.Win
                 Util.ShowError("Error al validar valor ingresado a celda: " + ex.Message);
             }
             
+        }
+        private void MostrarAyuda(enmAyuda tipoAyuda)
+        {
+
+            frmBusqueda frm;
+            string codigoSeleccionado = string.Empty;
+            switch (tipoAyuda) { 
+                case enmAyuda.enmEstadoInventarioFisico:
+                    frm = new frmBusqueda(tipoAyuda);
+                    frm.Owner = this;
+                    frm.ShowDialog();
+                    if(frm.Result != null)
+                    {
+                        //codigoSeleccionado = 
+                            string[]  valores = frm.Result.ToString().Split('|');
+
+                        Util.SetValueCurrentCellText(gridControlDet.CurrentRow, "in04estado",valores[0]);
+                        Util.SetValueCurrentCellText(gridControlDet.CurrentRow, "estadoinventariodesc", valores[1]);
+                    }
+
+                    break;
+                default: break;
+            }
+            
+        }
+        private void gridControlDet_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+            if (Util.IsCurrentColumn(gridControlDet, "in04estado") || Util.IsCurrentColumn(gridControlDet, "estadoinventariodesc"))
+            {
+                if (Estado == FormEstate.Edit) {
+                    if (e.KeyCode == Keys.F1)
+                    {
+                        MostrarAyuda(enmAyuda.enmEstadoInventarioFisico);
+                    }
+                }
+                
+                    
+            }
+        }
+
+        private void gridControlDet_CellValueChanged(object sender, GridViewCellEventArgs e)
+        {
+            //columna estado inventario
+            if (Util.IsCurrentColumn(gridControlDet, "estadoinventariodesc") 
+                || Util.IsCurrentColumn(gridControlDet, "in04estado"))
+            {
+                GuardarDetalle(gridControlDet.CurrentRow);
+            }
+        }
+
+        private void btnImportarInventario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string descripcion = "";
+                //abrir archivo
+                OpenFileDialog opf = new OpenFileDialog();
+                var fic = "";
+                var filename = "";
+                //abre el Dialog en la carpeta que desees 
+                opf.InitialDirectory = descripcion;
+                if (opf.ShowDialog() == DialogResult.OK && opf.FileName.Length > 0)
+                {
+                    fic = opf.FileName;
+                    filename = opf.SafeFileName;
+                }
+                else return;
+                var StreamReader = new System.IO.StreamReader(fic, Encoding.Default);
+                string msj = string.Empty;
+                
+                int contador = 0;  // Contador de líneas
+                using (var reader = new StreamReader(fic, Encoding.Default))
+                {
+                    
+
+                    // Leer el archivo línea por línea
+                    while (reader.ReadLine() != null)
+                    {
+                        contador++;  // Incrementamos el contador por cada línea
+                    }
+                    
+                    // Mostrar el número de líneas
+                    //Console.WriteLine($"El archivo tiene {lineCount} líneas.");
+                 }
+                //iniciar el arreglo 
+                string[] registros = new string[contador];
+                int x = 0;
+                while (!StreamReader.EndOfStream) 
+                {
+                    //string[] linea = StreamReader.ReadLine().Split('|');
+                    //string codigoproducto = string.IsNullOrEmpty(linea[0]) ? "" : linea[0];
+                    //string cantidad = string.IsNullOrEmpty(linea[1]) ? "": linea[1];
+                    //string estado = string.IsNullOrEmpty(linea[2]) ? "":linea[2];
+                    //string observacion = string.IsNullOrEmpty(linea[3]) ? "": linea[3];
+                    
+
+                    registros[x] = StreamReader.ReadLine();
+                        x++;
+                    
+
+                    //contador = contador + 1;
+                    //insertar en xml 
+                }
+                string xmldinamico =  Util.ConvertiraXMLdinamico(registros);
+                //Console.WriteLine(xmldinamico);
+
+                string fechaInventario = Util.GetCurrentCellText(gridControl, "IN04FECINV");
+                string codigoAlmacen = Util.GetCurrentCellText(gridControl, "IN04CODALM");
+                int flag = 0;
+                string mensaje = "";
+                InventarioFisicoLogic.Instance.ActualizarInventarioMasivo(Logueo.CodigoEmpresa,
+                    Logueo.Anio, fechaInventario, codigoAlmacen, xmldinamico, out flag, out mensaje);
+
+                if(flag == 1){
+                    Util.ShowMessage("Importacion correcta",1);
+
+                    OnBuscarDet();
+                }else{
+                    Util.ShowError("Fallo importacion: " + mensaje);
+                    
+                }
+
+
+            }
+            catch (Exception ex) {
+                Util.ShowError("Error al importar: " + ex.Message);
+            }
+        }
+
+        private void btnImportarInventarioMasivo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string descripcion = "";
+                //abrir archivo
+                OpenFileDialog opf = new OpenFileDialog();
+                var fic = "";
+                var filename = "";
+                //abre el Dialog en la carpeta que desees 
+                opf.InitialDirectory = descripcion;
+                if (opf.ShowDialog() == DialogResult.OK && opf.FileName.Length > 0)
+                {
+                    fic = opf.FileName;
+                    filename = opf.SafeFileName;
+                }
+                else return;
+                var StreamReader = new System.IO.StreamReader(fic, Encoding.Default);
+                string msj = string.Empty;
+
+                int contador = 0;  // Contador de líneas
+                using (var reader = new StreamReader(fic, Encoding.Default))
+                {
+
+
+                    // Leer el archivo línea por línea
+                    while (reader.ReadLine() != null)
+                    {
+                        contador++;  // Incrementamos el contador por cada línea
+                    }
+
+                    // Mostrar el número de líneas
+                    //Console.WriteLine($"El archivo tiene {lineCount} líneas.");
+                }
+                //iniciar el arreglo 
+                string[] registros = new string[contador];
+                int x = 0;
+                while (!StreamReader.EndOfStream)
+                {
+                    //string[] linea = StreamReader.ReadLine().Split('|');
+                    //string codigoproducto = string.IsNullOrEmpty(linea[0]) ? "" : linea[0];
+                    //string cantidad = string.IsNullOrEmpty(linea[1]) ? "": linea[1];
+                    //string estado = string.IsNullOrEmpty(linea[2]) ? "":linea[2];
+                    //string observacion = string.IsNullOrEmpty(linea[3]) ? "": linea[3];
+
+
+                    registros[x] = StreamReader.ReadLine();
+                    x++;
+
+
+                    //contador = contador + 1;
+                    //insertar en xml 
+                }
+                string xmldinamico = Util.ConvertiraXMLdinamico(registros);
+                //Console.WriteLine(xmldinamico);
+
+                string fechaInventario = Util.GetCurrentCellText(gridControl, "IN04FECINV");
+                string codigoAlmacen = Util.GetCurrentCellText(gridControl, "IN04CODALM");
+                int flag = 0;
+                string mensaje = "";
+                InventarioFisicoLogic.Instance.ActualizarInventarioMasivo(Logueo.CodigoEmpresa,
+                    Logueo.Anio, fechaInventario, codigoAlmacen, xmldinamico, out flag, out mensaje);
+
+                if (flag == 1)
+                {
+                    Util.ShowMessage("Importacion correcta", 1);
+
+                    OnBuscarDet();
+                }
+                else
+                {
+                    Util.ShowError("Fallo importacion: " + mensaje);
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Util.ShowError("Error al importar: " + ex.Message);
+            }
         }
    }
 }

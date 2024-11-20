@@ -513,7 +513,14 @@ namespace Inv.UI.Win
 
             return cadena;
         }
-
+        public static void ResaltarAyudaColumna(RadGridView DataGrid, string name) {
+            if (DataGrid.Rows.Count > 0) {
+                foreach (GridViewRowInfo row in DataGrid.Rows) {
+                    //ResaltarAyuda(row.Cells[name], name);
+                    ResaltarAyuda(row.Cells[name]);
+                }
+            }
+        }
         public static void ResaltarAyuda(GridViewCellInfo fila)
         {
 

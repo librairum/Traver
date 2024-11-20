@@ -75,9 +75,19 @@ namespace Inv.BusinessLogic
         public void InventarioFisicoUpd(InventarioFisico InvFis, out int @FlagOK, out string @cMsgRetorno)
         {
             @cMsgRetorno = string.Empty;
-            Accessor.InventarioFisicoUpd(InvFis.IN04CODEMP, InvFis.IN04AA, string.Format("{0:yyyyMMdd}", InvFis.IN04FECINV), InvFis.IN04CODALM, InvFis.IN04KEY, InvFis.IN04ITEM, InvFis.IN04CANTFISICA, out @FlagOK, out @cMsgRetorno);
+            Accessor.InventarioFisicoUpd(InvFis.IN04CODEMP, InvFis.IN04AA, 
+                string.Format("{0:yyyyMMdd}", InvFis.IN04FECINV), InvFis.IN04CODALM, 
+                InvFis.IN04KEY, InvFis.IN04ITEM, InvFis.IN04CANTFISICA, 
+                InvFis.in04observacion, InvFis.in04estado,
+                out @FlagOK, out @cMsgRetorno);
         }
 
+
+        public void ActualizarInventarioMasivo(string @CodEmp, string @Anio, string @FechaInventario,
+            string @CodigoAlmacen, string @XMLRango, out int @FlagOK, out string @Msg) { 
+            Accessor.Spu_Inv_Upd_InventarioMasivo(@CodEmp, @Anio,  @FechaInventario,@CodigoAlmacen, 
+                @XMLRango, out @FlagOK, out @Msg);
+        }
         
         #endregion
 

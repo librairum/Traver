@@ -31,7 +31,24 @@ namespace Inv.DataAccess
         public abstract DataTable InventarioFisicoRepDife(string @In04CodEmp, string @in04aa, string @In04CodAlm, string @cFecha);
 
         [SprocName("Spu_Inv_Upd_InvFisico")]
-        public abstract void InventarioFisicoUpd(string @IN04CODEMP, string @IN04AA,string @IN04FECINV,string @IN04CODALM,string @IN04KEY,int @IN04ITEM,double @IN04CANTFISICA,out int @FlagOK,out string @Msg);
+        public abstract void InventarioFisicoUpd(string @IN04CODEMP, string @IN04AA,string @IN04FECINV,string @IN04CODALM,
+            string @IN04KEY,int @IN04ITEM,double @IN04CANTFISICA , string @in04observacion, string @in04estado, out int @FlagOK,out string @Msg);
+
+        [SprocName("Spu_Inv_Upd_InventarioMasivo")]
+        public abstract void Spu_Inv_Upd_InventarioMasivo(string @CodEmp, string @Anio, string @FechaInventario,
+            string @CodigoAlmacen, string @XMLRango, out int @FlagOK, out string @Msg);
+        /*@CodEmp  VARCHAR(02),  -- Codigo de Empresa        
+    @Ano  VARCHAR(04), -- Año        
+    @FechaInventario varchar(10), -- anio-dia-mes
+    @CodigoAlmacen char(2),
+
+    @XMLRango xml    
+         @FlagOK int output,
+    @Msg varchar(200) output
+         */
+
 
     }
+
+    
 }

@@ -41,5 +41,13 @@ namespace Inv.BusinessEntities
         public string in01deslar { get; set; }
         [MapField("in01unimed")]
         public string in01unimed { get; set; }
+
+        [MapField("in04observacion")]
+        public string in04observacion {get;set;}
+        
+        [MapField("in04estado")]
+        public string in04estado { get; set; }
+        public string estadoInventarioDesc { get; set; }
+
     }
 }

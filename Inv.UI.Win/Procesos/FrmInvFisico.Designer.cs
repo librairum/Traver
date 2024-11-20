@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInvFisico));
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition5 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition6 = new Telerik.WinControls.UI.TableViewDefinition();
             this.gridControl = new Telerik.WinControls.UI.RadGridView();
             this.gridControlDet = new Telerik.WinControls.UI.RadGridView();
             this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
@@ -43,6 +43,7 @@
             this.gbnuevo = new Telerik.WinControls.UI.RadGroupBox();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.lblmensaje = new System.Windows.Forms.Label();
+            this.btnImportarInventarioMasivo = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.radCommandBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl.MasterTemplate)).BeginInit();
@@ -58,6 +59,7 @@
             this.gbnuevo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnImportarInventarioMasivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,9 +96,9 @@
             // 
             // 
             // 
-            this.gridControl.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.gridControl.MasterTemplate.ViewDefinition = tableViewDefinition5;
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(241, 253);
+            this.gridControl.Size = new System.Drawing.Size(185, 253);
             this.gridControl.TabIndex = 0;
             this.gridControl.Text = "radGridView1";
             this.gridControl.CurrentRowChanged += new Telerik.WinControls.UI.CurrentRowChangedEventHandler(this.gridControl_CurrentRowChanged);
@@ -104,17 +106,19 @@
             // 
             // gridControlDet
             // 
-            this.gridControlDet.Location = new System.Drawing.Point(250, 35);
+            this.gridControlDet.Location = new System.Drawing.Point(194, 35);
             // 
             // 
             // 
-            this.gridControlDet.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.gridControlDet.MasterTemplate.ViewDefinition = tableViewDefinition6;
             this.gridControlDet.Name = "gridControlDet";
-            this.gridControlDet.Size = new System.Drawing.Size(911, 253);
+            this.gridControlDet.Size = new System.Drawing.Size(967, 253);
             this.gridControlDet.TabIndex = 1;
             this.gridControlDet.CellBeginEdit += new Telerik.WinControls.UI.GridViewCellCancelEventHandler(this.gridControlDet_CellBeginEdit);
             this.gridControlDet.CellEndEdit += new Telerik.WinControls.UI.GridViewCellEventHandler(this.gridControlDet_CellEndEdit);
             this.gridControlDet.CellValidating += new Telerik.WinControls.UI.CellValidatingEventHandler(this.gridControlDet_CellValidating);
+            this.gridControlDet.CellValueChanged += new Telerik.WinControls.UI.GridViewCellEventHandler(this.gridControlDet_CellValueChanged);
+            this.gridControlDet.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridControlDet_KeyDown);
             // 
             // commandBarRowElement1
             // 
@@ -122,7 +126,7 @@
             // 
             // radLabel1
             // 
-            this.radLabel1.Location = new System.Drawing.Point(456, 3);
+            this.radLabel1.Location = new System.Drawing.Point(387, 3);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(49, 18);
             this.radLabel1.TabIndex = 2;
@@ -130,7 +134,7 @@
             // 
             // radLabel2
             // 
-            this.radLabel2.Location = new System.Drawing.Point(660, 3);
+            this.radLabel2.Location = new System.Drawing.Point(708, 3);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.Size = new System.Drawing.Size(35, 18);
             this.radLabel2.TabIndex = 3;
@@ -157,16 +161,16 @@
             // 
             // cboalmacenes
             // 
-            this.cboalmacenes.Location = new System.Drawing.Point(511, 3);
+            this.cboalmacenes.Location = new System.Drawing.Point(442, 3);
             this.cboalmacenes.Name = "cboalmacenes";
-            this.cboalmacenes.Size = new System.Drawing.Size(134, 20);
+            this.cboalmacenes.Size = new System.Drawing.Size(260, 20);
             this.cboalmacenes.TabIndex = 6;
             this.cboalmacenes.Text = "radDropDownList1";
             // 
             // dtpFecha
             // 
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(697, 3);
+            this.dtpFecha.Location = new System.Drawing.Point(745, 3);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(134, 20);
             this.dtpFecha.TabIndex = 5;
@@ -177,6 +181,7 @@
             // gbnuevo
             // 
             this.gbnuevo.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.gbnuevo.Controls.Add(this.btnImportarInventarioMasivo);
             this.gbnuevo.Controls.Add(this.rbtinvfisicodiferencias);
             this.gbnuevo.Controls.Add(this.rbtinvfisicotoma);
             this.gbnuevo.Controls.Add(this.cboalmacenes);
@@ -212,6 +217,15 @@
             this.lblmensaje.Text = "Modo edicion : Al terminar de editar a la celda cantidad, se guardara automatica " +
                 "el valor ingresado.\r\n";
             // 
+            // btnImportarInventarioMasivo
+            // 
+            this.btnImportarInventarioMasivo.Location = new System.Drawing.Point(885, 6);
+            this.btnImportarInventarioMasivo.Name = "btnImportarInventarioMasivo";
+            this.btnImportarInventarioMasivo.Size = new System.Drawing.Size(106, 15);
+            this.btnImportarInventarioMasivo.TabIndex = 8;
+            this.btnImportarInventarioMasivo.Text = "Importar Inventario";
+            this.btnImportarInventarioMasivo.Click += new System.EventHandler(this.btnImportarInventarioMasivo_Click);
+            // 
             // FrmInvFisico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,6 +260,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
             this.radPanel1.ResumeLayout(false);
             this.radPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnImportarInventarioMasivo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -266,5 +281,6 @@
         private Telerik.WinControls.UI.RadGroupBox gbnuevo;
         private Telerik.WinControls.UI.RadPanel radPanel1;
         private System.Windows.Forms.Label lblmensaje;
+        private Telerik.WinControls.UI.RadButton btnImportarInventarioMasivo;
     }
 }

@@ -212,7 +212,7 @@ namespace Inv.UI.Win
             {
                 //MessageBox.Show("Error al limpiar archivos descargos : " + ex.Message);
                 Util.ShowError("Error al limpiar archivos descargos : " + ex.Message);
-                //Application.Exit();
+                
             }
 
             Cursor.Current = Cursors.Default;
@@ -280,7 +280,7 @@ namespace Inv.UI.Win
             {
                 Util.ShowError("Error al verificar detectar actualizacion : " + ex.Message);
                 //MessageBox.Show("Error al verificar detectar actualizacion : " + ex.Message);
-                //Application.Exit();
+             
             }
         }
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -350,7 +350,7 @@ namespace Inv.UI.Win
                 //MessageBox.Show(mensaje + " detalle: " + ex.Message, "Sistema");
                 Util.ShowError("Error al descargar archivo de actualizacion:" + ex.Message);
                 //MessageBox.Show("Error al descargar archivo de actualizacion:" + ex.Message, "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //Application.Exit();
+                
 
             }
 

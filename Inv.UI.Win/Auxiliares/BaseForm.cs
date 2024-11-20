@@ -104,7 +104,8 @@ namespace Inv.UI.Win
         enmCtaCteDesc = 85,
         enmTipoCostoMP = 86,
         enmBloquesCosteo = 87,
-        enmFactTransportBloques = 88
+        enmFactTransportBloques = 88,
+        enmEstadoInventarioFisico = 89
         }
     public enum BaseRegBotones
     {

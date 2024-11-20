@@ -712,6 +712,12 @@ namespace Inv.UI.Win
                     this.Text = "Cuenta contable";
                     break;
 
+                case enmAyuda.enmEstadoInventarioFisico:
+                    CreateGridColumn(gridControl, "Codigo", "glo01codigo", 0, "", 120, true, false, true);
+                    CreateGridColumn(gridControl, "Descripcion", "glo01descripcion", 0, "", 120, true, false, true);
+                    this.gridControl.DataSource = GlobalLogic.Instance.TraeAyudaGlobal("71", "GLO", "glo01codigo", "*");
+
+                    break;
                 default:
                     break;
             }
@@ -1350,6 +1356,10 @@ namespace Inv.UI.Win
                 case enmAyuda.enmCuentaContable:
                    this.Result = Util.GetCurrentCellText(gridControl, "glo01codigo") + "|" + 
                                  Util.GetCurrentCellText(gridControl, "glo01descripcion");
+                   break;
+                case enmAyuda.enmEstadoInventarioFisico:
+                   this.Result = Util.GetCurrentCellText(gridControl, "glo01codigo") + "|" +
+                                Util.GetCurrentCellText(gridControl, "glo01descripcion");
                    break;
                 default:
                     break;
