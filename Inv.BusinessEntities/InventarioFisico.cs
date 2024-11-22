@@ -49,5 +49,7 @@ namespace Inv.BusinessEntities
         public string in04estado { get; set; }
         public string estadoInventarioDesc { get; set; }
 
+        public string ItemCorrelativo { get; set; }
+
     }
 }

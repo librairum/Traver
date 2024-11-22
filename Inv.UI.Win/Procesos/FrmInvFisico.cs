@@ -324,7 +324,7 @@ namespace Inv.UI.Win
         {
             
             RadGridView grilladet = this.CreateGridVista(this.gridControlDet);
-            this.CreateGridColumn(grilladet, "Item", "IN04ITEM", 0, "", 50, true, false, true);
+            this.CreateGridColumn(grilladet, "Item", "ItemCorrelativo", 0, "", 50, true, false, true);
 
             this.CreateGridColumn(grilladet, "Columna", "AlmacenColumna", 0, "", 50, true, false, true);
             this.CreateGridColumn(grilladet, "Caja", "In04caja", 0, "", 70, true, false, true);
@@ -341,7 +341,7 @@ namespace Inv.UI.Win
             this.CreateGridColumn(grilladet, "DescEstado", "estadoinventariodesc", 0, "", 100, true, false, true);
 
             this.CreateGridColumn(grilladet, "Obs", "in04observacion", 0, "", 200, false, true, true);
-
+            this.CreateGridColumn(grilladet, "itemdetalle", "IN04ITEM", 0, "", 200, false, true, false);
             
             //--AgregarColumnaCombo();
 
