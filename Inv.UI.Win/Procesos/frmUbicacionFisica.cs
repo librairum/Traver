@@ -60,8 +60,9 @@ namespace Inv.UI.Win
            isLoaded = true;
             this.CargarUbicacionFisica();
             isLoaded = true;
-
-            HabilitarBotones(true, true, true, true, false);
+            OcultarBotones();
+            HabilitarBotones(false, false, true, true, false);
+            
             Cursor.Current = Cursors.Default;
         }
         
@@ -112,7 +113,8 @@ namespace Inv.UI.Win
                     seleccionados[x] = this.gridControl.SelectedRows[i].Cells["in07nrocaja"].Value.ToString();                                        
                     x++;
                 }
-                var productos = DocumentoLogic.Instance.TraerProductosxNroCaja(Logueo.CodigoEmpresa ,Util.ConvertiraXML(seleccionados));
+                var productos = DocumentoLogic.Instance.TraerProductosxNroCaja(Logueo.CodigoEmpresa , Logueo.PT_codnaturaleza,
+                    Util.ConvertiraXML(seleccionados));
                 this.gridDetalles.DataSource = productos;
                 Cursor.Current = Cursors.Default;
             }
@@ -127,7 +129,7 @@ namespace Inv.UI.Win
         {
             try
             {
-                var UbicacionFisica = DocumentoLogic.Instance.TraerUbicacionFisica(Logueo.CodigoEmpresa);
+                var UbicacionFisica = DocumentoLogic.Instance.TraerUbicacionFisica(Logueo.CodigoEmpresa,Logueo.PT_codnaturaleza);
                 this.gridControl.DataSource = UbicacionFisica;
             }
             catch (Exception)
@@ -148,7 +150,7 @@ namespace Inv.UI.Win
             }
             Cursor.Current = Cursors.WaitCursor;
 
-            var productos = DocumentoLogic.Instance.Reporte_ProductosNroCaja(Logueo.CodigoEmpresa, Util.ConvertiraXML(seleccionados));
+            var productos = DocumentoLogic.Instance.Reporte_ProductosNroCaja(Logueo.CodigoEmpresa, Logueo.PT_codnaturaleza,Util.ConvertiraXML(seleccionados));
             //ranfecini = this.cbomesini.SelectedValue.ToString().Substring(0, 2);
             //ranfecfin = this.cbomesfin.SelectedValue.ToString().Substring(0, 2);
 
@@ -212,7 +214,8 @@ namespace Inv.UI.Win
                 string mensajeRetorno = string.Empty;
                 string flagok = string.Empty;
 
-                DocumentoLogic.Instance.UbicacionFisicaActualizar(ubifis, out flagok, out mensajeRetorno);
+                DocumentoLogic.Instance.UbicacionFisicaActualizar(ubifis, Logueo.PT_codnaturaleza ,
+                    out flagok, out mensajeRetorno);
 
                 if (flagok == "-1")
                 {

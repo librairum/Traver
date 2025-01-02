@@ -424,6 +424,15 @@ namespace Inv.UI.Win
                         case "FRMREPCONTABLE":
                             mostrarFormulario(formulario);
                             break;
+                        case "FRMINVFISICOMP":
+                            mostrarFormulario(formulario);
+                            break;
+                        case "FRMUBICACIONFISICAMP":
+                            mostrarFormulario(formulario);
+                            break;
+                        case "FRMINVFISICOPS":
+                            mostrarFormulario(formulario);
+                            break;
                         default:
                             
                             this.Close();
@@ -601,7 +610,16 @@ namespace Inv.UI.Win
                   //return frmGeneraVoucher.Instance(this);
                 case "FRMREPCONTABLE":
                    return FrmRepContable.Instance(this);
-                   break;
+
+                case "FRMINVFISICOMP":
+                   return FrmInvFisicoMP.Instance(this);
+                   
+                case "FRMUBICACIONFISICAMP":
+                   return frmUbicacionFisicaMP.Instance(this);
+                case "FRMINVFISICOPS":
+                   return FrmInvFisicoPS.Instance(this);
+
+                default: break;
 
                     
             }

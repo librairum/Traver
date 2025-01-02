@@ -70,7 +70,10 @@ namespace Inv.BusinessLogic
         {
             return Accessor.AlmacenTraer(empresa, "in09codigo", "*");
         }
-
+        public List<Almacen> AlmacenTraerxNaturaleza(string empresa, string codigonaturaleza)
+        {
+            return Accessor.AlmacenTraer(empresa, "naturaleza", codigonaturaleza);
+        }
         public List<Almacen> traerAlmacenXLineaXActividad(string empresa,string linea, string actividad)
         {
             return Accessor.traerAlmacenXLineaXActividad(empresa, linea, actividad);

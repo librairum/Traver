@@ -51,9 +51,9 @@ namespace Inv.BusinessLogic
         }
 
 
-        public List<InventarioFisico> InventarioFisicoPorAnio(string @IN04CODEMP, string @IN04AA)
+        public List<InventarioFisico> InventarioFisicoPorAnio(string @IN04CODEMP, string anio, string naturaleza)
         {
-            return Accessor.InventarioFisicoPorAnio(@IN04CODEMP, @IN04AA);
+            return Accessor.InventarioFisicoPorAnio(@IN04CODEMP, anio, naturaleza);
         }
 
         public List<InventarioFisico> InventarioFisicoTraer(string @In04CodEmp, string @in04aa, string @In04CodAlm, string @cFecha)
@@ -67,11 +67,11 @@ namespace Inv.BusinessLogic
             return Accessor.InventarioFisicoRepToma(@In04CodEmp, @in04aa, @In04CodAlm, @cFecha);
         }
 
-        public DataTable InventarioFisicoRepDife(string @In04CodEmp, string @in04aa, string @In04CodAlm, string @cFecha)
+        public DataTable InventarioFisicoRepDife(string @In04CodEmp, string @in04aa, string @In04CodAlm, string @cFecha, string @Flag)
         {
-            return Accessor.InventarioFisicoRepDife(@In04CodEmp, @in04aa, @In04CodAlm, @cFecha);
+            return Accessor.InventarioFisicoRepDife(@In04CodEmp, @in04aa, @In04CodAlm, @cFecha, @Flag);
         }
-
+        
         public void InventarioFisicoUpd(InventarioFisico InvFis, out int @FlagOK, out string @cMsgRetorno)
         {
             @cMsgRetorno = string.Empty;

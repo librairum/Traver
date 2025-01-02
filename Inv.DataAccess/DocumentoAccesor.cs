@@ -221,18 +221,20 @@ namespace Inv.DataAccess
         [SprocName("Spu_Inv_Rep_ProvMateriaPrima")]
         public abstract List<Spu_Inv_Rep_ProvMateriaPrima> RptProvMateriaPrima(string @IN06CODEMP, string @IN06AA, string @TipAnalisisctacte, string @PeriodoIni, string @PeriodoFin);
 
+        //funciona para traver de huaral
         [SprocName("Spu_Inv_Trae_Ubicacion")]
-        public abstract List<UbicacionFisica> TraerUbicacionFisica(string @IN07CODEMP);
+        public abstract List<UbicacionFisica> TraerUbicacionFisica(string @IN07CODEMP, string @naturaleza);
 
         [SprocName("Spu_Inv_Upd_Ubicacion")]
-        public abstract void UbicacionFisicaActualizar(string @IN07CODEMP, string @IN07UBICACION, string @IN07NROCAJA, string @IN07USUARIO, out string @FlagOK, 
+        public abstract void UbicacionFisicaActualizar(string @IN07CODEMP, string @IN07UBICACION, string @IN07NROCAJA, string @IN07USUARIO, 
+            string @in07naturalezacod,out string @FlagOK, 
             out string @cMsgRetorno);
 
         [SprocName("Spu_Inv_Trae_ProductoxNroCaja")]
-        public abstract List<Spu_Inv_Trae_ProductoxNroCaja> TraerProductosxNroCaja(string @cCodEmp, string @XMLrango);
+        public abstract List<Spu_Inv_Trae_ProductoxNroCaja> TraerProductosxNroCaja(string @cCodEmp,string @naturaleza, string @XMLrango);
 
         [SprocName("Spu_Inv_Trae_ProductoxNroCaja")]
-        public abstract DataTable Reporte_ProductosNroCaja(string @cCodEmp, string @XMLrango);
+        public abstract DataTable Reporte_ProductosNroCaja(string @cCodEmp, string @naturaleza, string @XMLrango);
 
         [SprocName("Spu_Inv_IngresoSalida")]
         public abstract DataTable Spu_Inv_Ing_Sal(string @codemp, string @fechaIni, string @fechaFin);

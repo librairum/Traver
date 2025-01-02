@@ -1027,7 +1027,7 @@
             this.radLabel9.Size = new System.Drawing.Size(621, 18);
             this.radLabel9.TabIndex = 11;
             this.radLabel9.Text = "Si el rango de hora muerta pasa a otro dia separar en dos bloques de hora muerta " +
-    ": Hora Inicio - 23:59    y  00:00 - Hora Fin";
+                ": Hora Inicio - 23:59    y  00:00 - Hora Fin";
             // 
             // dtpHMFecha
             // 

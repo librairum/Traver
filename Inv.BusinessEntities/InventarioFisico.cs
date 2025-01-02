@@ -49,7 +49,11 @@ namespace Inv.BusinessEntities
         public string in04estado { get; set; }
         public string estadoInventarioDesc { get; set; }
 
-        public string ItemCorrelativo { get; set; }
+        [MapField("in09descripcion")]
+        public string in09descripcion { get; set; }
+
+
+        public int ItemCorrelativo { get; set; }
 
     }
 }

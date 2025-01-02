@@ -911,8 +911,10 @@ namespace Inv.UI.Win
                     if (frm.Result != null)
                         codigoSeleccionado = frm.Result.ToString();
 
-                    if (codigoSeleccionado != "") this.txtCodigoTipDoc.Text = codigoSeleccionado;
-                          
+                    if (codigoSeleccionado != "") {
+                        this.txtCodigoTipDoc.Text = codigoSeleccionado.Split('|')[0];
+                        this.txtDesTipDoc.Text = codigoSeleccionado.Split('|')[1];
+                    }
                     break;
                     
                 case enmAyuda.enmTransaccion:

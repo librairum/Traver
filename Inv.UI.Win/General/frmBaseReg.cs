@@ -73,6 +73,16 @@ namespace Inv.UI.Win
         {
             this.radCommandBar1.Visible = false;
         }
+
+        internal void OcultarBotones() {
+            cbbCancelar.Visibility = ElementVisibility.Collapsed;
+            cbbGuardar.Visibility = ElementVisibility.Collapsed;
+            cbbVistaPrevia.Visibility = ElementVisibility.Collapsed;
+            cbbNuevo.Visibility = ElementVisibility.Collapsed;
+            cbbEditar.Visibility = ElementVisibility.Collapsed;
+            cbbEliminar.Visibility = ElementVisibility.Collapsed;
+            cbbImprimir.Visibility = ElementVisibility.Collapsed;
+        }
         private Extensions _extensions;
 
         public FormEstate Estado { get; set; }

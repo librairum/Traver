@@ -83,8 +83,10 @@ namespace Inv.UI.Win
                         
                     //agrego parametor de Tipo de Naturaleza -- > this._codigoAlmacen
                     var tipEntrada = ((bool)_parametros) == false ? "S" : "E";
+                    var tipoNaturalezaCod = (string)_parametros2;
                     var tipDocs = TipoDocumentoLogic.Instance.Trae_TipDocParaMov(Logueo.CodigoEmpresa,
-                                "04", tipEntrada.ToString());
+                                tipoNaturalezaCod, tipEntrada.ToString());
+
                     //ORIGINAL
                     //var tipDocs = TipoDocumentoLogic.Instance.TraerTipoDocumento2(Logueo.CodigoEmpresa,
                             //    tipEntrada, this._parametros2.ToString());

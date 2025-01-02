@@ -231,6 +231,24 @@
     <Compile Include="FrmCreados1312\frmAlmacenArchivoPlano.Designer.cs">
       <DependentUpon>frmAlmacenArchivoPlano.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\FrmInvFisicoPS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\FrmInvFisicoPS.Designer.cs">
+      <DependentUpon>FrmInvFisicoPS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\FrmInvFisicoMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\FrmInvFisicoMP.Designer.cs">
+      <DependentUpon>FrmInvFisicoMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\frmUbicacionFisicaMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\frmUbicacionFisicaMP.Designer.cs">
+      <DependentUpon>frmUbicacionFisicaMP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\FrmConfigurarVoucherContable_F.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +284,24 @@
     </Compile>
     <Compile Include="Procesos\FrmPrueba.Designer.cs">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\RptInvFisicoDiferenciasBloque.cs">
+      <DependentUpon>RptInvFisicoDiferenciasBloque.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\RptInvFisicotomaBloque.cs">
+      <DependentUpon>RptInvFisicotomaBloque.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\RptBloquesxUbicacion.cs">
+      <DependentUpon>RptBloquesxUbicacion.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Reportes\RptKardexResContableAgrupaAlmacen.cs">
       <DependentUpon>RptKardexResContableAgrupaAlmacen.rpt</DependentUpon>
@@ -1218,6 +1254,15 @@
     <EmbeddedResource Include="FrmCreados1312\frmAlmacenArchivoPlano.resx">
       <DependentUpon>frmAlmacenArchivoPlano.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\FrmInvFisicoPS.resx">
+      <DependentUpon>FrmInvFisicoPS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\FrmInvFisicoMP.resx">
+      <DependentUpon>FrmInvFisicoMP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frmUbicacionFisicaMP.resx">
+      <DependentUpon>frmUbicacionFisicaMP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procesos\FrmConfigurarVoucherContable_F.resx">
       <DependentUpon>FrmConfigurarVoucherContable_F.cs</DependentUpon>
     </EmbeddedResource>
@@ -1235,6 +1280,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\FrmPrueba.resx">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptInvFisicoDiferenciasBloque.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptInvFisicoDiferenciasBloque.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptInvFisicotomaBloque.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptInvFisicotomaBloque.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptBloquesxUbicacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptBloquesxUbicacion.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RptKardexResContableAgrupaAlmacen.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

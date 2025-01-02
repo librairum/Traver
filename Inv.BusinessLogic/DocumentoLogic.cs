@@ -370,25 +370,26 @@ namespace Inv.BusinessLogic
         {
             return Accessor.RptProvMateriaPrima(@IN06CODEMP, @IN06AA, @TipAnalisisctacte, @PeriodoIni, @PeriodoFin);
         }
-
-        public List<UbicacionFisica> TraerUbicacionFisica(string @IN07CODEMP)
+        //funciona para traver de huaral
+        public List<UbicacionFisica> TraerUbicacionFisica(string @IN07CODEMP, string codigonaturaleza)
         {
-            return Accessor.TraerUbicacionFisica(@IN07CODEMP);
+            return Accessor.TraerUbicacionFisica(@IN07CODEMP, codigonaturaleza);
         }
 
-        public void UbicacionFisicaActualizar(UbicacionFisica ubifis, out string flagok, out string cMsgRetorno)
+        public void UbicacionFisicaActualizar(UbicacionFisica ubifis, string @in07naturalezacod, out string flagok, out string cMsgRetorno)
         {
             cMsgRetorno = string.Empty;
-            Accessor.UbicacionFisicaActualizar(ubifis.IN07CODEMP, ubifis.IN07UBICACION, ubifis.IN07NROCAJA, ubifis.IN07USUARIO,out flagok, out cMsgRetorno);
+            Accessor.UbicacionFisicaActualizar(ubifis.IN07CODEMP, ubifis.IN07UBICACION, ubifis.IN07NROCAJA, ubifis.IN07USUARIO,
+                @in07naturalezacod, out flagok, out cMsgRetorno);
         }
 
-        public List<Spu_Inv_Trae_ProductoxNroCaja> TraerProductosxNroCaja(string @cCodEmp,string @XMLrango)
+        public List<Spu_Inv_Trae_ProductoxNroCaja> TraerProductosxNroCaja(string @cCodEmp, string @naturaleza, string @XMLrango)
         {
-            return Accessor.TraerProductosxNroCaja(@cCodEmp, @XMLrango);
+            return Accessor.TraerProductosxNroCaja(@cCodEmp, @naturaleza, @XMLrango);
         }
-        public DataTable Reporte_ProductosNroCaja(string @cCodEmp, string @XMLrango)
+        public DataTable Reporte_ProductosNroCaja(string @cCodEmp, string @naturaleza, string @XMLrango)
         {
-            return Accessor.Reporte_ProductosNroCaja(@cCodEmp, @XMLrango);
+            return Accessor.Reporte_ProductosNroCaja(@cCodEmp, @naturaleza, @XMLrango);
         }
         public DataTable Spu_Inv_Ing_Sal(string codemp, string fecnini, string fecfin) {
             return Accessor.Spu_Inv_Ing_Sal(codemp, fecnini, fecfin);

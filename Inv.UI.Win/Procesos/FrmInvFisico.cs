@@ -57,11 +57,13 @@ namespace Inv.UI.Win
                     dtpFecha.Enabled = false;
                     cboalmacenes.Enabled = false;
                     rbtinvfisicodiferencias.Enabled = true;
+                    rbtinvfisicoTotal.Enabled = true;
                     rbtinvfisicotoma.Enabled = true;
                     lblmensaje.Visible = false;
                     break;
                 case FormEstate.New:
                     rbtinvfisicodiferencias.Enabled = false;
+                    rbtinvfisicoTotal.Enabled = false;
                     rbtinvfisicotoma.Enabled = false;
                     dtpFecha.Enabled = true;
                     cboalmacenes.Enabled = true;
@@ -72,12 +74,14 @@ namespace Inv.UI.Win
                     cboalmacenes.Enabled = false;
                     rbtinvfisicotoma.Enabled = false;
                     rbtinvfisicodiferencias.Enabled = false;
+                    rbtinvfisicoTotal.Enabled = false;
                     lblmensaje.Visible = true;
                     break;
                 case FormEstate.View:
                        dtpFecha.Enabled = false;
                     cboalmacenes.Enabled = false;
                     rbtinvfisicodiferencias.Enabled = true;
+                    rbtinvfisicoTotal.Enabled = true;
                     rbtinvfisicotoma.Enabled = true;
                     lblmensaje.Visible = false;
                     break;
@@ -87,32 +91,44 @@ namespace Inv.UI.Win
         }
         protected override void OnBuscar()
         {
-            //base.OnBuscar();
-            var lista = InventarioFisicoLogic.Instance.InventarioFisicoPorAnio(Logueo.CodigoEmpresa, Logueo.Anio);
+            List<InventarioFisico> lista = null;
+            lista = InventarioFisicoLogic.Instance.InventarioFisicoPorAnio(Logueo.CodigoEmpresa, Logueo.Anio, Logueo.PT_codnaturaleza);
+  
+          
             this.gridControl.DataSource = lista;
         }
         protected void OnBuscarDet()
         {
-            if (this.gridControl.RowCount == 0)        
-                return;
-            
-            string invfisalmacen = string.Empty;
-            DateTime invfisfechadate;
-            string invfisfecha = string.Empty;
-
-            invfisalmacen = this.gridControl.CurrentRow.Cells["IN04CODALM"].Value.ToString();
-            invfisfechadate = Convert.ToDateTime(this.gridControl.CurrentRow.Cells["IN04FECINV"].Value.ToString());
-            invfisfecha = string.Format("{0:dd/MM/yyyy}", invfisfechadate);
-
-            //base.OnBuscar();
             Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+                if (this.gridControl.RowCount == 0)
+                    return;
 
-            var lista = InventarioFisicoLogic.Instance.InventarioFisicoTraer(Logueo.CodigoEmpresa, Logueo.Anio,invfisalmacen,invfisfecha);
-            this.gridControlDet.DataSource = lista;
+                string invfisalmacen = string.Empty;
+                DateTime invfisfechadate;
+                string invfisfecha = string.Empty;
 
-            if (Estado == FormEstate.Edit) { 
-                //resaltar la columna de estado por ser una columan tipo ayuda
-                Util.ResaltarAyudaColumna(gridControlDet, "estadoinventariodesc");
+                invfisalmacen = this.gridControl.CurrentRow.Cells["IN04CODALM"].Value.ToString();
+                invfisfechadate = Convert.ToDateTime(this.gridControl.CurrentRow.Cells["IN04FECINV"].Value.ToString());
+                invfisfecha = string.Format("{0:dd/MM/yyyy}", invfisfechadate);
+
+                //base.OnBuscar();
+                
+
+                var lista = InventarioFisicoLogic.Instance.InventarioFisicoTraer(Logueo.CodigoEmpresa, Logueo.Anio, invfisalmacen, invfisfecha);
+                this.gridControlDet.DataSource = lista;
+
+                if (Estado == FormEstate.Edit)
+                {
+                    //resaltar la columna de estado por ser una columan tipo ayuda
+                    Util.ResaltarAyudaColumna(gridControlDet, "estadoinventariodesc");
+                }
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex) {
+                Util.ShowError("Error al traer detalle:" + ex.Message);
+              
             }
             Cursor.Current = Cursors.Default;
         }   
@@ -149,7 +165,15 @@ namespace Inv.UI.Win
                  }
                  else if (rbtinvfisicodiferencias.CheckState == CheckState.Checked)
                  {
-                     var datosd = InventarioFisicoLogic.Instance.InventarioFisicoRepDife(Logueo.CodigoEmpresa, Logueo.Anio, invfisalmacen, invfisfecha);
+                     var datosd = InventarioFisicoLogic.Instance.InventarioFisicoRepDife(Logueo.CodigoEmpresa, Logueo.Anio, invfisalmacen, invfisfecha,"D");
+                     reporte.Nombre = "RptInvFisicoDiferencias.rpt";
+                     reporte.DataSource = datosd;
+                     reporte.FormulasFields.Add(new Formula("FechaInvFisico", invfisfecha));
+                     reporte.FormulasFields.Add(new Formula("NombreEmpresa", Logueo.NombreEmpresa));
+                 }
+                 else if (rbtinvfisicoTotal.CheckState == CheckState.Checked)
+                     {
+                     var datosd = InventarioFisicoLogic.Instance.InventarioFisicoRepDife(Logueo.CodigoEmpresa, Logueo.Anio, invfisalmacen, invfisfecha,"T");
                      reporte.Nombre = "RptInvFisicoDiferencias.rpt";
                      reporte.DataSource = datosd;
                      reporte.FormulasFields.Add(new Formula("FechaInvFisico", invfisfecha));
@@ -313,7 +337,9 @@ namespace Inv.UI.Win
         {
             
             grilla = this.CreateGridVista(this.gridControl);            
-            this.CreateGridColumn(grilla, "Almacen", "IN04CODALM", 0, "", 90, true, false, true);
+            this.CreateGridColumn(grilla, "Almacen", "IN04CODALM", 0, "", 30, true, false, true);
+            this.CreateGridColumn(grilla, "Almacen.Desc.", "in09descripcion", 0, "", 130, true, false, true);
+
             this.CreateGridColumn(grilla, "Fecha", "IN04FECINV", 0, "{0:dd/MM/yyyy}", 75, true, false, true);
 
             
@@ -324,7 +350,9 @@ namespace Inv.UI.Win
         {
             
             RadGridView grilladet = this.CreateGridVista(this.gridControlDet);
-            this.CreateGridColumn(grilladet, "Item", "ItemCorrelativo", 0, "", 50, true, false, true);
+            this.CreateGridColumn(grilladet, "Item", "ItemCorrelativo", 0, "", 50, true, false, false);
+
+            this.CreateGridColumn(grilladet, "itemdetalle", "IN04ITEM", 0, "", 50, false, true, true);
 
             this.CreateGridColumn(grilladet, "Columna", "AlmacenColumna", 0, "", 50, true, false, true);
             this.CreateGridColumn(grilladet, "Caja", "In04caja", 0, "", 70, true, false, true);
@@ -341,7 +369,7 @@ namespace Inv.UI.Win
             this.CreateGridColumn(grilladet, "DescEstado", "estadoinventariodesc", 0, "", 100, true, false, true);
 
             this.CreateGridColumn(grilladet, "Obs", "in04observacion", 0, "", 200, false, true, true);
-            this.CreateGridColumn(grilladet, "itemdetalle", "IN04ITEM", 0, "", 200, false, true, false);
+            
             
             //--AgregarColumnaCombo();
 
@@ -390,7 +418,9 @@ namespace Inv.UI.Win
         {
             try
             {
-                var almacen = AlmacenLogic.Instance.AlmacenTraer(Logueo.CodigoEmpresa);
+                //var almacen = AlmacenLogic.Instance.AlmacenTraer(Logueo.CodigoEmpresa);
+                var almacen = AlmacenLogic.Instance.AlmacenTraerxNaturaleza(Logueo.CodigoEmpresa, Logueo.PT_codnaturaleza);
+               
                 cbo.DataSource = almacen;
                 cbo.DisplayMember = "in09descripcion";
                 cbo.ValueMember = "in09codigo";
@@ -524,8 +554,9 @@ namespace Inv.UI.Win
             {
                 if (e.Column.Name == "IN04CANTFISICA")
                 {
-                    int numero;
-                    if (int.TryParse(e.Value.ToString(), out  numero) == false)
+                    double numero;
+
+                    if (Double.TryParse(e.Value.ToString(), out  numero) == false)
                     {
                         e.Cancel = true;
                     }
@@ -578,12 +609,19 @@ namespace Inv.UI.Win
 
         private void gridControlDet_CellValueChanged(object sender, GridViewCellEventArgs e)
         {
-            //columna estado inventario
-            if (Util.IsCurrentColumn(gridControlDet, "estadoinventariodesc") 
-                || Util.IsCurrentColumn(gridControlDet, "in04estado"))
+            try
             {
-                GuardarDetalle(gridControlDet.CurrentRow);
+                //columna estado inventario
+                if (Util.IsCurrentColumn(gridControlDet, "estadoinventariodesc")
+                    || Util.IsCurrentColumn(gridControlDet, "in04estado"))
+                {
+                    GuardarDetalle(gridControlDet.CurrentRow);
+                }
             }
+            catch (Exception ex) {
+                Util.ShowError("Error en evento cellvalue changed:");
+            }
+            
         }
 
         private void btnImportarInventario_Click(object sender, EventArgs e)
