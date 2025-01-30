@@ -1,11 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Net;
 using System.ComponentModel;
 using System.IO;
-
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml;
 using System.Reflection;
@@ -16,6 +15,7 @@ using Inv.BusinessLogic;
 
 //using Encriptador;
 using System.Data.SqlClient;
+using Inv.UI.Win.Utilities;
 
 namespace Inv.UI.Win
 {
@@ -26,20 +26,25 @@ namespace Inv.UI.Win
         private string rutaActualizacionLocal;
         private string NombreArchivoActualizacion;
         private bool detectoActualizacion = false;
+        private bool mensajeMostrado = false; // Variable para controlar el mensaje al usuario
+
         public frmSplash()
         {
             InitializeComponent();
         }
+
+
         private void frmSplash_Load(object sender, EventArgs e)
         {
             IniciarVentanaSplash();
         }
+
         private void frmSplash_Shown(object sender, EventArgs e)
         {
-
             if (backgroundWorker1.IsBusy != true)
                 backgroundWorker1.RunWorkerAsync();
         }
+
         private bool EncontroNuevoVersion()
         {
             Cursor.Current = Cursors.WaitCursor;
@@ -57,9 +62,7 @@ namespace Inv.UI.Win
 
                 // Verficar si ha descargado el archivo en ruta de actualzacion Local
                 if (!File.Exists(RutaMasArchivoLocal))
-                    Util.ShowError("NO existe la ruta de actualizacion local:" + LocalUpdateFile);
-                    //throw new FileNotFoundException("No existe la ruta de Actualizacion local", LocalUpdateFile);
-
+                    ErrorLogger.RegistrarErrorEnLog("NO existe la ruta de actualizacion local: " + LocalUpdateFile);
 
                 string versionOnline = configuracion.ObtenerVersionWeb(rutaActualizacionLocal, NombreArchivoActualizacion);
                 string versionLocal = configuracion.ObtenerVersion();
@@ -71,24 +74,25 @@ namespace Inv.UI.Win
             }
             catch (WebException exWebException)
             {
-                Util.ShowError("Error al iniciar sesion en el servidor o descargar archivo de actualizacion:" + exWebException.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al iniciar sesion en el servidor o descargar archivo de actualizacion: " + exWebException.Message);
                 //MessageBox.Show("Error al iniciar sesion en el servidor o descargar archivo de actualizacion:" + exWebException.Message);
             }
             catch (IOException exInputOutpu)
             {
-                Util.ShowError("Error al gestionar archivo: " + exInputOutpu.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo: " + exInputOutpu.Message);
                 //MessageBox.Show("Error al gestionar archivo: " + exInputOutpu.Message);
             }
             catch (Exception ex)
             {
                 //MessageBox.Show("Error  en [buscar actualizaciones] : " + ex.Message);
-                Util.ShowError("Error  en [buscar actualizaciones] : " + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error en [buscar actualizaciones]: " + ex.Message);
                 encontro = false;
             }
 
             Cursor.Current = Cursors.Default;
             return encontro;
         }
+
         private void IniciarVentanaSplash()
         {
             try
@@ -110,14 +114,15 @@ namespace Inv.UI.Win
             catch (System.Data.SqlClient.SqlException exSql)
             {
                 //MessageBox.Show("Error conexion al servidor :" + exSql.Message);
-                Util.ShowError("Error conexion al servidor :" + exSql.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error conexion al servidor: " + exSql.Message);
             }
             catch (Exception ex)
             {
                 //MessageBox.Show("Error al cargar formulario: " + ex.Message);
-                Util.ShowError("Error al cargar formulario: " + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al cargar formulario: " + ex.Message);
             }
         }
+
         private void IniciarVentanaLogin()
         {
             /*
@@ -129,6 +134,7 @@ namespace Inv.UI.Win
             frmIngreso.Show();
             this.Hide();
         }
+
         private void IniciarActualizador()
         {
             Cursor.Current = Cursors.WaitCursor;
@@ -153,16 +159,15 @@ namespace Inv.UI.Win
                 rutaEjecutable = Path.Combine(Application.StartupPath, nombreEjecutable);
                 tipoEjecucion = configuracion.ObtenerTipoEjecucion();
 
-
                 if (configuracion.ObtenerCadenaConexion().Contains("§") == true)
                 {
-                    Util.ShowAlert("La cadena conexion contiene caracter prohibido");
+                    ErrorLogger.RegistrarErrorEnLog("La cadena conexion contiene caracter prohibido");
                     return;
                 }
 
                 if (configuracion.ObtenerNombreEmpresa().Contains("§") == true)
                 {
-                    Util.ShowAlert("El nombre de empresa contiene caracter prohibido");
+                    ErrorLogger.RegistrarErrorEnLog("El nombre de empresa contiene caracter prohibido");
                     return;
                 }
                 cadenaConexion = (configuracion.ObtenerCadenaConexion()).Replace(' ', '§');
@@ -185,7 +190,6 @@ namespace Inv.UI.Win
 
                 string datosconcatenados = tipoEjecucion + "|" + cadenaConexion + "|" + nombreCarpetaEmpresa + "|" + nombreCarpetaModulo + "|" + nombreEjecutableModulo + "|" + nombreConfig + "|" + versionprograma + "|" + RutaDondeEstaInstaladoElPrograma + "|" + modoDesarrollo + "|" + nombreCarpetaParche + "|" + nombreScript + "|" + nombreZip;
 
-
                 Process.Start(rutaEjecutable, datosconcatenados);
                 //Util.ShowAlert("Inicia proceso Actualizador_iniciarActualizado");
             }
@@ -193,11 +197,12 @@ namespace Inv.UI.Win
             {
                 // Util.ShowError("Error al iniciarActualizar :" & ex.Message)
                 //MessageBox.Show("Error al iniciarActualizar :" + ex.Message);
-                Util.ShowError("Error al iniciarActualizar :" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al iniciarActualizar: " + ex.Message);
             }
 
             Cursor.Current = Cursors.Default;
         }
+
         private void LimpiarArchivosDescargados(string rutaActualizacionLocalaborrar)
         {
             Cursor.Current = Cursors.WaitCursor;
@@ -211,12 +216,12 @@ namespace Inv.UI.Win
             catch (Exception ex)
             {
                 //MessageBox.Show("Error al limpiar archivos descargos : " + ex.Message);
-                Util.ShowError("Error al limpiar archivos descargos : " + ex.Message);
-                
+                ErrorLogger.RegistrarErrorEnLog("Error al limpiar archivos descargos: " + ex.Message);
             }
 
             Cursor.Current = Cursors.Default;
         }
+
         private bool DescargarArchivosActualizacion()
         {
             bool operacionExitoso = false;
@@ -247,7 +252,7 @@ namespace Inv.UI.Win
             catch (Exception ex)
             {
                 //MessageBox.Show("Error al descargar archivos de actualizacion , detalle : " + ex.Message);
-                Util.ShowError("Error al descargar archivos de actualizacion , detalle : " + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al descargar archivos de actualizacion: " + ex.Message);
             }
 
             return operacionExitoso;
@@ -259,30 +264,36 @@ namespace Inv.UI.Win
             {
                 if (detectoActualizacion == true)
                 {
-                    string versionOnline = "";
-                    //Obtener version del archivo actualiza.config, descargado en %appdata%
-                    versionOnline = configuracion.ObtenerVersionWeb(rutaActualizacionLocal, NombreArchivoActualizacion);
+                    string versionOnline = configuracion.ObtenerVersionWeb(rutaActualizacionLocal, NombreArchivoActualizacion);
 
-                    if (MessageBox.Show(string.Format("Version {0} disponible," + Environment.NewLine + "Actualizar?", 
-                        versionOnline), "Sistema", 
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show(string.Format("Versión {0} disponible," + Environment.NewLine + "¿Actualizar?", versionOnline),
+                                        "Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        if (DescargarArchivosActualizacion() == true)
+                        if (DescargarArchivosActualizacion())
+                        {
                             IniciarActualizador();
+                            return; // Evitar continuar al login
+                        }
                     }
-                    else
-                        IniciarVentanaLogin();
                 }
-                else if (detectoActualizacion == false)
-                    IniciarVentanaLogin();
+
+                // Mostrar mensaje después de terminar las tareas del frmSplash
+                ErrorLogger.MostrarMensajeUnicoAlUsuario();
+
+                // Ocultar frmSplash y abrir frmLogin
+                this.Hide();
+                IniciarVentanaLogin();
             }
             catch (Exception ex)
             {
-                Util.ShowError("Error al verificar detectar actualizacion : " + ex.Message);
-                //MessageBox.Show("Error al verificar detectar actualizacion : " + ex.Message);
-             
+                ErrorLogger.RegistrarErrorEnLog("Error al verificar detectar actualización: " + ex.Message);
+                ErrorLogger.MostrarMensajeUnicoAlUsuario();
+                this.Hide();
+                IniciarVentanaLogin();
             }
         }
+
+
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
@@ -294,12 +305,12 @@ namespace Inv.UI.Win
             catch (System.Data.SqlClient.SqlException exSql)
             {
                 //MessageBox.Show("Error en conexion a base de datos, revisar detalle:" + exSql.Message);
-                Util.ShowError("Error en conexion a base de datos, revisar detalle:" + exSql.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error en conexion a base de datos: " + exSql.Message);
             }
             catch (Exception ex)
             {
                 //MessageBox.Show("Error en proceso de actualizacion revisar detalle :" + ex.Message);
-                Util.ShowError("Error en proceso de actualizacion revisar detalle :" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error en el proceso de actualizacion: " + ex.Message);
             }
 
             Cursor.Current = Cursors.Default;
@@ -345,18 +356,17 @@ namespace Inv.UI.Win
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
-                //string mensaje = "Instale o Actualice como administrador: " + Environment.NewLine + "Clic derecho sobre icono del programa -> Ejecutar como administrador";
-                //MessageBox.Show(mensaje + " detalle: " + ex.Message, "Sistema");
-                Util.ShowError("Error al descargar archivo de actualizacion:" + ex.Message);
-                //MessageBox.Show("Error al descargar archivo de actualizacion:" + ex.Message, "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+                // Registrar el error en el log con los detalles técnicos
+                ErrorLogger.RegistrarErrorEnLog("Error al descargar archivo de actualización: " + ex.Message);
 
+                // Mantener las palabras del mensaje original
+                string mensaje = "Instale o Actualice como administrador: " + Environment.NewLine +
+                                 "Clic derecho sobre icono del programa -> Ejecutar como administrador";
+
+                // Mostrar un mensaje genérico al usuario
+                ErrorLogger.MostrarMensajeUnicoAlUsuario();
             }
-
             Cursor.Current = Cursors.Default;
         }
-        
-
     }
 }
