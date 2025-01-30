@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Inv.UI.Win
 {
@@ -45,7 +46,21 @@ namespace Inv.UI.Win
         public static string OrigenTipo_automatico = "A";
         public static string MonedaxDefecto = "S";
 
+        // Nueva variable para la ruta de los errores
+        public static readonly string RutaLogErrores;
 
+        static Logueo()
+        {
+            // Inicializar la ruta de los logs
+            string carpetaLogs = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "ErroresAplicacion");
+
+            if (!Directory.Exists(carpetaLogs))
+            {
+                Directory.CreateDirectory(carpetaLogs); // Crear el directorio si no existe
+            }
+
+            RutaLogErrores = carpetaLogs; // Asignar la ruta
+        }
         
         //
         public static string GetRutaReporte()
