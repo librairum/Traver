@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +8,8 @@ using System.IO;
 using System.Xml;
 using System.Xml.XPath;
 using System.Data.SqlClient;
+
+using Inv.UI.Win.Utilities;
 namespace Inv.UI.Win
 {
     public class ActualizacionSistema
@@ -39,11 +41,11 @@ namespace Inv.UI.Win
             }
             catch (IOException exIO)
             {
-                MessageBox.Show("Error al gestionar archivo : " + exIO.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo : " + exIO.Message);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al obtener ruta origen version web :" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al obtener ruta origen version web :" + ex.Message);
             }
 
             return valor;
@@ -64,7 +66,7 @@ namespace Inv.UI.Win
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al leer xml:" + ex.Message + "ruta de archivo configuracion: " + rutaArchivo + " nodo : cnnInventarioWeb");
+                ErrorLogger.RegistrarErrorEnLog("Error al leer xml:" + ex.Message + "ruta de archivo configuracion: " + rutaArchivo + " nodo : cnnInventarioWeb");
             }
 
             return valor;
@@ -83,7 +85,7 @@ namespace Inv.UI.Win
             catch (Exception ex)
             {
                 // Util.ShowError("Error al obtener nombre de archivo  actualizacion, detalle : " & ex.Message)
-                MessageBox.Show(("Error al obtener nombre de archivo  actualizacion, detalle : " + ex.Message));
+                ErrorLogger.RegistrarErrorEnLog(("Error al obtener nombre de archivo  actualizacion, detalle : " + ex.Message));
             }
 
             return valor;
@@ -112,12 +114,12 @@ namespace Inv.UI.Win
             }
             catch (IOException exIO)
             {
-                MessageBox.Show("Error al gestionar archivo : " + exIO.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo : " + exIO.Message);
             }
             // Util.ShowError("Error al gestionar archivo : " & exIO.Message)
             catch (Exception ex)
             {
-                MessageBox.Show("Error al obtener ruta origen version web :" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al obtener ruta origen version web :" + ex.Message);
             }
 
             return valor;
@@ -145,12 +147,12 @@ namespace Inv.UI.Win
             catch (IOException exIO)
             {
                 // Util.ShowError("Error al gestionar archivo : " & exIO.Message)
-                MessageBox.Show("Error al gestionar archivo : " + exIO.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo : " + exIO.Message);
             }
             catch (Exception ex)
             {
                 // Util.ShowError("Error al obtener ruta destino version web :" & ex.Message)
-                MessageBox.Show("Error al obtener ruta destino version web :" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al obtener ruta destino version web :" + ex.Message);
             }
 
             return valor;
@@ -183,11 +185,11 @@ namespace Inv.UI.Win
             {
                 direccionFTP = ObtenerDireccionFTP();
                 nombreArchivoActualizacion = ObtenerNombreConfigWeb();
-                valor = Path.Combine(direccionFTP, nombreArchivoActualizacion);                
+                valor = Path.Combine(direccionFTP, nombreArchivoActualizacion);
             }
             catch (IOException exIO)
             {
-                Util.ShowError("Error al gestionar archivo : " + exIO.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo : " + exIO.Message);
             }
             catch (Exception ex)
             {
@@ -208,12 +210,13 @@ namespace Inv.UI.Win
                 rutaAppData = ObtenerRutaAppData();
                 nombreArchivoActualizacion = ObtenerNombreConfigWeb();
                 valor = Path.Combine(rutaAppData, nombreArchivoActualizacion);
-                
+
             }
             catch (IOException exIO)
             {
-                Util.ShowError("Error al gestionar archivo : " + exIO.Message);
-            }catch (Exception ex)
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo : " + exIO.Message);
+            }
+            catch (Exception ex)
             {
                 Util.ShowError("Error al obtener ruta destino version web :" + ex.Message);
             }
@@ -231,11 +234,11 @@ namespace Inv.UI.Win
             }
             catch (IOException exIO)
             {
-                MessageBox.Show("Error al gestionar archivo : " + exIO.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo : " + exIO.Message);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al obtener ruta AppData :" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al obtener ruta AppData :" + ex.Message);
             }
 
             return valor;
@@ -252,13 +255,13 @@ namespace Inv.UI.Win
             }
             catch (IOException exIO)
             {
-                MessageBox.Show("Error al gestionar archivo : " + exIO.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo : " + exIO.Message);
             }
             // Util.ShowError("Error al gestionar archivo : " & exIO.Message)
             catch (Exception ex)
             {
                 // Util.ShowError("Error al obtenerm nombre de empresa :" & ex.Message)
-                MessageBox.Show("Error al obtenerm nombre de empresa :" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al obtenerm nombre de empresa :" + ex.Message);
             }
 
             return valor;
@@ -276,12 +279,12 @@ namespace Inv.UI.Win
             catch (IOException exIO)
             {
                 // Util.ShowError("Error al gestionar archivo : " & exIO.Message)
-                MessageBox.Show("Error al gestionar archivo : " + exIO.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo : " + exIO.Message);
             }
             catch (Exception ex)
             {
                 // Util.ShowError("Error al obtener nombre de modulo :" & ex.Message)
-                MessageBox.Show("Error al obtener nombre de modulo :" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al obtener nombre de modulo :" + ex.Message);
             }
 
             return valor;
@@ -303,12 +306,12 @@ namespace Inv.UI.Win
             catch (IOException exIO)
             {
                 // Util.ShowError("Error al gestionar archivo : " & exIO.Message)
-                MessageBox.Show("Error al gestionar archivo : " + exIO.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo : " + exIO.Message);
             }
             catch (Exception ex)
             {
                 // Util.ShowError("Error al obtener usuario :" & ex.Message)
-                MessageBox.Show("Error al obtener usuario :" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al obtener usuario :" + ex.Message);
             }
 
             return valor;
@@ -330,12 +333,12 @@ namespace Inv.UI.Win
             catch (IOException exIO)
             {
                 // Util.ShowError("Error al gestionar archivo : " & exIO.Message)
-                MessageBox.Show("Error al gestionar archivo : " + exIO.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo : " + exIO.Message);
             }
             catch (Exception ex)
             {
                 // Util.ShowError("Error al obtener clave :" & ex.Message)
-                MessageBox.Show("Error al obtener clave :" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al obtener clave :" + ex.Message);
             }
 
             return valor;
@@ -354,12 +357,12 @@ namespace Inv.UI.Win
             catch (IOException exIO)
             {
                 // Util.ShowError("Error al gestionar archivo : " & exIO.Message)
-                MessageBox.Show("Error al gestionar archivo : " + exIO.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo : " + exIO.Message);
             }
             catch (Exception ex)
             {
                 // Util.ShowError("Error al obtener nombre de actualizador:" & ex.Message)
-                MessageBox.Show("Error al obtener nombre de actualizador:" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al obtener nombre de actualizador:" + ex.Message);
             }
 
             return valor;
@@ -382,11 +385,11 @@ namespace Inv.UI.Win
             // valor = valor.Replace("\", "/")
             catch (IOException exIO)
             {
-                MessageBox.Show("Error al obtener direccion FTP : " + exIO.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al obtener direccion FTP : " + exIO.Message);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al obtener direccion FTP:" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al obtener direccion FTP:" + ex.Message);
             }
 
             return valor;
@@ -403,12 +406,12 @@ namespace Inv.UI.Win
             }
             catch (IOException exIO)
             {
-                MessageBox.Show("Error al gestionar archivo : " + exIO.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo : " + exIO.Message);
             }
             // Util.ShowError("Error al gestionar archivo : " & exIO.Message)
             catch (Exception ex)
             {
-                MessageBox.Show("Error al obtener version :" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al obtener version :" + ex.Message);
             }
 
             return valor;
@@ -444,12 +447,12 @@ namespace Inv.UI.Win
             }
             catch (IOException exIO)
             {
-                MessageBox.Show("Error al gestionar archivo : " + exIO.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo : " + exIO.Message);
             }
             // Util.ShowError("Error al gestionar archivo : " & exIO.Message)
             catch (Exception ex)
             {
-                MessageBox.Show("Error al obtener version :" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al obtener version :" + ex.Message);
             }
 
             return valor;
@@ -470,11 +473,11 @@ namespace Inv.UI.Win
             }
             catch (IOException exIO)
             {
-                MessageBox.Show("Error al gestionar archivo : " + exIO.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo : " + exIO.Message);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al obtener version web:" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al obtener version web:" + ex.Message);
             }
 
             return valor;
@@ -499,12 +502,12 @@ namespace Inv.UI.Win
             }
             catch (IOException exIO)
             {
-                MessageBox.Show("Error al gestionar archivo : " + exIO.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo : " + exIO.Message);
             }
             catch (Exception ex)
             {
                 // Util.ShowError("Error al leer nodo actualiza:" & ex.Message)
-                MessageBox.Show("Error al leer nodo actualiza:" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al leer nodo actualiza:" + ex.Message);
             }
 
             return estado;
@@ -527,7 +530,7 @@ namespace Inv.UI.Win
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error en obtener ruta de parche :" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error en obtener ruta de parche :" + ex.Message);
             }
 
             return valor;
@@ -544,7 +547,7 @@ namespace Inv.UI.Win
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Inesperado", ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error Inesperado" + ex.Message);
             }
 
             return valor;
@@ -589,12 +592,12 @@ namespace Inv.UI.Win
             catch (IOException exIO)
             {
                 // Util.ShowError("Error al gestionar archivo : " & exIO.Message)
-                MessageBox.Show("Error al gestionar archivo : " + exIO.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al gestionar archivo : " + exIO.Message);
             }
             catch (Exception ex)
             {
                 // Util.ShowError("Error al leer nodo actualiza:" & ex.Message)
-                MessageBox.Show("Error al leer nodo actualiza:" + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al leer nodo actualiza:" + ex.Message);
             }
 
             return estado;
@@ -638,7 +641,7 @@ namespace Inv.UI.Win
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al leer xml : " + ex.Message);
+                ErrorLogger.RegistrarErrorEnLog("Error al leer xml : " + ex.Message);
             }
 
             return valor;
