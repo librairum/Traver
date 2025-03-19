@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com.UI.Win", "Com.UI.Win\Com.UI.Win.csproj", "{3C55B697-C8A1-44F9-BEE4-1A0733A76A51}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TutUpdate.UI", "TutUpdate.UI\TutUpdate.UI.csproj", "{F8F85441-2E39-4926-AB88-879CA6966D6E}"
@@ -144,5 +146,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {759DB987-BBF2-4AA3-8333-9C926A986F6A}
 	EndGlobalSection
 EndGlobal
