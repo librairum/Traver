@@ -166,3 +166,13 @@ D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.DataAccess\bin\Deb
 D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.DataAccess\obj\Debug\Inv.DataAccess.csprojResolveAssemblyReference.cache
 D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.DataAccess\obj\Debug\Inv.DataAccess.dll
 D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.DataAccess\obj\Debug\Inv.DataAccess.pdb
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.DataAccess\bin\Debug\Inv.DataAccess.dll
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.DataAccess\bin\Debug\Inv.DataAccess.pdb
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.DataAccess\bin\Debug\BLToolkit.4.dll
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.DataAccess\bin\Debug\Inv.BusinessEntities.dll
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.DataAccess\bin\Debug\Inv.BusinessEntities.pdb
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.DataAccess\obj\Debug\Inv.DataAccess.csproj.AssemblyReference.cache
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.DataAccess\obj\Debug\Inv.DataAccess.csproj.CoreCompileInputs.cache
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.DataAccess\obj\Debug\Inv.Data.83831641.Up2Date
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.DataAccess\obj\Debug\Inv.DataAccess.dll
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.DataAccess\obj\Debug\Inv.DataAccess.pdb

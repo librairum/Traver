@@ -261,9 +261,12 @@ namespace Inv.BusinessEntities
 
                [MapField("FAC34DIRECCPROV")]
            public string FAC34DIRECCPROV { get; set; }
-       
-   
-  
-         
+
+        [MapField("FAC66FLAGPROVEEDORDEISI")]
+        public string FAC66FLAGPROVEEDORDEISI { get; set; }
+
+
+
+
     }
 }

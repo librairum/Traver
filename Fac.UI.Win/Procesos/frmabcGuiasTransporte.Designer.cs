@@ -300,8 +300,8 @@
             // 
             // radCommandBar1
             // 
-            this.radCommandBar1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.radCommandBar1.Size = new System.Drawing.Size(2041, 76);
+            this.radCommandBar1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radCommandBar1.Size = new System.Drawing.Size(1271, 64);
             this.radCommandBar1.TabIndex = 8;
             // 
             // panelCabecera
@@ -317,20 +317,18 @@
             this.panelCabecera.Controls.Add(this.txtserie);
             this.panelCabecera.Controls.Add(this.txtsubplantilla);
             this.panelCabecera.Controls.Add(this.txtsubplantillaDes);
-            this.panelCabecera.Location = new System.Drawing.Point(16, 54);
-            this.panelCabecera.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelCabecera.Location = new System.Drawing.Point(11, 35);
             this.panelCabecera.Name = "panelCabecera";
-            this.panelCabecera.Size = new System.Drawing.Size(1682, 43);
+            this.panelCabecera.Size = new System.Drawing.Size(1121, 28);
             this.panelCabecera.TabIndex = 0;
             // 
             // dtpFechaDoc
             // 
             this.dtpFechaDoc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDoc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDoc.Location = new System.Drawing.Point(1378, 6);
-            this.dtpFechaDoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpFechaDoc.Location = new System.Drawing.Point(919, 4);
             this.dtpFechaDoc.Name = "dtpFechaDoc";
-            this.dtpFechaDoc.Size = new System.Drawing.Size(160, 31);
+            this.dtpFechaDoc.Size = new System.Drawing.Size(107, 23);
             this.dtpFechaDoc.TabIndex = 3;
             this.dtpFechaDoc.TabStop = false;
             this.dtpFechaDoc.Text = "01/03/2013";
@@ -339,88 +337,79 @@
             // 
             // radLabel3
             // 
-            this.radLabel3.Location = new System.Drawing.Point(1314, 6);
-            this.radLabel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel3.Location = new System.Drawing.Point(876, 4);
             this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(55, 26);
+            this.radLabel3.Size = new System.Drawing.Size(37, 18);
             this.radLabel3.TabIndex = 11;
             this.radLabel3.Text = "Fecha:";
             // 
             // txtnrodocumento
             // 
             this.txtnrodocumento.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnrodocumento.Location = new System.Drawing.Point(1002, 2);
-            this.txtnrodocumento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtnrodocumento.Location = new System.Drawing.Point(668, 1);
             this.txtnrodocumento.Name = "txtnrodocumento";
-            this.txtnrodocumento.Size = new System.Drawing.Size(297, 37);
+            this.txtnrodocumento.Size = new System.Drawing.Size(198, 27);
             this.txtnrodocumento.TabIndex = 2;
             this.txtnrodocumento.Tag = "txtsubplantilla";
             // 
             // txttipoarticulo
             // 
-            this.txttipoarticulo.Location = new System.Drawing.Point(394, 6);
-            this.txttipoarticulo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txttipoarticulo.Location = new System.Drawing.Point(263, 4);
             this.txttipoarticulo.Name = "txttipoarticulo";
-            this.txttipoarticulo.Size = new System.Drawing.Size(51, 27);
+            this.txttipoarticulo.Size = new System.Drawing.Size(34, 20);
             this.txttipoarticulo.TabIndex = 5;
             this.txttipoarticulo.TabStop = false;
             this.txttipoarticulo.Visible = false;
             // 
             // txtcodplantilla
             // 
-            this.txtcodplantilla.Location = new System.Drawing.Point(334, 6);
-            this.txtcodplantilla.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtcodplantilla.Location = new System.Drawing.Point(223, 4);
             this.txtcodplantilla.Name = "txtcodplantilla";
-            this.txtcodplantilla.Size = new System.Drawing.Size(51, 27);
+            this.txtcodplantilla.Size = new System.Drawing.Size(34, 20);
             this.txtcodplantilla.TabIndex = 5;
             this.txtcodplantilla.TabStop = false;
             this.txtcodplantilla.Visible = false;
             // 
             // txttipdoc
             // 
-            this.txttipdoc.Location = new System.Drawing.Point(256, 6);
-            this.txttipdoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txttipdoc.Location = new System.Drawing.Point(171, 4);
             this.txttipdoc.Name = "txttipdoc";
-            this.txttipdoc.Size = new System.Drawing.Size(51, 27);
+            this.txttipdoc.Size = new System.Drawing.Size(34, 20);
             this.txttipdoc.TabIndex = 9;
             this.txttipdoc.TabStop = false;
             this.txttipdoc.Visible = false;
             // 
             // radLabel2
             // 
-            this.radLabel2.Location = new System.Drawing.Point(808, 6);
-            this.radLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel2.Location = new System.Drawing.Point(539, 4);
             this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(116, 26);
+            this.radLabel2.Size = new System.Drawing.Size(78, 18);
             this.radLabel2.TabIndex = 7;
             this.radLabel2.Text = "Serie numero :";
             // 
             // radLabel1
             // 
-            this.radLabel1.Location = new System.Drawing.Point(52, 6);
-            this.radLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel1.Location = new System.Drawing.Point(35, 4);
             this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(71, 26);
+            this.radLabel1.Size = new System.Drawing.Size(48, 18);
             this.radLabel1.TabIndex = 6;
             this.radLabel1.Text = "Generar:";
             // 
             // txtserie
             // 
             this.txtserie.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtserie.Location = new System.Drawing.Point(927, 2);
-            this.txtserie.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtserie.Location = new System.Drawing.Point(618, 1);
             this.txtserie.Name = "txtserie";
-            this.txtserie.Size = new System.Drawing.Size(72, 37);
+            this.txtserie.Size = new System.Drawing.Size(48, 27);
             this.txtserie.TabIndex = 1;
             this.txtserie.Tag = "txtsubplantilla";
             this.txtserie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtsubplantilla
             // 
-            this.txtsubplantilla.Location = new System.Drawing.Point(134, 6);
-            this.txtsubplantilla.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtsubplantilla.Location = new System.Drawing.Point(89, 4);
             this.txtsubplantilla.Name = "txtsubplantilla";
-            this.txtsubplantilla.Size = new System.Drawing.Size(51, 27);
+            this.txtsubplantilla.Size = new System.Drawing.Size(34, 20);
             this.txtsubplantilla.TabIndex = 0;
             this.txtsubplantilla.Tag = "codigo";
             this.txtsubplantilla.TextChanged += new System.EventHandler(this.txtsubplantilla_TextChanged);
@@ -431,10 +420,9 @@
             this.txtsubplantillaDes.BackColor = System.Drawing.Color.LightGray;
             this.txtsubplantillaDes.Enabled = false;
             this.txtsubplantillaDes.ForeColor = System.Drawing.Color.White;
-            this.txtsubplantillaDes.Location = new System.Drawing.Point(194, 6);
-            this.txtsubplantillaDes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtsubplantillaDes.Location = new System.Drawing.Point(129, 4);
             this.txtsubplantillaDes.Name = "txtsubplantillaDes";
-            this.txtsubplantillaDes.Size = new System.Drawing.Size(394, 27);
+            this.txtsubplantillaDes.Size = new System.Drawing.Size(263, 20);
             this.txtsubplantillaDes.TabIndex = 8;
             this.txtsubplantillaDes.TabStop = false;
             this.txtsubplantillaDes.Tag = "txtsubplantilla";
@@ -443,19 +431,16 @@
             // 
             this.txtOriDirPartida.BackColor = System.Drawing.Color.LightGray;
             this.txtOriDirPartida.ForeColor = System.Drawing.Color.White;
-            this.txtOriDirPartida.Location = new System.Drawing.Point(136, 80);
-            this.txtOriDirPartida.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtOriDirPartida.Location = new System.Drawing.Point(92, 53);
             this.txtOriDirPartida.Name = "txtOriDirPartida";
-            this.txtOriDirPartida.Size = new System.Drawing.Size(452, 27);
+            this.txtOriDirPartida.Size = new System.Drawing.Size(301, 20);
             this.txtOriDirPartida.TabIndex = 8;
             this.txtOriDirPartida.Tag = "txtcodorigen";
             // 
             // ContainerPeso
             // 
-            this.ContainerPeso.Location = new System.Drawing.Point(1060, 69);
-            this.ContainerPeso.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ContainerPeso.Location = new System.Drawing.Point(707, 45);
             this.ContainerPeso.Name = "ContainerPeso";
-            this.ContainerPeso.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             // 
             // ContainerPeso.PanelContainer
             // 
@@ -466,18 +451,16 @@
             this.ContainerPeso.PanelContainer.Controls.Add(this.radLabel30);
             this.ContainerPeso.PanelContainer.Controls.Add(this.radPanel2);
             this.ContainerPeso.PanelContainer.Dock = System.Windows.Forms.DockStyle.None;
-            this.ContainerPeso.PanelContainer.Location = new System.Drawing.Point(16, 0);
-            this.ContainerPeso.PanelContainer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ContainerPeso.PanelContainer.Size = new System.Drawing.Size(280, 172);
-            this.ContainerPeso.Size = new System.Drawing.Size(309, 180);
+            this.ContainerPeso.PanelContainer.Location = new System.Drawing.Point(11, 0);
+            this.ContainerPeso.PanelContainer.Size = new System.Drawing.Size(187, 112);
+            this.ContainerPeso.Size = new System.Drawing.Size(206, 117);
             this.ContainerPeso.TabIndex = 80;
             // 
             // radLabel29
             // 
-            this.radLabel29.Location = new System.Drawing.Point(32, 112);
-            this.radLabel29.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel29.Location = new System.Drawing.Point(21, 73);
             this.radLabel29.Name = "radLabel29";
-            this.radLabel29.Size = new System.Drawing.Size(75, 26);
+            this.radLabel29.Size = new System.Drawing.Size(51, 18);
             this.radLabel29.TabIndex = 16;
             this.radLabel29.Text = "Cantidad";
             // 
@@ -485,10 +468,9 @@
             // 
             this.txtCantidadPeso.BackColor = System.Drawing.Color.LightGray;
             this.txtCantidadPeso.ForeColor = System.Drawing.Color.White;
-            this.txtCantidadPeso.Location = new System.Drawing.Point(117, 109);
-            this.txtCantidadPeso.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCantidadPeso.Location = new System.Drawing.Point(78, 71);
             this.txtCantidadPeso.Name = "txtCantidadPeso";
-            this.txtCantidadPeso.Size = new System.Drawing.Size(141, 27);
+            this.txtCantidadPeso.Size = new System.Drawing.Size(94, 20);
             this.txtCantidadPeso.TabIndex = 8;
             this.txtCantidadPeso.Tag = "txtCantidad";
             // 
@@ -497,30 +479,27 @@
             this.txtAyudaDesc.BackColor = System.Drawing.Color.LightGray;
             this.txtAyudaDesc.Enabled = false;
             this.txtAyudaDesc.ForeColor = System.Drawing.Color.White;
-            this.txtAyudaDesc.Location = new System.Drawing.Point(174, 80);
-            this.txtAyudaDesc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAyudaDesc.Location = new System.Drawing.Point(116, 52);
             this.txtAyudaDesc.Name = "txtAyudaDesc";
-            this.txtAyudaDesc.Size = new System.Drawing.Size(80, 27);
+            this.txtAyudaDesc.Size = new System.Drawing.Size(53, 20);
             this.txtAyudaDesc.TabIndex = 5;
             this.txtAyudaDesc.TabStop = false;
             this.txtAyudaDesc.Tag = "txtUnidadDesc";
             // 
             // txtAyudaUnidad
             // 
-            this.txtAyudaUnidad.Location = new System.Drawing.Point(116, 80);
-            this.txtAyudaUnidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAyudaUnidad.Location = new System.Drawing.Point(77, 52);
             this.txtAyudaUnidad.Name = "txtAyudaUnidad";
-            this.txtAyudaUnidad.Size = new System.Drawing.Size(52, 27);
+            this.txtAyudaUnidad.Size = new System.Drawing.Size(35, 20);
             this.txtAyudaUnidad.TabIndex = 4;
             this.txtAyudaUnidad.Tag = "codigo";
             this.txtAyudaUnidad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAyudaUnidad_KeyDown);
             // 
             // radLabel30
             // 
-            this.radLabel30.Location = new System.Drawing.Point(30, 77);
-            this.radLabel30.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel30.Location = new System.Drawing.Point(20, 50);
             this.radLabel30.Name = "radLabel30";
-            this.radLabel30.Size = new System.Drawing.Size(76, 26);
+            this.radLabel30.Size = new System.Drawing.Size(51, 18);
             this.radLabel30.TabIndex = 10;
             this.radLabel30.Text = "Uni Med:";
             // 
@@ -533,9 +512,8 @@
             this.radPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.radPanel2.ForeColor = System.Drawing.Color.White;
             this.radPanel2.Location = new System.Drawing.Point(0, 0);
-            this.radPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radPanel2.Name = "radPanel2";
-            this.radPanel2.Size = new System.Drawing.Size(280, 57);
+            this.radPanel2.Size = new System.Drawing.Size(187, 37);
             this.radPanel2.TabIndex = 0;
             this.radPanel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -546,10 +524,9 @@
             this.BtnGuardar.Dock = System.Windows.Forms.DockStyle.Right;
             this.BtnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuardar.Image")));
             this.BtnGuardar.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BtnGuardar.Location = new System.Drawing.Point(178, 0);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnGuardar.Location = new System.Drawing.Point(119, 0);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(51, 57);
+            this.BtnGuardar.Size = new System.Drawing.Size(34, 37);
             this.BtnGuardar.TabIndex = 6;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.ThemeName = "Office2013Light";
@@ -563,10 +540,9 @@
             this.BtnCancelar.Font = new System.Drawing.Font("Segoe UI", 12.25F);
             this.BtnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancelar.Image")));
             this.BtnCancelar.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BtnCancelar.Location = new System.Drawing.Point(229, 0);
-            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnCancelar.Location = new System.Drawing.Point(153, 0);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(51, 57);
+            this.BtnCancelar.Size = new System.Drawing.Size(34, 37);
             this.BtnCancelar.TabIndex = 7;
             this.BtnCancelar.Text = "x";
             this.BtnCancelar.ThemeName = "Office2013Light";
@@ -577,10 +553,9 @@
             this.radLabel37.BackColor = System.Drawing.Color.SteelBlue;
             this.radLabel37.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel37.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.radLabel37.Location = new System.Drawing.Point(14, 9);
-            this.radLabel37.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel37.Location = new System.Drawing.Point(9, 6);
             this.radLabel37.Name = "radLabel37";
-            this.radLabel37.Size = new System.Drawing.Size(108, 30);
+            this.radLabel37.Size = new System.Drawing.Size(73, 21);
             this.radLabel37.TabIndex = 4;
             this.radLabel37.Text = "Mod. Peso";
             this.radLabel37.ThemeName = "ControlDefault";
@@ -590,20 +565,18 @@
             this.txtorigenDes.BackColor = System.Drawing.Color.LightGray;
             this.txtorigenDes.Enabled = false;
             this.txtorigenDes.ForeColor = System.Drawing.Color.White;
-            this.txtorigenDes.Location = new System.Drawing.Point(216, 45);
-            this.txtorigenDes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtorigenDes.Location = new System.Drawing.Point(145, 30);
             this.txtorigenDes.Name = "txtorigenDes";
-            this.txtorigenDes.Size = new System.Drawing.Size(372, 27);
+            this.txtorigenDes.Size = new System.Drawing.Size(248, 20);
             this.txtorigenDes.TabIndex = 7;
             this.txtorigenDes.TabStop = false;
             this.txtorigenDes.Tag = "txtcodorigen";
             // 
             // txtcodorigen
             // 
-            this.txtcodorigen.Location = new System.Drawing.Point(136, 45);
-            this.txtcodorigen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtcodorigen.Location = new System.Drawing.Point(92, 30);
             this.txtcodorigen.Name = "txtcodorigen";
-            this.txtcodorigen.Size = new System.Drawing.Size(84, 27);
+            this.txtcodorigen.Size = new System.Drawing.Size(56, 20);
             this.txtcodorigen.TabIndex = 6;
             this.txtcodorigen.Tag = "codigo";
             this.txtcodorigen.TextChanged += new System.EventHandler(this.txtcodorigen_TextChanged);
@@ -614,29 +587,26 @@
             this.txtrucorigenDes.BackColor = System.Drawing.Color.LightGray;
             this.txtrucorigenDes.Enabled = false;
             this.txtrucorigenDes.ForeColor = System.Drawing.Color.White;
-            this.txtrucorigenDes.Location = new System.Drawing.Point(261, 9);
-            this.txtrucorigenDes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtrucorigenDes.Location = new System.Drawing.Point(176, 4);
             this.txtrucorigenDes.Name = "txtrucorigenDes";
-            this.txtrucorigenDes.Size = new System.Drawing.Size(327, 27);
+            this.txtrucorigenDes.Size = new System.Drawing.Size(218, 20);
             this.txtrucorigenDes.TabIndex = 5;
             this.txtrucorigenDes.TabStop = false;
             this.txtrucorigenDes.Tag = "txtrucorigen";
             // 
             // radLabel4
             // 
-            this.radLabel4.Location = new System.Drawing.Point(9, 9);
-            this.radLabel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel4.Location = new System.Drawing.Point(8, 4);
             this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(63, 26);
+            this.radLabel4.Size = new System.Drawing.Size(43, 18);
             this.radLabel4.TabIndex = 10;
             this.radLabel4.Text = "Origen:";
             // 
             // txtrucorigen
             // 
-            this.txtrucorigen.Location = new System.Drawing.Point(136, 9);
-            this.txtrucorigen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtrucorigen.Location = new System.Drawing.Point(93, 4);
             this.txtrucorigen.Name = "txtrucorigen";
-            this.txtrucorigen.Size = new System.Drawing.Size(130, 27);
+            this.txtrucorigen.Size = new System.Drawing.Size(87, 20);
             this.txtrucorigen.TabIndex = 4;
             this.txtrucorigen.Tag = "codigo";
             this.txtrucorigen.TextChanged += new System.EventHandler(this.txtrucorigen_TextChanged);
@@ -644,40 +614,40 @@
             // 
             // radLabel6
             // 
-            this.radLabel6.Location = new System.Drawing.Point(9, 45);
-            this.radLabel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel6.Location = new System.Drawing.Point(7, 30);
             this.radLabel6.Name = "radLabel6";
-            this.radLabel6.Size = new System.Drawing.Size(90, 26);
+            this.radLabel6.Size = new System.Drawing.Size(61, 18);
             this.radLabel6.TabIndex = 16;
             this.radLabel6.Text = "Dom.Parti :";
             // 
             // panelDestino
             // 
-            this.panelDestino.Controls.Add(this.txtotros);
+            this.panelDestino.Controls.Add(this.radLabel6);
+            this.panelDestino.Controls.Add(this.txtrucorigenDes);
+            this.panelDestino.Controls.Add(this.txtrucorigen);
             this.panelDestino.Controls.Add(this.txtdireccDestino);
+            this.panelDestino.Controls.Add(this.radLabel4);
+            this.panelDestino.Controls.Add(this.txtOriDirPartida);
             this.panelDestino.Controls.Add(this.txtdestinoDes);
-            this.panelDestino.Controls.Add(this.txtmotivoDes);
-            this.panelDestino.Controls.Add(this.radLabel18);
+            this.panelDestino.Controls.Add(this.txtorigenDes);
             this.panelDestino.Controls.Add(this.txtcoddestino);
+            this.panelDestino.Controls.Add(this.txtcodorigen);
             this.panelDestino.Controls.Add(this.txtrucdestinnoDes);
-            this.panelDestino.Controls.Add(this.txtcodmotivo);
             this.panelDestino.Controls.Add(this.txtrucdestino);
             this.panelDestino.Controls.Add(this.radLabel11);
             this.panelDestino.Controls.Add(this.radLabel13);
-            this.panelDestino.Location = new System.Drawing.Point(14, 223);
-            this.panelDestino.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelDestino.Location = new System.Drawing.Point(9, 125);
             this.panelDestino.Name = "panelDestino";
-            this.panelDestino.Size = new System.Drawing.Size(602, 191);
+            this.panelDestino.Size = new System.Drawing.Size(401, 146);
             this.panelDestino.TabIndex = 2;
             // 
             // txtotros
             // 
             this.txtotros.BackColor = System.Drawing.Color.LightGray;
             this.txtotros.ForeColor = System.Drawing.Color.White;
-            this.txtotros.Location = new System.Drawing.Point(138, 151);
-            this.txtotros.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtotros.Location = new System.Drawing.Point(94, 29);
             this.txtotros.Name = "txtotros";
-            this.txtotros.Size = new System.Drawing.Size(453, 27);
+            this.txtotros.Size = new System.Drawing.Size(298, 20);
             this.txtotros.TabIndex = 15;
             this.txtotros.Tag = "";
             // 
@@ -685,11 +655,10 @@
             // 
             this.txtdireccDestino.BackColor = System.Drawing.Color.LightGray;
             this.txtdireccDestino.ForeColor = System.Drawing.Color.White;
-            this.txtdireccDestino.Location = new System.Drawing.Point(138, 77);
-            this.txtdireccDestino.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtdireccDestino.Location = new System.Drawing.Point(92, 123);
             this.txtdireccDestino.Name = "txtdireccDestino";
             this.txtdireccDestino.ReadOnly = true;
-            this.txtdireccDestino.Size = new System.Drawing.Size(453, 27);
+            this.txtdireccDestino.Size = new System.Drawing.Size(302, 20);
             this.txtdireccDestino.TabIndex = 13;
             this.txtdireccDestino.TabStop = false;
             // 
@@ -698,10 +667,9 @@
             this.txtdestinoDes.BackColor = System.Drawing.Color.LightGray;
             this.txtdestinoDes.Enabled = false;
             this.txtdestinoDes.ForeColor = System.Drawing.Color.White;
-            this.txtdestinoDes.Location = new System.Drawing.Point(198, 42);
-            this.txtdestinoDes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtdestinoDes.Location = new System.Drawing.Point(132, 100);
             this.txtdestinoDes.Name = "txtdestinoDes";
-            this.txtdestinoDes.Size = new System.Drawing.Size(393, 27);
+            this.txtdestinoDes.Size = new System.Drawing.Size(262, 20);
             this.txtdestinoDes.TabIndex = 12;
             this.txtdestinoDes.TabStop = false;
             this.txtdestinoDes.Tag = "txtcoddestino";
@@ -711,29 +679,26 @@
             this.txtmotivoDes.BackColor = System.Drawing.Color.LightGray;
             this.txtmotivoDes.Enabled = false;
             this.txtmotivoDes.ForeColor = System.Drawing.Color.White;
-            this.txtmotivoDes.Location = new System.Drawing.Point(188, 115);
-            this.txtmotivoDes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtmotivoDes.Location = new System.Drawing.Point(127, 6);
             this.txtmotivoDes.Name = "txtmotivoDes";
-            this.txtmotivoDes.Size = new System.Drawing.Size(404, 27);
+            this.txtmotivoDes.Size = new System.Drawing.Size(265, 20);
             this.txtmotivoDes.TabIndex = 14;
             this.txtmotivoDes.TabStop = false;
             this.txtmotivoDes.Tag = "txtcodmotivo";
             // 
             // radLabel18
             // 
-            this.radLabel18.Location = new System.Drawing.Point(20, 122);
-            this.radLabel18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel18.Location = new System.Drawing.Point(15, 10);
             this.radLabel18.Name = "radLabel18";
-            this.radLabel18.Size = new System.Drawing.Size(70, 26);
+            this.radLabel18.Size = new System.Drawing.Size(47, 18);
             this.radLabel18.TabIndex = 6;
             this.radLabel18.Text = "Motivo :";
             // 
             // txtcoddestino
             // 
-            this.txtcoddestino.Location = new System.Drawing.Point(138, 42);
-            this.txtcoddestino.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtcoddestino.Location = new System.Drawing.Point(92, 100);
             this.txtcoddestino.Name = "txtcoddestino";
-            this.txtcoddestino.Size = new System.Drawing.Size(70, 27);
+            this.txtcoddestino.Size = new System.Drawing.Size(47, 20);
             this.txtcoddestino.TabIndex = 11;
             this.txtcoddestino.Tag = "codigo";
             this.txtcoddestino.TextChanged += new System.EventHandler(this.txtcoddestino_TextChanged);
@@ -744,20 +709,18 @@
             this.txtrucdestinnoDes.BackColor = System.Drawing.Color.LightGray;
             this.txtrucdestinnoDes.Enabled = false;
             this.txtrucdestinnoDes.ForeColor = System.Drawing.Color.White;
-            this.txtrucdestinnoDes.Location = new System.Drawing.Point(249, 6);
-            this.txtrucdestinnoDes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtrucdestinnoDes.Location = new System.Drawing.Point(166, 77);
             this.txtrucdestinnoDes.Name = "txtrucdestinnoDes";
-            this.txtrucdestinnoDes.Size = new System.Drawing.Size(342, 27);
+            this.txtrucdestinnoDes.Size = new System.Drawing.Size(228, 20);
             this.txtrucdestinnoDes.TabIndex = 10;
             this.txtrucdestinnoDes.TabStop = false;
             this.txtrucdestinnoDes.Tag = "txtrucdestino";
             // 
             // txtcodmotivo
             // 
-            this.txtcodmotivo.Location = new System.Drawing.Point(136, 115);
-            this.txtcodmotivo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtcodmotivo.Location = new System.Drawing.Point(93, 6);
             this.txtcodmotivo.Name = "txtcodmotivo";
-            this.txtcodmotivo.Size = new System.Drawing.Size(51, 27);
+            this.txtcodmotivo.Size = new System.Drawing.Size(34, 20);
             this.txtcodmotivo.TabIndex = 14;
             this.txtcodmotivo.Tag = "codigo";
             this.txtcodmotivo.TextChanged += new System.EventHandler(this.txtcodmotivo_TextChanged);
@@ -765,10 +728,9 @@
             // 
             // txtrucdestino
             // 
-            this.txtrucdestino.Location = new System.Drawing.Point(138, 6);
-            this.txtrucdestino.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtrucdestino.Location = new System.Drawing.Point(92, 77);
             this.txtrucdestino.Name = "txtrucdestino";
-            this.txtrucdestino.Size = new System.Drawing.Size(116, 27);
+            this.txtrucdestino.Size = new System.Drawing.Size(77, 20);
             this.txtrucdestino.TabIndex = 9;
             this.txtrucdestino.Tag = "codigo";
             this.txtrucdestino.TextChanged += new System.EventHandler(this.txtrucdestino_TextChanged);
@@ -776,98 +738,88 @@
             // 
             // radLabel11
             // 
-            this.radLabel11.Location = new System.Drawing.Point(20, 48);
-            this.radLabel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel11.Location = new System.Drawing.Point(13, 104);
             this.radLabel11.Name = "radLabel11";
-            this.radLabel11.Size = new System.Drawing.Size(98, 26);
+            this.radLabel11.Size = new System.Drawing.Size(66, 18);
             this.radLabel11.TabIndex = 16;
             this.radLabel11.Text = "Domi desti :";
             // 
             // radLabel13
             // 
-            this.radLabel13.Location = new System.Drawing.Point(20, 12);
-            this.radLabel13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel13.Location = new System.Drawing.Point(13, 81);
             this.radLabel13.Name = "radLabel13";
-            this.radLabel13.Size = new System.Drawing.Size(107, 26);
+            this.radLabel13.Size = new System.Drawing.Size(72, 18);
             this.radLabel13.TabIndex = 10;
             this.radLabel13.Text = "Destinatario :";
             // 
             // radLabel15
             // 
-            this.radLabel15.Location = new System.Drawing.Point(448, 85);
-            this.radLabel15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel15.Location = new System.Drawing.Point(299, 55);
             this.radLabel15.Name = "radLabel15";
-            this.radLabel15.Size = new System.Drawing.Size(55, 26);
+            this.radLabel15.Size = new System.Drawing.Size(38, 18);
             this.radLabel15.TabIndex = 30;
             this.radLabel15.Text = "Placa :";
             // 
             // txtplacasemiremolque
             // 
             this.txtplacasemiremolque.Enabled = false;
-            this.txtplacasemiremolque.Location = new System.Drawing.Point(514, 85);
-            this.txtplacasemiremolque.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtplacasemiremolque.Location = new System.Drawing.Point(343, 55);
             this.txtplacasemiremolque.Name = "txtplacasemiremolque";
-            this.txtplacasemiremolque.Size = new System.Drawing.Size(200, 27);
+            this.txtplacasemiremolque.Size = new System.Drawing.Size(133, 20);
             this.txtplacasemiremolque.TabIndex = 26;
             this.txtplacasemiremolque.TabStop = false;
             this.txtplacasemiremolque.Tag = "";
             // 
             // radLabel9
             // 
-            this.radLabel9.Location = new System.Drawing.Point(12, 85);
-            this.radLabel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel9.Location = new System.Drawing.Point(8, 55);
             this.radLabel9.Name = "radLabel9";
-            this.radLabel9.Size = new System.Drawing.Size(91, 26);
+            this.radLabel9.Size = new System.Drawing.Size(61, 18);
             this.radLabel9.TabIndex = 28;
             this.radLabel9.Text = "SemiRemi :";
             // 
             // txtmarcaSemiremolque
             // 
             this.txtmarcaSemiremolque.Enabled = false;
-            this.txtmarcaSemiremolque.Location = new System.Drawing.Point(146, 85);
-            this.txtmarcaSemiremolque.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtmarcaSemiremolque.Location = new System.Drawing.Point(97, 55);
             this.txtmarcaSemiremolque.Name = "txtmarcaSemiremolque";
-            this.txtmarcaSemiremolque.Size = new System.Drawing.Size(200, 27);
+            this.txtmarcaSemiremolque.Size = new System.Drawing.Size(133, 20);
             this.txtmarcaSemiremolque.TabIndex = 25;
             this.txtmarcaSemiremolque.TabStop = false;
             this.txtmarcaSemiremolque.Tag = "";
             // 
             // radLabel14
             // 
-            this.radLabel14.Location = new System.Drawing.Point(448, 49);
-            this.radLabel14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel14.Location = new System.Drawing.Point(299, 32);
             this.radLabel14.Name = "radLabel14";
-            this.radLabel14.Size = new System.Drawing.Size(55, 26);
+            this.radLabel14.Size = new System.Drawing.Size(38, 18);
             this.radLabel14.TabIndex = 26;
             this.radLabel14.Text = "Placa :";
             // 
             // txtplacaremolque
             // 
             this.txtplacaremolque.Enabled = false;
-            this.txtplacaremolque.Location = new System.Drawing.Point(514, 49);
-            this.txtplacaremolque.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtplacaremolque.Location = new System.Drawing.Point(343, 32);
             this.txtplacaremolque.Name = "txtplacaremolque";
-            this.txtplacaremolque.Size = new System.Drawing.Size(200, 27);
+            this.txtplacaremolque.Size = new System.Drawing.Size(133, 20);
             this.txtplacaremolque.TabIndex = 24;
             this.txtplacaremolque.TabStop = false;
             this.txtplacaremolque.Tag = "txtCodTrayler";
             // 
             // radLabel10
             // 
-            this.radLabel10.Location = new System.Drawing.Point(12, 49);
-            this.radLabel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel10.Location = new System.Drawing.Point(8, 32);
             this.radLabel10.Name = "radLabel10";
-            this.radLabel10.Size = new System.Drawing.Size(93, 26);
+            this.radLabel10.Size = new System.Drawing.Size(63, 18);
             this.radLabel10.TabIndex = 19;
             this.radLabel10.Text = "Remolque :";
             // 
             // txtmarcaRemolque
             // 
             this.txtmarcaRemolque.Enabled = false;
-            this.txtmarcaRemolque.Location = new System.Drawing.Point(146, 49);
-            this.txtmarcaRemolque.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtmarcaRemolque.Location = new System.Drawing.Point(97, 32);
             this.txtmarcaRemolque.Name = "txtmarcaRemolque";
-            this.txtmarcaRemolque.Size = new System.Drawing.Size(200, 27);
+            this.txtmarcaRemolque.Size = new System.Drawing.Size(133, 20);
             this.txtmarcaRemolque.TabIndex = 23;
             this.txtmarcaRemolque.TabStop = false;
             this.txtmarcaRemolque.Tag = "txtCodTrayler";
@@ -877,29 +829,26 @@
             this.txtcodtrailerDes.BackColor = System.Drawing.Color.LightGray;
             this.txtcodtrailerDes.Enabled = false;
             this.txtcodtrailerDes.ForeColor = System.Drawing.Color.White;
-            this.txtcodtrailerDes.Location = new System.Drawing.Point(303, 14);
-            this.txtcodtrailerDes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtcodtrailerDes.Location = new System.Drawing.Point(202, 9);
             this.txtcodtrailerDes.Name = "txtcodtrailerDes";
-            this.txtcodtrailerDes.Size = new System.Drawing.Size(411, 27);
+            this.txtcodtrailerDes.Size = new System.Drawing.Size(274, 20);
             this.txtcodtrailerDes.TabIndex = 22;
             this.txtcodtrailerDes.TabStop = false;
             this.txtcodtrailerDes.Tag = "txtCodTrayler";
             // 
             // radLabel12
             // 
-            this.radLabel12.Location = new System.Drawing.Point(15, 14);
-            this.radLabel12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel12.Location = new System.Drawing.Point(10, 9);
             this.radLabel12.Name = "radLabel12";
-            this.radLabel12.Size = new System.Drawing.Size(81, 26);
+            this.radLabel12.Size = new System.Drawing.Size(55, 18);
             this.radLabel12.TabIndex = 13;
             this.radLabel12.Text = "Vehiculo :";
             // 
             // txtCodTrayler
             // 
-            this.txtCodTrayler.Location = new System.Drawing.Point(146, 14);
-            this.txtCodTrayler.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCodTrayler.Location = new System.Drawing.Point(97, 9);
             this.txtCodTrayler.Name = "txtCodTrayler";
-            this.txtCodTrayler.Size = new System.Drawing.Size(162, 27);
+            this.txtCodTrayler.Size = new System.Drawing.Size(108, 20);
             this.txtCodTrayler.TabIndex = 21;
             this.txtCodTrayler.Tag = "codigo";
             this.txtCodTrayler.TextChanged += new System.EventHandler(this.txtCodTrayler_TextChanged);
@@ -910,20 +859,18 @@
             this.txtestadoguiaDes.BackColor = System.Drawing.Color.LightGray;
             this.txtestadoguiaDes.Enabled = false;
             this.txtestadoguiaDes.ForeColor = System.Drawing.Color.White;
-            this.txtestadoguiaDes.Location = new System.Drawing.Point(195, 128);
-            this.txtestadoguiaDes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtestadoguiaDes.Location = new System.Drawing.Point(130, 83);
             this.txtestadoguiaDes.Name = "txtestadoguiaDes";
-            this.txtestadoguiaDes.Size = new System.Drawing.Size(516, 27);
+            this.txtestadoguiaDes.Size = new System.Drawing.Size(344, 20);
             this.txtestadoguiaDes.TabIndex = 29;
             this.txtestadoguiaDes.TabStop = false;
             this.txtestadoguiaDes.Tag = "txtestadoguia";
             // 
             // radLabel20
             // 
-            this.radLabel20.Location = new System.Drawing.Point(16, 129);
-            this.radLabel20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel20.Location = new System.Drawing.Point(11, 84);
             this.radLabel20.Name = "radLabel20";
-            this.radLabel20.Size = new System.Drawing.Size(67, 26);
+            this.radLabel20.Size = new System.Drawing.Size(45, 18);
             this.radLabel20.TabIndex = 16;
             this.radLabel20.Text = "Estado :";
             this.radLabel20.Visible = false;
@@ -931,10 +878,9 @@
             // txtestadoguia
             // 
             this.txtestadoguia.Enabled = false;
-            this.txtestadoguia.Location = new System.Drawing.Point(141, 128);
-            this.txtestadoguia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtestadoguia.Location = new System.Drawing.Point(94, 83);
             this.txtestadoguia.Name = "txtestadoguia";
-            this.txtestadoguia.Size = new System.Drawing.Size(58, 27);
+            this.txtestadoguia.Size = new System.Drawing.Size(39, 20);
             this.txtestadoguia.TabIndex = 28;
             this.txtestadoguia.Tag = "codigo";
             this.txtestadoguia.TextChanged += new System.EventHandler(this.txtestadoguia_TextChanged);
@@ -943,20 +889,18 @@
             // dtpfechaIntra
             // 
             this.dtpfechaIntra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpfechaIntra.Location = new System.Drawing.Point(1566, 391);
-            this.dtpfechaIntra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpfechaIntra.Location = new System.Drawing.Point(1044, 254);
             this.dtpfechaIntra.Name = "dtpfechaIntra";
-            this.dtpfechaIntra.Size = new System.Drawing.Size(129, 27);
+            this.dtpfechaIntra.Size = new System.Drawing.Size(86, 20);
             this.dtpfechaIntra.TabIndex = 27;
             this.dtpfechaIntra.TabStop = false;
             this.dtpfechaIntra.Value = new System.DateTime(((long)(0)));
             // 
             // radLabel17
             // 
-            this.radLabel17.Location = new System.Drawing.Point(1368, 389);
-            this.radLabel17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel17.Location = new System.Drawing.Point(912, 253);
             this.radLabel17.Name = "radLabel17";
-            this.radLabel17.Size = new System.Drawing.Size(193, 26);
+            this.radLabel17.Size = new System.Drawing.Size(129, 18);
             this.radLabel17.TabIndex = 7;
             this.radLabel17.Text = "Fecha inicio de traslado :";
             // 
@@ -965,11 +909,10 @@
             this.txtobservacion.AutoSize = false;
             this.txtobservacion.BackColor = System.Drawing.Color.LightGray;
             this.txtobservacion.ForeColor = System.Drawing.Color.White;
-            this.txtobservacion.Location = new System.Drawing.Point(1048, 42);
-            this.txtobservacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtobservacion.Location = new System.Drawing.Point(699, 27);
             this.txtobservacion.Multiline = true;
             this.txtobservacion.Name = "txtobservacion";
-            this.txtobservacion.Size = new System.Drawing.Size(218, 66);
+            this.txtobservacion.Size = new System.Drawing.Size(145, 43);
             this.txtobservacion.TabIndex = 38;
             this.txtobservacion.Tag = "0";
             // 
@@ -978,19 +921,17 @@
             this.txtreferencia.AutoSize = false;
             this.txtreferencia.BackColor = System.Drawing.Color.LightGray;
             this.txtreferencia.ForeColor = System.Drawing.Color.White;
-            this.txtreferencia.Location = new System.Drawing.Point(146, 74);
-            this.txtreferencia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtreferencia.Location = new System.Drawing.Point(97, 48);
             this.txtreferencia.Multiline = true;
             this.txtreferencia.Name = "txtreferencia";
-            this.txtreferencia.Size = new System.Drawing.Size(798, 38);
+            this.txtreferencia.Size = new System.Drawing.Size(532, 25);
             this.txtreferencia.TabIndex = 35;
             // 
             // radLabel21
             // 
-            this.radLabel21.Location = new System.Drawing.Point(14, 77);
-            this.radLabel21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel21.Location = new System.Drawing.Point(9, 50);
             this.radLabel21.Name = "radLabel21";
-            this.radLabel21.Size = new System.Drawing.Size(109, 26);
+            this.radLabel21.Size = new System.Drawing.Size(74, 18);
             this.radLabel21.TabIndex = 6;
             this.radLabel21.Text = "Observacion :";
             // 
@@ -999,10 +940,9 @@
             this.txtprecinto.BackColor = System.Drawing.Color.LightGray;
             this.txtprecinto.Enabled = false;
             this.txtprecinto.ForeColor = System.Drawing.Color.White;
-            this.txtprecinto.Location = new System.Drawing.Point(1374, 5);
-            this.txtprecinto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtprecinto.Location = new System.Drawing.Point(916, 3);
             this.txtprecinto.Name = "txtprecinto";
-            this.txtprecinto.Size = new System.Drawing.Size(244, 27);
+            this.txtprecinto.Size = new System.Drawing.Size(163, 20);
             this.txtprecinto.TabIndex = 37;
             this.txtprecinto.Tag = "";
             // 
@@ -1011,36 +951,32 @@
             this.txtcontenedor.BackColor = System.Drawing.Color.LightGray;
             this.txtcontenedor.Enabled = false;
             this.txtcontenedor.ForeColor = System.Drawing.Color.White;
-            this.txtcontenedor.Location = new System.Drawing.Point(1048, 5);
-            this.txtcontenedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtcontenedor.Location = new System.Drawing.Point(699, 3);
             this.txtcontenedor.Name = "txtcontenedor";
-            this.txtcontenedor.Size = new System.Drawing.Size(218, 27);
+            this.txtcontenedor.Size = new System.Drawing.Size(145, 20);
             this.txtcontenedor.TabIndex = 36;
             // 
             // radLabel19
             // 
-            this.radLabel19.Location = new System.Drawing.Point(1275, 5);
-            this.radLabel19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel19.Location = new System.Drawing.Point(850, 3);
             this.radLabel19.Name = "radLabel19";
-            this.radLabel19.Size = new System.Drawing.Size(78, 26);
+            this.radLabel19.Size = new System.Drawing.Size(53, 18);
             this.radLabel19.TabIndex = 20;
             this.radLabel19.Text = "Precinto :";
             // 
             // radLabel22
             // 
-            this.radLabel22.Location = new System.Drawing.Point(940, 5);
-            this.radLabel22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel22.Location = new System.Drawing.Point(627, 3);
             this.radLabel22.Name = "radLabel22";
-            this.radLabel22.Size = new System.Drawing.Size(105, 26);
+            this.radLabel22.Size = new System.Drawing.Size(71, 18);
             this.radLabel22.TabIndex = 19;
             this.radLabel22.Text = "Contenedor :";
             // 
             // chkflagproveedor
             // 
-            this.chkflagproveedor.Location = new System.Drawing.Point(1275, 43);
-            this.chkflagproveedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chkflagproveedor.Location = new System.Drawing.Point(850, 28);
             this.chkflagproveedor.Name = "chkflagproveedor";
-            this.chkflagproveedor.Size = new System.Drawing.Size(213, 26);
+            this.chkflagproveedor.Size = new System.Drawing.Size(147, 18);
             this.chkflagproveedor.TabIndex = 39;
             this.chkflagproveedor.TabStop = false;
             this.chkflagproveedor.Tag = "0";
@@ -1049,15 +985,14 @@
             // gridControl
             // 
             this.gridControl.Controls.Add(this.ContainerPeso);
-            this.gridControl.Location = new System.Drawing.Point(16, 542);
-            this.gridControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl.Location = new System.Drawing.Point(11, 354);
             // 
             // 
             // 
             this.gridControl.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.gridControl.Name = "gridControl";
             this.gridControl.NewRowEnterKeyMode = Telerik.WinControls.UI.RadGridViewNewRowEnterKeyMode.EnterMovesToNextCell;
-            this.gridControl.Size = new System.Drawing.Size(1682, 255);
+            this.gridControl.Size = new System.Drawing.Size(1121, 166);
             this.gridControl.TabIndex = 20;
             this.gridControl.TabStop = false;
             this.gridControl.Text = "gridControl";
@@ -1074,20 +1009,18 @@
             this.txtbrevete.BackColor = System.Drawing.Color.LightGray;
             this.txtbrevete.Enabled = false;
             this.txtbrevete.ForeColor = System.Drawing.Color.White;
-            this.txtbrevete.Location = new System.Drawing.Point(144, 109);
-            this.txtbrevete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbrevete.Location = new System.Drawing.Point(96, 71);
             this.txtbrevete.Name = "txtbrevete";
-            this.txtbrevete.Size = new System.Drawing.Size(160, 27);
+            this.txtbrevete.Size = new System.Drawing.Size(107, 20);
             this.txtbrevete.TabIndex = 20;
             this.txtbrevete.TabStop = false;
             this.txtbrevete.Tag = "txtcodchofer";
             // 
             // radLabel8
             // 
-            this.radLabel8.Location = new System.Drawing.Point(14, 112);
-            this.radLabel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel8.Location = new System.Drawing.Point(9, 73);
             this.radLabel8.Name = "radLabel8";
-            this.radLabel8.Size = new System.Drawing.Size(73, 26);
+            this.radLabel8.Size = new System.Drawing.Size(49, 18);
             this.radLabel8.TabIndex = 30;
             this.radLabel8.Text = "Brevete :";
             // 
@@ -1096,29 +1029,26 @@
             this.txtchoferDes.BackColor = System.Drawing.Color.LightGray;
             this.txtchoferDes.Enabled = false;
             this.txtchoferDes.ForeColor = System.Drawing.Color.White;
-            this.txtchoferDes.Location = new System.Drawing.Point(300, 75);
-            this.txtchoferDes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtchoferDes.Location = new System.Drawing.Point(200, 49);
             this.txtchoferDes.Name = "txtchoferDes";
-            this.txtchoferDes.Size = new System.Drawing.Size(411, 27);
+            this.txtchoferDes.Size = new System.Drawing.Size(274, 20);
             this.txtchoferDes.TabIndex = 19;
             this.txtchoferDes.TabStop = false;
             this.txtchoferDes.Tag = "txtcodchofer";
             // 
             // radLabel7
             // 
-            this.radLabel7.Location = new System.Drawing.Point(12, 75);
-            this.radLabel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel7.Location = new System.Drawing.Point(8, 49);
             this.radLabel7.Name = "radLabel7";
-            this.radLabel7.Size = new System.Drawing.Size(96, 26);
+            this.radLabel7.Size = new System.Drawing.Size(65, 18);
             this.radLabel7.TabIndex = 28;
             this.radLabel7.Text = "Conductor :";
             // 
             // txtcodchofer
             // 
-            this.txtcodchofer.Location = new System.Drawing.Point(142, 75);
-            this.txtcodchofer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtcodchofer.Location = new System.Drawing.Point(95, 49);
             this.txtcodchofer.Name = "txtcodchofer";
-            this.txtcodchofer.Size = new System.Drawing.Size(162, 27);
+            this.txtcodchofer.Size = new System.Drawing.Size(108, 20);
             this.txtcodchofer.TabIndex = 18;
             this.txtcodchofer.Tag = "codigo";
             this.txtcodchofer.TextChanged += new System.EventHandler(this.txtcodchofer_TextChanged);
@@ -1129,29 +1059,26 @@
             this.txttransportistaDes.BackColor = System.Drawing.Color.LightGray;
             this.txttransportistaDes.Enabled = false;
             this.txttransportistaDes.ForeColor = System.Drawing.Color.White;
-            this.txttransportistaDes.Location = new System.Drawing.Point(300, 38);
-            this.txttransportistaDes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txttransportistaDes.Location = new System.Drawing.Point(200, 25);
             this.txttransportistaDes.Name = "txttransportistaDes";
-            this.txttransportistaDes.Size = new System.Drawing.Size(411, 27);
+            this.txttransportistaDes.Size = new System.Drawing.Size(274, 20);
             this.txttransportistaDes.TabIndex = 17;
             this.txttransportistaDes.TabStop = false;
             this.txttransportistaDes.Tag = "txtRucTranportista";
             // 
             // radLabel5
             // 
-            this.radLabel5.Location = new System.Drawing.Point(14, 38);
-            this.radLabel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel5.Location = new System.Drawing.Point(9, 25);
             this.radLabel5.Name = "radLabel5";
-            this.radLabel5.Size = new System.Drawing.Size(114, 26);
+            this.radLabel5.Size = new System.Drawing.Size(77, 18);
             this.radLabel5.TabIndex = 26;
             this.radLabel5.Text = "Transportista :";
             // 
             // txtRucTransportista
             // 
-            this.txtRucTransportista.Location = new System.Drawing.Point(142, 38);
-            this.txtRucTransportista.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtRucTransportista.Location = new System.Drawing.Point(95, 25);
             this.txtRucTransportista.Name = "txtRucTransportista";
-            this.txtRucTransportista.Size = new System.Drawing.Size(162, 27);
+            this.txtRucTransportista.Size = new System.Drawing.Size(108, 20);
             this.txtRucTransportista.TabIndex = 16;
             this.txtRucTransportista.Tag = "codigo";
             this.txtRucTransportista.TextChanged += new System.EventHandler(this.txtRucTransportista_TextChanged);
@@ -1159,17 +1086,13 @@
             // 
             // panelOrigen
             // 
-            this.panelOrigen.Controls.Add(this.txtrucorigenDes);
-            this.panelOrigen.Controls.Add(this.radLabel6);
-            this.panelOrigen.Controls.Add(this.txtOriDirPartida);
-            this.panelOrigen.Controls.Add(this.txtrucorigen);
-            this.panelOrigen.Controls.Add(this.radLabel4);
-            this.panelOrigen.Controls.Add(this.txtorigenDes);
-            this.panelOrigen.Controls.Add(this.txtcodorigen);
-            this.panelOrigen.Location = new System.Drawing.Point(14, 102);
-            this.panelOrigen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelOrigen.Controls.Add(this.txtotros);
+            this.panelOrigen.Controls.Add(this.txtmotivoDes);
+            this.panelOrigen.Controls.Add(this.txtcodmotivo);
+            this.panelOrigen.Controls.Add(this.radLabel18);
+            this.panelOrigen.Location = new System.Drawing.Point(9, 66);
             this.panelOrigen.Name = "panelOrigen";
-            this.panelOrigen.Size = new System.Drawing.Size(598, 117);
+            this.panelOrigen.Size = new System.Drawing.Size(401, 56);
             this.panelOrigen.TabIndex = 1;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.panelOrigen.GetChildAt(0).GetChildAt(1))).LeftWidth = 0F;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.panelOrigen.GetChildAt(0).GetChildAt(1))).RightWidth = 0F;
@@ -1186,10 +1109,9 @@
             this.panelTransportista.Controls.Add(this.radLabel8);
             this.panelTransportista.Controls.Add(this.radLabel7);
             this.panelTransportista.Controls.Add(this.txtchoferDes);
-            this.panelTransportista.Location = new System.Drawing.Point(626, 102);
-            this.panelTransportista.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelTransportista.Location = new System.Drawing.Point(417, 66);
             this.panelTransportista.Name = "panelTransportista";
-            this.panelTransportista.Size = new System.Drawing.Size(738, 145);
+            this.panelTransportista.Size = new System.Drawing.Size(492, 94);
             this.panelTransportista.TabIndex = 3;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.panelTransportista.GetChildAt(0).GetChildAt(1))).BorderDrawMode = Telerik.WinControls.BorderDrawModes.TopOver;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.panelTransportista.GetChildAt(0).GetChildAt(1))).LeftWidth = 0F;
@@ -1199,10 +1121,9 @@
             // 
             // chkTrasladoM1oL
             // 
-            this.chkTrasladoM1oL.Location = new System.Drawing.Point(22, 9);
-            this.chkTrasladoM1oL.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chkTrasladoM1oL.Location = new System.Drawing.Point(15, 6);
             this.chkTrasladoM1oL.Name = "chkTrasladoM1oL";
-            this.chkTrasladoM1oL.Size = new System.Drawing.Size(337, 26);
+            this.chkTrasladoM1oL.Size = new System.Drawing.Size(230, 18);
             this.chkTrasladoM1oL.TabIndex = 40;
             this.chkTrasladoM1oL.TabStop = false;
             this.chkTrasladoM1oL.Tag = "0";
@@ -1224,10 +1145,9 @@
             this.panelVehiculo.Controls.Add(this.radLabel9);
             this.panelVehiculo.Controls.Add(this.radLabel14);
             this.panelVehiculo.Controls.Add(this.txtmarcaSemiremolque);
-            this.panelVehiculo.Location = new System.Drawing.Point(626, 252);
-            this.panelVehiculo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelVehiculo.Location = new System.Drawing.Point(417, 164);
             this.panelVehiculo.Name = "panelVehiculo";
-            this.panelVehiculo.Size = new System.Drawing.Size(736, 162);
+            this.panelVehiculo.Size = new System.Drawing.Size(491, 105);
             this.panelVehiculo.TabIndex = 4;
             // 
             // txtClienteCod
@@ -1235,10 +1155,9 @@
             this.txtClienteCod.BackColor = System.Drawing.Color.LightGray;
             this.txtClienteCod.Enabled = false;
             this.txtClienteCod.ForeColor = System.Drawing.Color.White;
-            this.txtClienteCod.Location = new System.Drawing.Point(146, 2);
-            this.txtClienteCod.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtClienteCod.Location = new System.Drawing.Point(97, 1);
             this.txtClienteCod.Name = "txtClienteCod";
-            this.txtClienteCod.Size = new System.Drawing.Size(129, 27);
+            this.txtClienteCod.Size = new System.Drawing.Size(86, 20);
             this.txtClienteCod.TabIndex = 30;
             this.txtClienteCod.Tag = "";
             this.txtClienteCod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClienteCod_KeyDown);
@@ -1246,19 +1165,17 @@
             // radLabel23
             // 
             this.radLabel23.Controls.Add(this.radLabel24);
-            this.radLabel23.Location = new System.Drawing.Point(14, 5);
-            this.radLabel23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel23.Location = new System.Drawing.Point(9, 3);
             this.radLabel23.Name = "radLabel23";
-            this.radLabel23.Size = new System.Drawing.Size(68, 26);
+            this.radLabel23.Size = new System.Drawing.Size(46, 18);
             this.radLabel23.TabIndex = 20;
             this.radLabel23.Text = "Cliente :";
             // 
             // radLabel24
             // 
-            this.radLabel24.Location = new System.Drawing.Point(4, 37);
-            this.radLabel24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel24.Location = new System.Drawing.Point(3, 24);
             this.radLabel24.Name = "radLabel24";
-            this.radLabel24.Size = new System.Drawing.Size(69, 26);
+            this.radLabel24.Size = new System.Drawing.Size(47, 18);
             this.radLabel24.TabIndex = 35;
             this.radLabel24.Text = "Tipo OC";
             // 
@@ -1267,10 +1184,9 @@
             this.txtTipoOCCod.BackColor = System.Drawing.Color.LightGray;
             this.txtTipoOCCod.Enabled = false;
             this.txtTipoOCCod.ForeColor = System.Drawing.Color.White;
-            this.txtTipoOCCod.Location = new System.Drawing.Point(146, 34);
-            this.txtTipoOCCod.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTipoOCCod.Location = new System.Drawing.Point(97, 22);
             this.txtTipoOCCod.Name = "txtTipoOCCod";
-            this.txtTipoOCCod.Size = new System.Drawing.Size(39, 27);
+            this.txtTipoOCCod.Size = new System.Drawing.Size(26, 20);
             this.txtTipoOCCod.TabIndex = 32;
             this.txtTipoOCCod.Tag = "";
             this.txtTipoOCCod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTipoOCCod_KeyDown);
@@ -1278,19 +1194,17 @@
             // radLabel25
             // 
             this.radLabel25.Controls.Add(this.radLabel26);
-            this.radLabel25.Location = new System.Drawing.Point(14, 37);
-            this.radLabel25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel25.Location = new System.Drawing.Point(9, 24);
             this.radLabel25.Name = "radLabel25";
-            this.radLabel25.Size = new System.Drawing.Size(77, 26);
+            this.radLabel25.Size = new System.Drawing.Size(52, 18);
             this.radLabel25.TabIndex = 36;
             this.radLabel25.Text = "OC  Tipo:";
             // 
             // radLabel26
             // 
-            this.radLabel26.Location = new System.Drawing.Point(4, 37);
-            this.radLabel26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel26.Location = new System.Drawing.Point(3, 24);
             this.radLabel26.Name = "radLabel26";
-            this.radLabel26.Size = new System.Drawing.Size(69, 26);
+            this.radLabel26.Size = new System.Drawing.Size(47, 18);
             this.radLabel26.TabIndex = 35;
             this.radLabel26.Text = "Tipo OC";
             // 
@@ -1299,28 +1213,25 @@
             this.txtOCNumero.BackColor = System.Drawing.Color.LightGray;
             this.txtOCNumero.Enabled = false;
             this.txtOCNumero.ForeColor = System.Drawing.Color.White;
-            this.txtOCNumero.Location = new System.Drawing.Point(363, 34);
-            this.txtOCNumero.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtOCNumero.Location = new System.Drawing.Point(242, 22);
             this.txtOCNumero.Name = "txtOCNumero";
-            this.txtOCNumero.Size = new System.Drawing.Size(236, 27);
+            this.txtOCNumero.Size = new System.Drawing.Size(157, 20);
             this.txtOCNumero.TabIndex = 34;
             // 
             // radLabel27
             // 
             this.radLabel27.Controls.Add(this.radLabel28);
-            this.radLabel27.Location = new System.Drawing.Point(297, 34);
-            this.radLabel27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel27.Location = new System.Drawing.Point(198, 22);
             this.radLabel27.Name = "radLabel27";
-            this.radLabel27.Size = new System.Drawing.Size(63, 26);
+            this.radLabel27.Size = new System.Drawing.Size(43, 18);
             this.radLabel27.TabIndex = 37;
             this.radLabel27.Text = "OC N° :";
             // 
             // radLabel28
             // 
-            this.radLabel28.Location = new System.Drawing.Point(4, 37);
-            this.radLabel28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel28.Location = new System.Drawing.Point(3, 24);
             this.radLabel28.Name = "radLabel28";
-            this.radLabel28.Size = new System.Drawing.Size(69, 26);
+            this.radLabel28.Size = new System.Drawing.Size(47, 18);
             this.radLabel28.TabIndex = 35;
             this.radLabel28.Text = "Tipo OC";
             // 
@@ -1329,10 +1240,9 @@
             this.txtClienteDesc.BackColor = System.Drawing.Color.LightGray;
             this.txtClienteDesc.Enabled = false;
             this.txtClienteDesc.ForeColor = System.Drawing.Color.White;
-            this.txtClienteDesc.Location = new System.Drawing.Point(280, 2);
-            this.txtClienteDesc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtClienteDesc.Location = new System.Drawing.Point(187, 1);
             this.txtClienteDesc.Name = "txtClienteDesc";
-            this.txtClienteDesc.Size = new System.Drawing.Size(315, 27);
+            this.txtClienteDesc.Size = new System.Drawing.Size(210, 20);
             this.txtClienteDesc.TabIndex = 31;
             this.txtClienteDesc.Tag = "0";
             // 
@@ -1341,10 +1251,9 @@
             this.txtTipoOCDesc.BackColor = System.Drawing.Color.LightGray;
             this.txtTipoOCDesc.Enabled = false;
             this.txtTipoOCDesc.ForeColor = System.Drawing.Color.White;
-            this.txtTipoOCDesc.Location = new System.Drawing.Point(188, 34);
-            this.txtTipoOCDesc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTipoOCDesc.Location = new System.Drawing.Point(125, 22);
             this.txtTipoOCDesc.Name = "txtTipoOCDesc";
-            this.txtTipoOCDesc.Size = new System.Drawing.Size(87, 27);
+            this.txtTipoOCDesc.Size = new System.Drawing.Size(58, 20);
             this.txtTipoOCDesc.TabIndex = 33;
             this.txtTipoOCDesc.TabStop = false;
             this.txtTipoOCDesc.Tag = "";
@@ -1374,10 +1283,9 @@
             this.pnlDatosExtra.Controls.Add(this.txtClienteCod);
             this.pnlDatosExtra.Controls.Add(this.txtcontenedor);
             this.pnlDatosExtra.Controls.Add(this.txtprecinto);
-            this.pnlDatosExtra.Location = new System.Drawing.Point(16, 423);
-            this.pnlDatosExtra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlDatosExtra.Location = new System.Drawing.Point(11, 276);
             this.pnlDatosExtra.Name = "pnlDatosExtra";
-            this.pnlDatosExtra.Size = new System.Drawing.Size(1682, 114);
+            this.pnlDatosExtra.Size = new System.Drawing.Size(1121, 74);
             this.pnlDatosExtra.TabIndex = 5;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.pnlDatosExtra.GetChildAt(0).GetChildAt(1))).BorderDrawMode = Telerik.WinControls.BorderDrawModes.TopOver;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.pnlDatosExtra.GetChildAt(0).GetChildAt(1))).LeftWidth = 0F;
@@ -1387,38 +1295,38 @@
             // 
             // radLabel16
             // 
-            this.radLabel16.Location = new System.Drawing.Point(658, 11);
-            this.radLabel16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel16.Location = new System.Drawing.Point(439, 7);
             this.radLabel16.Name = "radLabel16";
-            this.radLabel16.Size = new System.Drawing.Size(157, 26);
+            this.radLabel16.Size = new System.Drawing.Size(105, 18);
             this.radLabel16.TabIndex = 44;
             this.radLabel16.Text = "Modalidad Traslado";
             this.radLabel16.Visible = false;
             // 
             // rbtPrivado
             // 
-            this.rbtPrivado.Location = new System.Drawing.Point(730, 38);
+            this.rbtPrivado.Location = new System.Drawing.Point(487, 25);
+            this.rbtPrivado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtPrivado.Name = "rbtPrivado";
-            this.rbtPrivado.Size = new System.Drawing.Size(78, 26);
+            this.rbtPrivado.Size = new System.Drawing.Size(58, 18);
             this.rbtPrivado.TabIndex = 41;
             this.rbtPrivado.TabStop = false;
             this.rbtPrivado.Text = "Privado";
             // 
             // rbtPublico
             // 
-            this.rbtPublico.Location = new System.Drawing.Point(814, 38);
+            this.rbtPublico.Location = new System.Drawing.Point(543, 25);
+            this.rbtPublico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtPublico.Name = "rbtPublico";
-            this.rbtPublico.Size = new System.Drawing.Size(77, 26);
+            this.rbtPublico.Size = new System.Drawing.Size(57, 18);
             this.rbtPublico.TabIndex = 42;
             this.rbtPublico.TabStop = false;
             this.rbtPublico.Text = "Publico";
             // 
             // radPanel1
             // 
-            this.radPanel1.Location = new System.Drawing.Point(651, 5);
-            this.radPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radPanel1.Location = new System.Drawing.Point(434, 3);
             this.radPanel1.Name = "radPanel1";
-            this.radPanel1.Size = new System.Drawing.Size(254, 65);
+            this.radPanel1.Size = new System.Drawing.Size(169, 42);
             this.radPanel1.TabIndex = 43;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel1.GetChildAt(0).GetChildAt(1))).BorderDrawMode = Telerik.WinControls.BorderDrawModes.TopOver;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel1.GetChildAt(0).GetChildAt(1))).LeftWidth = 0F;
@@ -1430,10 +1338,9 @@
             // 
             this.btnAgregarDetPacking.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarDetPacking.Image")));
             this.btnAgregarDetPacking.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAgregarDetPacking.Location = new System.Drawing.Point(1488, 74);
-            this.btnAgregarDetPacking.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAgregarDetPacking.Location = new System.Drawing.Point(992, 48);
             this.btnAgregarDetPacking.Name = "btnAgregarDetPacking";
-            this.btnAgregarDetPacking.Size = new System.Drawing.Size(36, 37);
+            this.btnAgregarDetPacking.Size = new System.Drawing.Size(24, 24);
             this.btnAgregarDetPacking.TabIndex = 40;
             this.btnAgregarDetPacking.TabStop = false;
             this.btnAgregarDetPacking.ThemeName = "Office2013Light";
@@ -1444,10 +1351,9 @@
             // 
             this.btnAgregar.Image = global::Fac.UI.Win.Properties.Resources.add1;
             this.btnAgregar.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAgregar.Location = new System.Drawing.Point(1533, 72);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAgregar.Location = new System.Drawing.Point(1022, 47);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(36, 37);
+            this.btnAgregar.Size = new System.Drawing.Size(24, 24);
             this.btnAgregar.TabIndex = 18;
             this.btnAgregar.TabStop = false;
             this.btnAgregar.ThemeName = "Office2013Light";
@@ -1458,10 +1364,9 @@
             // 
             this.btnRemover.Image = global::Fac.UI.Win.Properties.Resources.minus;
             this.btnRemover.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnRemover.Location = new System.Drawing.Point(1575, 72);
-            this.btnRemover.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRemover.Location = new System.Drawing.Point(1050, 47);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(36, 37);
+            this.btnRemover.Size = new System.Drawing.Size(24, 24);
             this.btnRemover.TabIndex = 19;
             this.btnRemover.TabStop = false;
             this.btnRemover.ThemeName = "Office2013Light";
@@ -1470,10 +1375,8 @@
             // 
             // rgpAnularGuiaRemision
             // 
-            this.rgpAnularGuiaRemision.Location = new System.Drawing.Point(280, 77);
-            this.rgpAnularGuiaRemision.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rgpAnularGuiaRemision.Location = new System.Drawing.Point(187, 50);
             this.rgpAnularGuiaRemision.Name = "rgpAnularGuiaRemision";
-            this.rgpAnularGuiaRemision.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             // 
             // rgpAnularGuiaRemision.PanelContainer
             // 
@@ -1483,30 +1386,27 @@
             this.rgpAnularGuiaRemision.PanelContainer.Controls.Add(this.radLabel33);
             this.rgpAnularGuiaRemision.PanelContainer.Controls.Add(this.rpCabSaldos);
             this.rgpAnularGuiaRemision.PanelContainer.Dock = System.Windows.Forms.DockStyle.None;
-            this.rgpAnularGuiaRemision.PanelContainer.Location = new System.Drawing.Point(15, 0);
-            this.rgpAnularGuiaRemision.PanelContainer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.rgpAnularGuiaRemision.PanelContainer.Size = new System.Drawing.Size(372, 258);
-            this.rgpAnularGuiaRemision.Size = new System.Drawing.Size(375, 262);
+            this.rgpAnularGuiaRemision.PanelContainer.Location = new System.Drawing.Point(10, 0);
+            this.rgpAnularGuiaRemision.PanelContainer.Size = new System.Drawing.Size(248, 168);
+            this.rgpAnularGuiaRemision.Size = new System.Drawing.Size(250, 170);
             this.rgpAnularGuiaRemision.TabIndex = 76;
             // 
             // txtMotivoBaja
             // 
             this.txtMotivoBaja.AutoSize = false;
             this.txtMotivoBaja.Enabled = false;
-            this.txtMotivoBaja.Location = new System.Drawing.Point(102, 111);
-            this.txtMotivoBaja.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMotivoBaja.Location = new System.Drawing.Point(68, 72);
             this.txtMotivoBaja.Multiline = true;
             this.txtMotivoBaja.Name = "txtMotivoBaja";
-            this.txtMotivoBaja.Size = new System.Drawing.Size(254, 120);
+            this.txtMotivoBaja.Size = new System.Drawing.Size(169, 78);
             this.txtMotivoBaja.TabIndex = 80;
             // 
             // dtpFechaBaja
             // 
             this.dtpFechaBaja.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaBaja.Location = new System.Drawing.Point(102, 75);
-            this.dtpFechaBaja.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpFechaBaja.Location = new System.Drawing.Point(68, 49);
             this.dtpFechaBaja.Name = "dtpFechaBaja";
-            this.dtpFechaBaja.Size = new System.Drawing.Size(123, 27);
+            this.dtpFechaBaja.Size = new System.Drawing.Size(82, 20);
             this.dtpFechaBaja.TabIndex = 79;
             this.dtpFechaBaja.TabStop = false;
             this.dtpFechaBaja.Text = "01/03/2013";
@@ -1514,19 +1414,17 @@
             // 
             // radLabel32
             // 
-            this.radLabel32.Location = new System.Drawing.Point(27, 78);
-            this.radLabel32.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel32.Location = new System.Drawing.Point(18, 51);
             this.radLabel32.Name = "radLabel32";
-            this.radLabel32.Size = new System.Drawing.Size(60, 26);
+            this.radLabel32.Size = new System.Drawing.Size(41, 18);
             this.radLabel32.TabIndex = 78;
             this.radLabel32.Text = "Fecha :";
             // 
             // radLabel33
             // 
-            this.radLabel33.Location = new System.Drawing.Point(18, 111);
-            this.radLabel33.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel33.Location = new System.Drawing.Point(12, 72);
             this.radLabel33.Name = "radLabel33";
-            this.radLabel33.Size = new System.Drawing.Size(70, 26);
+            this.radLabel33.Size = new System.Drawing.Size(47, 18);
             this.radLabel33.TabIndex = 77;
             this.radLabel33.Text = "Motivo :";
             // 
@@ -1539,9 +1437,8 @@
             this.rpCabSaldos.Dock = System.Windows.Forms.DockStyle.Top;
             this.rpCabSaldos.ForeColor = System.Drawing.Color.White;
             this.rpCabSaldos.Location = new System.Drawing.Point(0, 0);
-            this.rpCabSaldos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rpCabSaldos.Name = "rpCabSaldos";
-            this.rpCabSaldos.Size = new System.Drawing.Size(372, 57);
+            this.rpCabSaldos.Size = new System.Drawing.Size(248, 37);
             this.rpCabSaldos.TabIndex = 0;
             this.rpCabSaldos.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1552,10 +1449,9 @@
             this.btnGuardarAnulacion.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnGuardarAnulacion.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarAnulacion.Image")));
             this.btnGuardarAnulacion.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnGuardarAnulacion.Location = new System.Drawing.Point(270, 0);
-            this.btnGuardarAnulacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardarAnulacion.Location = new System.Drawing.Point(180, 0);
             this.btnGuardarAnulacion.Name = "btnGuardarAnulacion";
-            this.btnGuardarAnulacion.Size = new System.Drawing.Size(51, 57);
+            this.btnGuardarAnulacion.Size = new System.Drawing.Size(34, 37);
             this.btnGuardarAnulacion.TabIndex = 6;
             this.btnGuardarAnulacion.Text = "Guardar";
             this.btnGuardarAnulacion.ThemeName = "Office2013Light";
@@ -1569,10 +1465,9 @@
             this.btnCerrarAnular.Font = new System.Drawing.Font("Segoe UI", 12.25F);
             this.btnCerrarAnular.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarAnular.Image")));
             this.btnCerrarAnular.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCerrarAnular.Location = new System.Drawing.Point(321, 0);
-            this.btnCerrarAnular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCerrarAnular.Location = new System.Drawing.Point(214, 0);
             this.btnCerrarAnular.Name = "btnCerrarAnular";
-            this.btnCerrarAnular.Size = new System.Drawing.Size(51, 57);
+            this.btnCerrarAnular.Size = new System.Drawing.Size(34, 37);
             this.btnCerrarAnular.TabIndex = 7;
             this.btnCerrarAnular.Text = "x";
             this.btnCerrarAnular.ThemeName = "Office2013Light";
@@ -1583,10 +1478,9 @@
             this.radLabel31.BackColor = System.Drawing.Color.SteelBlue;
             this.radLabel31.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel31.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.radLabel31.Location = new System.Drawing.Point(14, 9);
-            this.radLabel31.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel31.Location = new System.Drawing.Point(9, 6);
             this.radLabel31.Name = "radLabel31";
-            this.radLabel31.Size = new System.Drawing.Size(185, 30);
+            this.radLabel31.Size = new System.Drawing.Size(124, 21);
             this.radLabel31.TabIndex = 4;
             this.radLabel31.Text = "Anular documento";
             this.radLabel31.ThemeName = "ControlDefault";
@@ -1595,10 +1489,9 @@
             // 
             this.txtCantidad.BackColor = System.Drawing.Color.LightGray;
             this.txtCantidad.ForeColor = System.Drawing.Color.White;
-            this.txtCantidad.Location = new System.Drawing.Point(1408, 809);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCantidad.Location = new System.Drawing.Point(939, 526);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(141, 27);
+            this.txtCantidad.Size = new System.Drawing.Size(94, 20);
             this.txtCantidad.TabIndex = 78;
             this.txtCantidad.Tag = "";
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1607,33 +1500,30 @@
             // 
             this.txtUnidadMed.BackColor = System.Drawing.Color.LightGray;
             this.txtUnidadMed.ForeColor = System.Drawing.Color.White;
-            this.txtUnidadMed.Location = new System.Drawing.Point(1557, 809);
-            this.txtUnidadMed.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUnidadMed.Location = new System.Drawing.Point(1038, 526);
             this.txtUnidadMed.Name = "txtUnidadMed";
-            this.txtUnidadMed.Size = new System.Drawing.Size(141, 27);
+            this.txtUnidadMed.Size = new System.Drawing.Size(94, 20);
             this.txtUnidadMed.TabIndex = 79;
             this.txtUnidadMed.Tag = "";
             // 
             // radLabel34
             // 
-            this.radLabel34.Location = new System.Drawing.Point(1311, 809);
-            this.radLabel34.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel34.Location = new System.Drawing.Point(874, 526);
             this.radLabel34.Name = "radLabel34";
-            this.radLabel34.Size = new System.Drawing.Size(89, 26);
+            this.radLabel34.Size = new System.Drawing.Size(60, 18);
             this.radLabel34.TabIndex = 20;
             this.radLabel34.Text = "Peso Bruto";
             // 
             // gridreferencial
             // 
-            this.gridreferencial.Location = new System.Drawing.Point(1377, 132);
-            this.gridreferencial.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridreferencial.Location = new System.Drawing.Point(918, 86);
             // 
             // 
             // 
             this.gridreferencial.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.gridreferencial.Name = "gridreferencial";
             this.gridreferencial.NewRowEnterKeyMode = Telerik.WinControls.UI.RadGridViewNewRowEnterKeyMode.EnterMovesToNextCell;
-            this.gridreferencial.Size = new System.Drawing.Size(484, 100);
+            this.gridreferencial.Size = new System.Drawing.Size(323, 65);
             this.gridreferencial.TabIndex = 21;
             this.gridreferencial.TabStop = false;
             this.gridreferencial.Text = "radGridView1";
@@ -1643,10 +1533,8 @@
             // 
             // PopupProveedor
             // 
-            this.PopupProveedor.Location = new System.Drawing.Point(1368, 235);
-            this.PopupProveedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PopupProveedor.Location = new System.Drawing.Point(912, 153);
             this.PopupProveedor.Name = "PopupProveedor";
-            this.PopupProveedor.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             // 
             // PopupProveedor.PanelContainer
             // 
@@ -1657,28 +1545,25 @@
             this.PopupProveedor.PanelContainer.Controls.Add(this.radLabel38);
             this.PopupProveedor.PanelContainer.Controls.Add(this.radPanel3);
             this.PopupProveedor.PanelContainer.Dock = System.Windows.Forms.DockStyle.None;
-            this.PopupProveedor.PanelContainer.Location = new System.Drawing.Point(6, 6);
-            this.PopupProveedor.PanelContainer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PopupProveedor.PanelContainer.Size = new System.Drawing.Size(482, 128);
-            this.PopupProveedor.Size = new System.Drawing.Size(494, 145);
+            this.PopupProveedor.PanelContainer.Location = new System.Drawing.Point(4, 4);
+            this.PopupProveedor.PanelContainer.Size = new System.Drawing.Size(321, 83);
+            this.PopupProveedor.Size = new System.Drawing.Size(329, 94);
             this.PopupProveedor.TabIndex = 84;
             this.PopupProveedor.Visible = false;
             // 
             // txtRazonSoProv
             // 
-            this.txtRazonSoProv.Location = new System.Drawing.Point(242, 54);
-            this.txtRazonSoProv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtRazonSoProv.Location = new System.Drawing.Point(161, 35);
             this.txtRazonSoProv.Name = "txtRazonSoProv";
-            this.txtRazonSoProv.Size = new System.Drawing.Size(230, 27);
+            this.txtRazonSoProv.Size = new System.Drawing.Size(153, 20);
             this.txtRazonSoProv.TabIndex = 18;
             this.txtRazonSoProv.Tag = "codigo";
             // 
             // radLabel36
             // 
-            this.radLabel36.Location = new System.Drawing.Point(4, 91);
-            this.radLabel36.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel36.Location = new System.Drawing.Point(3, 59);
             this.radLabel36.Name = "radLabel36";
-            this.radLabel36.Size = new System.Drawing.Size(82, 26);
+            this.radLabel36.Size = new System.Drawing.Size(56, 18);
             this.radLabel36.TabIndex = 16;
             this.radLabel36.Text = "Domicilio:";
             // 
@@ -1686,28 +1571,25 @@
             // 
             this.txtDomiProv.BackColor = System.Drawing.Color.LightGray;
             this.txtDomiProv.ForeColor = System.Drawing.Color.White;
-            this.txtDomiProv.Location = new System.Drawing.Point(96, 88);
-            this.txtDomiProv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDomiProv.Location = new System.Drawing.Point(64, 57);
             this.txtDomiProv.Name = "txtDomiProv";
-            this.txtDomiProv.Size = new System.Drawing.Size(375, 27);
+            this.txtDomiProv.Size = new System.Drawing.Size(250, 20);
             this.txtDomiProv.TabIndex = 8;
             this.txtDomiProv.Tag = "txtCantidad";
             // 
             // txtCodigoProv
             // 
-            this.txtCodigoProv.Location = new System.Drawing.Point(96, 55);
-            this.txtCodigoProv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCodigoProv.Location = new System.Drawing.Point(64, 36);
             this.txtCodigoProv.Name = "txtCodigoProv";
-            this.txtCodigoProv.Size = new System.Drawing.Size(136, 27);
+            this.txtCodigoProv.Size = new System.Drawing.Size(91, 20);
             this.txtCodigoProv.TabIndex = 4;
             this.txtCodigoProv.Tag = "codigo";
             // 
             // radLabel38
             // 
-            this.radLabel38.Location = new System.Drawing.Point(14, 55);
-            this.radLabel38.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel38.Location = new System.Drawing.Point(9, 36);
             this.radLabel38.Name = "radLabel38";
-            this.radLabel38.Size = new System.Drawing.Size(66, 26);
+            this.radLabel38.Size = new System.Drawing.Size(45, 18);
             this.radLabel38.TabIndex = 10;
             this.radLabel38.Text = "Codigo:";
             // 
@@ -1718,9 +1600,8 @@
             this.radPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.radPanel3.ForeColor = System.Drawing.Color.White;
             this.radPanel3.Location = new System.Drawing.Point(0, 0);
-            this.radPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radPanel3.Name = "radPanel3";
-            this.radPanel3.Size = new System.Drawing.Size(482, 49);
+            this.radPanel3.Size = new System.Drawing.Size(321, 32);
             this.radPanel3.TabIndex = 0;
             this.radPanel3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1729,20 +1610,18 @@
             this.radLabel39.BackColor = System.Drawing.Color.SteelBlue;
             this.radLabel39.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel39.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.radLabel39.Location = new System.Drawing.Point(14, 9);
-            this.radLabel39.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel39.Location = new System.Drawing.Point(9, 6);
             this.radLabel39.Name = "radLabel39";
-            this.radLabel39.Size = new System.Drawing.Size(107, 30);
+            this.radLabel39.Size = new System.Drawing.Size(72, 21);
             this.radLabel39.TabIndex = 4;
             this.radLabel39.Text = "Proveedor";
             this.radLabel39.ThemeName = "ControlDefault";
             // 
             // radLabel35
             // 
-            this.radLabel35.Location = new System.Drawing.Point(1382, 105);
-            this.radLabel35.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radLabel35.Location = new System.Drawing.Point(921, 68);
             this.radLabel35.Name = "radLabel35";
-            this.radLabel35.Size = new System.Drawing.Size(204, 26);
+            this.radLabel35.Size = new System.Drawing.Size(137, 18);
             this.radLabel35.TabIndex = 82;
             this.radLabel35.Text = "Documento Relacionados:";
             // 
@@ -1750,10 +1629,9 @@
             // 
             this.btnModificarPeso.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarPeso.Image")));
             this.btnModificarPeso.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnModificarPeso.Location = new System.Drawing.Point(1268, 808);
-            this.btnModificarPeso.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnModificarPeso.Location = new System.Drawing.Point(845, 525);
             this.btnModificarPeso.Name = "btnModificarPeso";
-            this.btnModificarPeso.Size = new System.Drawing.Size(36, 35);
+            this.btnModificarPeso.Size = new System.Drawing.Size(24, 23);
             this.btnModificarPeso.TabIndex = 83;
             this.btnModificarPeso.TabStop = false;
             this.btnModificarPeso.ThemeName = "Office2013Light";
@@ -1764,10 +1642,9 @@
             // 
             this.btnAgregarReferencial.Image = global::Fac.UI.Win.Properties.Resources.add1;
             this.btnAgregarReferencial.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAgregarReferencial.Location = new System.Drawing.Point(1870, 135);
-            this.btnAgregarReferencial.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAgregarReferencial.Location = new System.Drawing.Point(1247, 88);
             this.btnAgregarReferencial.Name = "btnAgregarReferencial";
-            this.btnAgregarReferencial.Size = new System.Drawing.Size(36, 38);
+            this.btnAgregarReferencial.Size = new System.Drawing.Size(24, 25);
             this.btnAgregarReferencial.TabIndex = 81;
             this.btnAgregarReferencial.TabStop = false;
             this.btnAgregarReferencial.ThemeName = "Office2013Light";
@@ -1775,10 +1652,10 @@
             // 
             // fabcGuiasTransporte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(2067, 826);
+            this.ClientSize = new System.Drawing.Size(939, 508);
             this.Controls.Add(this.btnAgregarReferencial);
             this.Controls.Add(this.PopupProveedor);
             this.Controls.Add(this.panelCabecera);
@@ -1797,8 +1674,8 @@
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.panelDestino);
             this.Controls.Add(this.rgpAnularGuiaRemision);
-            this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            //this.Name= "fabcGuiasTransporte";
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            //this.Name = "fabcGuiasTransporte";
             // 
             // 
             // 

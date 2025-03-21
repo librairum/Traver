@@ -263,6 +263,7 @@ namespace Fac.UI.Win
 
                     CreateGridColumn(gridControl, "flag", "FAC66FLAGDESEXTRA", 0, "", 70, true, false, false);
                     CreateGridColumn(gridControl, "Descrip.Defecto", "FAC66DESXDEFECTO", 0, "", 70, true, false, false);
+                    CreateGridColumn(gridControl, "flagdeisi", "FAC66FLAGPROVEEDORDEISI", 0, "", 70, true, false, false);
                     var MOTIVODETRASLADO = Fac_GuiaTransporteLogic.Instance.Spu_Fact_Help_FAC66_MOTIVODETRASLADO("FAC66CODMOTIVO",
                         "*");
                     gridControl.DataSource = MOTIVODETRASLADO;
@@ -924,7 +925,7 @@ namespace Fac.UI.Win
             {
                 case enmAyuda.enmBuscaTipArt:
                     this.Result = Util.GetCurrentCellText(gridControl.CurrentRow, "glo01codigo") + "|" +
-                                   Util.GetCurrentCellText(gridControl.CurrentRow, "glo01descripcion");                    
+                                   Util.GetCurrentCellText(gridControl.CurrentRow, "glo01descripcion");
                     break;
 
 
@@ -938,14 +939,14 @@ namespace Fac.UI.Win
                     break;
                 case enmAyuda.enmBuscaTipDoc:
                     this.Result = Util.GetCurrentCellText(gridControl.CurrentRow, "FAC01COD") + "|" +
-                                   Util.GetCurrentCellText(gridControl.CurrentRow, "FAC01DESC");                    
+                                   Util.GetCurrentCellText(gridControl.CurrentRow, "FAC01DESC");
                     break;
-                    //CATALOGO NRO D-37
+                //CATALOGO NRO D-37
                 case enmAyuda.enmCatalogoD37:
                     this.Result = Util.GetCurrentCellText(gridControl.CurrentRow, "glo04Codigo") + "|" +
-                                           Util.GetCurrentCellText(gridControl.CurrentRow, "glo04descripcion");   
+                                           Util.GetCurrentCellText(gridControl.CurrentRow, "glo04descripcion");
                     break;
-                    //CATALOGO61
+                //CATALOGO61
                 case enmAyuda.enmCatalogo61:
                     this.Result = Util.GetCurrentCellText(gridControl.CurrentRow, "glo04Codigo") + "|" +
                                            Util.GetCurrentCellText(gridControl.CurrentRow, "glo04descripcion");
@@ -953,88 +954,92 @@ namespace Fac.UI.Win
 
                 case enmAyuda.enmBuscaPlantilla:
                     this.Result = Util.GetCurrentCellText(gridControl.CurrentRow, "FAC02COD") + "|" +
-                            Util.GetCurrentCellText(gridControl.CurrentRow, "FAC02DESC");  
+                            Util.GetCurrentCellText(gridControl.CurrentRow, "FAC02DESC");
                     break;
 
-        
+
                 case enmAyuda.enmSubPlantilla:
-                   listaGuiaTransp = new List<GuiaTransporte>();
-                   guiaTransporte = new GuiaTransporte();
-                   guiaTransporte.FAC03COD = gridControl.CurrentRow.Cells["FAC03COD"].Value.ToString();
-                   guiaTransporte.FAC02COD = gridControl.CurrentRow.Cells["FAC02COD"].Value.ToString();
-                   guiaTransporte.FAC03TIPART = gridControl.CurrentRow.Cells["FAC03TIPART"].Value.ToString();
-                   guiaTransporte.FAC01COD = gridControl.CurrentRow.Cells["FAC01COD"].Value.ToString();
-                   guiaTransporte.FAC03SERIEXDEF = gridControl.CurrentRow.Cells["FAC03SERIEXDEF"].Value.ToString();
-                   listaGuiaTransp.Add(guiaTransporte);
-                   this.Result = listaGuiaTransp;
-                   break;
-                    //NUEVO FAC89SUBPLANTILLA
+                    listaGuiaTransp = new List<GuiaTransporte>();
+                    guiaTransporte = new GuiaTransporte();
+                    guiaTransporte.FAC03COD = gridControl.CurrentRow.Cells["FAC03COD"].Value.ToString();
+                    guiaTransporte.FAC02COD = gridControl.CurrentRow.Cells["FAC02COD"].Value.ToString();
+                    guiaTransporte.FAC03TIPART = gridControl.CurrentRow.Cells["FAC03TIPART"].Value.ToString();
+                    guiaTransporte.FAC01COD = gridControl.CurrentRow.Cells["FAC01COD"].Value.ToString();
+                    guiaTransporte.FAC03SERIEXDEF = gridControl.CurrentRow.Cells["FAC03SERIEXDEF"].Value.ToString();
+                    listaGuiaTransp.Add(guiaTransporte);
+                    this.Result = listaGuiaTransp;
+                    break;
+                //NUEVO FAC89SUBPLANTILLA
 
                 case enmAyuda.enmProductoSunat:
-                   if (this.gridControl.CurrentRow.Cells["Codigo"].Value == null) return;
-                   this.Result = this.gridControl.CurrentRow.Cells["Codigo"].Value.ToString() + "|" +
-                                 this.gridControl.CurrentRow.Cells["Descripcion"].Value.ToString() + "|" +
-                                 this.gridControl.CurrentRow.Cells["SegmentoCodigo"].Value.ToString() + "|" +
-                                 this.gridControl.CurrentRow.Cells["SegmentoDescripcion"].Value.ToString() + "|" +
-                                  this.gridControl.CurrentRow.Cells["FamiliaCodigo"].Value.ToString() + "|" +
-                                  this.gridControl.CurrentRow.Cells["FamiliaDescripcion"].Value.ToString();
-                   break;
+                    if (this.gridControl.CurrentRow.Cells["Codigo"].Value == null) return;
+                    this.Result = this.gridControl.CurrentRow.Cells["Codigo"].Value.ToString() + "|" +
+                                  this.gridControl.CurrentRow.Cells["Descripcion"].Value.ToString() + "|" +
+                                  this.gridControl.CurrentRow.Cells["SegmentoCodigo"].Value.ToString() + "|" +
+                                  this.gridControl.CurrentRow.Cells["SegmentoDescripcion"].Value.ToString() + "|" +
+                                   this.gridControl.CurrentRow.Cells["FamiliaCodigo"].Value.ToString() + "|" +
+                                   this.gridControl.CurrentRow.Cells["FamiliaDescripcion"].Value.ToString();
+                    break;
 
 
                 case enmAyuda.enmVehxTranporYchofer:
-                   guiaTransporte = new GuiaTransporte();
-                   guiaTransporte.FAC34TRAYCODIGO = gridControl.CurrentRow.Cells["FAC69codigo"].Value.ToString();
-                   guiaTransporte.FAC34TRAYMARCA = gridControl.CurrentRow.Cells["FAC69MarcaRemolque"].Value.ToString();
-                   guiaTransporte.FAC34TRAYMARCASR = gridControl.CurrentRow.Cells["FAC69MarcaSemiRemolque"].Value.ToString();
-                   guiaTransporte.FAC34TRAYPLACA = gridControl.CurrentRow.Cells["FAC69PlacaRemolque"].Value.ToString();
-                   guiaTransporte.FAC34TRAYPLACASR = gridControl.CurrentRow.Cells["FAC69PlacaSemiRemolque"].Value.ToString();
-                   this.Result = guiaTransporte;        
-                   break;
+                    guiaTransporte = new GuiaTransporte();
+                    guiaTransporte.FAC34TRAYCODIGO = gridControl.CurrentRow.Cells["FAC69codigo"].Value.ToString();
+                    guiaTransporte.FAC34TRAYMARCA = gridControl.CurrentRow.Cells["FAC69MarcaRemolque"].Value.ToString();
+                    guiaTransporte.FAC34TRAYMARCASR = gridControl.CurrentRow.Cells["FAC69MarcaSemiRemolque"].Value.ToString();
+                    guiaTransporte.FAC34TRAYPLACA = gridControl.CurrentRow.Cells["FAC69PlacaRemolque"].Value.ToString();
+                    guiaTransporte.FAC34TRAYPLACASR = gridControl.CurrentRow.Cells["FAC69PlacaSemiRemolque"].Value.ToString();
+                    this.Result = guiaTransporte;
+                    break;
 
                 case enmAyuda.enmEstablecimientoxSerie:
-                   this.Result = Util.GetCurrentCellText(this.gridControl.CurrentRow, "Glo03codigo") + "|" +
-                               Util.GetCurrentCellText(this.gridControl.CurrentRow, "Glo03Descripcion");
-                   break;
+                    this.Result = Util.GetCurrentCellText(this.gridControl.CurrentRow, "Glo03codigo") + "|" +
+                                Util.GetCurrentCellText(this.gridControl.CurrentRow, "Glo03Descripcion");
+                    break;
 
-                case enmAyuda.enmTransportista:                   
-                   guiaTransporte = new GuiaTransporte();
-                   guiaTransporte.FAC34CHOFCOD= gridControl.CurrentRow.Cells["FAC60Codigo"].Value.ToString();
-                   guiaTransporte.FAC34CHOFNOMBRE = gridControl.CurrentRow.Cells["FAC60Nombre"].Value.ToString();
-                   this.Result = guiaTransporte;
-                   
-                   break;
+                case enmAyuda.enmTransportista:
+                    guiaTransporte = new GuiaTransporte();
+                    guiaTransporte.FAC34CHOFCOD = gridControl.CurrentRow.Cells["FAC60Codigo"].Value.ToString();
+                    guiaTransporte.FAC34CHOFNOMBRE = gridControl.CurrentRow.Cells["FAC60Nombre"].Value.ToString();
+                    this.Result = guiaTransporte;
+
+                    break;
                 case enmAyuda.enmchoferxtransportistas:
-                   guiaTransporte = new GuiaTransporte();
-                   guiaTransporte.FAC34CHOFCOD = gridControl.CurrentRow.Cells["FAC61Codigo"].Value.ToString();
-                   guiaTransporte.FAC34CHOFNOMBRE = gridControl.CurrentRow.Cells["FAC61Nombres"].Value.ToString();
-                   guiaTransporte.FAC34CHOFLICCONDUCIR = gridControl.CurrentRow.Cells["FAC61Brevete"].Value.ToString();
-                   this.Result = guiaTransporte;
-                    
-                        
-                   break;
-                case enmAyuda.enmDestinatario:
-                   guiaTransporte = new GuiaTransporte();                    
-                   guiaTransporte.FAC01COD = gridControl.CurrentRow.Cells["ccm02cod"].Value.ToString();
-                   guiaTransporte.FAC34DESTDIRECCION = gridControl.CurrentRow.Cells["ccm02nom"].Value.ToString();
+                    guiaTransporte = new GuiaTransporte();
+                    guiaTransporte.FAC34CHOFCOD = gridControl.CurrentRow.Cells["FAC61Codigo"].Value.ToString();
+                    guiaTransporte.FAC34CHOFNOMBRE = gridControl.CurrentRow.Cells["FAC61Nombres"].Value.ToString();
+                    guiaTransporte.FAC34CHOFLICCONDUCIR = gridControl.CurrentRow.Cells["FAC61Brevete"].Value.ToString();
+                    this.Result = guiaTransporte;
 
-                   this.Result = guiaTransporte;
-                   break;
+
+                    break;
+                case enmAyuda.enmDestinatario:
+                    guiaTransporte = new GuiaTransporte();
+                    guiaTransporte.FAC01COD = gridControl.CurrentRow.Cells["ccm02cod"].Value.ToString();
+                    guiaTransporte.FAC34DESTDIRECCION = gridControl.CurrentRow.Cells["ccm02nom"].Value.ToString();
+
+                    this.Result = guiaTransporte;
+                    break;
                 case enmAyuda.enmdestinaEstab:
-                    
-                   guiaTransporte = new GuiaTransporte();
-                   guiaTransporte.FAC34DESCODESTAB= gridControl.CurrentRow.Cells["FAC65CODEST"].Value.ToString();
-                   guiaTransporte.FAC34DESDESESTAB = gridControl.CurrentRow.Cells["FAC65DESEST"].Value.ToString();
+
+                    guiaTransporte = new GuiaTransporte();
+                    guiaTransporte.FAC34DESCODESTAB = gridControl.CurrentRow.Cells["FAC65CODEST"].Value.ToString();
+                    guiaTransporte.FAC34DESDESESTAB = gridControl.CurrentRow.Cells["FAC65DESEST"].Value.ToString();
                     guiaTransporte.FAC34DESTDIRECCION = gridControl.CurrentRow.Cells["FAC65DIRECCION"].Value.ToString();
 
                     this.Result = guiaTransporte;
-                   break;
+                    break;
                 case enmAyuda.enmMotvioDeTraslado:
-                    
-                        guiaTransporte = new GuiaTransporte();
+
+                    guiaTransporte = new GuiaTransporte();
                     guiaTransporte.FAC34MOTRASLCOD = gridControl.CurrentRow.Cells["FAC66CODMOTIVO"].Value.ToString();
-                    guiaTransporte.FAC34MOTRASLDESC  = gridControl.CurrentRow.Cells["FAC66DESMOTIVO"].Value.ToString();
+                    guiaTransporte.FAC34MOTRASLDESC = gridControl.CurrentRow.Cells["FAC66DESMOTIVO"].Value.ToString();
                     //flag de traslado
                     guiaTransporte.FAC66FLAGDESEXTRA = gridControl.CurrentRow.Cells["FAC66FLAGDESEXTRA"].Value.ToString();
+                   
+
+                    guiaTransporte.FAC66FLAGPROVEEDORDEISI = Util.GetCurrentCellText(gridControl.CurrentRow, "FAC66FLAGPROVEEDORDEISI");
+                    
                     this.Result = guiaTransporte;
                                              
                    break;

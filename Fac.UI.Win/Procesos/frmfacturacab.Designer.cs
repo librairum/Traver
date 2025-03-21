@@ -344,7 +344,7 @@
             // radCommandBar1
             // 
             this.radCommandBar1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radCommandBar1.Size = new System.Drawing.Size(926, 64);
+            this.radCommandBar1.Size = new System.Drawing.Size(1191, 64);
             this.radCommandBar1.TabIndex = 1;
             this.radCommandBar1.TabStop = false;
             // 
@@ -357,7 +357,7 @@
             this.rpvFactura.Location = new System.Drawing.Point(0, 64);
             this.rpvFactura.Name = "rpvFactura";
             this.rpvFactura.SelectedPage = this.pvGenerales;
-            this.rpvFactura.Size = new System.Drawing.Size(926, 208);
+            this.rpvFactura.Size = new System.Drawing.Size(1191, 208);
             this.rpvFactura.TabIndex = 1;
             this.rpvFactura.ThemeName = "Office2013Light";
             // 
@@ -368,7 +368,7 @@
             this.pvGenerales.ItemSize = new System.Drawing.SizeF(103F, 27F);
             this.pvGenerales.Location = new System.Drawing.Point(5, 31);
             this.pvGenerales.Name = "pvGenerales";
-            this.pvGenerales.Size = new System.Drawing.Size(916, 172);
+            this.pvGenerales.Size = new System.Drawing.Size(1181, 172);
             this.pvGenerales.Text = "Datos Generales";
             // 
             // rpGeneralesDatos
@@ -439,7 +439,7 @@
             this.rpGeneralesDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rpGeneralesDatos.Location = new System.Drawing.Point(0, 0);
             this.rpGeneralesDatos.Name = "rpGeneralesDatos";
-            this.rpGeneralesDatos.Size = new System.Drawing.Size(916, 172);
+            this.rpGeneralesDatos.Size = new System.Drawing.Size(1181, 172);
             this.rpGeneralesDatos.TabIndex = 6;
             this.rpGeneralesDatos.Paint += new System.Windows.Forms.PaintEventHandler(this.rpGeneralesDatos_Paint);
             // 
@@ -1714,7 +1714,7 @@
             gridViewTextBoxColumn1});
             this.gridControlDetalle.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.gridControlDetalle.Name = "gridControlDetalle";
-            this.gridControlDetalle.Size = new System.Drawing.Size(926, 187);
+            this.gridControlDetalle.Size = new System.Drawing.Size(1191, 187);
             this.gridControlDetalle.TabIndex = 5;
             this.gridControlDetalle.Text = "radGridView1";
             this.gridControlDetalle.CellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.gridControlDetalle_CellFormatting);
@@ -1734,7 +1734,7 @@
             this.rpDetalle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rpDetalle.Location = new System.Drawing.Point(0, 304);
             this.rpDetalle.Name = "rpDetalle";
-            this.rpDetalle.Size = new System.Drawing.Size(926, 187);
+            this.rpDetalle.Size = new System.Drawing.Size(1191, 187);
             this.rpDetalle.TabIndex = 10;
             // 
             // rpBotones
@@ -1747,7 +1747,7 @@
             this.rpBotones.Dock = System.Windows.Forms.DockStyle.Top;
             this.rpBotones.Location = new System.Drawing.Point(0, 272);
             this.rpBotones.Name = "rpBotones";
-            this.rpBotones.Size = new System.Drawing.Size(926, 32);
+            this.rpBotones.Size = new System.Drawing.Size(1191, 32);
             this.rpBotones.TabIndex = 69;
             // 
             // btnCancelar
@@ -1755,7 +1755,7 @@
             this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(756, 0);
+            this.btnCancelar.Location = new System.Drawing.Point(1021, 0);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(34, 32);
             this.btnCancelar.TabIndex = 17;
@@ -1768,7 +1768,7 @@
             this.btnGrabar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnGrabar.Image = ((System.Drawing.Image)(resources.GetObject("btnGrabar.Image")));
             this.btnGrabar.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnGrabar.Location = new System.Drawing.Point(790, 0);
+            this.btnGrabar.Location = new System.Drawing.Point(1055, 0);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(34, 32);
             this.btnGrabar.TabIndex = 16;
@@ -1781,7 +1781,7 @@
             this.btnNuevoGuia.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnNuevoGuia.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoGuia.Image")));
             this.btnNuevoGuia.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnNuevoGuia.Location = new System.Drawing.Point(824, 0);
+            this.btnNuevoGuia.Location = new System.Drawing.Point(1089, 0);
             this.btnNuevoGuia.Name = "btnNuevoGuia";
             this.btnNuevoGuia.Size = new System.Drawing.Size(34, 32);
             this.btnNuevoGuia.TabIndex = 14;
@@ -1794,7 +1794,7 @@
             this.btnEditar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEditar.Location = new System.Drawing.Point(858, 0);
+            this.btnEditar.Location = new System.Drawing.Point(1123, 0);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(34, 32);
             this.btnEditar.TabIndex = 15;
@@ -1806,7 +1806,7 @@
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAdd.Location = new System.Drawing.Point(892, 0);
+            this.btnAdd.Location = new System.Drawing.Point(1157, 0);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(34, 32);
             this.btnAdd.TabIndex = 13;
@@ -1818,7 +1818,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(926, 491);
+            this.ClientSize = new System.Drawing.Size(1191, 491);
             this.Controls.Add(this.rpDetalle);
             this.Controls.Add(this.rpBotones);
             this.Controls.Add(this.rpvFactura);

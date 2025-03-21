@@ -979,9 +979,9 @@ namespace Fac.UI.Win
 
         public class TransportEquipment
         {
-            public List<IDOnly> ID { get; set; }
-            public List<IDOnlyA> AttachedTransportEquipment { get; set; }
+            public List<IDOnly> ID { get; set; }            
             public List<ApplicableTransportMeans> ApplicableTransportMeans { get; set; }
+            public List<IDOnlyA> AttachedTransportEquipment { get; set; }
         }
         public class ApplicableTransportMeans
         {
@@ -18704,14 +18704,6 @@ namespace Fac.UI.Win
                 idtransport._ = dt.Rows[0]["Shipment_TransportHandlingUnit_TransportEquipment_ID__"].ToString();
                 transportequipment.ID.Add(idtransport);
 
-                //PLACA SECUNDARIA
-                transportequipment.AttachedTransportEquipment = new List<IDOnlyA>();
-                IDOnlyA IDONLYA = new IDOnlyA();
-                transportequipment.AttachedTransportEquipment.Add(IDONLYA);
-                IDONLYA.ID = new List<IDOnly>();
-                IDOnly OnlyID = new IDOnly();
-                OnlyID._ = dt.Rows[0]["Shipment_TransportHandlingUnit_TransportEquipment_AttachedTransportEquipment_ID__"].ToString();
-                IDONLYA.ID.Add(OnlyID);
 
                 //TUCE - TARJETA UNICA DE CIRCULACION VEHICULAR
                 transportequipment.ApplicableTransportMeans = new List<ApplicableTransportMeans>();
@@ -18722,6 +18714,17 @@ namespace Fac.UI.Win
                 RegistrationNationalityID RegistrationNationalityIDclass = new RegistrationNationalityID();
                 RegistrationNationalityIDclass._ = dt.Rows[0]["TransportHandlingUnit_TransportEquipment_ApplicableTransportMeans_RegistrationNationalityID__"].ToString();
                 ApplicableTransportMeansclass.RegistrationNationalityID.Add(RegistrationNationalityIDclass);
+
+                //PLACA SECUNDARIA
+                transportequipment.AttachedTransportEquipment = new List<IDOnlyA>();
+                IDOnlyA IDONLYA = new IDOnlyA();
+                transportequipment.AttachedTransportEquipment.Add(IDONLYA);
+                IDONLYA.ID = new List<IDOnly>();
+                IDOnly OnlyID = new IDOnly();
+                OnlyID._ = dt.Rows[0]["Shipment_TransportHandlingUnit_TransportEquipment_AttachedTransportEquipment_ID__"].ToString();
+                IDONLYA.ID.Add(OnlyID);
+
+             
 
 
                 //END TUCE
@@ -21327,6 +21330,8 @@ namespace Fac.UI.Win
 
                             txtcodmotivo.Text = ((GuiaTransporte)frm.Result).FAC34MOTRASLCOD;
                         txtmotivoDes.Text = ((GuiaTransporte)frm.Result).FAC34MOTRASLDESC;
+                        //string flagprovDeisi = ((GuiaTransporte)frm.Result).fac34
+                        //bool activarProveedorDeisi = "S" == 
 
                         if (txtcodmotivo.Text == "03")
                         {

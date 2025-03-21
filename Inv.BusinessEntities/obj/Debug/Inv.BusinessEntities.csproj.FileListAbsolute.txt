@@ -118,3 +118,11 @@ D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.BusinessEntities\b
 D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.BusinessEntities\obj\Debug\Inv.BusinessEntities.dll
 D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.BusinessEntities\obj\Debug\Inv.BusinessEntities.pdb
 D:\PROYECTOS_29082024\LOGISTICA\Traver_repositorio\Traver\Inv.BusinessEntities\obj\Debug\Inv.BusinessEntities.csprojResolveAssemblyReference.cache
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.BusinessEntities\bin\Debug\Inv.BusinessEntities.dll
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.BusinessEntities\bin\Debug\Inv.BusinessEntities.pdb
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.BusinessEntities\bin\Debug\BLToolkit.4.dll
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.BusinessEntities\obj\Debug\Inv.BusinessEntities.csproj.AssemblyReference.cache
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.BusinessEntities\obj\Debug\Inv.BusinessEntities.csproj.CoreCompileInputs.cache
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.BusinessEntities\obj\Debug\Inv.Busi.30B75AD4.Up2Date
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.BusinessEntities\obj\Debug\Inv.BusinessEntities.dll
+D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.BusinessEntities\obj\Debug\Inv.BusinessEntities.pdb
