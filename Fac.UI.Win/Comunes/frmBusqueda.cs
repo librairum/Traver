@@ -1096,9 +1096,10 @@ namespace Fac.UI.Win
                     case enmAyuda.enmEmpresa:
                    guiaTransporte = new GuiaTransporte();
                    guiaTransporte.FAC34CODEMP = gridControl.CurrentRow.Cells[0].Value.ToString();
-                   guiaTransporte.FAC34DESCODEMP = gridControl.CurrentRow.Cells[0].Value.ToString();
+                    guiaTransporte.FAC34DESCODEMP = gridControl.CurrentRow.Cells[1].Value.ToString();
+                    //guiaTransporte.FAC34DESCODEMP = gridControl.CurrentRow.Cells[0].Value.ToString();
 
-                   this.Result = guiaTransporte;
+                    this.Result = guiaTransporte;
                    break;
                 case enmAyuda.enmEstablecimientos:
                    guiaTransporte = new GuiaTransporte();

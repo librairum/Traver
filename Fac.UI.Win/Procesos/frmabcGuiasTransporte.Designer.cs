@@ -61,17 +61,17 @@
             this.txtrucorigen = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             this.panelDestino = new Telerik.WinControls.UI.RadPanel();
-            this.txtotros = new Telerik.WinControls.UI.RadTextBox();
             this.txtdireccDestino = new Telerik.WinControls.UI.RadTextBox();
             this.txtdestinoDes = new Telerik.WinControls.UI.RadTextBox();
-            this.txtmotivoDes = new Telerik.WinControls.UI.RadTextBox();
-            this.radLabel18 = new Telerik.WinControls.UI.RadLabel();
             this.txtcoddestino = new Telerik.WinControls.UI.RadTextBox();
             this.txtrucdestinnoDes = new Telerik.WinControls.UI.RadTextBox();
-            this.txtcodmotivo = new Telerik.WinControls.UI.RadTextBox();
             this.txtrucdestino = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
+            this.txtotros = new Telerik.WinControls.UI.RadTextBox();
+            this.txtmotivoDes = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel18 = new Telerik.WinControls.UI.RadLabel();
+            this.txtcodmotivo = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel15 = new Telerik.WinControls.UI.RadLabel();
             this.txtplacasemiremolque = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
@@ -188,17 +188,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelDestino)).BeginInit();
             this.panelDestino.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtotros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdireccDestino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdestinoDes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmotivoDes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtcoddestino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtrucdestinnoDes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtcodmotivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtrucdestino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtotros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmotivoDes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtcodmotivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtplacasemiremolque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
@@ -641,16 +641,6 @@
             this.panelDestino.Size = new System.Drawing.Size(401, 146);
             this.panelDestino.TabIndex = 2;
             // 
-            // txtotros
-            // 
-            this.txtotros.BackColor = System.Drawing.Color.LightGray;
-            this.txtotros.ForeColor = System.Drawing.Color.White;
-            this.txtotros.Location = new System.Drawing.Point(94, 29);
-            this.txtotros.Name = "txtotros";
-            this.txtotros.Size = new System.Drawing.Size(298, 20);
-            this.txtotros.TabIndex = 15;
-            this.txtotros.Tag = "";
-            // 
             // txtdireccDestino
             // 
             this.txtdireccDestino.BackColor = System.Drawing.Color.LightGray;
@@ -674,26 +664,6 @@
             this.txtdestinoDes.TabStop = false;
             this.txtdestinoDes.Tag = "txtcoddestino";
             // 
-            // txtmotivoDes
-            // 
-            this.txtmotivoDes.BackColor = System.Drawing.Color.LightGray;
-            this.txtmotivoDes.Enabled = false;
-            this.txtmotivoDes.ForeColor = System.Drawing.Color.White;
-            this.txtmotivoDes.Location = new System.Drawing.Point(127, 6);
-            this.txtmotivoDes.Name = "txtmotivoDes";
-            this.txtmotivoDes.Size = new System.Drawing.Size(265, 20);
-            this.txtmotivoDes.TabIndex = 14;
-            this.txtmotivoDes.TabStop = false;
-            this.txtmotivoDes.Tag = "txtcodmotivo";
-            // 
-            // radLabel18
-            // 
-            this.radLabel18.Location = new System.Drawing.Point(15, 10);
-            this.radLabel18.Name = "radLabel18";
-            this.radLabel18.Size = new System.Drawing.Size(47, 18);
-            this.radLabel18.TabIndex = 6;
-            this.radLabel18.Text = "Motivo :";
-            // 
             // txtcoddestino
             // 
             this.txtcoddestino.Location = new System.Drawing.Point(92, 100);
@@ -715,16 +685,7 @@
             this.txtrucdestinnoDes.TabIndex = 10;
             this.txtrucdestinnoDes.TabStop = false;
             this.txtrucdestinnoDes.Tag = "txtrucdestino";
-            // 
-            // txtcodmotivo
-            // 
-            this.txtcodmotivo.Location = new System.Drawing.Point(93, 6);
-            this.txtcodmotivo.Name = "txtcodmotivo";
-            this.txtcodmotivo.Size = new System.Drawing.Size(34, 20);
-            this.txtcodmotivo.TabIndex = 14;
-            this.txtcodmotivo.Tag = "codigo";
-            this.txtcodmotivo.TextChanged += new System.EventHandler(this.txtcodmotivo_TextChanged);
-            this.txtcodmotivo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtcodmotivo_KeyDown);
+            this.txtrucdestinnoDes.TextChanged += new System.EventHandler(this.txtrucdestinnoDes_TextChanged);
             // 
             // txtrucdestino
             // 
@@ -735,6 +696,7 @@
             this.txtrucdestino.Tag = "codigo";
             this.txtrucdestino.TextChanged += new System.EventHandler(this.txtrucdestino_TextChanged);
             this.txtrucdestino.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtrucdestino_KeyDown);
+            this.txtrucdestino.Leave += new System.EventHandler(this.txtrucdestino_Leave);
             // 
             // radLabel11
             // 
@@ -751,6 +713,46 @@
             this.radLabel13.Size = new System.Drawing.Size(72, 18);
             this.radLabel13.TabIndex = 10;
             this.radLabel13.Text = "Destinatario :";
+            // 
+            // txtotros
+            // 
+            this.txtotros.BackColor = System.Drawing.Color.LightGray;
+            this.txtotros.ForeColor = System.Drawing.Color.White;
+            this.txtotros.Location = new System.Drawing.Point(94, 29);
+            this.txtotros.Name = "txtotros";
+            this.txtotros.Size = new System.Drawing.Size(298, 20);
+            this.txtotros.TabIndex = 15;
+            this.txtotros.Tag = "";
+            // 
+            // txtmotivoDes
+            // 
+            this.txtmotivoDes.BackColor = System.Drawing.Color.LightGray;
+            this.txtmotivoDes.Enabled = false;
+            this.txtmotivoDes.ForeColor = System.Drawing.Color.White;
+            this.txtmotivoDes.Location = new System.Drawing.Point(127, 6);
+            this.txtmotivoDes.Name = "txtmotivoDes";
+            this.txtmotivoDes.Size = new System.Drawing.Size(265, 20);
+            this.txtmotivoDes.TabIndex = 14;
+            this.txtmotivoDes.TabStop = false;
+            this.txtmotivoDes.Tag = "txtcodmotivo";
+            // 
+            // radLabel18
+            // 
+            this.radLabel18.Location = new System.Drawing.Point(15, 10);
+            this.radLabel18.Name = "radLabel18";
+            this.radLabel18.Size = new System.Drawing.Size(47, 18);
+            this.radLabel18.TabIndex = 6;
+            this.radLabel18.Text = "Motivo :";
+            // 
+            // txtcodmotivo
+            // 
+            this.txtcodmotivo.Location = new System.Drawing.Point(93, 6);
+            this.txtcodmotivo.Name = "txtcodmotivo";
+            this.txtcodmotivo.Size = new System.Drawing.Size(34, 20);
+            this.txtcodmotivo.TabIndex = 14;
+            this.txtcodmotivo.Tag = "codigo";
+            this.txtcodmotivo.TextChanged += new System.EventHandler(this.txtcodmotivo_TextChanged);
+            this.txtcodmotivo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtcodmotivo_KeyDown);
             // 
             // radLabel15
             // 
@@ -1305,7 +1307,7 @@
             // rbtPrivado
             // 
             this.rbtPrivado.Location = new System.Drawing.Point(487, 25);
-            this.rbtPrivado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtPrivado.Margin = new System.Windows.Forms.Padding(2);
             this.rbtPrivado.Name = "rbtPrivado";
             this.rbtPrivado.Size = new System.Drawing.Size(58, 18);
             this.rbtPrivado.TabIndex = 41;
@@ -1315,7 +1317,7 @@
             // rbtPublico
             // 
             this.rbtPublico.Location = new System.Drawing.Point(543, 25);
-            this.rbtPublico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtPublico.Margin = new System.Windows.Forms.Padding(2);
             this.rbtPublico.Name = "rbtPublico";
             this.rbtPublico.Size = new System.Drawing.Size(57, 18);
             this.rbtPublico.TabIndex = 42;
@@ -1655,7 +1657,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(939, 508);
+            this.ClientSize = new System.Drawing.Size(1243, 559);
             this.Controls.Add(this.btnAgregarReferencial);
             this.Controls.Add(this.PopupProveedor);
             this.Controls.Add(this.panelCabecera);
@@ -1742,17 +1744,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelDestino)).EndInit();
             this.panelDestino.ResumeLayout(false);
             this.panelDestino.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtotros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdireccDestino)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdestinoDes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmotivoDes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtcoddestino)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtrucdestinnoDes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtcodmotivo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtrucdestino)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtotros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmotivoDes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtcodmotivo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtplacasemiremolque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();

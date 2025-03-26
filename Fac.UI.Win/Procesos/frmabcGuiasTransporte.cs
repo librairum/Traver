@@ -25,7 +25,7 @@ namespace Fac.UI.Win
         private bool cargoCabecera = false;
         private bool cargoDetalle = false;
 
-
+        private string esFlagProveedorDeisi = "";
         /*variable para enviar desde de Guia Tranporte a detalle Guia para Grabar o actualizar*/
         public static int valProveedor { get; set; }
         public static string rucdestino { get; set; }
@@ -20742,11 +20742,12 @@ namespace Fac.UI.Win
                 txtTipoOCCod.Text = guia.FAC34OCTIPCOD;
                 txtTipoOCDesc.Text = guia.FAC34OCTIPDES;
                 txtOCNumero.Text = guia.FAC34OCNRO;
-
+                
+                // 03: motivo Compras
                 if (txtcodmotivo.Text == "03")
                 {
-                    PopupProveedor.Visible = true;
-                   gridreferencial.Visible = false;
+                    //PopupProveedor.Visible = true;
+                    gridreferencial.Visible = false;
                     btnAgregarReferencial.Visible = false;
                     radLabel35.Visible = false;
 
@@ -20756,6 +20757,7 @@ namespace Fac.UI.Win
                     
                     
                 }
+                esFlagProveedorDeisi = guia.FAC66FLAGPROVEEDORDEISI;
 
                 // cargarGuiaDetalle();
             }
@@ -21160,6 +21162,7 @@ namespace Fac.UI.Win
             }
 
         }
+        
         void cmdHelp_Click(enmAyuda tipoAyuda)
         {
             List<GuiaTransporte> listaGuia;
@@ -21170,6 +21173,7 @@ namespace Fac.UI.Win
             string codchofer = txtcodchofer.Text.Trim();
             string codigoSeleccionado = string.Empty;
             string rucdestino = txtrucdestino.Text.Trim();
+            
             try
             {
                 switch (tipoAyuda)
@@ -21306,10 +21310,10 @@ namespace Fac.UI.Win
                         frm.Owner = this;
                         frm.ShowDialog();
                         if (frm.Result != null)
+                        {                           
                             txtrucdestino.Text = ((GuiaTransporte)frm.Result).FAC01COD;
-
-                        txtrucdestinnoDes.Text = ((GuiaTransporte)frm.Result).FAC34DESTDIRECCION;
-
+                            txtrucdestinnoDes.Text = ((GuiaTransporte)frm.Result).FAC34DESTDIRECCION;                                                       
+                        }
                         break;
                     case enmAyuda.enmdestinaEstab:
                         guiaTransportista = new GuiaTransporte();
@@ -21327,15 +21331,17 @@ namespace Fac.UI.Win
                         frm.Owner = this;
                         frm.ShowDialog();
                         if (frm.Result != null)
-
+                        { 
                             txtcodmotivo.Text = ((GuiaTransporte)frm.Result).FAC34MOTRASLCOD;
-                        txtmotivoDes.Text = ((GuiaTransporte)frm.Result).FAC34MOTRASLDESC;
+                            txtmotivoDes.Text = ((GuiaTransporte)frm.Result).FAC34MOTRASLDESC;
+                            esFlagProveedorDeisi =   ((GuiaTransporte)frm.Result).FAC66FLAGPROVEEDORDEISI;
+                        }
                         //string flagprovDeisi = ((GuiaTransporte)frm.Result).fac34
                         //bool activarProveedorDeisi = "S" == 
 
                         if (txtcodmotivo.Text == "03")
                         {
-                            PopupProveedor.Visible = true;
+                            //PopupProveedor.Visible = true;
                             gridreferencial.Visible = false;
                             btnAgregarReferencial.Visible = false;
                             radLabel35.Visible = false;
@@ -21364,21 +21370,64 @@ namespace Fac.UI.Win
 
                         break;
                     case enmAyuda.enmEstablecimientos:
-                        frm = new frmBusqueda(tipoAyuda);
+                        if (esFlagProveedorDeisi.Equals("N"))
+                        {
+                            //debe traer destino de otros proveedores
+                            guiaTransportista = new GuiaTransporte();
+                            guiaTransportista.FAC01COD = txtrucorigen.Text.Trim();
+                            frm = new frmBusqueda(enmAyuda.enmdestinaEstab, guiaTransportista);
+                            
+                        }
+                        else
+                        {
+                            //debe traer dato destino de proveedor minera deisi
+                            frm = new frmBusqueda(tipoAyuda);
+
+                        }
                         frm.Owner = this;
                         frm.ShowDialog();
                         if (frm.Result != null)
+                        { 
                             txtcodorigen.Text = ((GuiaTransporte)frm.Result).FAC34DESCODESTAB;
-                        txtorigenDes.Text = ((GuiaTransporte)frm.Result).FAC34DESDESESTAB;
-                        txtOriDirPartida.Text = ((GuiaTransporte)frm.Result).FAC34DESTDIRECCION;
+                            txtorigenDes.Text = ((GuiaTransporte)frm.Result).FAC34DESDESESTAB;
+                            txtOriDirPartida.Text = ((GuiaTransporte)frm.Result).FAC34DESTDIRECCION;
+                        }
                         break;
+
+
                     case enmAyuda.enmEmpresa:
-                        frm = new frmBusqueda(tipoAyuda);
+                        if (esFlagProveedorDeisi.Equals("N"))
+                        {
+
+                            //debe traer datos de otros proveedores
+                            frm = new frmBusqueda(enmAyuda.enmDestinatario);
+
+                        }
+                        else
+                        {
+                            
+                            //debe traer solo la empresa minera deisi
+                            frm = new frmBusqueda(tipoAyuda);
+
+                        }
+
                         frm.Owner = this;
                         frm.ShowDialog();
                         if (frm.Result != null)
-                            txtrucorigen.Text = ((GuiaTransporte)frm.Result).FAC34CODEMP;
-                        txtrucorigenDes.Text = ((GuiaTransporte)frm.Result).FAC34DESCODEMP;
+                        {
+                            if (esFlagProveedorDeisi.Equals("N"))
+                            {
+                                //leer datos del registro seleccionado de destinatario (otro proveedores)
+                                txtrucorigen.Text=((GuiaTransporte)frm.Result).FAC01COD;
+                                txtrucorigenDes.Text = ((GuiaTransporte)frm.Result).FAC34DESTDIRECCION;
+                            }
+                            else {
+                                //leer datos del registro seleccionado (proveedores empresa minera deisi)
+                                txtrucorigen.Text = ((GuiaTransporte)frm.Result).FAC34CODEMP;
+                                txtrucorigenDes.Text = ((GuiaTransporte)frm.Result).FAC34DESCODEMP;
+                            }
+                            
+                        }
                         break;
 
                     case enmAyuda.enmEstados:
@@ -21386,8 +21435,10 @@ namespace Fac.UI.Win
                         frm.Owner = this;
                         frm.ShowDialog();
                         if (frm.Result != null)
+                        { 
                             txtestadoguia.Text = ((GuiaTransporte)frm.Result).FAC34ESTADO;
-                        txtestadoguiaDes.Text = ((GuiaTransporte)frm.Result).FAC34ESTADOLLENADO;
+                            txtestadoguiaDes.Text = ((GuiaTransporte)frm.Result).FAC34ESTADOLLENADO;
+                        }
                         break;
                     case enmAyuda.enmFactCab_Cliente:
                         frm = new frmBusqueda(tipoAyuda, Logueo.TipoAnalisisCliente);
@@ -21633,11 +21684,11 @@ namespace Fac.UI.Win
             }
             if (txtcodmotivo.Text == "03")
             {
-                if (txtCodigoProv.Text == "" || txtRazonSoProv.Text == "" || txtDomiProv.Text == "")
-                {
-                    Util.ShowError("Ingresar Datos del Proveedor");
-                    return false;
-                }
+                //if (txtCodigoProv.Text == "" || txtRazonSoProv.Text == "" || txtDomiProv.Text == "")
+                //{
+                //    Util.ShowError("Ingresar Datos del Proveedor");
+                //    return false;
+                //}
             }
 
             //Validar si la guia esta aceptada dentro del detalle GUIA REMISION
@@ -21818,7 +21869,8 @@ namespace Fac.UI.Win
                         }
                         break;
                     case enmAyuda.enmEmpresa:
-                        var dataEmpresa = Fac_GuiaTransporteLogic.Instance.Spu_Fact_Help_empresa(Logueo.nombreModulo, "Ruc", "*");
+                        var dataEmpresa = Fac_GuiaTransporteLogic.Instance.Spu_Fact_Help_empresa(Logueo.nombreModulo,
+                            "Ruc", "*");
                         filtro = " Ruc='" + txtrucorigen.Text + "'";
                         dr = dataEmpresa.Select(filtro);
                         if (dr.Length == 0)
@@ -22307,7 +22359,10 @@ namespace Fac.UI.Win
         {
             if (e.KeyValue == (char)Keys.F1)
             {
+
+                //ayuda para traer proveedor oriden mienra deisi
                 cmdHelp_Click(enmAyuda.enmEmpresa);
+                //esFlagProveedorDeisi
             }
         }
 
@@ -22468,57 +22523,106 @@ namespace Fac.UI.Win
                 txtcontenedor.Text = "";
                 txtprecinto.Text = "";
 
-                if (txtcodmotivo.Text == "01") // Venta
+                string codmotivo = txtcodmotivo.Text.Trim();
+                if (codmotivo.Equals("01") && codmotivo.Equals("04") && codmotivo.Equals("12"))
                 {
-                    txtTipoOCCod.Text = "V";
-                    GlobalLogic.Instance.DameDescripcion("57" + txtTipoOCCod.Text.Trim(), "GLOTA", out descripcion);
-                    txtTipoOCDesc.Text = descripcion;
+                    switch (codmotivo)
+                    {
+                        case "01":
+                            //Venta
+                            txtTipoOCCod.Text = "V";
+                            GlobalLogic.Instance.DameDescripcion("57" + txtTipoOCCod.Text.Trim(), "GLOTA", out descripcion);
+                            txtTipoOCDesc.Text = descripcion;
+                            txtOCNumero.Text = "";
+                            txtOCNumero.Enabled = true;
+                            break;
 
-                    txtClienteCod.Text = txtrucdestino.Text.Trim();
-                    GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTE", out ClienteDesc);
-                    txtClienteDesc.Text = ClienteDesc;
+                            
 
-                    GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTEFLAGDESC", out ClienteFlagDescUsuario);
-                    chkflagproveedor.Checked = ClienteFlagDescUsuario == "1" ? true : false;
+                        case "04":
+                            // Consignacion
+                            txtTipoOCCod.Text = "C";
+                            GlobalLogic.Instance.DameDescripcion("57" + txtTipoOCCod.Text.Trim(), "GLOTA", out descripcion);
+                            txtTipoOCDesc.Text = descripcion;
 
+                            txtOCNumero.Text = "";
+                            txtOCNumero.Enabled = true;
+                            break;
+                        default:
+                            //opcion  12
 
-                    txtOCNumero.Text = "";
-                    txtOCNumero.Enabled = true;
-                }
-                else if (txtcodmotivo.Text == "04") // Consignacion
-                {
-                    txtTipoOCCod.Text = "C";
-                    GlobalLogic.Instance.DameDescripcion("57" + txtTipoOCCod.Text.Trim(), "GLOTA", out descripcion);
-                    txtTipoOCDesc.Text = descripcion;
+                            //3.Si el codigo de motivo es 12 -  exportacion
+                            txtTipoOCCod.Text = "V";
+                            GlobalLogic.Instance.DameDescripcion("57" + txtTipoOCCod.Text.Trim(), "GLOTA", out descripcion);
+                            txtTipoOCDesc.Text = descripcion;
+                            break;
 
-                    txtClienteCod.Text = txtrucdestino.Text.Trim();
-                    GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTE", out ClienteDesc);
-                    txtClienteDesc.Text = ClienteDesc;
-
-                    GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTEFLAGDESC", out ClienteFlagDescUsuario);
-                    chkflagproveedor.Checked = ClienteFlagDescUsuario == "1" ? true : false;
-
-                    txtOCNumero.Text = "";
-                    txtOCNumero.Enabled = true;
-                }
-
-                //3.Si el codigo de motivo es 12 -  exportacion
-                else if (txtcodmotivo.Text == "12")
-                {
-                    txtTipoOCCod.Text = "V";
-                    GlobalLogic.Instance.DameDescripcion("57" + txtTipoOCCod.Text.Trim(), "GLOTA", out descripcion);
-                    txtTipoOCDesc.Text = descripcion;
+                    }
+                    if (txtrucdestino.Text.Trim() != "") {
+                        txtClienteCod.Text = txtrucdestino.Text.Trim();
+                        GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTE", out ClienteDesc);
+                        txtClienteDesc.Text = ClienteDesc;
 
 
-                    txtClienteCod.Text = txtrucdestino.Text.Trim();
-                    GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTE", out ClienteDesc);
-                    txtClienteDesc.Text = ClienteDesc;
-
-                    GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTEFLAGDESC", out ClienteFlagDescUsuario);
-                    chkflagproveedor.Checked = ClienteFlagDescUsuario == "1" ? true : false;
-
+                        GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTEFLAGDESC", out ClienteFlagDescUsuario);
+                        chkflagproveedor.Checked = ClienteFlagDescUsuario == "1" ? true : false;
+                    }
+                    
 
                 }
+                #region "codigo comentado por cambios para generar documentacion electronica"
+                //if (txtcodmotivo.Text == "01") // Venta
+                //{
+                //    txtTipoOCCod.Text = "V";
+                //    GlobalLogic.Instance.DameDescripcion("57" + txtTipoOCCod.Text.Trim(), "GLOTA", out descripcion);
+                //    txtTipoOCDesc.Text = descripcion;
+
+                //    txtClienteCod.Text = txtrucdestino.Text.Trim();
+                //    GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTE", out ClienteDesc);
+                //    txtClienteDesc.Text = ClienteDesc;
+
+                //    GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTEFLAGDESC", out ClienteFlagDescUsuario);
+                //    chkflagproveedor.Checked = ClienteFlagDescUsuario == "1" ? true : false;
+
+
+                //    txtOCNumero.Text = "";
+                //    txtOCNumero.Enabled = true;
+                //}
+                //else if (txtcodmotivo.Text == "04") // Consignacion
+                //{
+                //    txtTipoOCCod.Text = "C";
+                //    GlobalLogic.Instance.DameDescripcion("57" + txtTipoOCCod.Text.Trim(), "GLOTA", out descripcion);
+                //    txtTipoOCDesc.Text = descripcion;
+
+                //    txtClienteCod.Text = txtrucdestino.Text.Trim();
+                //    GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTE", out ClienteDesc);
+                //    txtClienteDesc.Text = ClienteDesc;
+
+                //    GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTEFLAGDESC", out ClienteFlagDescUsuario);
+                //    chkflagproveedor.Checked = ClienteFlagDescUsuario == "1" ? true : false;
+
+                //    txtOCNumero.Text = "";
+                //    txtOCNumero.Enabled = true;
+                //}
+
+                ////3.Si el codigo de motivo es 12 -  exportacion
+                //else if (txtcodmotivo.Text == "12")
+                //{
+                //    txtTipoOCCod.Text = "V";
+                //    GlobalLogic.Instance.DameDescripcion("57" + txtTipoOCCod.Text.Trim(), "GLOTA", out descripcion);
+                //    txtTipoOCDesc.Text = descripcion;
+
+
+                //    txtClienteCod.Text = txtrucdestino.Text.Trim();
+                //    GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTE", out ClienteDesc);
+                //    txtClienteDesc.Text = ClienteDesc;
+
+                //    GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTEFLAGDESC", out ClienteFlagDescUsuario);
+                //    chkflagproveedor.Checked = ClienteFlagDescUsuario == "1" ? true : false;
+
+
+                //}
+                #endregion
 
             }
             //2.Si el campo de codigo de motivo esta en blanco
@@ -22531,6 +22635,8 @@ namespace Fac.UI.Win
 
         }
 
+        
+        
         private void txtcodorigen_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtcodorigen.Text))
@@ -22574,6 +22680,17 @@ namespace Fac.UI.Win
             if (!string.IsNullOrEmpty(txtrucdestino.Text))
             {
                 obtenerDescripcion(enmAyuda.enmDestinatario, "");
+
+                //string ClienteDesc = "";
+                //string ClienteFlagDescUsuario = "";
+
+                //txtClienteCod.Text = txtrucdestino.Text.Trim();
+                //GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTE", out ClienteDesc);
+                //txtClienteDesc.Text = ClienteDesc;
+
+
+                //GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTEFLAGDESC", out ClienteFlagDescUsuario);
+                //chkflagproveedor.Checked = ClienteFlagDescUsuario == "1" ? true : false;
             }
             else
             {
@@ -22993,6 +23110,40 @@ namespace Fac.UI.Win
             {
                 Util.ShowError("ERROR POPUP PROVEEDOR");
             }
+        }
+
+        private void txtrucdestino_Leave(object sender, EventArgs e)
+        {
+            string codmotivo = txtcodmotivo.Text.Trim();
+            if (codmotivo.Equals("01") || codmotivo.Equals("04") || codmotivo.Equals("12"))
+            {
+                if (!string.IsNullOrEmpty(txtrucdestino.Text))
+                {
+                    obtenerDescripcion(enmAyuda.enmDestinatario, "");
+
+                    string ClienteDesc = "";
+                    string ClienteFlagDescUsuario = "";
+
+                    txtClienteCod.Text = txtrucdestino.Text.Trim();
+                    GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTE", out ClienteDesc);
+                    txtClienteDesc.Text = ClienteDesc;
+
+
+                    GlobalLogic.Instance.DameDescripcion(Logueo.CodigoEmpresa + Logueo.TipoAnalisisCliente + txtClienteCod.Text.Trim(), "CLIENTEFLAGDESC", out ClienteFlagDescUsuario);
+                    chkflagproveedor.Checked = ClienteFlagDescUsuario == "1" ? true : false;
+                }
+                else
+                {
+                    txtrucdestinnoDes.Text = "";
+                    txtcoddestino.Text = "";
+                }
+            }
+
+        }
+
+        private void txtrucdestinnoDes_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void rButtonProveedor_Click(object sender, EventArgs e)
