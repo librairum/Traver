@@ -190,3 +190,21 @@ D:\PROYECTOS_29082024\LOGISTICA\github\Traver\TutUpdate.UI\obj\Debug\TutUpdate.U
 D:\PROYECTOS_29082024\LOGISTICA\github\Traver\TutUpdate.UI\obj\Debug\TutUpdat.20934F4B.Up2Date
 D:\PROYECTOS_29082024\LOGISTICA\github\Traver\TutUpdate.UI\obj\Debug\TutUpdate.UI.exe
 D:\PROYECTOS_29082024\LOGISTICA\github\Traver\TutUpdate.UI\obj\Debug\TutUpdate.UI.pdb
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\bin\Debug\TutUpdate.UI.exe.config
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\bin\Debug\TutUpdate.UI.exe
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\bin\Debug\TutUpdate.UI.pdb
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\bin\Debug\Microsoft.CSharp.dll
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\bin\Debug\Microsoft.SqlServer.Smo.dll
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\bin\Debug\Microsoft.SqlServer.Dmf.dll
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\obj\Debug\TutUpdate.UI.csproj.AssemblyReference.cache
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\obj\Debug\TutUpdate.UI.frmActualizacion.resources
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\obj\Debug\TutUpdate.UI.Properties.Resources.resources
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\obj\Debug\TutUpdate.UI.csproj.GenerateResource.cache
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\obj\Debug\TutUpdate.UI.csproj.CoreCompileInputs.cache
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\obj\Debug\TutUpdat.20934F4B.Up2Date
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\obj\Debug\TutUpdate.UI.exe
+D:\trabajo\minera deisi\traver\github\Traver\TutUpdate.UI\obj\Debug\TutUpdate.UI.pdb

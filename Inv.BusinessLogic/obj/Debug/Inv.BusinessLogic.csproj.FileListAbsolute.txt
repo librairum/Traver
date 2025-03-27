@@ -220,3 +220,15 @@ D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.BusinessLogic\obj\Debug\Inv.Bu
 D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.BusinessLogic\obj\Debug\Inv.Busi.13B71E05.Up2Date
 D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
 D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb
+D:\trabajo\minera deisi\traver\github\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.dll
+D:\trabajo\minera deisi\traver\github\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessLogic.pdb
+D:\trabajo\minera deisi\traver\github\Traver\Inv.BusinessLogic\bin\Debug\BLToolkit.4.dll
+D:\trabajo\minera deisi\traver\github\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.dll
+D:\trabajo\minera deisi\traver\github\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.dll
+D:\trabajo\minera deisi\traver\github\Traver\Inv.BusinessLogic\bin\Debug\Inv.BusinessEntities.pdb
+D:\trabajo\minera deisi\traver\github\Traver\Inv.BusinessLogic\bin\Debug\Inv.DataAccess.pdb
+D:\trabajo\minera deisi\traver\github\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csproj.AssemblyReference.cache
+D:\trabajo\minera deisi\traver\github\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.csproj.CoreCompileInputs.cache
+D:\trabajo\minera deisi\traver\github\Traver\Inv.BusinessLogic\obj\Debug\Inv.Busi.13B71E05.Up2Date
+D:\trabajo\minera deisi\traver\github\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.dll
+D:\trabajo\minera deisi\traver\github\Traver\Inv.BusinessLogic\obj\Debug\Inv.BusinessLogic.pdb

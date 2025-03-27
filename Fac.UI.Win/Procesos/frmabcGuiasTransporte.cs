@@ -20759,6 +20759,7 @@ namespace Fac.UI.Win
                 }
                 esFlagProveedorDeisi = guia.FAC66FLAGPROVEEDORDEISI;
 
+
                 // cargarGuiaDetalle();
             }
             catch (Exception ex)
@@ -21860,6 +21861,8 @@ namespace Fac.UI.Win
                         }
                         txtcodmotivo.Text = dr[0]["FAC66CODMOTIVO"] == null ? "" : dr[0]["FAC66CODMOTIVO"].ToString();
                         txtmotivoDes.Text = dr[0]["FAC66DESMOTIVO"] == null ? "" : dr[0]["FAC66DESMOTIVO"].ToString();
+                        esFlagProveedorDeisi = dr[0]["FAC66FLAGPROVEEDORDEISI"] == null ? "" : dr[0]["FAC66FLAGPROVEEDORDEISI"].ToString();
+
                         //si es otros activo el campo de txtotros
                         txtotros.Enabled = false;
                         txtotros.Text = "";

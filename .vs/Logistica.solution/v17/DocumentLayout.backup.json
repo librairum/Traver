@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\trabajo\\minera deisi\\traver\\github\\Traver\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|D:\\trabajo\\minera deisi\\traver\\github\\Traver\\fac.ui.win\\procesos\\frmabcguiastransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\procesos\\frmabcguiastransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|d:\\trabajo\\minera deisi\\traver\\github\\traver\\fac.ui.win\\procesos\\frmabcguiastransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\procesos\\frmabcguiastransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C55B697-C8A1-44F9-BEE4-1A0733A76A51}|Com.UI.Win\\Com.UI.Win.csproj|D:\\trabajo\\minera deisi\\traver\\github\\Traver\\com.ui.win\\auxilares\\baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C55B697-C8A1-44F9-BEE4-1A0733A76A51}|Com.UI.Win\\Com.UI.Win.csproj|solutionrelative:com.ui.win\\auxilares\\baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|D:\\trabajo\\minera deisi\\traver\\github\\Traver\\fac.ui.win\\procesos\\frmfacturacab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\procesos\\frmfacturacab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|D:\\trabajo\\minera deisi\\traver\\github\\Traver\\fac.ui.win\\procesos\\frmfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\procesos\\frmfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 347,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmabcGuiasTransporte.cs",
+              "DocumentMoniker": "D:\\trabajo\\minera deisi\\traver\\github\\Traver\\Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
+              "RelativeDocumentMoniker": "Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
+              "ToolTip": "D:\\trabajo\\minera deisi\\traver\\github\\Traver\\Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
+              "RelativeToolTip": "Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
+              "ViewState": "AgIAAEJPAAAAAAAAAAAQwF9PAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T05:43:12.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmabcGuiasTransporte.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\trabajo\\minera deisi\\traver\\github\\Traver\\Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
+              "RelativeDocumentMoniker": "Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
+              "ToolTip": "D:\\trabajo\\minera deisi\\traver\\github\\Traver\\Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T05:43:03.161Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseForm.cs",
+              "DocumentMoniker": "D:\\trabajo\\minera deisi\\traver\\github\\Traver\\Com.UI.Win\\Auxilares\\BaseForm.cs",
+              "RelativeDocumentMoniker": "Com.UI.Win\\Auxilares\\BaseForm.cs",
+              "ToolTip": "D:\\trabajo\\minera deisi\\traver\\github\\Traver\\Com.UI.Win\\Auxilares\\BaseForm.cs",
+              "RelativeToolTip": "Com.UI.Win\\Auxilares\\BaseForm.cs",
+              "ViewState": "AgIAAOkAAAAAAAAAAADwvwcBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T02:06:50.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmfacturacab.cs",
+              "DocumentMoniker": "D:\\trabajo\\minera deisi\\traver\\github\\Traver\\Fac.UI.Win\\Procesos\\frmfacturacab.cs",
+              "RelativeDocumentMoniker": "Fac.UI.Win\\Procesos\\frmfacturacab.cs",
+              "ToolTip": "D:\\trabajo\\minera deisi\\traver\\github\\Traver\\Fac.UI.Win\\Procesos\\frmfacturacab.cs",
+              "RelativeToolTip": "Fac.UI.Win\\Procesos\\frmfacturacab.cs",
+              "ViewState": "AgIAANoGAAAAAAAAAAAkwOUGAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T16:26:13.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmFacturas.cs",
+              "DocumentMoniker": "D:\\trabajo\\minera deisi\\traver\\github\\Traver\\Fac.UI.Win\\Procesos\\frmFacturas.cs",
+              "RelativeDocumentMoniker": "Fac.UI.Win\\Procesos\\frmFacturas.cs",
+              "ToolTip": "D:\\trabajo\\minera deisi\\traver\\github\\Traver\\Fac.UI.Win\\Procesos\\frmFacturas.cs",
+              "RelativeToolTip": "Fac.UI.Win\\Procesos\\frmFacturas.cs",
+              "ViewState": "AgIAANQAAAAAAAAAAAAkwPIAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T16:26:13.838Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
