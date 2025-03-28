@@ -14,6 +14,7 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json;
 using System.Xml;
+using System.Linq;
 namespace Fac.UI.Win
 {
     public partial class fabcGuiasTransporte : frmBaseReg
@@ -20288,16 +20289,17 @@ namespace Fac.UI.Win
 
             if (txtcodmotivo.Text == "03")
             {
-                //QUE OBTENGA DE LOS INPUTS DE PROVEEDOR 
-                _guia.FAC34CODPROV = txtCodigoProv.Text.ToString().Trim();
-                _guia.FAC34DESCPROV = txtRazonSoProv.Text.ToString().Trim();
-                _guia.FAC34DIRECCPROV = txtDomiProv.Text.ToString().Trim();
+                //QUE OBTENGA DE LOS INPUTS DE PROVEEDOR                                 
+                // * codigo antiguo de actualizacion
+                //_guia.FAC34CODPROV = txtCodigoProv.Text.ToString().Trim();
+                //_guia.FAC34DESCPROV = txtRazonSoProv.Text.ToString().Trim();
+                //_guia.FAC34DIRECCPROV = txtDomiProv.Text.ToString().Trim();
 
-                //
-                //txtCodigoProv.Text = guia.FAC34ORICODEMP;
-                //txtDomiProv.Text = guia.FAC34ORICODESTAB;
-                //txtDomiProv.Text = guia.FAC34ORIDOMPARTIDA;
-
+                //asignar valor en blanco a estos campos y solo se guardar los datos del proveedor por el tipo de comrpar
+                // se guardar los datos dle proveedor 
+                _guia.FAC34CODPROV = "";
+                _guia.FAC34DESCPROV = "";
+                _guia.FAC34DIRECCPROV = "";
             }
             else 
             {
@@ -20669,17 +20671,17 @@ namespace Fac.UI.Win
                     dtpfechaIntra.Value = Convert.ToDateTime(guia.FAC34FECHAINITRASLADO);
                 }
 
-
+                esFlagProveedorDeisi = Util.convertiracadena(guia.FAC66FLAGPROVEEDORDEISI);
                 txtrucorigen.Text = guia.FAC34ORICODEMP;
-
-                string nomruc = string.Empty;
-                Fac_GuiaTransporteLogic.Instance.Dame_Descripcion(Logueo.nombreModulo, "1007", out nomruc);
-                txtrucorigenDes.Text = nomruc;
+                //cargar nombre de ruc origen en el evento textchange con metod obtenerDescripcion
+               
+                //txtrucorigenDes.Text = nomruc;
                 //txtrucorigenDes.Text = guia.
 
                 txtcodorigen.Text = guia.FAC34ORICODESTAB;
                 txtorigenDes.Text = guia.FAC34ORIDESESTAB;
                 txtOriDirPartida.Text = guia.FAC34ORIDOMPARTIDA;
+                
 
                 txtrucdestino.Text = guia.FAC34DESCODEMP;
                 txtrucdestinnoDes.Text = guia.FAC34DESDESEMP;
@@ -20751,13 +20753,28 @@ namespace Fac.UI.Win
                     btnAgregarReferencial.Visible = false;
                     radLabel35.Visible = false;
 
+
+
+                    //txtrucorigen.Text = guia.FAC34CODPROV;
+                    //txtrucorigenDes.Text = guia.FAC34DESCPROV;
+                    //txtOriDirPartida.Text = guia.FAC34DIRECCPROV;
+
+
+                    /*codigo antiguoa*/
                     txtCodigoProv.Text = guia.FAC34CODPROV;
                     txtRazonSoProv.Text = guia.FAC34DESCPROV;
                     txtDomiProv.Text = guia.FAC34DIRECCPROV;
+                    /*
                     
                     
+                     
+                     */
+
                 }
-                esFlagProveedorDeisi = guia.FAC66FLAGPROVEEDORDEISI;
+                
+                 
+               
+                
 
                 // cargarGuiaDetalle();
             }
@@ -21298,10 +21315,11 @@ namespace Fac.UI.Win
                         frm.Owner = this;
                         frm.ShowDialog();
                         if (frm.Result != null)
+                        { 
                             this.txtcodchofer.Text = ((GuiaTransporte)frm.Result).FAC34CHOFCOD;
-                        this.txtchoferDes.Text = ((GuiaTransporte)frm.Result).FAC34CHOFNOMBRE;
-                        this.txtbrevete.Text = ((GuiaTransporte)frm.Result).FAC34CHOFLICCONDUCIR;
-
+                            this.txtchoferDes.Text = ((GuiaTransporte)frm.Result).FAC34CHOFNOMBRE;
+                            this.txtbrevete.Text = ((GuiaTransporte)frm.Result).FAC34CHOFLICCONDUCIR;
+                        }
 
 
                         break;
@@ -21346,17 +21364,16 @@ namespace Fac.UI.Win
                             btnAgregarReferencial.Visible = false;
                             radLabel35.Visible = false;
 
-                        }
-                        else {
-                        PopupProveedor.Visible = false;
-                        gridreferencial.Visible = true;
-                        btnAgregarReferencial.Visible = true;
-                        radLabel35.Visible = true;
+                        } else {
+                            PopupProveedor.Visible = false;
+                            gridreferencial.Visible = true;
+                            btnAgregarReferencial.Visible = true;
+                            radLabel35.Visible = true;
                             
-                            //LIMPIAR LOS TXTS
-                        txtCodigoProv.Text = "";
-                        txtRazonSoProv.Text = "";
-                        txtDomiProv.Text = "";
+                                //LIMPIAR LOS TXTS
+                            txtCodigoProv.Text = "";
+                            txtRazonSoProv.Text = "";
+                            txtDomiProv.Text = "";
 
                         }
 
@@ -21860,6 +21877,7 @@ namespace Fac.UI.Win
                         }
                         txtcodmotivo.Text = dr[0]["FAC66CODMOTIVO"] == null ? "" : dr[0]["FAC66CODMOTIVO"].ToString();
                         txtmotivoDes.Text = dr[0]["FAC66DESMOTIVO"] == null ? "" : dr[0]["FAC66DESMOTIVO"].ToString();
+                        esFlagProveedorDeisi = dr[0]["FAC66FLAGPROVEEDORDEISI"] == null ? "" : dr[0]["FAC66FLAGPROVEEDORDEISI"].ToString();
                         //si es otros activo el campo de txtotros
                         txtotros.Enabled = false;
                         txtotros.Text = "";
@@ -21869,17 +21887,44 @@ namespace Fac.UI.Win
                         }
                         break;
                     case enmAyuda.enmEmpresa:
-                        var dataEmpresa = Fac_GuiaTransporteLogic.Instance.Spu_Fact_Help_empresa(Logueo.nombreModulo,
-                            "Ruc", "*");
-                        filtro = " Ruc='" + txtrucorigen.Text + "'";
-                        dr = dataEmpresa.Select(filtro);
-                        if (dr.Length == 0)
+                        if (esFlagProveedorDeisi.Equals("N"))
                         {
-                            txtrucorigenDes.Text = "???";
-                            return;
+                            //          DESTINATARIO = Fac_GuiaTransporteLogic.Instance.Spu_Fact_Help_FAC64_DESTINATARIO(Logueo.CodigoEmpresa,
+                            //"FAC64CODIGO", "*");
+                            //         filtro = "FAC64CODIGO = '" + txtrucorigen.Text + "'";
+
+                            List<CuentaCorriente> registrosCtaCte =  CuentaCorrienteLogic.Instance.Glo_Traer_CuentasCorrientes(Logueo.CodigoEmpresa,
+                                        "15", "ccm02cod");
+                            //filtro = " ccm02cod='" + txtrucorigen.Text.Trim() + "'";
+                            //registrosCtaCte.Select(x => x.ccm02cod.Equals(txtrucorigen.Text.Trim()));
+                            CuentaCorriente resultadoCtaCte = registrosCtaCte.FirstOrDefault(x => x.ccm02cod.Equals(txtrucorigen.Text.Trim()));
+                            if (resultadoCtaCte == null) {
+                                txtrucorigenDes.Text = "???";
+                            }
+                            else
+                            {
+                                txtrucorigenDes.Text = resultadoCtaCte.ccm02nom;
+
+                            }
+
+
                         }
-                        txtrucorigen.Text = dr[0]["Ruc"] == null ? "" : dr[0]["Ruc"].ToString();
-                        txtrucorigenDes.Text = dr[0]["Nombre"] == null ? "" : dr[0]["Nombre"].ToString();
+                        else
+                        {
+                            //completar datos con empresa deisi
+                            var dataEmpresa = Fac_GuiaTransporteLogic.Instance.Spu_Fact_Help_empresa(Logueo.nombreModulo,
+                            "Ruc", "*");
+                            filtro = " Ruc='" + txtrucorigen.Text + "'";
+                            dr = dataEmpresa.Select(filtro);
+                            if (dr.Length == 0)
+                            {
+                                txtrucorigenDes.Text = "???";
+                                return;
+                            }
+                            txtrucorigen.Text = dr[0]["Ruc"] == null ? "" : dr[0]["Ruc"].ToString();
+                            txtrucorigenDes.Text = dr[0]["Nombre"] == null ? "" : dr[0]["Nombre"].ToString();
+                           
+                        }
                         break;
                     case enmAyuda.enmEstablecimientos:
                         var ESTABLECIMIENTOS = Fac_GuiaTransporteLogic.Instance.Spu_Fact_Help_FAC63_ESTABLECIMIENTOS(Logueo.CodigoEmpresa,

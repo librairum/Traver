@@ -138,7 +138,8 @@ namespace Fac.UI.Win.Maestros
             cuenta.ccm02tipana = Logueo.TipoAnalisisDestinatario; //tipo de analisis de destinatario
             cuenta.ccm02cod = txtruc.Text.Trim();
             cuenta.ccm02nom = txtempresa.Text.Trim();
-            cuenta.ccm02tipdocidentidad = txttipdoc.Text.Trim();
+            //cuenta.ccm02tipdocidentidad = txttipdoc.Text.Trim();
+            cuenta.ccm02tipdocidentidad = Util.Right(txttipdoc.Text.Trim(), 1);
             cuenta.ccm02correo = txtemailguia.Text.Trim();
         }
         protected override void OnEliminar()
@@ -355,18 +356,22 @@ namespace Fac.UI.Win.Maestros
             {
                 if (!isLoaded) return;
                 if (Estado == FormEstate.New) return;
-                var row = e.CurrentRow.Cells;
-
-                if (e.CurrentRow.Cells != null)
+                if(e.CurrentRow != null)
                 {
-                    if (e.CurrentRow.Cells["ccm02nom"].Value != null)
+                    var row = e.CurrentRow.Cells;
+
+                    if (e.CurrentRow.Cells != null)
                     {
-                        CargarRegistro();
-                        limpiarCajasDomicilio();
-                        OnCargarDomicilio();
-                        OnCargarRegistroDomicilio();
+                        if (e.CurrentRow.Cells["ccm02nom"].Value != null)
+                        {
+                            CargarRegistro();
+                            limpiarCajasDomicilio();
+                            OnCargarDomicilio();
+                            OnCargarRegistroDomicilio();
+                        }
                     }
                 }
+
 
             }
             catch (Exception ex)

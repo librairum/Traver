@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|d:\\proyectos_29082024\\logistica\\github\\traver\\fac.ui.win\\procesos\\frmabcguiastransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\procesos\\frmabcguiastransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|d:\\proyectos_29082024\\logistica\\github\\traver\\fac.ui.win\\procesos\\frmguiatransportista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\procesos\\frmguiatransportista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|d:\\proyectos_29082024\\logistica\\github\\traver\\fac.ui.win\\procesos\\frmguiatransportista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\procesos\\frmguiatransportista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\fac.ui.win\\procesos\\frmabcguiastransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\procesos\\frmabcguiastransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C55B697-C8A1-44F9-BEE4-1A0733A76A51}|Com.UI.Win\\Com.UI.Win.csproj|D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\com.ui.win\\procesos\\frmprovfacturadetoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C55B697-C8A1-44F9-BEE4-1A0733A76A51}|Com.UI.Win\\Com.UI.Win.csproj|solutionrelative:com.ui.win\\procesos\\frmprovfacturadetoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|d:\\proyectos_29082024\\logistica\\github\\traver\\fac.ui.win\\procesos\\frmabcguiastransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\procesos\\frmabcguiastransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\fac.ui.win\\procesos\\frmfacturacab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\procesos\\frmfacturacab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|d:\\proyectos_29082024\\logistica\\github\\traver\\fac.ui.win\\comunes\\frmbusqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\comunes\\frmbusqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\fac.ui.win\\procesos\\frmfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\procesos\\frmfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|d:\\proyectos_29082024\\logistica\\github\\traver\\fac.ui.win\\maestros\\frmdestinatarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\maestros\\frmdestinatarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,24 +34,79 @@
       "DocumentGroups": [
         {
           "DockedWidth": 347,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmProvFacturaDetOC.cs",
-              "DocumentMoniker": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Com.UI.Win\\Procesos\\frmProvFacturaDetOC.cs",
-              "RelativeDocumentMoniker": "Com.UI.Win\\Procesos\\frmProvFacturaDetOC.cs",
-              "ToolTip": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Com.UI.Win\\Procesos\\frmProvFacturaDetOC.cs",
-              "RelativeToolTip": "Com.UI.Win\\Procesos\\frmProvFacturaDetOC.cs",
-              "ViewState": "AQIAAIsGAAAAAAAAAAAQwOwIAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "frmGuiaTransportista.cs",
+              "DocumentMoniker": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmGuiaTransportista.cs",
+              "RelativeDocumentMoniker": "Fac.UI.Win\\Procesos\\frmGuiaTransportista.cs",
+              "ToolTip": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmGuiaTransportista.cs",
+              "RelativeToolTip": "Fac.UI.Win\\Procesos\\frmGuiaTransportista.cs",
+              "ViewState": "AQIAAP4AAAAAAAAAAAAMwA0BAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T17:50:26.21Z",
+              "WhenOpened": "2025-03-28T20:51:24.539Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "frmGuiaTransportista.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmGuiaTransportista.cs",
+              "RelativeDocumentMoniker": "Fac.UI.Win\\Procesos\\frmGuiaTransportista.cs",
+              "ToolTip": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmGuiaTransportista.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Fac.UI.Win\\Procesos\\frmGuiaTransportista.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T20:51:19.243Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmabcGuiasTransporte.cs",
+              "DocumentMoniker": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
+              "RelativeDocumentMoniker": "Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
+              "ToolTip": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
+              "RelativeToolTip": "Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
+              "ViewState": "AQIAAOoGAAAAAAAAAAAewAgHAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T01:49:50.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmBusqueda.cs",
+              "DocumentMoniker": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Comunes\\frmBusqueda.cs",
+              "RelativeDocumentMoniker": "Fac.UI.Win\\Comunes\\frmBusqueda.cs",
+              "ToolTip": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Comunes\\frmBusqueda.cs",
+              "RelativeToolTip": "Fac.UI.Win\\Comunes\\frmBusqueda.cs",
+              "ViewState": "AQIAAN4AAAAAAAAAAAAkwOoAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T17:56:59.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmDestinatarios.cs",
+              "DocumentMoniker": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Maestros\\frmDestinatarios.cs",
+              "RelativeDocumentMoniker": "Fac.UI.Win\\Maestros\\frmDestinatarios.cs",
+              "ToolTip": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Maestros\\frmDestinatarios.cs",
+              "RelativeToolTip": "Fac.UI.Win\\Maestros\\frmDestinatarios.cs",
+              "ViewState": "AQIAAFUBAAAAAAAAAAAvwGYBAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T02:17:49.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "frmabcGuiasTransporte.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
               "RelativeDocumentMoniker": "Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
@@ -56,45 +115,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T16:17:08.061Z",
               "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmabcGuiasTransporte.cs",
-              "DocumentMoniker": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
-              "RelativeDocumentMoniker": "Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
-              "ToolTip": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
-              "RelativeToolTip": "Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
-              "ViewState": "AQIAAJJQAAAAAAAAAAAQwKNQAABRAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T19:34:06.205Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmfacturacab.cs",
-              "DocumentMoniker": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmfacturacab.cs",
-              "RelativeDocumentMoniker": "Fac.UI.Win\\Procesos\\frmfacturacab.cs",
-              "ToolTip": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmfacturacab.cs",
-              "RelativeToolTip": "Fac.UI.Win\\Procesos\\frmfacturacab.cs",
-              "ViewState": "AQIAANoGAAAAAAAAAAAkwOUGAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T16:26:13.694Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmFacturas.cs",
-              "DocumentMoniker": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmFacturas.cs",
-              "RelativeDocumentMoniker": "Fac.UI.Win\\Procesos\\frmFacturas.cs",
-              "ToolTip": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmFacturas.cs",
-              "RelativeToolTip": "Fac.UI.Win\\Procesos\\frmFacturas.cs",
-              "ViewState": "AQIAANQAAAAAAAAAAAAkwPIAAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T16:26:13.838Z",
-              "EditorCaption": ""
             }
           ]
         }
