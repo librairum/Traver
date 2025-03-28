@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\fac.ui.win\\procesos\\frmabcguiastransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\procesos\\frmabcguiastransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|d:\\proyectos_29082024\\logistica\\github\\traver\\fac.ui.win\\procesos\\frmguiatransportista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\procesos\\frmguiatransportista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|d:\\proyectos_29082024\\logistica\\github\\traver\\fac.ui.win\\procesos\\frmguiatransportista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\fac.ui.win\\procesos\\frmguiatransportista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\procesos\\frmguiatransportista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -15,15 +19,11 @@
       "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\procesos\\frmabcguiastransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|d:\\proyectos_29082024\\logistica\\github\\traver\\fac.ui.win\\procesos\\frmabcguiastransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\procesos\\frmabcguiastransporte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|d:\\proyectos_29082024\\logistica\\github\\traver\\fac.ui.win\\comunes\\frmbusqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\fac.ui.win\\comunes\\frmbusqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\comunes\\frmbusqueda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|d:\\proyectos_29082024\\logistica\\github\\traver\\fac.ui.win\\maestros\\frmdestinatarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\fac.ui.win\\maestros\\frmdestinatarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F21ACE1C-AD1C-47BC-B4D5-F8AC555CB70D}|Fac.UI.Win\\Fac.UI.Win.csproj|solutionrelative:fac.ui.win\\maestros\\frmdestinatarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 347,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,38 +42,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmGuiaTransportista.cs",
               "DocumentMoniker": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmGuiaTransportista.cs",
               "RelativeDocumentMoniker": "Fac.UI.Win\\Procesos\\frmGuiaTransportista.cs",
               "ToolTip": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmGuiaTransportista.cs",
               "RelativeToolTip": "Fac.UI.Win\\Procesos\\frmGuiaTransportista.cs",
-              "ViewState": "AQIAAP4AAAAAAAAAAAAMwA0BAAAIAAAA",
+              "ViewState": "AQIAAOgAAAAAAAAAAAAUwP8AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-28T20:51:24.539Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "frmGuiaTransportista.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmGuiaTransportista.cs",
               "RelativeDocumentMoniker": "Fac.UI.Win\\Procesos\\frmGuiaTransportista.cs",
               "ToolTip": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmGuiaTransportista.cs [Dise\u00F1o]",
               "RelativeToolTip": "Fac.UI.Win\\Procesos\\frmGuiaTransportista.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T20:51:19.243Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-03-28T20:51:19.243Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "frmabcGuiasTransporte.cs",
               "DocumentMoniker": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
               "RelativeDocumentMoniker": "Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
               "ToolTip": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
               "RelativeToolTip": "Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
-              "ViewState": "AQIAAOoGAAAAAAAAAAAewAgHAABMAAAA",
+              "ViewState": "AQIAAHhVAAAAAAAAAAAmwJJVAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-28T01:49:50.723Z",
               "EditorCaption": ""
@@ -87,9 +86,8 @@
               "ToolTip": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Comunes\\frmBusqueda.cs",
               "RelativeToolTip": "Fac.UI.Win\\Comunes\\frmBusqueda.cs",
               "ViewState": "AQIAAN4AAAAAAAAAAAAkwOoAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T17:56:59.286Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-03-28T17:56:59.286Z"
             },
             {
               "$type": "Document",
@@ -100,13 +98,12 @@
               "ToolTip": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Maestros\\frmDestinatarios.cs",
               "RelativeToolTip": "Fac.UI.Win\\Maestros\\frmDestinatarios.cs",
               "ViewState": "AQIAAFUBAAAAAAAAAAAvwGYBAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T02:17:49.305Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-03-28T02:17:49.305Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "frmabcGuiasTransporte.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\PROYECTOS_29082024\\LOGISTICA\\github\\Traver\\Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",
               "RelativeDocumentMoniker": "Fac.UI.Win\\Procesos\\frmabcGuiasTransporte.cs",

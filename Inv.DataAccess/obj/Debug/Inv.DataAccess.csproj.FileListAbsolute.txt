@@ -176,3 +176,13 @@ D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.DataAccess\obj\Debug\Inv.DataA
 D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.DataAccess\obj\Debug\Inv.Data.83831641.Up2Date
 D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.DataAccess\obj\Debug\Inv.DataAccess.dll
 D:\PROYECTOS_29082024\LOGISTICA\github\Traver\Inv.DataAccess\obj\Debug\Inv.DataAccess.pdb
+D:\trabajo\minera deisi\traver\github\Traver\Inv.DataAccess\bin\Debug\Inv.DataAccess.dll
+D:\trabajo\minera deisi\traver\github\Traver\Inv.DataAccess\bin\Debug\Inv.DataAccess.pdb
+D:\trabajo\minera deisi\traver\github\Traver\Inv.DataAccess\bin\Debug\BLToolkit.4.dll
+D:\trabajo\minera deisi\traver\github\Traver\Inv.DataAccess\bin\Debug\Inv.BusinessEntities.dll
+D:\trabajo\minera deisi\traver\github\Traver\Inv.DataAccess\bin\Debug\Inv.BusinessEntities.pdb
+D:\trabajo\minera deisi\traver\github\Traver\Inv.DataAccess\obj\Debug\Inv.DataAccess.csproj.AssemblyReference.cache
+D:\trabajo\minera deisi\traver\github\Traver\Inv.DataAccess\obj\Debug\Inv.DataAccess.csproj.CoreCompileInputs.cache
+D:\trabajo\minera deisi\traver\github\Traver\Inv.DataAccess\obj\Debug\Inv.Data.83831641.Up2Date
+D:\trabajo\minera deisi\traver\github\Traver\Inv.DataAccess\obj\Debug\Inv.DataAccess.dll
+D:\trabajo\minera deisi\traver\github\Traver\Inv.DataAccess\obj\Debug\Inv.DataAccess.pdb

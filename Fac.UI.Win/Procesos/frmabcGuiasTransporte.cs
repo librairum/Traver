@@ -20776,6 +20776,7 @@ namespace Fac.UI.Win
                
                 
 
+
                 // cargarGuiaDetalle();
             }
             catch (Exception ex)
